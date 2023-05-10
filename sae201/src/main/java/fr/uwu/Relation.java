@@ -20,4 +20,17 @@ public class Relation {
     public String toString() {
         return "Id1: " + id1 + " Id2: " + id2 + " Tps: " + temps;
     }
+
+    public boolean compareTo(Relation relation) {
+        if (this.id1 != relation.id1) {
+            return false;
+        }
+        if (this.id2 != relation.id2) {
+            return false;
+        }
+        if (this.temps != relation.temps) {
+            return false;
+        }
+        return true;
+    }
 }
