@@ -1,14 +1,20 @@
 package fr.uwu;
 
+/**
+ * Represente une station de métro.
+ * C'est le noeud du graphe.
+ */
 public class Station {
 
-    // Variables
+    //#region Variables
+    // TODO : Getters and Setters si besoin
     Integer id;
     String ligne;
     boolean terminus;
     String nom;
+    //#endregion
 
-    // Constructeurs
+    //#region Constructeurs
     public Station() {
     }
 
@@ -18,6 +24,9 @@ public class Station {
         this.terminus = terminus;
         this.nom = nom;
     }
+    //#endregion
+
+    //#region Méthodes
 
     public String toString() {
         return "Id: " + id + " Ligne: " + ligne + " Terminus: " + terminus + " Nom: " + nom;
@@ -38,4 +47,6 @@ public class Station {
         }
         return true;
     }
+
+    //#endregion
 }

@@ -1,13 +1,20 @@
 package fr.uwu;
 
+/**
+ * Represente une relation (un troncon de métro) entre deux stations.
+ * C'est l'arête du graphe.
+ */
 public class Relation {
 
-    // Variables
+    //#region Variables
+    // TODO : Remplacer Integer par Station
+    // TODO : Getters and Setters si besoin
     Integer id1;
     Integer id2;
     Integer temps;
+    //#endregion
 
-    // Constructeurs
+    //#region Constructeurs
     public Relation() {
     }
 
@@ -16,6 +23,9 @@ public class Relation {
         this.id2 = id2;
         this.temps = temps;
     }
+    //#endregion
+
+    //#region Méthodes
 
     public String toString() {
         return "Id1: " + id1 + " Id2: " + id2 + " Tps: " + temps;
@@ -33,4 +43,6 @@ public class Relation {
         }
         return true;
     }
+
+    //#endregion
 }

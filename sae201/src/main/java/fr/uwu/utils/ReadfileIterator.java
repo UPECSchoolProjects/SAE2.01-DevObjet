@@ -29,13 +29,14 @@ import java.util.Iterator;
  */
 public class ReadfileIterator implements Iterator<String>, AutoCloseable {
 
-    // Attributs
+    //#region Attributs
     Reader reader; // flux entrant
     BufferedReader br; // buffer pour lire le fichier ligne par ligne
     String nextline; // prochaine ligne à envoyer. permet de savoir si on est à la fin du fichier pour la méthode hasNext()
     // Nextline à toujours une ligne d'avance sur ce qui est renvoyé par next().
+    //#endregion
 
-    // Constructeurs
+    //#region Constructeurs
 
     /**
      * Constructeur avec un flux entrant
@@ -66,8 +67,10 @@ public class ReadfileIterator implements Iterator<String>, AutoCloseable {
         this.br = new BufferedReader(reader);
         nextline = br.readLine();
     }
+        //#endregion
 
     // Méthodes
+    //#region Implémentation de l'interface Iterator
 
     /**
      * Méthode implémentée de l'interface Iterator
