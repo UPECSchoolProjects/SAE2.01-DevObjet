@@ -6,36 +6,35 @@ package fr.uwu;
  */
 public class Relation {
 
-    //#region Variables
-    // TODO : Remplacer Integer par Station
+    // #region Variables
     // TODO : Getters and Setters si besoin
-    Integer id1;
-    Integer id2;
-    Integer temps; // en secondes
-    //#endregion
+    Quai st1;
+    Quai st2;
+    Integer temps; // Temps en secondes
+    // #endregion
 
-    //#region Constructeurs
+    // #region Constructeurs
     public Relation() {
     }
 
-    public Relation(Integer id1, Integer id2, Integer temps) {
-        this.id1 = id1;
-        this.id2 = id2;
+    public Relation(Quai st1, Quai st2, Integer temps) {
+        this.st1 = st1;
+        this.st2 = st2;
         this.temps = temps;
     }
-    //#endregion
+    // #endregion
 
-    //#region Méthodes
+    // #region Méthodes
 
     public String toString() {
-        return "Id1: " + id1 + " Id2: " + id2 + " Tps: " + temps;
+        return "St1: " + st1 + "\n St2: " + st2 + "\n Tps: " + temps;
     }
 
     public boolean compareTo(Relation relation) {
-        if (this.id1 != relation.id1) {
+        if (this.st1 != relation.st2) {
             return false;
         }
-        if (this.id2 != relation.id2) {
+        if (this.st2 != relation.st2) {
             return false;
         }
         if (this.temps != relation.temps) {
@@ -44,5 +43,5 @@ public class Relation {
         return true;
     }
 
-    //#endregion
+    // #endregion
 }
