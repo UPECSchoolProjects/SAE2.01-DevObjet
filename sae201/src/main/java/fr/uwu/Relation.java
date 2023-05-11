@@ -10,7 +10,7 @@ public class Relation {
     // TODO : Getters and Setters si besoin
     Quai st1;
     Quai st2;
-    Integer temps;
+    Integer temps; // Temps en secondes
     // #endregion
 
     // #region Constructeurs
