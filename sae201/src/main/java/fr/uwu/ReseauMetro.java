@@ -4,19 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe principale du Grpahe. ELle gère les stations (noed) et les relations entre les stations (arête).
+ * Classe principale du Grpahe. ELle gère les stations (noed) et les relations
+ * entre les stations (arête).
  */
 public class ReseauMetro {
 
-    //#region Attributs
+    // #region Attributs
     ArrayList<Station> stations;
     ArrayList<Relation> relations;
-    //#endregion
+    // #endregion
 
-    //#region Constructeurs
+    // #region Constructeurs
 
     /**
-     * Constructeur par défaut. Initialise les listes de stations et de relations (vides).
+     * Constructeur par défaut. Initialise les listes de stations et de relations
+     * (vides).
      */
     public ReseauMetro() {
         this.stations = new ArrayList<Station>();
@@ -24,8 +26,10 @@ public class ReseauMetro {
     }
 
     /**
-     * Constructeur avec paramètres. Initialise les listes de stations et de relations avec les paramètres.
-     * @param stations ArrayList de stations
+     * Constructeur avec paramètres. Initialise les listes de stations et de
+     * relations avec les paramètres.
+     * 
+     * @param stations  ArrayList de stations
      * @param relations ArrayList de relations
      */
     public ReseauMetro(ArrayList<Station> stations, ArrayList<Relation> relations) {
@@ -33,12 +37,13 @@ public class ReseauMetro {
         this.relations = relations;
     }
 
-    //#endregion
-    
-    //#region Méthodes
+    // #endregion
+
+    // #region Méthodes
 
     /**
      * Ajoute une station (noed) au graphe.
+     * 
      * @param station Objet Station à ajouter
      */
     public void addStation(Station station) {
@@ -47,6 +52,7 @@ public class ReseauMetro {
 
     /**
      * Ajoute une relation (arête) au graphe.
+     * 
      * @param relation Objet Relation à ajouter
      */
     public void addRelation(Relation relation) {
@@ -55,10 +61,13 @@ public class ReseauMetro {
 
     /**
      * Retourne le trajet le plus court entre deux stations.
-     * Se base sur l'algorithme de Dijkstra (voir https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra). 
+     * Se base sur l'algorithme de Dijkstra (voir
+     * https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra).
+     * 
      * @param station1 Objet reference de la station de départ
      * @param station2 Objet reference de la station d'arrivée
-     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus court (dans l'ordre)
+     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus
+     *         court (dans l'ordre)
      */
     public List<Relation> dijkstra_algo(Station station1, Station station2) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -66,10 +75,13 @@ public class ReseauMetro {
 
     /**
      * Retourne le trajet le plus court entre deux stations.
-     * Se base sur l'algorithme de Bellman-Ford (voir https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford). 
+     * Se base sur l'algorithme de Bellman-Ford (voir
+     * https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford).
+     * 
      * @param station1 Objet reference de la station de départ
      * @param station2 Objet reference de la station d'arrivée
-     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus court (dans l'ordre)
+     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus
+     *         court (dans l'ordre)
      */
     public List<Relation> Bellman_Ford_algo(Station station1, Station station2) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -169,7 +181,8 @@ public class ReseauMetro {
      * Être capable de fournir le trajet, le plus court en temps, entre deux
      * stations passant par une troisième station étape.
      * 
-     * Cette fonction généralise cett etape en un trajet qui passe par plusieurs stations
+     * Cette fonction généralise cett etape en un trajet qui passe par plusieurs
+     * stations
      * 
      * @param stations
      */
@@ -177,5 +190,5 @@ public class ReseauMetro {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    //#endregion
+    // #endregion
 }
