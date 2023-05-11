@@ -11,7 +11,7 @@ public class Relation {
     // TODO : Getters and Setters si besoin
     Integer id1;
     Integer id2;
-    Integer temps;
+    Integer temps; // en secondes
     //#endregion
 
     //#region Constructeurs
