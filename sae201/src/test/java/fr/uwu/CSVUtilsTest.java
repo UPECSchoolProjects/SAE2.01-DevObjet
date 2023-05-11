@@ -48,9 +48,9 @@ public class CSVUtilsTest {
 
      @Test
     public void testReadStation() {
-        List<Station> stations = CSVUtils.readStationCSV(getClass().getClassLoader().getResource("stations.csv").getPath());
+        List<Quai> stations = CSVUtils.readStationCSV(getClass().getClassLoader().getResource("stations.csv").getPath());
 
-        Station station1 = stations.get(0);
+        Quai station1 = stations.get(0);
 
         System.out.println(station1);
 

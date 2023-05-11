@@ -1,10 +1,12 @@
 package fr.uwu;
 
+import java.util.List;
+
 /**
  * Represente une station de métro.
  * C'est le noeud du graphe.
  */
-public class Station {
+public class Quai {
 
     //#region Variables
     // TODO : Getters and Setters si besoin
@@ -15,10 +17,10 @@ public class Station {
     //#endregion
 
     //#region Constructeurs
-    public Station() {
+    public Quai() {
     }
 
-    public Station(Integer id, String ligne, Boolean terminus, String nom) {
+    public Quai(Integer id, String ligne, Boolean terminus, String nom) {
         this.id = id;
         this.ligne = ligne;
         this.terminus = terminus;
@@ -28,11 +30,16 @@ public class Station {
 
     //#region Méthodes
 
+
+    public List<Relation> getRelations() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     public String toString() {
         return "Id: " + id + " Ligne: " + ligne + " Terminus: " + terminus + " Nom: " + nom;
     }
 
-    public boolean compareTo(Station station) {
+    public boolean compareTo(Quai station) {
         if (this.id != station.id) {
             return false;
         }

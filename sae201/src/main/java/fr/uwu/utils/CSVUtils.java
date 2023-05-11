@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Function;
 
 import fr.uwu.Relation;
-import fr.uwu.Station;
+import fr.uwu.Quai;
 
 public class CSVUtils {
 
@@ -70,16 +70,16 @@ public class CSVUtils {
      * Donc dans la fonction readCSV, la fonction convert est de type Function<String[], Station>
      * et le type de retour de readCSV est List<Station>
      * 
-     * @see Station
+     * @see Quai
      * @param filename Chemin du fichier CSV
      * @return liste d'objets de type Station à partir du fichier CSV stations.csv
      */
-    public static List<Station> readStationCSV(String filename) {
+    public static List<Quai> readStationCSV(String filename) {
         filename = filename != null ? filename : "CSV/stations.csv";
 
         // (linesplit) -> {} est la fonction de conversion (type Function<String[], Station>) qui convertit une ligne du CSV en objet de type Station. (Elle prends en argument un tableau de String et renvoie un objet de type Station)
         return readCSV(filename, (lignesplit) -> {
-            return new Station(
+            return new Quai(
                 Integer.parseInt(lignesplit[0]),
                 lignesplit[1],
                 lignesplit[2].equals("1"),
