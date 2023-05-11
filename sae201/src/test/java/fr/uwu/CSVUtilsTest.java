@@ -63,7 +63,8 @@ public class CSVUtilsTest {
 
     @Test
     public void testReadRelation() {
-        List<Relation> relations = CSVUtils.readRelationCSV(getClass().getClassLoader().getResource("relations.csv").getPath());
+        List<Quai> stations = CSVUtils.readStationCSV(getClass().getClassLoader().getResource("stations.csv").getPath());
+        List<Relation> relations = CSVUtils.readRelationCSV(getClass().getClassLoader().getResource("relations.csv").getPath(), stations);
 
         Relation relation1 = relations.get(0);
 
@@ -71,8 +72,8 @@ public class CSVUtilsTest {
         // id1;id2;temps
         // 0;238;41
 
-        assert(relation1.id1 == 0);
-        assert(relation1.id2 == 238);
+        assert(relation1.st1.id == 0);
+        assert(relation1.st2.id == 238);
         assert(relation1.temps == 41);
     } 
 }
