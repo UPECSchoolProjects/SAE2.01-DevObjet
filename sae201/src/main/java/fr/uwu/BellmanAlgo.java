@@ -1,4 +1,12 @@
 package fr.uwu;
+/**
+     * Algorithme de Bellman-Ford (voir https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford)
+     * 
+     * @param graph Le graphe 
+     * @param sommet Nombre de sommets dans le graphe
+     * @param arete Nombre d'arêtes dans le graphe
+     * @return renvoie la distance du sommet depuis la source
+     */
 public class BellmanAlgo
 {
  
