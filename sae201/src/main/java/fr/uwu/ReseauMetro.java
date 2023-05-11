@@ -26,6 +26,7 @@ public class ReseauMetro {
     public ReseauMetro() {
         this.quais = new ArrayList<Quai>();
         this.relations = new ArrayList<Relation>();
+        this.stations = new HashMap<String, List<Quai>>();
     }
 
     /**
