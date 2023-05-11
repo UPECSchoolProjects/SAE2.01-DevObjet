@@ -99,14 +99,15 @@ public class CSVUtils {
      * @param filename Chemin du fichier CSV
      * @return liste d'objets de type Relation à partir du fichier CSV relations.csv
      */
-    public static List<Relation> readRelationCSV(String filename) {
+    public static List<Relation> readRelationCSV(String filename, List<Quai> stations) {
         filename = filename != null ? filename : "CSV/relations.csv";
 
         return readCSV(filename, (lignesplit) -> {
             return new Relation(
-                Integer.parseInt(lignesplit[0]),
-                Integer.parseInt(lignesplit[1]),
+                Quai.getQuaiById(stations, Integer.parseInt(lignesplit[0])),
+                Quai.getQuaiById(stations, Integer.parseInt(lignesplit[1])),
                 Integer.parseInt(lignesplit[2]));
         });
     }
+
 }

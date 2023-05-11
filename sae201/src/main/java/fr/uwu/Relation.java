@@ -8,8 +8,8 @@ public class Relation {
 
     // #region Variables
     // TODO : Getters and Setters si besoin
-    Station st1;
-    Station st2;
+    Quai st1;
+    Quai st2;
     Integer temps;
     // #endregion
 
@@ -17,7 +17,7 @@ public class Relation {
     public Relation() {
     }
 
-    public Relation(Station st1, Station st2, Integer temps) {
+    public Relation(Quai st1, Quai st2, Integer temps) {
         this.st1 = st1;
         this.st2 = st2;
         this.temps = temps;
