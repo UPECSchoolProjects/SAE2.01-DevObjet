@@ -80,7 +80,7 @@ public class ReseauMetro {
                 // relier cette station a toutes les autres déja presente
                 for (Quai stationsDejaPresente : this.stations.get(station.nom)) {
                     if (stationsDejaPresente != station) {
-                        this.relations.add(new Relation(station.id, stationsDejaPresente.id, 1));
+                        this.relations.add(new Relation(station, stationsDejaPresente, 180));
                     }
                 }
             } else {
@@ -100,6 +100,9 @@ public class ReseauMetro {
      */
     public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
         throw new UnsupportedOperationException("Not supported yet.");
+        
+        
+
     }
 
     /**
