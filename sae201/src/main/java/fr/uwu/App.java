@@ -15,7 +15,7 @@ public class App {
 
         // ? Parcours du CSV Relations
 
-        List<Station> station = CSVUtils.readStationCSV(null);
+        List<Quai> station = CSVUtils.readStationCSV(null);
 
         for (int i = 10; i < 26; i++) {
             System.out.println(station.get(i));
