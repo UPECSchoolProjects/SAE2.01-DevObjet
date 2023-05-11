@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Classe principale du Grpahe. ELle gère les stations (noed) et les relations entre les stations
- * (arête).
+ * Classe principale du Grpahe. ELle gère les stations (noed) et les relations
+ * entre les stations (arête).
  */
 public class ReseauMetro {
 
@@ -21,7 +21,8 @@ public class ReseauMetro {
     // #region Constructeurs
 
     /**
-     * Constructeur par défaut. Initialise les listes de stations et de relations (vides).
+     * Constructeur par défaut. Initialise les listes de stations et de relations
+     * (vides).
      */
     public ReseauMetro() {
         this.quais = new ArrayList<Quai>();
@@ -64,9 +65,15 @@ public class ReseauMetro {
     }
 
     /**
-     * Cette fonction à pour but de parcourir la liste des stations et relier entre elles les
-     * stations qui ont le même nom.
-     */
+     * Retourne le trajet le plus court entre deux stations.
+     * Se base sur l'algorithme de Dijkstra (voir
+     * https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra).
+     * 
+     * @param station1 Objet reference de la station de départ
+     * @param station2 Objet reference de la station d'arrivée
+     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus
+     *         court (dans l'ordre)
+    */
     public void relierStationMemeNom() {
         Map<String, List<Quai>> stationsMemeNom = new HashMap<String, List<Quai>>();
 
@@ -93,13 +100,14 @@ public class ReseauMetro {
     }
 
     /**
-     * Retourne le trajet le plus court entre deux stations. Se base sur l'algorithme de
-     * Bellman-Ford (voir https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford).
+     * Retourne le trajet le plus court entre deux stations.
+     * Se base sur l'algorithme de Bellman-Ford (voir
+     * https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford).
      * 
      * @param station1 Objet reference de la station de départ
      * @param station2 Objet reference de la station d'arrivée
-     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus court (dans
-     *         l'ordre)
+     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus
+     *         court (dans l'ordre)
      */
     public List<Relation> Bellman_Ford_algo(Quai station1, Quai station2) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -192,7 +200,8 @@ public class ReseauMetro {
      * Être capable de fournir le trajet, le plus court en temps, entre deux stations passant par
      * une troisième station étape.
      * 
-     * Cette fonction généralise cett etape en un trajet qui passe par plusieurs stations
+     * Cette fonction généralise cett etape en un trajet qui passe par plusieurs
+     * stations
      * 
      * @param stations
      */
