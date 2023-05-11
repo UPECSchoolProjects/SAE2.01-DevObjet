@@ -6,7 +6,7 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import fr.uwu.utils.CSVUtils;
 import fr.uwu.utils.ReadfileIterator;
