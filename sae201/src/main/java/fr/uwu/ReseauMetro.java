@@ -27,6 +27,7 @@ public class ReseauMetro {
     public ReseauMetro() {
         this.quais = new ArrayList<Quai>();
         this.relations = new ArrayList<Relation>();
+        this.stations = new HashMap<String, List<Quai>>();
     }
 
     /**
@@ -64,23 +65,26 @@ public class ReseauMetro {
     }
 
     /**
-     * Retourne le trajet le plus court entre deux stations.
-     * Se base sur l'algorithme de Dijkstra (voir
-     * https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra).
      * 
-     * @param station1 Objet reference de la station de départ
-     * @param station2 Objet reference de la station d'arrivée
-     * @return renoive une liste de relations (arêtes) qui forment le trajet le plus
-     *         court (dans l'ordre)
-    */
+     */
     public void relierStationMemeNom() {
-        Map<String, List<Quai>> stationsMemeNom = new HashMap<String, List<Quai>>();
-
         for (Quai station : this.quais) {
-            if (stationsMemeNom.containsKey(station.nom)) {
-                stationsMemeNom.get(station.nom).add(station);
+            // ne rien faire si la station est déja présente dans la hashmap
+            if (this.stations.values().stream().anyMatch(liste -> liste.contains(station))) {
+                continue;
+            }
+
+            if (this.stations.containsKey(station.nom)) {
+                this.stations.get(station.nom).add(station);
+
+                // relier cette station a toutes les autres déja presente
+                for (Quai stationsDejaPresente : this.stations.get(station.nom)) {
+                    if (stationsDejaPresente != station) {
+                        this.relations.add(new Relation(station, stationsDejaPresente, 180));
+                    }
+                }
             } else {
-                stationsMemeNom.put(station.nom, new ArrayList<Quai>(Arrays.asList(station)));
+                this.stations.put(station.nom, new ArrayList<Quai>(Arrays.asList(station)));
             }
         }
     }
