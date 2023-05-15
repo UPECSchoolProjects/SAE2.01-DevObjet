@@ -43,6 +43,19 @@ public class Quai {
         return "Id: " + id + " Ligne: " + ligne + " Terminus: " + terminus + " Nom: " + nom;
     }
 
+    public Boolean isTerminus(){
+        if (this.terminus == true){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
     public boolean compareTo(Quai station) {
         if (this.id != station.id) {
             return false;

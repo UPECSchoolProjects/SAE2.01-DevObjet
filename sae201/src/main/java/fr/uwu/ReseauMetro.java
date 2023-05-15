@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Classe principale du Grpahe. ELle gère les stations (noed) et les relations
+ * Classe principale du Graphe. ELle gère les stations (noeud) et les relations
  * entre les stations (arête).
  */
 public class ReseauMetro {
@@ -47,7 +47,7 @@ public class ReseauMetro {
     // #region Méthodes
 
     /**
-     * Ajoute une station (noed) au graphe.
+     * Ajoute une station (noeud) au graphe.
      * 
      * @param station Objet Station à ajouter
      */
@@ -100,9 +100,6 @@ public class ReseauMetro {
      */
     public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
         throw new UnsupportedOperationException("Not supported yet.");
-        
-        
-
     }
 
     /**
@@ -174,8 +171,31 @@ public class ReseauMetro {
      * @param station2 Reference de la station 2
      */
     public void comparerStation_A_B(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        // throw new UnsupportedOperationException("Not supported yet.");
+        // ACCESSIBLE 
+
+        // CENTRALE
+        
+        // TERMINALE
+        // ArrayList<Quai> terminus = new ArrayList<>();
+        // for (Quai quai : quais) {
+        //     if (quai.isTerminus()) { // Vérifier si le terminus est vrai
+        //         terminus.add(quai);
+        //     }
+        // }
+        // for (Quai terminus_quai : terminus){
+        //     if (dijkstra_algo(station1, terminus_quai) > dijkstra_algo(station2, terminus_quai) ){
+        //         return station1 + " plus accessible que "+ station2;
+        //     }
+        //     if (dijkstra_algo(station2, terminus_quai) > dijkstra_algo(station1, terminus_quai) ){
+        //         return station2 + " plus accessible que "+ station1;
+        //     }
+        //     if (dijkstra_algo(station2, terminus_quai) == dijkstra_algo(station1, terminus_quai) ){
+        //         return station1 + " aussi accessible que "+ station2;
+        //     }
+        // }
     }
+
 
     /**
      * Analyse plus poussée du graphe des lignes de métro :
@@ -185,9 +205,17 @@ public class ReseauMetro {
      * @param station1 Reference de la station 1
      * @param station2 Reference de la station 2
      */
-    public void reliePDistance(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public int reliePDistance(Quai station1, Quai station2, int pDistance) {
+        List<Relation> relations = dijkstra_algo(station1, station2);
+        int distance = relations.size();
+
+        if (distance == pDistance) {
+            return pDistance;
+        } else {
+            return distance;
+        }
     }
+
 
     /**
      * Analyse plus poussée du graphe des lignes de métro :
