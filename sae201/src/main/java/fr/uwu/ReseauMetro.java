@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 /**
  * Classe principale du Grpahe. ELle gère les stations (noed) et les relations
  * entre les stations (arête).
@@ -122,8 +121,17 @@ public class ReseauMetro {
      * @param ligne le nom de la ligne dont on veut afficher les stations
      * @return ne renvoie rien (affiche les stations)
      */
-    public void printStatioLigne(String ligne) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void printStationLigne(String ligne) {
+        boolean ligneExiste = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne));
+        if (!ligneExiste) {
+            throw new IllegalArgumentException("La ligne spécifiée n'existe pas.");
+        }
+
+        // Afficher les stations de la ligne
+        quais.stream()
+                .filter(quai -> quai.getLigne().equals(ligne))
+                .map(Quai::getNom)
+                .forEach(System.out::println);
     }
 
     /**
@@ -133,8 +141,38 @@ public class ReseauMetro {
      * @param ligne1
      * @param ligne2
      */
-    public void printCorrespondanceEntre2Ligne(String ligne1, String ligne2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void correspondanceEntre2Lignes(String ligne1, String ligne2) {
+        // Vérifier si les lignes existent dans la liste des quais
+        boolean ligne1Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne1));
+        boolean ligne2Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne2));
+    
+        if (!ligne1Existe || !ligne2Existe) {
+            throw new IllegalArgumentException("Au moins l'une des lignes spécifiées n'existe pas.");
+        }
+    
+        // Rechercher les correspondances possibles entre les deux lignes
+        List<Quai> correspondances = new ArrayList<>();
+    
+        for (Quai quai1 : quais) {
+            if (quai1.getLigne().equals(ligne1)) {
+                for (Quai quai2 : quais) {
+                    if (quai2.getLigne().equals(ligne2) && quai1.compareTo(quai2)) {
+                        correspondances.add(quai1);
+                        break;
+                    }
+                }
+            }
+        }
+    
+        // Afficher les correspondances trouvées
+        if (correspondances.isEmpty()) {
+            System.out.println("Il n'y a pas de correspondances entre les lignes spécifiées.");
+        } else {
+            System.out.println("Correspondances possibles entre les lignes " + ligne1 + " et " + ligne2 + ":");
+            for (Quai correspondance : correspondances) {
+                System.out.println(correspondance.getNom());
+            }
+        }
     }
 
     /**
@@ -144,7 +182,7 @@ public class ReseauMetro {
      * par correspondance).
      */
     public void trajetEntre2Station(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
 
     /**

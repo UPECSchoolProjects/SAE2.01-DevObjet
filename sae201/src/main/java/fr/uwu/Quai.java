@@ -55,5 +55,14 @@ public class Quai {
         return true;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public String getLigne() {
+        return ligne;
+    }
+
     //#endregion
+
 }
