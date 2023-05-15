@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import path from 'path';
 import React, { useEffect, useRef } from 'react';
 import * as SPD from "svg-path-d";
+import { Transition } from 'react-transition-group';
 
 interface pathAttr { id: string, d: string, transform: string, fill: string, strokeColor: string, strokeWidth: string };
 type point = { x: number, y: number };
@@ -69,7 +70,7 @@ function generateKeyFrameAnimation(nbItem: number, delay: number, duration: numb
 
 }
 
-function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbItem }: pathAttr & { delay: number, nbItem: number }) {
+function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbItem, animationDuration }: pathAttr & { delay: number, nbItem: number, animationDuration: number }) {
     const pathRef = useRef<SVGPathElement>(null);
 
     useEffect(() => {
@@ -77,7 +78,6 @@ function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbI
             const length = pathRef.current.getTotalLength();
             pathRef.current.style.strokeDasharray = `${length} ${length}`;
             pathRef.current.style.strokeDashoffset = `${length}`;
-            pathRef.current.style.animation = `dash-animation 1000ms ${delay}ms linear infinite`;
         }
     }, []);
 
@@ -93,17 +93,30 @@ function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbI
       filter='blur(1px)'
       style={{zIndex: -2}}
     /> */}
-        <path
-            id={id}
-            d={d}
-            transform={transform}
-            fill={fill}
-            stroke={strokeColor}
-            strokeWidth={strokeWidth}
-            filter="url(#glow)"
-            ref={pathRef as React.Ref<SVGPathElement>}
-            opacity={0.6}
-        />
+        <Transition
+            in={true}
+            timeout={{ enter: 0, exit: delay + nbItem * animationDuration }}
+            mountOnEnter
+            unmountOnExit
+        >
+            {(state) => (
+                <path
+                    id={id}
+                    d={d}
+                    transform={transform}
+                    fill={fill}
+                    stroke={strokeColor}
+                    strokeWidth={strokeWidth}
+                    filter="url(#glow)"
+                    ref={pathRef as React.Ref<SVGPathElement>}
+                    opacity={state === 'entered' ? 0.6 : 0}
+                    style={{
+                        animation: state === 'entered' ? `dash-animation ${animationDuration}ms ${delay}ms linear infinite` : 'none',
+                        transition: 'opacity 800ms',
+                    }}
+                />
+            )}
+        </Transition>
         <path
             id={id}
             d={d}
@@ -115,8 +128,15 @@ function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbI
         <style>
             {`
         @keyframes dash-animation {
-          to {
+          0% {
+            opacity: 0.6
+          }
+          90% {
+            opacity: 0.6
+          }
+            to {
             stroke-dashoffset: 0;
+            opacity: 0;
           }
         }
       `}
@@ -216,7 +236,7 @@ function SvgComponent() {
                     </feMerge>
                 </filter>
             </defs>
-            {pathData.map((s: pathAttr, index: number) => (<LinePath key={uuidv4()} {...s} delay={1000 * index} nbItem={pathData.length} />))}
+            {pathData.map((s: pathAttr, index: number) => (<LinePath key={uuidv4()} {...s} delay={1500 * index} nbItem={pathData.length} animationDuration={1500} />))}
             {points.map((p) => (<StopPoint key={uuidv4()} id={uuidv4()} cx={p.x} cy={p.y} r={p.strokeWidth} fill="#76d5e3" />))}
         </svg>
     );
