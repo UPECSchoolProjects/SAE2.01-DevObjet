@@ -8,6 +8,10 @@ import java.util.List;
  */
 public class Quai {
 
+    public static Quai getQuaiById(List<Quai> quais, int id) {
+        return quais.stream().filter(quai -> quai.id == id).findFirst().orElse(null);
+    }
+
     //#region Variables
     // TODO : Getters and Setters si besoin
     Integer id;
