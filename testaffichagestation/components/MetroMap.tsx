@@ -131,7 +131,7 @@ function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbI
           0% {
             opacity: 0.6
           }
-          90% {
+          85% {
             opacity: 0.6
           }
             to {
