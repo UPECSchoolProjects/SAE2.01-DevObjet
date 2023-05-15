@@ -35,12 +35,12 @@ public class Quai {
     //#region Méthodes
 
 
-    public List<Relation> getRelations() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<Relation> getRelations(List<Relation> relations) {
+        return relations.stream().filter(relation -> relation.st1.id == this.id || relation.st2.id == this.id).toList();
     }
 
     public String toString() {
-        return "Id: " + id + " Ligne: " + ligne + " Terminus: " + terminus + " Nom: " + nom;
+        return "Id: " + id + ", Ligne: " + ligne + ", Terminus: " + terminus + ", Nom: " + nom;
     }
 
     public boolean compareTo(Quai station) {

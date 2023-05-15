@@ -27,7 +27,7 @@ public class Relation {
     // #region Méthodes
 
     public String toString() {
-        return "St1: " + st1 + "\n St2: " + st2 + "\n Tps: " + temps;
+        return "\t- St1: " + st1 + "\n\t- St2: " + st2 + "\n\t- Tps: " + temps;
     }
 
     public boolean compareTo(Relation relation) {
