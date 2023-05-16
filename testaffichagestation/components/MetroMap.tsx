@@ -109,7 +109,7 @@ function LinePath({ id, d, transform, fill, strokeColor, strokeWidth, delay, nbI
                     strokeWidth={strokeWidth}
                     filter="url(#glow)"
                     ref={pathRef as React.Ref<SVGPathElement>}
-                    opacity={state === 'entered' ? 0.6 : 0}
+                    opacity={state === 'entered' ? 0.8 : 0}
                     style={{
                         animation: state === 'entered' ? `dash-animation ${animationDuration}ms ${delay}ms linear infinite` : 'none',
                         transition: 'opacity 800ms',
@@ -224,15 +224,17 @@ function SvgComponent() {
             id="test"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 300 300"
+            width="500"
+            height="500"
+            viewBox="0 0 4536 4536"
             shapeRendering="geometricPrecision"
             textRendering="geometricPrecision"
         >
             <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" result="blurred"></feGaussianBlur>
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blurred"></feGaussianBlur>
                     <feMerge>
-                        {addIntensity(2)}
+                        {addIntensity(3)}
                     </feMerge>
                 </filter>
             </defs>
