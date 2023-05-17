@@ -2,9 +2,9 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
-import SvgLineComponent, { LinePath } from './Lines';
 import { GraphicCorrespondance, Station, Troncons, linedata } from '../types/LinesAttributes';
 import { StopPoint } from './StopPoints';
+import { LinePath } from './Lines';
 
 
 function addIntensity(num: number) {
@@ -17,7 +17,7 @@ function addIntensity(num: number) {
     return arr;
 }
 
-async function getStations() {
+async function getStations(): Promise<{ stations: Station[], correspondances: GraphicCorrespondance[] }> {
     let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/svgLines/stations.json`, { cache: "no-cache" });
     let data = await res.json();
     return data;
@@ -37,11 +37,16 @@ function GraphicCorrespondance({ correspondance }: { correspondance: GraphicCorr
     </>
 }
 
-function renderTroncons(troncons: Troncons[], linesData: Map<String, linedata>): JSX.Element[] {
+function renderTroncons(tronconsController: TroconController[], linesData: Map<String, linedata>): JSX.Element[] {
     const itemsPerLine = new Map<String, number>();
     const countedPerLine = new Map<String, number>();
+
+
     // count how many troncons per line
-    troncons.forEach((troncon) => {
+    tronconsController.forEach((tronconsControl) => {
+        const troncon = tronconsControl.troncon;
+
+
         const line = troncon.line || "3";
         if (itemsPerLine.has(line)) {
             itemsPerLine.set(line, itemsPerLine.get(line) || 0 + 1);
@@ -50,7 +55,9 @@ function renderTroncons(troncons: Troncons[], linesData: Map<String, linedata>):
         }
     });
 
-    return troncons.map((troncon) => {
+    return tronconsController.map((tronconsControl) => {
+        const troncon = tronconsControl.troncon;
+
         const lineData = linesData.get(troncon.line || "3");
 
         if (countedPerLine.has(troncon.line || "3")) {
@@ -59,9 +66,11 @@ function renderTroncons(troncons: Troncons[], linesData: Map<String, linedata>):
 
         const count = countedPerLine.get(troncon.line || "3") || 0;
 
-        countedPerLine.set(troncon.line || "3", count + 1);
+        if (tronconsControl.activated) {
+            countedPerLine.set(troncon.line || "3", count + 1);
+        }
 
-        return <LinePath key={troncon.line + '-' + troncon.id} {...troncon} strokeColor={lineData?.strokeColor || "#FFF"} strokeWidth={lineData?.strokeWidth || "1"} delay={3000 * count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={3000} />
+        return <LinePath key={troncon.line + '-' + troncon.id} id={troncon.line + '-' + troncon.id} activated={tronconsControl.activated} d={troncon.d} strokeColor={lineData?.strokeColor || "#FFF"} strokeWidth={lineData?.strokeWidth || "1"} delay={3000 * count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={3000} />
 
     })
 }
@@ -71,40 +80,64 @@ type StationController = {
     activated: boolean
 }
 
+type TroconController = {
+    troncon: Troncons,
+    activated: boolean
+}
+
+type CorrespondanceController = {
+    correspondance: GraphicCorrespondance,
+    activated: boolean
+}
+
 function SvgComponent() {
-    const [stations, setStations] = React.useState<Station[]>([]);
-    const [correspondances, setCorrespondances] = React.useState<GraphicCorrespondance[]>([]);
-    const [troncons, setTroncons] = React.useState<Troncons[]>([]);
+    const [stations, setStations] = React.useState<StationController[]>([]);
+    const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
+    const [troncons, setTroncons] = React.useState<TroconController[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
+
+    const [currentPath, setCurrentPath] = React.useState<number[]>([]);
+
+    const [mapLoaded, setMapLoaded] = React.useState(false);
 
     const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M13", "M14"]
 
-    React.useEffect(() => {
-        getStations().then((data: { stations: Station[], correspondances: GraphicCorrespondance[] }) => {
-            setStations(data.stations);
-            setCorrespondances(data.correspondances);
+    const fetchData = async () => {
+        let data: { stations: Station[], correspondances: GraphicCorrespondance[] } = await getStations()
 
-            lines.forEach((line) => {
-                getTroncons(line).then((data: { linedata: linedata, troncons: Troncons[] }) => {
-                    // add all troncons to troncons array
-                    // add line attr to each troncons
-                    data.troncons.forEach((troncon) => {
-                        troncon.line = line;
-                    });
+        const stations = data.stations.map((station) => {
+            return { station, activated: false };
+        });
+        setStations(stations);
 
-                    setTroncons((prevTroncons) => prevTroncons.concat(data.troncons));
-
-                    //copy new map and add new line
-                    setLinesData((prevLinesData) => {
-                        const newLinesData = new Map(prevLinesData);
-                        newLinesData.set(line, data.linedata);
-                        return newLinesData;
-                    });
-                }
-                )
-            });
+        const correspondances = data.correspondances.map((correspondance) => {
+            return { correspondance, activated: false };
         });
 
+        setCorrespondances(correspondances);
+
+        await Promise.all(
+            lines.map(async (line) => {
+                const { linedata, troncons }: { linedata: linedata, troncons: Troncons[] } = await getTroncons(line);
+
+
+                const tronconsWithLine = troncons.map((troncon) => ({
+                    troncon: { ...troncon, line },
+                    activated: false,
+                }));
+
+                setTroncons((prevTroncons) => [...prevTroncons, ...tronconsWithLine]);
+
+                setLinesData((prevLinesData) => new Map(prevLinesData).set(line, linedata));
+            })
+        );
+
+        setMapLoaded(true);
+        setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]);
+    };
+
+    React.useEffect(() => {
+        fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -120,6 +153,41 @@ function SvgComponent() {
         console.log(stations);
     }, [stations]);
 
+    React.useEffect(() => {
+        console.log('Activating');
+
+        if (!mapLoaded) {
+            return;
+        }
+
+        const activate = async () => {
+            setStations((prevStations) =>
+                prevStations.map((prevStation) => ({
+                    ...prevStation,
+                    activated: currentPath.includes(parseInt(prevStation.station.id)),
+                }))
+            );
+
+            setTroncons((prevTroncons) =>
+                prevTroncons.map((prevTroncon) => ({
+                    ...prevTroncon,
+                    activated:
+                        currentPath.includes(parseInt(prevTroncon.troncon.beginStation)) &&
+                        currentPath.includes(parseInt(prevTroncon.troncon.endStation)),
+                }))
+            );
+
+            setCorrespondances((prevCorrespondances) =>
+                prevCorrespondances.map((prevCorrespondance) => ({
+                    ...prevCorrespondance,
+                    activated: true,
+                }))
+            );
+        };
+
+        activate();
+    }, [mapLoaded, currentPath]);
+
     return (
         <svg
             id="test"
@@ -133,9 +201,9 @@ function SvgComponent() {
         >
             <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blurred"></feGaussianBlur>
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" ></feGaussianBlur>
                     <feMerge>
-                        {addIntensity(3)}
+                        {addIntensity(2)}
                     </feMerge>
                 </filter>
             </defs>
@@ -148,13 +216,15 @@ function SvgComponent() {
             </g>
             <g id="correspondances">
                 {correspondances && correspondances.map((correspondance) => (
-                    <GraphicCorrespondance key={correspondance.id} correspondance={correspondance} />
+                    <GraphicCorrespondance key={correspondance.correspondance.id} correspondance={correspondance.correspondance} />
                 ))}
             </g>
             <g id="stations">
-                {stations && stations.map((station) => {
+                {stations && stations.map((stationControl) => {
+                    const station = stationControl.station;
+
                     const lineData = linesData.get(station.line || "3")
-                    return <StopPoint key={station.line + "-" + station.id} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                    return <StopPoint key={station.line + "-" + station.id} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
                 })}
             </g>
         </svg>

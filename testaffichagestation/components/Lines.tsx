@@ -10,7 +10,7 @@ async function getPathData(line: string) {
     return data;
 }
 
-export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, animationDuration }: pathAttr & { strokeColor: string, strokeWidth: string, delay: number, nbItem: number, animationDuration: number }) {
+export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, animationDuration, activated }: pathAttr & { strokeColor: string, strokeWidth: string, delay: number, nbItem: number, animationDuration: number, activated: boolean }) {
     const pathRef = React.useRef<SVGPathElement>(null);
 
     React.useEffect(() => {
@@ -20,6 +20,16 @@ export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, anima
             pathRef.current.style.strokeDashoffset = `${length}`;
         }
     }, []);
+
+    if (!activated) {
+        return <path
+            id={id + "-plain"}
+            d={d}
+            fill='none'
+            stroke='#666'
+            strokeWidth={strokeWidth}
+        />
+    }
 
     return <React.Fragment>
         <Transition
@@ -73,22 +83,4 @@ export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, anima
 
 function getDistance(point1: point, point2: point) {
     return Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
-}
-
-export default function SvgLineComponent({ line }: { line: string }) {
-    const [pathData, setPathData] = React.useState<pathDataType | null>(null);
-
-    React.useEffect(() => {
-        getPathData(line).then((data) => {
-            setPathData(data);
-        });
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    return (
-        <>
-            {pathData && pathData.troncons.map((s: pathAttr, index: number) => (<LinePath key={crypto.randomUUID()} {...s} strokeColor={pathData.linedata.strokeColor} strokeWidth={pathData.linedata.strokeWidth} delay={1500 * index} nbItem={pathData.troncons.length} animationDuration={1500} />))}
-           {/*  {pathData && points && points.map((p) => (<StopPoint key={p.station.id} id={p.station.id} cx={p.point.x} cy={p.point.y} r={pathData.linedata.strokeWidth} displayName={p.station.displayName} fill="#76d5e3" />))} */}
-        </>);
 }
