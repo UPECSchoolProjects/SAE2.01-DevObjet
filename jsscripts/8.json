@@ -1,0 +1,226 @@
+{
+    "troncons": [
+        {
+            "id": "CreteilPointeDuLac-CreteilPrefecture",
+            "d": "m 3815.4222,4004.0561 c 0,-28.7414 -0.3607,-49.4892 -0.2741,-74.0848",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CreteilPrefecture-CreteilUniversite",
+            "d": "m 3815.1481,3929.9713 c 0.1347,-38.2248 0.7387,-74.1275 0.7387,-74.1275",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CreteilUniversite-CreteilLEchat",
+            "d": "m 3815.8868,3855.8438 -0.4646,-75.2677",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CreteilLEchat-MaisonsAlfortLesJuiliottes",
+            "d": "M 3815.4222,3780.5761 V 3702.056",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MaisonsAlfortLesJuiliottes-MaisonsAlfortStade",
+            "d": "m 3815.4222,3702.056 c 0,0 -0.014,-65.0749 -0.3568,-74.8545",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MaisonsAlfortStade-EcoleVeterinaireMaisonsAlfort",
+            "d": "m 3815.0654,3627.2015 c -0.2034,-5.8032 -2.3864,-8.9173 -9.8229,-15.9242 -3.2221,-3.0359 -12.4649,-12.0519 -12.4649,-12.0519 l -51.2574,-49.7557",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "EcoleVeterinaireMaisonsAlfort-CharentonEcoles",
+            "d": "m 3741.5202,3549.4697 -96.64,-96.1754",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CharentonEcoles-Liberte",
+            "d": "m 3644.8802,3453.2943 -96.2916,-96.9885",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Liberte-PorteDeCharenton",
+            "d": "m 3548.5886,3356.3058 c 0,0 -66.6354,-64.7254 -79.9655,-81.0025 -2.4069,-2.939 -3.5388,-7.6183 -2.2151,-11.1789 1.6227,-4.3649 16.7543,-17.1112 16.7543,-17.1112",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDeCharenton-PorteDoree",
+            "d": "m 3483.1623,3247.0132 88.8014,-89.4349",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDoree-MichelBizot",
+            "d": "m 3571.9637,3157.5783 c 0,0 5.0344,-6.2917 9.2641,-11.667 2.3208,-2.9493 1.6117,-8.6253 -1.9994,-11.8923 -2.6314,-2.3807 -72.4552,-73.2086 -72.4552,-73.2086",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MichelBizot-Daumesnil",
+            "d": "m 3506.7732,3060.8104 -66.9047,-69.6924",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Daumesnil-Montgallet",
+            "d": "M 3439.8685,2991.118 3335.3301,2889.3672",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Montgallet-ReuillyDiderot",
+            "d": "m 3335.3301,2889.3672 -99.8924,-102.2154",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ReuillyDiderot-FaidherbeChaligny",
+            "d": "m 3235.4377,2787.1518 -94.6172,-92.3739",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "FaidherbeChaligny-LedruRollin",
+            "d": "m 3140.8205,2694.7779 c 0,0 -18.9089,-21.3826 -29.6179,-30.0591 -5.6186,-4.5522 -10.4034,-7.4401 -20.2555,-7.7672 -11.9337,-0.3962 -78.1906,0.9782 -90.9897,0.3286 -5.4387,-0.2761 -10.8739,-3.1682 -14.7783,-6.9644 -8.6846,-8.444 -31.2983,-31.8194 -31.2983,-31.8194",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LedruRollin-Bastille",
+            "d": "m 2953.8808,2618.4964 -98.5267,-97.5643",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Bastille-CheminVert",
+            "d": "m 2855.3541,2520.9321 c 0,0 -10.1633,-9.2646 -14.126,-13.9386 -3.2855,-3.8752 -6.345,-10.0737 -6.9693,-13.9617 -0.7703,-4.7966 -1.0138,-87.6811 -1.0138,-87.6811",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CheminVert-StSebastienFroissart",
+            "d": "m 2833.245,2405.3507 0.1642,-112.0803",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "StSebastienFroissart-FillesDuCalvaire",
+            "d": "M 2833.4092,2293.2704 V 2177.6609",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "FillesDuCalvaire-Republique",
+            "d": "m 2833.4092,2177.6609 c 0,0 0.3728,-88.0113 0.3005,-98.5217 -0.029,-4.2217 0.7373,-8.6635 3.5147,-12.5399 4.7256,-6.595 23.2794,-24.0039 30.7025,-31.6599 2.7718,-2.8587 5.2097,-6.8339 4.51,-11.0614 -0.8403,-5.0771 -9.7851,-13.4787 -9.7851,-13.4787",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Republique-StrasbourgSaintDenis",
+            "d": "m 2862.6518,2010.3993 c 0,0 -65.7894,-64.3853 -72.3157,-70.7061 -4.0913,-3.9625 -8.3615,-6.3038 -15.3323,-7.5417 -8.9778,-1.5942 -176.6336,-0.085 -176.6336,-0.085",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "StrasbourgSaintDenis-BonneNouvelle",
+            "d": "m 2598.3702,1932.0665 -112.2445,-0.1127",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "BonneNouvelle-GrandsBoulevards",
+            "d": "m 2486.1257,1931.9538 -207.026,0.7698",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "GrandsBoulevards-RichelieuDrouot",
+            "d": "m 2279.0997,1932.7236 -155.8386,-0.028",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "RichelieuDrouot-Opera",
+            "d": "m 2123.2611,1932.6956 c 0,0 -134.7274,-0.7271 -157.1246,0.2207 -7.0231,0.2972 -12.6692,0.8843 -19.4527,8.1424 -6.1828,6.6156 -48.2966,48.5689 -48.2966,48.5689",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Opera-Madeleine",
+            "d": "m 1898.3872,1989.6276 c 0,0 -142.5003,144.8088 -145.122,147.0108 -2.0679,1.7368 -6.6345,5.8842 -18.3099,7.814 -9.0989,1.5039 -171.4081,-1.1815 -171.4081,-1.1815",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Madeleine-Concorde",
+            "d": "m 1563.5472,2143.2709 c 0,0 -14.7895,-0.062 -19.6301,0.9293 -3.4131,0.6991 -8.9195,4.7091 -9.2922,9.9892 -0.6378,9.0349 -0.567,123.8659 -0.8132,123.9362",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Concorde-Invalides",
+            "d": "m 1533.8117,2278.1256 c 0,0 0.4285,94.6268 0.3485,103.3769 -0.049,5.3866 -1.7424,10.9163 -5.9238,15.6808 -6.9826,7.9564 -57.7285,56.2185 -57.7285,56.2185",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Invalides-LaTourMaubourg",
+            "d": "m 1470.5079,2453.4018 -103.2608,103.9577",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LaTourMaubourg-EcoleMilitaire",
+            "d": "m 1367.2471,2557.3595 c 0,0 -93.2366,93.4808 -96.0592,96.5239 -3.4643,3.735 -7.2003,7.357 -7.6661,14.7514 -0.2495,3.9607 -0.3485,29.5032 -0.3485,29.5032",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "EcoleMilitaire-LaMottePicquetGrenelle",
+            "d": "m 1263.1733,2698.138 -0.4646,195.1385",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LaMottePicquetGrenelle-Commerce",
+            "d": "M 1262.7087,2893.2765 V 3049.62",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Commerce-FelixFaure",
+            "d": "m 1262.7087,3049.62 0.4646,116.7347",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "FelixFaure-Boucicaut",
+            "d": "m 1263.1733,3166.3547 c 0,0 0.2102,65.4702 0,69.3438 -0.3118,5.7464 0.8223,12.1943 -6.9693,19.5138 -5.0428,4.7373 -36.24,33.9169 -36.24,33.9169",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Boucicaut-Lourmel",
+            "d": "m 1219.964,3289.1292 -87.3477,89.2062",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Lourmel-Balard",
+            "d": "M 1132.6163,3378.3354 1020.644,3491.7016",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

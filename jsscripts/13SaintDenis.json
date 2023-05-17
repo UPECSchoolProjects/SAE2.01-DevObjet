@@ -1,0 +1,154 @@
+{
+    "troncons": [
+        {
+            "id": "ChatillonMontrouge-MalakoffRueEtienneDolet",
+            "d": "m 1363.4109,3894.4272 139.2979,-136.6696",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MalakoffRueEtienneDolet-MalakoffPlateauDeVanves",
+            "d": "m 1502.7088,3757.7576 72.9343,-73.5914",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MalakoffPlateauDeVanves-PorteDeVanves",
+            "d": "m 1575.6431,3684.1662 106.4446,-105.7875",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDeVanves-Plaisance",
+            "d": "m 1682.0877,3578.3787 116.9576,-116.3006",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Plaisance-Pernety",
+            "d": "m 1799.0453,3462.0781 95.2745,-97.2457",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Pernety-Gaite",
+            "d": "m 1894.3198,3364.8324 c 0,0 48.8515,-46.922 53.8794,-53.8794 3.6468,-5.0463 4.0424,-8.3706 4.4798,-12.9022 0.4786,-4.9581 0.1196,-29.2296 0.1196,-29.2296",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Gaite-MontparnasseBienvenue",
+            "d": "m 1952.7986,3268.8212 c 0,0 -0.7829,-147.7024 -2.2433,-153.488",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MontparnasseBienvenue-Duroc",
+            "d": "m 1950.5553,3115.3332 c -1.9674,-7.7936 -6.2185,-7.0782 -21.0398,-7.2608 -12.1841,-0.1501 -84.4991,1.1815 -103.2652,-0.4647 -6.2793,-0.5509 -11.6488,-3.4077 -16.6919,-8.8868 -5.2472,-5.7008 -140.612,-139.2979 -140.612,-139.2979",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Duroc-StFrancoisXavier",
+            "d": "M 1668.9464,2959.423 1533.5909,2822.4084",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "StFrancoisXavier-Varenne",
+            "d": "m 1533.5909,2822.4084 c 0,0 -50.8016,-48.4777 -54.5365,-52.2203 -4.6185,-4.6281 -8.2993,-11.196 -8.3824,-17.7339 -0.09,-7.0411 -0.7767,-133.1588 -0.7767,-133.1588",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Varenne-Invalides",
+            "d": "m 1469.8953,2619.2954 -0.04,-165.8128",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Invalides-ChampesElyseesClemenceau",
+            "d": "m 1469.8553,2453.4826 v -239.829",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ChampesElyseesClemenceau-Miromesnil",
+            "d": "m 1469.8553,2213.6536 c 0,0 0.2097,-121.3823 0.6571,-132.7272 0.2092,-5.3053 2.8064,-10.5088 5.9864,-14.7606 3.0116,-4.0266 132.6544,-134.3932 132.6544,-134.3932",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Miromesnil-SaintLazare",
+            "d": "m 1609.1532,1931.7726 c 0,0 143.3604,-140.8221 149.1539,-147.8398 2.7887,-3.378 5.338,-5.8928 6.7232,-10.0484 1.2467,-3.7401 1.1615,-12.2918 1.1615,-12.2918",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "SaintLazare-Liege",
+            "d": "m 1766.1918,1761.5926 0.6571,-244.4284",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Liege-PlaceDeClichy",
+            "d": "m 1766.8489,1517.1642 0.3519,-156.8063",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PlaceDeClichy-LaFourche",
+            "d": "m 1767.2008,1360.3579 -0.3519,-104.0487",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LaFourche-GuyMoquet",
+            "d": "m 1766.8164,1257.0171 -0.2322,-133.9253",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "GuyMoquet-PorteDeSaintOuen",
+            "d": "M 1766.5842,1123.0918 V 1003.221",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDeSaintOuen-Garibaldi",
+            "d": "m 1766.5842,1003.221 c 0,0 0.1354,-16.64633 1.0454,-20.21083 0.9927,-3.88812 4.5756,-8.15436 6.2723,-9.75692 5.8395,-5.51546 88.7415,-86.76694 88.7415,-86.76694",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Garibaldi-MairieDeSaintOuen",
+            "d": "m 1862.6434,886.48631 98.0339,-98.96309",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MairieDeSaintOuen-CarrefourPleyel",
+            "d": "M 1960.6773,787.52322 2067.5952,680.52074",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CarrefourPleyel-SaintDenisPorteDeParis",
+            "d": "m 2067.5952,680.52074 c 0,0 23.5219,-24.64802 29.5196,-29.09 5.9204,-4.38475 9.3251,-5.38041 17.5825,-5.61525 12.3543,-0.35136 157.2723,-0.46461 157.2723,-0.46461",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "SaintDenisPorteDeParis-BasiliqueSaintDenis",
+            "d": "m 2271.9696,645.35088 c 0,0 166.0498,0.2749 186.7754,0 7.5054,-0.0995 15.5767,-3.07892 20.9077,-8.36308 13.8977,-13.77567 123.1231,-122.65848 123.1231,-122.65848",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "BasiliqueSaintDenis-SaintDenisUniversite",
+            "d": "m 2602.7758,514.32932 52.9662,-53.89539 v 0 0 l -0.9292,1.85846",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

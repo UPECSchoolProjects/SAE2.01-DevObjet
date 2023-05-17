@@ -1,0 +1,40 @@
+{
+    "troncons": [
+        {
+            "id": "LaFourche-Brochant",
+            "d": "m 1766.8489,1256.3092 c 0,0 0.5355,-16.2371 -0.8894,-21.5635 -1.6338,-6.1071 -5.9035,-10.383 -9.6236,-13.918 -13.0763,-12.4258 -82.7903,-79.5049 -82.7903,-79.5049",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Brochant-PorteDeClichy",
+            "d": "m 1673.5456,1141.3228 -82.1332,-84.1044",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDeClichy-MairieDeClichy",
+            "d": "M 1591.4124,1057.2184 1433.7167,900.17973",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MairieDeClichy-GabrielPeri",
+            "d": "M 1433.7167,900.17973 1314.1308,780.59381",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "GabrielPeri-LesAgnettes",
+            "d": "M 1314.1308,780.59381 1246.453,712.91606",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LesAgnettes-LesCourtilles",
+            "d": "m 1246.453,712.91606 c 0,0 -13.5942,-14.4407 -18.3978,-20.36903 -2.663,-3.28656 -3.5728,-8.30696 -3.9026,-12.5241 -0.7242,-9.26193 -0.6969,-116.9178 -0.6969,-116.9178",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

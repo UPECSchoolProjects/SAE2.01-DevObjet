@@ -34,7 +34,7 @@ function GraphicCorrespondance({ correspondance }: { correspondance: GraphicCorr
         <path d={correspondance.d} fill='#FFF' stroke={correspondance.strokeColor} strokeWidth={correspondance.strokeWidth}>
             <title>{correspondance.displayName}</title>
         </path>
-        </>
+    </>
 }
 
 function renderTroncons(troncons: Troncons[], linesData: Map<String, linedata>): JSX.Element[] {
@@ -61,12 +61,15 @@ function renderTroncons(troncons: Troncons[], linesData: Map<String, linedata>):
 
         countedPerLine.set(troncon.line || "3", count + 1);
 
-        return <LinePath key={troncon.id} {...troncon} strokeColor={lineData?.strokeColor || "#FFF" } strokeWidth={lineData?.strokeWidth || "1"} delay={1500*count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={1500} />
-    
+        return <LinePath key={troncon.line + '-' + troncon.id} {...troncon} strokeColor={lineData?.strokeColor || "#FFF"} strokeWidth={lineData?.strokeWidth || "1"} delay={3000 * count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={3000} />
+
     })
 }
 
-
+type StationController = {
+    station: Station,
+    activated: boolean
+}
 
 function SvgComponent() {
     const [stations, setStations] = React.useState<Station[]>([]);
@@ -74,15 +77,15 @@ function SvgComponent() {
     const [troncons, setTroncons] = React.useState<Troncons[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
 
-    const lines = ["1","2","3", "3bis", "4", "5"]
+    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M13", "M14"]
 
     React.useEffect(() => {
-        getStations().then((data: {stations: Station[], correspondances: GraphicCorrespondance[]}) => {
+        getStations().then((data: { stations: Station[], correspondances: GraphicCorrespondance[] }) => {
             setStations(data.stations);
             setCorrespondances(data.correspondances);
 
             lines.forEach((line) => {
-                getTroncons(line).then((data: {linedata: linedata, troncons: Troncons[]}) => {
+                getTroncons(line).then((data: { linedata: linedata, troncons: Troncons[] }) => {
                     // add all troncons to troncons array
                     // add line attr to each troncons
                     data.troncons.forEach((troncon) => {
@@ -97,12 +100,12 @@ function SvgComponent() {
                         newLinesData.set(line, data.linedata);
                         return newLinesData;
                     });
-            }
-            )
+                }
+                )
+            });
         });
-        });
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     React.useEffect(() => {
@@ -112,6 +115,10 @@ function SvgComponent() {
     React.useEffect(() => {
         console.log(linesData);
     }, [linesData]);
+
+    React.useEffect(() => {
+        console.log(stations);
+    }, [stations]);
 
     return (
         <svg
@@ -132,12 +139,12 @@ function SvgComponent() {
                     </feMerge>
                 </filter>
             </defs>
-{/*            {lines.map((line) => 
+            {/*            {lines.map((line) => 
             <SvgLineComponent key={line} line={line} />
            )} */}
             <g id="troncons">
                 {stations && troncons && renderTroncons(troncons, linesData)}
-                
+
             </g>
             <g id="correspondances">
                 {correspondances && correspondances.map((correspondance) => (
@@ -147,7 +154,7 @@ function SvgComponent() {
             <g id="stations">
                 {stations && stations.map((station) => {
                     const lineData = linesData.get(station.line || "3")
-                    return <StopPoint key={station.id} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                    return <StopPoint key={station.line + "-" + station.id} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
                 })}
             </g>
         </svg>

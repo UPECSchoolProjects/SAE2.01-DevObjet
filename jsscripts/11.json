@@ -1,0 +1,76 @@
+{
+    "troncons": [
+        {
+            "id": "Chatelet-HotelDeVille",
+            "d": "m 2354.2066,2387.6589 c 0,0 113.7426,0.6761 124.5169,-0.4647 7.3038,-0.7733 11.2945,-4.4597 16.0293,-8.1307 6.9359,-5.3774 32.2907,-29.9677 32.2907,-29.9677",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "HotelDeVille-Rambuteau",
+            "d": "m 2527.0435,2349.0958 108.2554,-108.2554",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Rambuteau-ArtsEtMetiers",
+            "d": "M 2635.2989,2240.8404 2752.382,2123.2927",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ArtsEtMetiers-Republique",
+            "d": "m 2752.382,2123.2927 138.92,-137.0616",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Republique-Goncourt",
+            "d": "m 2891.302,1986.2311 119.1435,-122.0658",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Goncourt-Belleville",
+            "d": "m 3010.4455,1864.1653 106.6597,-106.9896",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Belleville-Pyrenees",
+            "d": "m 3117.1052,1757.1757 c 0,0 51.2732,-50.6305 56.6831,-56.2185 3.9048,-4.0335 9.7357,-6.5282 15.3323,-6.9692 9.0946,-0.7166 66.6418,-0.4646 66.6418,-0.4646",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Pyrenees-Jourdain",
+            "d": "m 3255.7624,1693.5234 h 165.6659",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Jourdain-PlaceDesFetes",
+            "d": "m 3421.4283,1693.5234 139.8493,-0.4646",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PlaceDesFetes-Telegraphe",
+            "d": "m 3561.2776,1693.0588 137.9907,1.3938",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Telegraphe-PorteDesLilas",
+            "d": "m 3699.2683,1694.4526 c 0,0 60.4095,-0.2677 72.0154,-1.8585 4.9411,-0.6773 9.6848,-3.2619 13.4739,-6.5046 4.306,-3.6851 9.1761,-7.8984 9.1761,-7.8984",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteDesLilas-MairieDesLilas",
+            "d": "m 3793.9337,1678.1911 114.8762,-114.2954",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

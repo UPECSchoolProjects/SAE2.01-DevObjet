@@ -1,139 +1,186 @@
+
+
 const input = `
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1116.6828,2790.3929 c 0,0 100.9363,101.8259 107.334,107.8151 6.4063,5.9973 10.4759,7.1537 16.0301,7.6642 8.8789,0.816 25.0963,0.2323 25.0963,0.2323"
-id="path6374"
-inkscape:label="LaMottePicquet-Dupleix" />
+d="m 529.19705,3512.4929 -67.83386,68.7631"
+id="path1718"
+inkscape:label="Billancourt-PontDeSevres" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1126.2279,1899.348 c 0,0 8.5816,6.6943 10.437,13.1667 0.3329,1.1614 0.4191,4.1715 -0.4743,6.3289 -2.7067,6.5363 -116.9178,120.852 -116.9178,120.852"
-id="path8389"
-inkscape:label="Kleber-CDGEtoile" />
+d="m 598.88937,3444.1945 -69.69232,68.2984"
+id="path1716"
+inkscape:label="MarcelSembat-Billancourt" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="M 1019.2728,2039.6956 891.92997,2165.8521"
-id="path6398"
-inkscape:label="Boissiere-Kleber" />
+d="m 665.91015,3355.6852 c 0,0 0.39272,9.5905 -0.81308,14.4031 -1.24908,4.9853 -2.43422,9.1147 -5.80769,13.4739 -10.55066,13.6336 -60.40001,60.6323 -60.40001,60.6323"
+id="path1712"
+inkscape:label="PorteDeStCloud-MarcelSembat" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 891.92997,2165.8521 c 0,0 -6.58183,6.4255 -10.80514,13.6341 -1.68792,2.8811 -1.79042,9.856 -1.79042,9.856 -0.9156,5.0402 0.75006,104.3639 0.31202,156.5459"
-id="path6393"
-inkscape:label="Trocadero-Boissiere" />
+d="m 665.79399,3253.7021 0.11616,101.9831"
+id="path1708"
+inkscape:label="Exelmans-PorteDeStCloud" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 879.64643,2345.8881 c 0,0 -0.01,184.1009 0.48455,193.0329 0.34038,6.1527 -0.94627,12.4266 3.29358,17.5566 5.60742,6.7847 9.94869,10.4415 9.94869,10.4415"
-id="path6388"
-inkscape:label="Passy-Trocadero" />
+d="m 665.89605,3140.9257 -0.10206,112.7764"
+id="path1706"
+inkscape:label="MichelAngeMolitor-Exelmans" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 893.37325,2566.9191 120.15025,119.1646"
-id="path6383"
-inkscape:label="BirHakeim-Passy" />
+d="m 665.77989,3028.7832 0.11616,112.1425"
+id="path1704"
+inkscape:label="MichelAngleAuteuil-MichelAngeMolitor" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1013.5235,2686.0837 103.1593,104.3092"
-id="path6378"
-inkscape:label="Dupleix-BirHakeim" />
+d="m 665.76339,2863.2791 0.0165,165.5041"
+id="path1702"
+inkscape:label="Jasmin-MichelAngleAuteuil" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1265.1432,2906.1045 c -0.2335,0.2759 97.4688,-1.7782 133.4207,-0.068 5.5373,0.2634 10.5637,0.978 14.5599,4.8201 18.5125,17.7988 49.3033,49.5356 49.3033,49.5356"
-id="path6369"
-inkscape:label="Cambronne-LaMottePicquet" />
+d="m 665.78329,2697.5426 -0.0199,165.7365"
+id="path1700"
+inkscape:label="Ranelagh-Jasmin" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1462.4271,2960.3922 105.6033,105.8954"
-id="path6364"
-inkscape:label="SevresLecourbe-Cambronne" />
+d="m 665.97573,2526.6657 -0.19244,170.8769"
+id="path1696"
+inkscape:label="LaMuette-Ranelagh" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1568.0304,3066.2876 c 0,0 47.7308,48.2107 57.2211,56.7448 4.3536,3.915 10.1672,6.3786 15.9338,7.392 9.726,1.7092 81.6404,0.1642 81.6404,0.1642"
-id="path6359"
-inkscape:label="Pasteur-SevresLecourbe" />
+d="m 703.40854,2344.9705 c 0,0 -19.13468,-0.4334 -27.67305,0.1327 -4.32675,0.2869 -9.02564,4.7157 -9.35493,9.0395 -0.57096,7.4971 -0.40483,172.523 -0.40483,172.523"
+id="path1692"
+inkscape:label="RueDeLaPompe-LaMuette" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="M 1722.8257,3130.5886 H 1930.787"
-id="path6354"
-inkscape:label="Montparnasse-Pasteur" />
+d="m 878.8251,2344.4097 -175.41656,0.5608"
+id="path1690"
+inkscape:label="Trocadero-RueDeLaPompe" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1930.787,3130.5886 91.4201,-0.3003"
-id="path6349"
-inkscape:label="EdgarQuinet-Montparnasse" />
+d="m 1056.5613,2344.7382 -177.7362,-0.3285"
+id="path1686"
+inkscape:label="Iena-Trocadero" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2022.2071,3130.2883 c 0,0 96.3451,-0.842 116.8978,0.921 6.5761,0.5641 13.2163,2.7669 18.6982,6.4428 14.1494,9.488 36.3029,35.6258 36.3029,35.6258"
-id="path6344"
-inkscape:label="Raspail-EdgarQuinet" />
+d="m 1242.8394,2271.4754 -64.9698,63.6357 c -2.2517,2.2055 -8.225,9.2424 -14.2528,9.5109 -4.6811,0.2085 -72.7642,0.078 -107.0555,0.1162"
+id="path1682"
+inkscape:label="AlmaMarceau-Iena" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2194.106,3173.2779 79.0121,78.5393"
-id="path6339"
-inkscape:label="DenfertRochereau-Raspail" />
+d="m 1382.7943,2129.8778 -139.9549,141.5976"
+id="path1680"
+inkscape:label="FranklinDRoosevelt-AlmaMarceau" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2273.1181,3251.8172 76.7124,79.0122"
-id="path6334"
-inkscape:label="StJacques-DenfertRochereau" />
+d="m 1514.536,1998.4647 -131.7417,131.4131"
+id="path1678"
+inkscape:label="StPhilippeDuRoule-FranklinDRoosevelt" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2349.8305,3330.8294 c 0,0 32.2382,32.4058 49.7727,49.6084 4.7397,4.65 11.9227,7.1504 18.5621,7.2277 14.6171,0.1703 41.3951,-0.3285 41.3951,-0.3285"
-id="path6329"
-inkscape:label="Glaciere-StJacques" />
+d="m 1594.3694,1918.6312 -79.8334,79.8335"
+id="path1676"
+inkscape:label="Miromesnil-StPhilippeDuRoule" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2459.5604,3387.337 131.4131,-0.1643"
-id="path6324"
-inkscape:label="Corvisart-Glaciere" />
+d="m 1661.7949,1850.5851 -67.4255,68.0461"
+id="path1672"
+inkscape:label="StAugustin-Miromesnil" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2590.9735,3387.1727 111.2083,-0.3285"
-id="path6315"
-inkscape:label="PlaceItalie-Corvisart" />
+d="m 1819.0857,1912.7058 c 0,0 -13.5024,-0.4875 -19.9641,-0.5009 -8.7109,-0.018 -8.7065,0.097 -15.7462,-5.8703 -3.2088,-2.7199 -76.953,-77.1697 -82.302,-82.2543 -3.2516,-3.0909 -10.1368,-2.8147 -13.4571,0.2022 -3.8303,3.4803 -25.8214,26.3026 -25.8214,26.3026"
+id="path1668"
+inkscape:label="HavreCaumartin-StAugustin" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2702.1818,3386.8442 h 136.8339"
-id="path6310"
-inkscape:label="Nationale-PlaceItalie" />
+d="m 2003.5381,1912.7057 -184.4524,10e-5"
+id="path1664"
+inkscape:label="ChausseeAntinLaFayette-HavreCaumartin" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2839.0157,3386.8442 h 132.8915"
-id="path6305"
-inkscape:label="Chevaleret-Nationale" />
+d="m 2124.2219,1912.9381 -120.6838,-0.2324"
+id="path1662"
+inkscape:label="RichelieuDrouot-ChausseeAntinLaFayette" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2971.9072,3386.8442 c 0,0 43.3963,1.1743 66.576,-0.9433 5.5792,-0.5097 12.1095,-1.6871 16.1662,-5.5511 19.3152,-18.3974 54.3454,-55.004 54.913,-54.777"
-id="path6296"
-inkscape:label="QuaiDeLaGare-Cheveleret" />
+d="m 2278.8227,1913.0542 -154.6008,-0.1161"
+id="path1660"
+inkscape:label="GrandsBoulevards-RichelieuDrouot" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3109.5624,3325.5728 142.5833,-143.733"
-id="path6298"
-inkscape:label="Bercy-QuaiDeLaGare" />
+d="m 2487.6673,1913.1703 -208.8446,-0.1161"
+id="path1658"
+inkscape:label="BonneNouvelle-GrandsBoulevards" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3252.1457,3181.8398 88.8681,-88.5396"
-id="path6287"
-inkscape:label="Dugommier-Bercy" />
+d="m 2598.9427,1913.4027 -111.2754,-0.2324"
+id="path1652"
+inkscape:label="StrasbourgSaintDenis-BonneNouvelle" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3341.0138,3093.3002 99.0555,-98.3324"
-id="path6282"
-inkscape:label="Daumesnil-Dugommier" />
+d="m 2877.3635,1996.2203 c 0,0 -74.5951,-74.3682 -78.1714,-77.3585 -4.4848,-3.7498 -9.2862,-5.5445 -15.1001,-6.1561 -8.4395,-0.8877 -185.1493,0.697 -185.1493,0.697"
+id="path1648"
+inkscape:label="Republique-StrasbourgSaintDenis" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3440.0693,2994.9678 c 35.251,-35.251 53.8578,-53.3651 81.1152,-80.6225"
-id="path6277"
-inkscape:label="BelAir-Daumesnil" />
+d="m 2960.1813,2078.9219 -82.8178,-82.7016"
+id="path1644"
+inkscape:label="Oberkampf-Republique" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3521.1845,2914.3453 75.8684,-79.2616"
-id="path6271"
-inkscape:label="Picpus-BelAir" />
+d="M 3163.1021,2282.1912 2960.1813,2078.9219"
+id="path1640"
+inkscape:label="StAmbroise-Oberkampf" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3597.0529,2835.0837 c 0,0 5.7216,-4.8195 6.2943,-8.2236 1.047,-6.2241 -3.2853,-10.0202 -3.2853,-10.0202 l -139.1337,-137.491 h 0.1643 v 0"
-id="path6267"
-inkscape:label="Nation-Picpus" />
+d="m 3244.8744,2363.9635 -81.7723,-81.7723"
+id="path1638"
+inkscape:label="Voltaire-StAmbroise" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3316.5414,2436.3273 -71.667,-72.3638"
+id="path1636"
+inkscape:label="Charonne-Voltaire" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3392.1575,2510.8981 -75.6161,-74.5708"
+id="path1632"
+inkscape:label="RueDesBoulets-Charonne" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="M 3510.1699,2629.2589 3392.1575,2510.8981"
+id="path2283"
+inkscape:label="Nation-RueDesBoulets" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3619.5868,2564.4451 c 0,0 -74.6499,76.181 -80.1462,80.03 -4.0655,2.847 -11.1819,2.511 -14.8677,-0.8131 -5.1995,-4.6893 -14.403,-14.4031 -14.403,-14.4031"
+id="path1628"
+inkscape:label="Buzenval-Nation" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3678.8253,2505.0904 -59.2385,59.3547"
+id="path1626"
+inkscape:label="Maraichers-Buzenval" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3739.5737,2445.1551 -60.7484,59.9353"
+id="path1624"
+inkscape:label="PorteDeMontreuil-Maraichers" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3796.2568,2387.3105 -56.6831,57.8446"
+id="path1622"
+inkscape:label="Robespierre-PorteDeMontreuil" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3855.1469,2328.6527 -58.8901,58.6578"
+id="path1620"
+inkscape:label="CroixDeChavaux-Robespierre" />
+<path
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 3913.5722,2269.5304 -58.4253,59.1223"
+id="path8483"
+inkscape:label="MairieDeMontreil-CroixDeChavaux" />
 `;
 
 const lines = input.split('<path');
@@ -141,8 +188,13 @@ const troncons = [];
 
 lines.forEach(line => {
     if (line.trim() !== '') {
-        const id = line.match(/inkscape:label="([^"]+)"/)[1];
+        let id = line.match(/inkscape:label="([^"]+)"/)[1];
         const d = line.match(/d="([^"]+)"/)[1];
+
+        // reverse id order 
+        // id = id.split('-').reverse().join('-');
+
+
 
         const troncon = {
             id,
@@ -159,6 +211,25 @@ lines.forEach(line => {
 // reverse the order of the troncons
 troncons.reverse();
 
+
+// check that the for each troncon, the end station is the same as the begin station of the next troncon
+for (let i = 0; i < troncons.length - 1; i++) {
+
+    const troncon = troncons[i];
+    const nextTroncon = troncons[i + 1];
+
+    const tronconEndStation = troncon.id.split('-')[1];
+    const nextTronconBeginStation = nextTroncon.id.split('-')[0];
+
+    if (tronconEndStation !== nextTronconBeginStation) {
+        console.log(troncon.id, nextTroncon.id);
+        console.log('error');
+        // exit
+        process.exit(1);
+    }
+}
+
+
 const output = {
     troncons
 };
@@ -168,4 +239,4 @@ const fs = require('fs');
 console.log(JSON.stringify(output, null, 4));
 
 // write the output to a file
-fs.writeFileSync('5.json', JSON.stringify(output, null, 4));
+fs.writeFileSync('9Corr.json', JSON.stringify(output, null, 4));

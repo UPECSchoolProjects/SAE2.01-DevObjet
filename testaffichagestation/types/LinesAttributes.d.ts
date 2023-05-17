@@ -13,7 +13,7 @@ export type Station = {
     displayName: string,
     line: string,
     position: point,
-    displayType: "normal" | "correspTerminus"
+    displayType: "normal" | "correspTerminus" | "correspondanceSimple"
 }
 
 export type Troncons = {
@@ -51,5 +51,6 @@ export type StopPointData = {
 };
 
 
-export interface pathAttr { id: string, d: string };
+export interface pathAttr { id: string, d: string }
+
 export type point = { x: number, y: number };

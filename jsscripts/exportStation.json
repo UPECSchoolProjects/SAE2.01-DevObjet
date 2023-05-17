@@ -1,301 +1,61 @@
 [
     {
-        "id": 66,
+        "id": 36,
         "idfmId": "",
-        "idName": "station-ChateauVincennes",
-        "displayName": "Château de Vincennes",
-        "line": "1",
+        "idName": "station-BoulogneJeanJaures",
+        "displayName": "Boulogne - Jean Jaurès",
+        "line": "M10",
         "position": {
-            "x": 3914,
-            "y": 2897
+            "x": 465,
+            "y": 3170
         },
         "displayType": "normal"
     },
     {
-        "id": 43,
+        "id": 198,
         "idfmId": "",
-        "idName": "station-Berault",
-        "displayName": "Bérault",
-        "line": "1",
+        "idName": "station-MichelAngleMolitor",
+        "displayName": "Michel-Ange - Molitor",
+        "line": "M10",
         "position": {
-            "x": 3880,
-            "y": 2862
+            "x": 666,
+            "y": 3141
         },
         "displayType": "normal"
     },
     {
-        "id": 328,
+        "id": 52,
         "idfmId": "",
-        "idName": "station-StMande",
-        "displayName": "Saint-Mandé",
-        "line": "1",
+        "idName": "station-ChardonLagache",
+        "displayName": "Chardon-Lagache",
+        "line": "M10",
         "position": {
-            "x": 3787,
-            "y": 2769
+            "x": 738,
+            "y": 3141
         },
         "displayType": "normal"
     },
     {
-        "id": 275,
+        "id": 201,
         "idfmId": "",
-        "idName": "station-PteVincennes",
-        "displayName": "Porte de Vincennes",
-        "line": "1",
+        "idName": "station-Mirabeau",
+        "displayName": "Mirabeau",
+        "line": "M10",
         "position": {
-            "x": 3661,
-            "y": 2698
+            "x": 846,
+            "y": 3096
         },
         "displayType": "normal"
     },
     {
-        "id": 212,
+        "id": 145,
         "idfmId": "",
-        "idName": "station-Nation",
-        "displayName": "",
-        "line": "1",
+        "idName": "station-JavelAndreCitroen",
+        "displayName": "Javel - André Citroën",
+        "line": "M10",
         "position": {
-            "x": 3475,
-            "y": 2662
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 295,
-        "idfmId": "",
-        "idName": "station-ReuillyDiderot",
-        "displayName": "Reuilly - Diderot",
-        "line": "1",
-        "position": {
-            "x": 3235,
-            "y": 2788
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 119,
-        "idfmId": "",
-        "idName": "station-GareDeLyon",
-        "displayName": "Gare de Lyon",
-        "line": "1",
-        "position": {
-            "x": 3061,
-            "y": 2882
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 16,
-        "idfmId": "",
-        "idName": "station-Bastille",
-        "displayName": "",
-        "line": "1",
-        "position": {
-            "x": 2855,
-            "y": 2550
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 331,
-        "idfmId": "",
-        "idName": "station-StPaul",
-        "displayName": "Saint-Paul Le Marais",
-        "line": "1",
-        "position": {
-            "x": 2670,
-            "y": 2491
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 135,
-        "idfmId": "",
-        "idName": "station-HotelDeVille",
-        "displayName": "Hôtel de Ville",
-        "line": "1",
-        "position": {
-            "x": 2526,
-            "y": 2349
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 67,
-        "idfmId": "",
-        "idName": "station-Chatelet",
-        "displayName": "Châtelet",
-        "line": "1",
-        "position": {
-            "x": 2353,
-            "y": 2345
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 173,
-        "idfmId": "",
-        "idName": "station-LouvreRivoli",
-        "displayName": "Louvre - Rivoli",
-        "line": "1",
-        "position": {
-            "x": 2043,
-            "y": 2344
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 227,
-        "idfmId": "",
-        "idName": "station-PalaisRoyalMuseeLouvre",
-        "displayName": "Palais-Royal - Musée du Louvre",
-        "line": "1",
-        "position": {
-            "x": 1902,
-            "y": 2345
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 356,
-        "idfmId": "",
-        "idName": "station-Tuileries",
-        "displayName": "Tuileries",
-        "line": "1",
-        "position": {
-            "x": 1729,
-            "y": 2345
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 77,
-        "idfmId": "",
-        "idName": "station-Concorde",
-        "displayName": "Concorde",
-        "line": "1",
-        "position": {
-            "x": 1555,
-            "y": 2300
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 50,
-        "idfmId": "",
-        "idName": "station-ChampsElyseesClemenceau",
-        "displayName": "Champs-Élysées - Clemenceau",
-        "line": "1",
-        "position": {
-            "x": 1471,
-            "y": 2215
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 109,
-        "idfmId": "",
-        "idName": "station-FranklinDRoosevelt",
-        "displayName": "Franklin D. Roosevelt",
-        "line": "1",
-        "position": {
-            "x": 1384,
-            "y": 2128
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 127,
-        "idfmId": "",
-        "idName": "station-GeorgeV",
-        "displayName": "George V",
-        "line": "1",
-        "position": {
-            "x": 1264,
-            "y": 2008
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 55,
-        "idfmId": "",
-        "idName": "station-CDGEtoile",
-        "displayName": "Charles de Gaulle - Étoile",
-        "line": "1",
-        "position": {
-            "x": 1141,
-            "y": 1885
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 6,
-        "idfmId": "",
-        "idName": "station-Argentine",
-        "displayName": "Argentine",
-        "line": "1",
-        "position": {
-            "x": 1040,
-            "y": 1784
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 258,
-        "idfmId": "",
-        "idName": "station-PorteMaillot",
-        "displayName": "Porte Maillot",
-        "line": "1",
-        "position": {
-            "x": 912,
-            "y": 1656
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 166,
-        "idfmId": "",
-        "idName": "station-LesSablons",
-        "displayName": "Les Sablons",
-        "line": "1",
-        "position": {
-            "x": 822,
-            "y": 1565
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 252,
-        "idfmId": "",
-        "idName": "station-PontDeNeuilly",
-        "displayName": "Pont de Neuilly",
-        "line": "1",
-        "position": {
-            "x": 741,
-            "y": 1485
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 102,
-        "idfmId": "",
-        "idName": "station-EsplanadeLaDefense",
-        "displayName": "Esplanade de la Défense",
-        "line": "1",
-        "position": {
-            "x": 661,
-            "y": 1405
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 130,
-        "idfmId": "",
-        "idName": "station-LaDefense",
-        "displayName": "La Défense Grande Arche",
-        "line": "1",
-        "position": {
-            "x": 586,
-            "y": 1329
+            "x": 976,
+            "y": 3028
         },
         "displayType": "normal"
     }

@@ -1,0 +1,140 @@
+{
+    "linedata": {
+        "strokeColor": "#f4b300",
+        "strokeWidth": "4"
+    },
+    "troncons": [
+        {
+            "id": "Austerlitz-Jussieu",
+            "d": "m 2838.5229,3047.4698 c 0,0 -125.4508,-126.3849 -129.6742,-129.9464 -4.2318,-3.5687 -9.304,-5.4966 -15.4905,-5.9865 -8.1013,-0.6414 -84.1511,-0.08 -84.1511,-0.08",
+            "beginStation": 117,
+            "endStation": 148
+        },
+        {
+            "id": "Jussieu-CardinalLemoine",
+            "d": "m 2609.2071,2911.4569 c 0,0 -51.9513,-0.2766 -79.5049,-0.6571 -6.7434,-0.093 -13.5326,-3.5561 -18.5622,-8.049 -8.2889,-7.4043 -25.4613,-26.2827 -25.4613,-26.2827",
+            "beginStation": 148,
+            "endStation": 47
+        },
+        {
+            "id": "CardinalLemoine-MaubertMutualité",
+            "d": "m 2485.6787,2876.4681 -76.0552,-75.5625",
+            "beginStation": 47,
+            "endStation": 195
+        },
+        {
+            "id": "MaubertMutualité-ClunyLaSorbonne",
+            "d": "m 2409.6235,2800.9056 c 0,0 -65.3193,-64.5763 -68.2528,-67.5956 -3.2819,-3.3779 -6.6246,-4.3625 -13.3877,-4.5173 -1.4058,-0.032 -17.0837,0 -17.0837,0",
+            "beginStation": 195,
+            "endStation": 74
+        },
+        {
+            "id": "ClunyLaSorbonne-Odeon",
+            "d": "M 2310.8993,2728.7927 H 2197.8841",
+            "beginStation": 74,
+            "endStation": 221
+        },
+        {
+            "id": "Odeon-Mabillon",
+            "d": "m 2197.8841,2728.7927 -131.4131,0.6571",
+            "beginStation": 221,
+            "endStation": 174
+        },
+        {
+            "id": "Mabillon-SevresBabylone",
+            "d": "m 2066.471,2729.4498 c 0,0 -125.3383,-1.4706 -156.3816,-0.6571 -8.6366,0.2263 -16.0621,7.206 -22.3402,13.1413 -6.3983,6.0489 -41.3845,41.3845 -41.3845,41.3845",
+            "beginStation": 174,
+            "endStation": 346
+        },
+        {
+            "id": "SevresBabylone-Vaneau",
+            "d": "m 1846.3647,2783.3185 -88.0574,89.3715",
+            "beginStation": 346,
+            "endStation": 358
+        },
+        {
+            "id": "Vaneau-Duroc",
+            "d": "m 1758.3073,2872.69 -88.0468,87.3898",
+            "beginStation": 358,
+            "endStation": 99
+        },
+        {
+            "id": "Duroc-Segur",
+            "d": "m 1670.2605,2960.0798 c 0,0 -56.8126,55.8835 -82.7903,80.1619 -3.524,3.2935 -10.7893,3.7916 -14.4554,0.6571 -13.2457,-11.3249 -45.9946,-45.9946 -45.9946,-45.9946",
+            "beginStation": 99,
+            "endStation": 349
+        },
+        {
+            "id": "Segur-LaMottePicquetGrenelle",
+            "d": "m 1527.0202,2994.9042 c 0,0 -95.2836,-96.7156 -105.7875,-105.1305 -4.3243,-3.4643 -10.2301,-5.378 -15.7696,-5.2565 -19.5358,0.4285 -141.9262,0.6571 -141.9262,0.6571",
+            "beginStation": 349,
+            "endStation": 154
+        },
+        {
+            "id": "LaMottePicquetGrenelle-AvenueEmileZola",
+            "d": "m 1263.5369,2885.1743 c 0,0 -29.7822,0.2674 -40.8508,0.08 -6.2012,-0.1051 -13.4619,3.4972 -18.2054,7.493 -8.3159,7.0054 -37.5324,37.1077 -37.5324,37.1077",
+            "beginStation": 154,
+            "endStation": 11
+        },
+        {
+            "id": "AvenueEmileZola-CharlesMichels",
+            "d": "m 1166.9483,2929.855 -68.3348,67.6778",
+            "beginStation": 11,
+            "endStation": 54
+        },
+        {
+            "id": "CharlesMichels-JavelAndreCitroen",
+            "d": "m 1098.6135,2997.5328 c 0,0 -15.3711,16.0765 -25.3932,24.7362 -5.1937,4.4876 -13.1006,5.0479 -19.8577,5.449 -10.7932,0.6407 -78.35713,0.2721 -78.35713,0.2721",
+            "beginStation": 54,
+            "endStation": 145
+        },
+        {
+            "id": "JavelAndreCitroen-MichelAngleAuteuil",
+            "d": "m 975.00547,3027.9901 -179.95622,-0.2323 h -129.4419",
+            "beginStation": 145,
+            "endStation": 196
+        },
+        {
+            "id": "MichelAngleAuteuil-PorteDAuteuil",
+            "d": "m 665.60735,3027.7578 c 0,0 -31.74575,0.2525 -45.99459,0.6571 -9.04964,0.257 -18.25671,5.0321 -24.6166,11.4752 -16.03956,16.2494 -50.94593,51.603 -50.94593,51.603",
+            "beginStation": 196,
+            "endStation": 259
+        },
+        {
+            "id": "PorteDAuteuil-BoulogneJeanJaures",
+            "d": "m 544.05023,3091.4931 -79.50493,78.8061",
+            "beginStation": 259,
+            "endStation": 36
+        },
+        {
+            "id": "BoulogneJeanJaures-BoulognePontDeStCloud",
+            "d": "m 464.5453,3170.2992 -79.50492,79.5467",
+            "beginStation": 36,
+            "endStation": 37
+        },
+        {
+            "id": "BoulogneJeanJaures-MichelAngleMolitor",
+            "d": "m 465.57679,3170.3886 200.68179,-29.1234",
+            "beginStation": 36,
+            "endStation": 198
+        },
+        {
+            "id": "MichelAngleMolitor-ChardonLagache",
+            "d": "m 666.25858,3141.2652 c 0,0 37.5756,0.071 72.45353,0.096",
+            "beginStation": 198,
+            "endStation": 52
+        },
+        {
+            "id": "ChardonLagache-Mirabeau",
+            "d": "m 738.71211,3141.3612 c 28.43831,0.02 55.08315,0.01 58.10342,-0.096 5.95291,-0.2078 11.29272,-4.2866 16.02923,-7.8985 3.73769,-2.8502 16.43499,-16.5642 33.89416,-36.5836",
+            "beginStation": 52,
+            "endStation": 201
+        },
+        {
+            "id": "Mirabeau-JavelAndreCitroen",
+            "d": "m 846.73892,3096.7831 c 18.44484,-21.1496 129.35795,-68.5347 129.35795,-68.5347",
+            "beginStation": 201,
+            "endStation": 145
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "troncons": [
+        {
+            "id": "MaisonBlanche-LeKremlinBicetre",
+            "d": "m 2679.3489,3557.5169 0.3285,107.5944",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LeKremlinBicetre-VillejuifLeoLagrande",
+            "d": "m 2679.6774,3665.1113 -0.8214,91.3321",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "VillejuifLeoLagrande-VillejuifPaulVaillantCouturier",
+            "d": "m 2678.856,3756.4434 0.1643,91.1679",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "VillejuifPaulVaillantCouturier-VillejuifLouisAragon",
+            "d": "m 2679.0203,3847.6113 0.4928,91.0035",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

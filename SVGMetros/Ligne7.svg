@@ -86,8 +86,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="2.6687159"
-     inkscape:cx="3033.294"
-     inkscape:cy="3669.7424"
+     inkscape:cx="2648.8395"
+     inkscape:cy="3618.7816"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="1341"
@@ -127,12 +127,13 @@
        id="path1103"
        inkscape:label="PorteDItalie-PorteDeChoisy" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 2795.9779,3633.2436 c 0,0 -36.1485,1.4411 -48.13,-1.4784 -6.9267,-1.6877 -13.4474,-4.3387 -17.9051,-8.3775 -11.8066,-10.6971 -31.491,-29.1515 -44.1876,-42.545 -5.3161,-5.6079 -6.4063,-23.6543 -6.4063,-23.6543"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 2795.9779,3633.2436 c 0,0 -11.6243,0.4634 -23.8741,0.3323 -9.3521,-0.1001 -19.0688,-0.5468 -24.2559,-1.8107 -6.9267,-1.6878 -13.4474,-4.3387 -17.9051,-8.3775 -11.8066,-10.6971 -31.491,-29.1515 -44.1876,-42.545 -5.3161,-5.6079 -6.4063,-23.6543 -6.4063,-23.6543"
        id="path1097"
-       inkscape:label="MaisonBlanche-PorteDItalite" />
+       inkscape:label="MaisonBlanche-PorteDItalite"
+       sodipodi:nodetypes="cssssc" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 2679.0203,3847.6113 0.4928,91.0035"
        id="path1092"
        inkscape:label="VillejuifPaulVaillantCouturier-VillejuifLouisAragon" />
@@ -282,14 +283,15 @@
        id="path967"
        inkscape:label="AubervilliersPantinQuatreChemins-PortedeLaVillette" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3337.5642,993.81156 c 0,0 89.5666,-88.15955 98.067,-97.24569 4.216,-4.50657 5.8159,-10.89732 6.735,-15.11251 1.8516,-8.49152 1.3141,-21.68316 1.3141,-21.68316"
        id="path956"
        inkscape:label="FortAubervilliers-AubervilliersPantinQuatreChemins" />
     <path
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 3443.6803,859.7702 -0.3285,-124.51391 v 0 0.65707 -0.32854"
+       d="m 3443.6803,859.7702 0.4209,-123.38977"
        id="path950"
-       inkscape:label="LaCourneuve8Mai1945-FortAubervilliers" />
+       inkscape:label="LaCourneuve8Mai1945-FortAubervilliers"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

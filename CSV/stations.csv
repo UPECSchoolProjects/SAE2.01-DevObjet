@@ -23,7 +23,7 @@ id;ligne;terminus;nom
 21;2;0;Belleville
 22;14;0;Bercy
 23;6;0;Bercy
-24;14;1;Bibliothèque_François_Mitterand
+24;14;0;Bibliothèque_François_Mitterand
 25;9;0;Billancourt
 26;6;0;Bir-Hakeim
 27;2;0;Blanche
@@ -175,7 +175,7 @@ id;ligne;terminus;nom
 173;1;0;Louvre,_Rivoli
 174;10;0;Mabillon
 175;12;0;Madeleine
-176;14;1;Madeleine
+176;14;0;Madeleine
 177;8;0;Madeleine
 178;12;1;Mairie_d'Issy
 179;7;1;Mairie_d'Ivry
@@ -275,7 +275,7 @@ id;ligne;terminus;nom
 273;13;0;Porte_de_Vanves
 274;12;0;Porte_de_Versailles
 275;1;0;Porte_de_Vincennes
-276;12;1;Porte_de_la_Chapelle
+276;12;0;Porte_de_la_Chapelle
 277;7;0;Porte_de_la_Villette
 278;11;0;Porte_des_Lilas
 279;3b;1;Porte_des_Lilas
@@ -375,6 +375,18 @@ id;ligne;terminus;nom
 373;10;0;Église_d'Auteuil
 374;5;0;Église_de_Pantin
 375;4;0;Étienne_Marcel
-376;4;0;Mairie_de_Montrouge
+376;4;1;Mairie_de_Montrouge
 377;4;0;Barbara
 378;4;0;Bagneux_lucie_aubrac
+379;14;1;Mairie_de_saint_ouen
+380;14;0;Saint_ouen
+381;14;0;Porte_de_Clichy
+382;14;0;Pont_Cardinet
+383;14;0;Saint-Lazare
+384;14;0;Olympiades
+385;13;0;Les_Agnettes
+386;13;1;Les_courtilles
+387;12;0;Front_populaire
+388;12;0;Aime_Cesaire
+389;12;1;Mairie_d'Aubervilliers
+390;8;1;Creteil-Pointe_du_lac

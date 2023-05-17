@@ -86,8 +86,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.5540715"
-     inkscape:cx="470.37732"
-     inkscape:cy="3362.4579"
+     inkscape:cx="3422.6224"
+     inkscape:cy="2437.1466"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="1341"
@@ -240,7 +240,7 @@
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3244.8744,2363.9635 -81.7723,-81.7723"
        id="path1638"
-       inkscape:label="Charonne-StAmbroise" />
+       inkscape:label="Voltaire-StAmbroise" />
     <path
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3316.5414,2436.3273 -71.667,-72.3638"
@@ -253,9 +253,14 @@
        inkscape:label="RueDesBoulets-Charonne" />
     <path
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-       d="m 3619.5868,2564.4451 c 0,0 -74.6499,76.181 -80.1462,80.03 -4.0655,2.847 -11.1819,2.511 -14.8677,-0.8131 -5.1995,-4.6893 -14.403,-14.4031 -14.403,-14.4031 l -118.0124,-118.3608"
+       d="M 3510.1699,2629.2589 3392.1575,2510.8981"
+       id="path2283"
+       inkscape:label="Nation-RueDesBoulets" />
+    <path
+       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       d="m 3619.5868,2564.4451 c 0,0 -74.6499,76.181 -80.1462,80.03 -4.0655,2.847 -11.1819,2.511 -14.8677,-0.8131 -5.1995,-4.6893 -14.403,-14.4031 -14.403,-14.4031"
        id="path1628"
-       inkscape:label="Buzenval-RueDesBoulets" />
+       inkscape:label="Buzenval-Nation" />
     <path
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3678.8253,2505.0904 -59.2385,59.3547"
