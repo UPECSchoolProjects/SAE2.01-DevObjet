@@ -1292,6 +1292,270 @@
                 "y": 1329
             },
             "displayType": "normal"
+        },
+        {
+            "id": 242,
+            "idfmId": "",
+            "idName": "station-PlaceDItalie",
+            "displayName": "Place d'Italie",
+            "line": "5",
+            "position": {
+                "x": 2700,
+                "y": 3386
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 46,
+            "idfmId": "",
+            "idName": "station-CampoFormio",
+            "displayName": "Campo-Formio",
+            "line": "5",
+            "position": {
+                "x": 2790,
+                "y": 3233
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 329,
+            "idfmId": "",
+            "idName": "station-StMarcel",
+            "displayName": "Saint-Marcel",
+            "line": "5",
+            "position": {
+                "x": 2854,
+                "y": 3146
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 118,
+            "idfmId": "",
+            "idName": "station-Austerlitz",
+            "displayName": "Gare d'Austerlitz",
+            "line": "5",
+            "position": {
+                "x": 2854,
+                "y": 3028
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 288,
+            "idfmId": "",
+            "idName": "station-QuaiDeLaRapee",
+            "displayName": "Quai de la Rapée",
+            "line": "5",
+            "position": {
+                "x": 2854,
+                "y": 2831
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 17,
+            "idfmId": "",
+            "idName": "station-Bastille",
+            "displayName": "Bastille",
+            "line": "5",
+            "position": {
+                "x": 2854,
+                "y": 2538
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 40,
+            "idfmId": "",
+            "idName": "station-BreguetSabin",
+            "displayName": "Bréguet - Sabin",
+            "line": "5",
+            "position": {
+                "x": 2944,
+                "y": 2401
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 297,
+            "idfmId": "",
+            "idName": "station-RichardLenoir",
+            "displayName": "Richard-Lenoir",
+            "line": "5",
+            "position": {
+                "x": 3037,
+                "y": 2308
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 219,
+            "idfmId": "",
+            "idName": "station-Oberkampf",
+            "displayName": "Oberkampf",
+            "line": "5",
+            "position": {
+                "x": 2974,
+                "y": 2063
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 313,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "5",
+            "position": {
+                "x": 2894,
+                "y": 1982
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 140,
+            "idfmId": "",
+            "idName": "station-JacquesBonsergent",
+            "displayName": "Jacques Bonsergent",
+            "line": "5",
+            "position": {
+                "x": 2812,
+                "y": 1818
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 122,
+            "idfmId": "",
+            "idName": "station-GareDeLEst",
+            "displayName": "Gare de l'Est",
+            "line": "5",
+            "position": {
+                "x": 2769,
+                "y": 1621
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 125,
+            "idfmId": "",
+            "idName": "station-GareDuNord",
+            "displayName": "Gare du Nord",
+            "line": "5",
+            "position": {
+                "x": 2770,
+                "y": 1456
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 340,
+            "idfmId": "",
+            "idName": "station-Stalingrad",
+            "displayName": "Stalingrad",
+            "line": "5",
+            "position": {
+                "x": 2999,
+                "y": 1408
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 143,
+            "idfmId": "",
+            "idName": "station-Jaures",
+            "displayName": "Jaurès",
+            "line": "5",
+            "position": {
+                "x": 3103,
+                "y": 1464
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 160,
+            "idfmId": "",
+            "idName": "station-Laumiere",
+            "displayName": "Laumière",
+            "line": "5",
+            "position": {
+                "x": 3189,
+                "y": 1375
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 226,
+            "idfmId": "",
+            "idName": "station-Ourcq",
+            "displayName": "Ourcq",
+            "line": "5",
+            "position": {
+                "x": 3306,
+                "y": 1303
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 270,
+            "idfmId": "",
+            "idName": "station-PortedePantin",
+            "displayName": "Porte de Pantin",
+            "line": "5",
+            "position": {
+                "x": 3461,
+                "y": 1302
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 134,
+            "idfmId": "",
+            "idName": "station-Hoche",
+            "displayName": "Hoche",
+            "line": "5",
+            "position": {
+                "x": 3611,
+                "y": 1303
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 374,
+            "idfmId": "",
+            "idName": "station-EgliseDePantin",
+            "displayName": "Église de Pantin",
+            "line": "5",
+            "position": {
+                "x": 3718,
+                "y": 1242
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 29,
+            "idfmId": "",
+            "idName": "station-BobignyPantin",
+            "displayName": "Bobigny - Pantin - Raymond Queneau",
+            "line": "5",
+            "position": {
+                "x": 3792,
+                "y": 1167
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 28,
+            "idfmId": "",
+            "idName": "station-BobignyPabloPicasso",
+            "displayName": "Bobigny - Pablo Picasso",
+            "line": "5",
+            "position": {
+                "x": 0,
+                "y": 1060
+            },
+            "displayType": "normal"
         }
     ],
     "correspondances": [

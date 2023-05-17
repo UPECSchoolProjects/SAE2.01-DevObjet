@@ -74,7 +74,7 @@ function SvgComponent() {
     const [troncons, setTroncons] = React.useState<Troncons[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
 
-    const lines = ["1","2","3", "3bis", "4"]
+    const lines = ["1","2","3", "3bis", "4", "5"]
 
     React.useEffect(() => {
         getStations().then((data: {stations: Station[], correspondances: GraphicCorrespondance[]}) => {

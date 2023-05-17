@@ -46,4 +46,4 @@ function getPathEndpoints(d) {
 }
 
 // Path: PATHENDOINTS.js
-console.log(getPathEndpoints("M 3914.8946,2897.644 3880.6485,2862"))
+console.log(getPathEndpoints("m 1116.6828,2790.3929 c 0,0 100.9363,101.8259 107.334,107.8151 6.4063,5.9973 10.4759,7.1537 16.0301,7.6642 8.8789,0.816 25.0963,0.2323 25.0963,0.2323"))
