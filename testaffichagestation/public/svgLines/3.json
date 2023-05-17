@@ -1,158 +1,162 @@
 {
     "linedata": {
         "strokeColor": "#55c490",
-        "strokeWidth": "15"
+        "strokeWidth": "4"
     },
     "troncons": [
         {
             "id": "Gallieni-Porte_de_bagnolet",
             "d": "m 3901.376,2126.5449 c -46.963,-0.023 -88.2876,-0.7115 -126.3754,-0.6785",
-            "beginStation": "0",
-            "endStation": "1"
+            "beginStation": 114,
+            "endStation": 263
         },
         {
             "id": "porte_de_bagnolot-Gambetta",
             "d": "m 3775.0006,2125.8664 c -73.5104,0.064 -131.7598,-0.461 -178.18,-0.2461",
-            "beginStation": "1",
-            "endStation": "2"
+            "beginStation": 263,
+            "endStation": 115
         },
         {
             "id": "Gambetta-Pere_lechaise",
             "d": "m 3596.8206,2125.6203 c -95.0005,0.4398 -141.1596,0.2416 -172.3706,0.6079",
-            "beginStation": "2",
-            "endStation": "3"
+            "beginStation": 115,
+            "endStation": 285
         },
         {
-            "id": "P__re_lachaise-RueSaintMaur",
+            "id": "Pere_lachaise-RueSaintMaur",
             "d": "m 3424.45,2126.2282 c -41.0283,0.4814 -56.7032,-0.1017 -120.3156,-0.3457",
-            "beginStation": "3",
-            "endStation": "4"
+            "beginStation": 285,
+            "endStation": 305
         },
         {
             "id": "RueSaintMaur-Parmentier",
             "d": "m 3304.1344,2125.8825 c -8.408,-0.032 -24.1521,0.5686 -28.1308,-1.6606 -23.6434,-12.2154 -67.74,-63.9407 -59.2384,-54.5923",
-            "beginStation": "4",
-            "endStation": "5"
+            "beginStation": 305,
+            "endStation": 229
         },
         {
             "id": "Parmentier-Republique",
             "d": "m 3216.7652,2069.6296 c 10.6898,11.7546 -99.3149,-107.7617 -116.8508,-110.8108 m 0,0 c -19.4602,-3.3837 -130.6919,-1.9631 -184.2102,-0.8994",
-            "beginStation": "5",
-            "endStation": "6"
+            "beginStation": 229,
+            "endStation": 312
         },
         {
-            "id": "Republique-temple",
+            "id": "Republique-Temple",
             "d": "m 2915.7042,1957.9194 c -13.9274,0.2769 -23.9463,0.5295 -27.4222,0.667 m 0,0 c -9.1127,0.3605 -75.5,74.5709 -75.5,74.5709",
-            "beginStation": "6",
-            "endStation": "7"
+            "beginStation": 312,
+            "endStation": 350
         },
         {
             "id": "Temple-ArtsMetiers",
             "d": "m 2812.782,2033.1573 c -8.0597,9.4157 -41.7245,42.5559 -75.6462,76.0488",
-            "beginStation": "7",
-            "endStation": "8"
+            "beginStation": 350,
+            "endStation": 8
         },
         {
             "id": "ArtsMetiers-ReaumurSebastopol",
             "d": "m 2737.1358,2109.2061 c -18.4921,18.2584 -33.5703,34.4003 -41.0685,36.9723 m 0,0 c -6.449,2.2121 -98.8065,1.9789 -192.4846,1.5167",
-            "beginStation": "8",
-            "endStation": "9"
+            "beginStation": 8,
+            "endStation": 309
         },
         {
             "id": "ReaumurSebastopol-Sentier",
             "d": "m 2503.5827,2147.6951 c -100.7414,-0.497 -203.01,-1.2587 -201.6056,0.471",
-            "beginStation": "9",
-            "endStation": "10"
+            "beginStation": 309,
+            "endStation": 336
         },
         {
             "id": "Sentier-Bourse",
             "d": "m 2301.9771,2148.1661 -154.3087,0.7698",
-            "beginStation": "10",
-            "endStation": "11"
+            "beginStation": 336,
+            "endStation": 38
         },
         {
             "id": "Bourse-QuatreSeptembre",
             "d": "m 2147.6684,2148.9359 c 0,0 -82.1276,3.7996 -92.8667,-2.6283 m 0,0 c -12.8048,-7.6644 -51.0859,-49.3089 -52.3091,-50.8919",
-            "beginStation": "11",
-            "endStation": "12"
+            "beginStation": 38,
+            "endStation": 289
         },
         {
             "id": "QuatreSeptembre-Opera",
             "d": "m 2002.4926,2095.4157 c 0.3961,-0.2475 -44.8835,-44.7837 -97.5423,-96.8994",
-            "beginStation": "12",
-            "endStation": "13"
+            "beginStation": 289,
+            "endStation": 223
         },
         {
             "id": "Opera-HavreCaumartin",
             "d": "m 1904.9503,1998.5163 c -28.5949,-28.3 -59.3658,-58.835 -86.1804,-85.727",
-            "beginStation": "13",
-            "endStation": "14"
+            "beginStation": 223,
+            "endStation": 132
         },
         {
             "id": "HavreCaumartin-SaintLazare",
             "d": "m 1818.7699,1912.7893 c -38.0899,-38.2 -68.197,-69.0491 -72.745,-75.6998 m 0,0 c -4.6814,-6.8457 -2.3244,-42.3888 -1.2306,-75.0065",
-            "beginStation": "14",
-            "endStation": "15"
+            "beginStation": 132,
+            "endStation": 327
         },
         {
             "id": "SaintLazare-Europe",
             "d": "m 1744.7943,1762.083 c 0.7506,-22.3813 0.9066,-43.3853 -2.2141,-52.7957 m 0,0 c -4.5937,-13.8526 -103.5762,-105.876 -103.5762,-105.876",
-            "beginStation": "15",
-            "endStation": "16"
+            "beginStation": 327,
+            "endStation": 103
         },
         {
             "id": "Europe-Villiers",
             "d": "M 1639.004,1603.4113 1531.3726,1496.0618",
-            "beginStation": "16",
-            "endStation": "17"
+            "beginStation": 103,
+            "endStation": 367
         },
         {
             "id": "Velliers-Malesherbes",
             "d": "m 1531.3726,1496.0618 -60.5594,-60.3437",
-            "beginStation": "17",
-            "endStation": "18"
+            "beginStation": 367,
+            "endStation": 189
         },
         {
             "id": "Malesherbes-Wagram",
             "d": "m 1470.8132,1435.7181 -58.598,-58.9264",
-            "beginStation": "18",
-            "endStation": "19"
+            "beginStation": 189,
+            "endStation": 370
         },
         {
             "id": "Wagram-Pereire",
             "d": "m 1412.2152,1376.7917 -52.7504,-51.7084",
-            "beginStation": "19",
-            "endStation": "20"
+            "beginStation": 370,
+            "endStation": 286
         },
         {
             "id": "Pereire-PorteDeChamperret",
             "d": "m 1359.4648,1325.0833 -73.5219,-73.9536",
-            "beginStation": "20",
-            "endStation": "21"
+            "beginStation": 286,
+            "endStation": 264
         },
         {
             "id": "PorteDeChamperret-LouiseMichel",
             "d": "m 1285.9429,1251.1297 -50.4506,-50.7791",
-            "beginStation": "21",
-            "endStation": "22"
+            "beginStation": 264,
+            "endStation": 171
         },
         {
             "id": "LouiseMichel-AnatoleFrance",
             "d": "m 1235.4923,1200.3506 -50.7792,-51.7648",
-            "beginStation": "22",
-            "endStation": "23"
+            "beginStation": 171,
+            "endStation": 4
         },
         {
             "id": "AnatoleFrance-PontDeLevalois",
             "d": "m 1184.7131,1148.5858 -47.1022,-47.6795",
-            "beginStation": "23",
-            "endStation": "24"
+            "beginStation": 4,
+            "endStation": 251
         }
     ],
     "stations": {
         "0": {
             "id": "station-Gallieni",
             "displayName": "Gallieni",
+            "position": {
+                "x": 3901.376,
+                "y": 2126.5449 
+            },
             "correspondance": []
         },
         "1": {

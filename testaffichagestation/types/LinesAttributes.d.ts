@@ -1,7 +1,41 @@
-export type Station = {
+
+
+/* export type Station = {
     id: string,
     displayName: string,
     correspondances: string[],
+} */
+
+export type Station = {
+    id: string,
+    idfmId: string,
+    idName: string,
+    displayName: string,
+    line: string,
+    position: point,
+    displayType: "normal" | "correspTerminus"
+}
+
+export type Troncons = {
+    id: string,
+    d: string,
+    beginStation: string,
+    endStation: string,
+    line?: string,
+}
+
+export type GraphicCorrespondance = {
+    id: string,
+    displayName: string
+    stations: {id: number, line: string}[],
+    d: string,
+    strokeColor: string,
+    strokeWidth: string,
+}
+
+export type linedata = {
+    strokeColor: string,
+    strokeWidth: string
 }
 
 export type pathDataType = {

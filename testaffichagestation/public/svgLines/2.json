@@ -1,0 +1,152 @@
+{
+    "linedata": {
+        "strokeColor": "#0064B4",
+        "strokeWidth": "4"
+    },
+    "troncons": [
+    {
+        "id": "Nation-Avron",
+        "d": "m 3525.8134,2613.8065 -88.7038,-87.3897",
+        "beginStation": "213",
+        "endStation": "12"
+    },
+    {
+        "id": "Avron-AlexandreDumas",
+        "d": "m 3437.1096,2526.4168 c 0,0 -7.2536,-7.1409 -9.3631,-12.1557 -2.645,-6.2878 -2.3409,-7.5144 -3.1211,-20.6976 -0.6963,-11.7651 1.3141,-111.044 1.3141,-111.044",
+        "beginStation": "12",
+        "endStation": "1"
+    },
+    {
+        "id": "AlexandreDumas-PhilippeAuguste",
+        "d": "m 3425.9395,2382.5195 -1.3141,-143.2403",
+        "beginStation": "1",
+        "endStation": "235"
+    },
+    {
+        "id": "PhilippeAuguste-PereLachaise",
+        "d": "M 3424.6254,2239.2792 V 2125.6069",
+        "beginStation": "235",
+        "endStation": "284"
+    },
+    {
+        "id": "PereLachaise-Menilmontant",
+        "d": "m 3424.6254,2125.6069 c 0,0 0.5511,-14.0442 0,-22.9973 -0.3732,-6.0622 -1.3705,-8.7796 -7.8848,-16.4267 -7.1064,-8.3422 -95.9316,-97.2456 -95.9316,-97.2456",
+        "beginStation": "284",
+        "endStation": "211"
+    },
+    {
+        "id": "Menilmontant-Couronnes",
+        "d": "M 3320.809,1988.9373 3208.4508,1877.8932",
+        "beginStation": "211",
+        "endStation": "86"
+    },
+    {
+        "id": "Couronnes-Belleville",
+        "d": "m 3208.4508,1877.8932 c 0,0 -73.0113,-69.6041 -83.283,-82.4617 -6.2842,-7.8663 -8.195,-10.615 -8.7062,-21.3547 -0.3161,-6.6403 -0.1642,-16.4266 -0.1642,-16.4266",
+        "beginStation": "86",
+        "endStation": "21"
+    },
+    {
+        "id": "Belleville-ColonelFabien",
+        "d": "m 3116.2974,1757.6502 0.3285,-143.2403",
+        "beginStation": "21",
+        "endStation": "75"
+    },
+    {
+        "id": "ColonelFabien-Jaures",
+        "d": "m 3116.6259,1614.4099 c 0,0 -0.5924,-71.8939 -0.8213,-109.5656 -0.061,-10.1192 -0.6708,-8.9401 -7.2277,-16.591 -5.7033,-6.6549 -16.4267,-17.0837 -16.4267,-17.0837",
+        "beginStation": "75",
+        "endStation": "142"
+    },
+    {
+        "id": "Jaures-Stalingrad",
+        "d": "m 3092.1502,1471.1696 -90.1822,-91.3321",
+        "beginStation": "142",
+        "endStation": "339"
+    },
+    {
+        "id": "Stalingrad-LaChapelle",
+        "d": "m 3001.968,1379.8375 -13.6342,-12.1557 c 0,0 -4.1144,-5.418 -18.5621,-5.9136 -17.9162,-0.6145 -215.5174,-0.4928 -215.5174,-0.4928",
+        "beginStation": "339",
+        "endStation": "151"
+    },
+    {
+        "id": "LaChapelle-BarbesRochechouart",
+        "d": "M 2754.2543,1361.2754 H 2544.4861",
+        "beginStation": "151",
+        "endStation": "13"
+    },
+    {
+        "id": "BarbesRochechouart-Anvers",
+        "d": "m 2544.4861,1361.2754 -192.8487,10e-5",
+        "beginStation": "13",
+        "endStation": "5"
+    },
+    {
+        "id": "Anvers-Pigalle",
+        "d": "m 2351.6374,1361.2755 -161.4738,0.1642",
+        "beginStation": "5",
+        "endStation": "239"
+    },
+    {
+        "id": "Pigalle-Blanche",
+        "d": "M 2190.1636,1361.4397 H 1977.4387",
+        "beginStation": "239",
+        "endStation": "27"
+    },
+    {
+        "id": "Blanche-PlaceDeClichy",
+        "d": "M 1977.4387,1361.4397 H 1766.1921",
+        "beginStation": "27",
+        "endStation": "246"
+    },
+    {
+        "id": "PlaceDeClichy-Rome",
+        "d": "m 1766.1921,1361.4397 c 0,0 -71.7298,0.1131 -91.3322,0.6571 -6.8538,0.1902 -8.1091,-0.034 -18.3978,9.1989 -6.4041,5.7473 -20.9931,19.6459 -20.9931,19.6459",
+        "beginStation": "246",
+        "endStation": "302"
+    },
+    {
+        "id": "Rome-Villiers",
+        "d": "m 1635.469,1390.9416 c -11.3253,11.2779 -69.0603,68.7503 -104.2343,104.7319",
+        "beginStation": "302",
+        "endStation": "366"
+    },
+    {
+        "id": "Villiers-Monceau",
+        "d": "m 1531.2347,1495.6735 -93.5356,93.7679",
+        "beginStation": "366",
+        "endStation": "204"
+    },
+    {
+        "id": "Monceau-Courcelles",
+        "d": "m 1437.6991,1589.4414 -92.8785,93.9206",
+        "beginStation": "204",
+        "endStation": "85"
+    },
+    {
+        "id": "Courcelles-Ternes",
+        "d": "m 1344.8206,1683.362 -93.7679,93.0641",
+        "beginStation": "85",
+        "endStation": "351"
+    },
+    {
+        "id": "Ternes-CDGEtoile",
+        "d": "m 1251.0527,1776.4261 -104.4734,105.4095",
+        "beginStation": "351",
+        "endStation": "56"
+    },
+    {
+        "id": "CDGEtoile-VictorHugo",
+        "d": "m 1146.5793,1881.8356 c 0,0 -177.81157,177.4931 -179.70743,179.792 -1.38642,1.6811 -3.42349,3.3363 -5.42886,4.5588 -3.85218,2.3484 -6.93512,2.3291 -12.79303,0.2447 -5.9841,-2.1293 -14.95991,-12.4444 -14.95991,-12.4444",
+        "beginStation": 56,
+        "endStation": 362
+    },
+    {
+        "id": "VictorHugo-PorteDauphine",
+        "d": "M 933.69007,2053.9867 784.5362,1900.8905 h 0.65707",
+        "beginStation": 362,
+        "endStation": 256
+    }
+]
+}

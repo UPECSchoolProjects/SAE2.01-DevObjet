@@ -86,12 +86,12 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.5219183"
-     inkscape:cx="1337.1283"
-     inkscape:cy="1815.8005"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="1341"
-     inkscape:window-y="1525"
+     inkscape:cx="1136.3948"
+     inkscape:cy="1907.7897"
+     inkscape:window-width="1811"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="g194" />
   <g
@@ -108,7 +108,17 @@
        style="display:inline" />
     <path
        style="display:inline;fill:none;stroke:#0fe742;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
-       d="m 1251.0527,1776.4261 -104.4734,105.4095 c 0,0 -177.81157,177.4931 -179.70743,179.792 -1.38642,1.6811 -3.42349,3.3363 -5.42886,4.5588 -3.85218,2.3484 -6.93512,2.3291 -12.79303,0.2447 -5.9841,-2.1293 -14.95991,-12.4444 -14.95991,-12.4444 L 784.5362,1900.8905 h 0.65707"
+       d="M 933.69007,2053.9867 784.5362,1900.8905 h 0.65707"
+       id="path17903"
+       inkscape:label="VictorHugo-PorteDauphine" />
+    <path
+       style="display:inline;fill:none;stroke:#0fe742;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1146.5793,1881.8356 c 0,0 -177.81157,177.4931 -179.70743,179.792 -1.38642,1.6811 -3.42349,3.3363 -5.42886,4.5588 -3.85218,2.3484 -6.93512,2.3291 -12.79303,0.2447 -5.9841,-2.1293 -14.95991,-12.4444 -14.95991,-12.4444"
+       id="path17909"
+       inkscape:label="CDGEtoile-VictorHugo" />
+    <path
+       style="display:inline;fill:none;stroke:#0fe742;stroke-width:1.5;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1251.0527,1776.4261 -104.4734,105.4095"
        id="path1058"
        inkscape:label="Ternes-CDGEtoile" />
     <path
