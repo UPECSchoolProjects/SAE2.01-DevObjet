@@ -86,13 +86,13 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="4.304635"
-     inkscape:cx="3585.2052"
-     inkscape:cy="1541.7103"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="1341"
-     inkscape:window-y="1525"
-     inkscape:window-maximized="1"
+     inkscape:cx="3441.1745"
+     inkscape:cy="1635.3303"
+     inkscape:window-width="1918"
+     inkscape:window-height="1243"
+     inkscape:window-x="-794"
+     inkscape:window-y="1882"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g194" />
   <g
      inkscape:groupmode="layer"
@@ -107,7 +107,7 @@
        id="image196"
        style="display:inline" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3561.295,1467.8021 c 0,0 -15.7928,-0.1327 -19.3835,0.4108 -3.9064,0.5913 -8.1444,2.2372 -11.0058,5.0923 -2.6141,2.6084 -91.5897,90.1259 -91.5897,90.1259 l -6.7369,7.6662 -8.3208,0.2463"
        id="path1703"
        inkscape:label="Danube-Botzaris" />
@@ -117,15 +117,16 @@
        id="path1699"
        inkscape:label="PreSaintGervais-Danube" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3560.3657,1675.6365 c 0.4139,-0.059 11.2473,0.6247 22.819,-1.903 7.8982,-1.7253 11.5239,-6.7357 14.9059,-10.1258 3.2324,-3.24 83.8477,-85.8044 85.0901,-87.8825 1.719,-2.8753 2.0718,-7.0664 0.9855,-9.9381 -1.6,-4.2298 -13.3877,-15.441 -13.3877,-15.441"
        id="path1695"
        inkscape:label="PlaceDesFetes-PreSaintGervais" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
-       d="m 3356.7462,1518.7473 h 15.7694 l 26.2828,23.6544 c 0,0 136.1018,139.9328 157.0386,160.3238 9.984,9.724 22.6828,17.3966 36.1386,21.0262 12.2648,3.3084 36.2512,4.1814 36.2512,4.1814"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+       d="m 3425.2815,1571.2079 c 0,0 9.6328,3.5264 18.2876,11.4031 22.4434,20.4255 59.9887,60.5631 76.0279,75.5114 10.1955,9.5021 9.9745,12.4798 23.3616,15.4508 14.0912,3.1273 17.2021,2.323 17.2021,2.323"
        id="path1691"
-       inkscape:label="Botzaris-PlaceDesFetes" />
+       inkscape:label="Botzaris-PlaceDesFetes"
+       sodipodi:nodetypes="csssc" />
     <path
        style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 3351.034,1571.0436 h 73.5914"
@@ -143,7 +144,7 @@
        id="path1674"
        inkscape:label="Jaures-Bolivar" />
     <path
-       style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
        d="m 2985.0485,1504.68 c 0,0 71.1555,-73.2971 78.1908,-79.5049 3.9449,-3.4809 11.9112,-4.2336 15.7696,-0.6571 11.4887,10.6493 34.4959,34.496 34.4959,34.496"
        id="path8624"
        inkscape:label="LouisBlanc-Jaures" />

@@ -5,6 +5,8 @@ import React from 'react';
 import { GraphicCorrespondance, Station, Troncons, linedata } from '../types/LinesAttributes';
 import { StopPoint } from './StopPoints';
 import { LinePath } from './Lines';
+import { cp } from 'fs';
+import svgPanZoom from 'svg-pan-zoom';
 
 
 function addIntensity(num: number) {
@@ -100,6 +102,8 @@ function SvgComponent() {
 
     const [mapLoaded, setMapLoaded] = React.useState(false);
 
+    const svgRef = React.useRef<SVGSVGElement | null>(null);
+
     const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M13", "M14"]
 
     const fetchData = async () => {
@@ -131,6 +135,12 @@ function SvgComponent() {
                 setLinesData((prevLinesData) => new Map(prevLinesData).set(line, linedata));
             })
         );
+
+        const panZoom = svgPanZoom(svgRef.current!, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true
+        });
 
         setMapLoaded(true);
         setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]);
@@ -193,11 +203,13 @@ function SvgComponent() {
             id="test"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            width="500"
-            height="500"
+            width="1000"
+            height="800"
             viewBox="0 0 4536 4536"
             shapeRendering="geometricPrecision"
             textRendering="geometricPrecision"
+            ref={svgRef}
+            style= {{cursor: 'grab'}}
         >
             <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
