@@ -1,0 +1,62 @@
+[
+    {
+        "id": 36,
+        "idfmId": "",
+        "idName": "station-BoulogneJeanJaures",
+        "displayName": "Boulogne - Jean Jaurès",
+        "line": "M10",
+        "position": {
+            "x": 465,
+            "y": 3170
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 198,
+        "idfmId": "",
+        "idName": "station-MichelAngleMolitor",
+        "displayName": "Michel-Ange - Molitor",
+        "line": "M10",
+        "position": {
+            "x": 666,
+            "y": 3141
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 52,
+        "idfmId": "",
+        "idName": "station-ChardonLagache",
+        "displayName": "Chardon-Lagache",
+        "line": "M10",
+        "position": {
+            "x": 738,
+            "y": 3141
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 201,
+        "idfmId": "",
+        "idName": "station-Mirabeau",
+        "displayName": "Mirabeau",
+        "line": "M10",
+        "position": {
+            "x": 846,
+            "y": 3096
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 145,
+        "idfmId": "",
+        "idName": "station-JavelAndreCitroen",
+        "displayName": "Javel - André Citroën",
+        "line": "M10",
+        "position": {
+            "x": 976,
+            "y": 3028
+        },
+        "displayType": "normal"
+    }
+]

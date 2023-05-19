@@ -1,0 +1,28 @@
+{
+    "troncons": [
+        {
+            "id": "BoulogneJeanJaures-MichelAngleMolitor",
+            "d": "m 465.57679,3170.3886 200.68179,-29.1234",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MichelAngleMolitor-ChardonLagache",
+            "d": "m 666.25858,3141.2652 c 0,0 37.5756,0.071 72.45353,0.096",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ChardonLagache-Mirabeau",
+            "d": "m 738.71211,3141.3612 c 28.43831,0.02 55.08315,0.01 58.10342,-0.096 5.95291,-0.2078 11.29272,-4.2866 16.02923,-7.8985 3.73769,-2.8502 16.43499,-16.5642 33.89416,-36.5836",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Mirabeau-JavelAndreCitroen",
+            "d": "m 846.73892,3096.7831 c 18.44484,-21.1496 129.35795,-68.5347 129.35795,-68.5347",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

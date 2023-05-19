@@ -1,0 +1,148 @@
+{
+    "troncons": [
+        {
+            "id": "ChateauVincennes-Berault",
+            "d": "M 3914.8946,2897.644 3880.6485,2862",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Berault-StMande",
+            "d": "m 3880.6485,2862 -92.9539,-92.6043",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "StMande-PteVincennes",
+            "d": "m 3787.6946,2769.3957 c 0,0 -42.2859,-44.329 -63.0066,-62.9011 -4.6351,-4.1545 -17.0176,-7.6879 -17.0176,-7.6879 l -45.778,-0.3495",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PreVincennes-Nation",
+            "d": "m 3661.8924,2698.4572 c 0,0 -106.4482,0.5854 -126.105,0.8534 -6.8807,0.094 -17.0407,1.8018 -28.713,-5.6464 -12.2827,-10.1374 -31.4391,-31.2004 -31.4391,-31.2004",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Nation-ReuillyDiderot",
+            "d": "m 3475.6353,2662.4638 c 0,0 -42.5841,-44.3674 -49.4009,-49.6453 -5.5725,-4.3145 -11.5938,-4.2596 -16.1675,0.2155 -19.2277,18.8135 -174.9352,175.2611 -174.9352,175.2611",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ReuillyDiderot-GareDeLyon",
+            "d": "m 3235.1317,2788.2951 c 0,0 -109.4601,110.8341 -127.0022,127.4623 -3.7604,3.5645 -9.9733,3.879 -14.5386,-0.9652 -11.4283,-12.1269 -31.7051,-31.8251 -31.7051,-31.8251",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "GareDeLyon-Bastille",
+            "d": "m 3061.8858,2882.9671 c 0,0 -73.6056,-69.1097 -85.7203,-87.4966 -3.2987,-5.0066 -3.0401,-27.2684 -3.0401,-27.2684 l 0.8909,-88.4062 c 0.033,0.031 1.7701,-11.0644 -12.446,-24.5997 -34.8806,-33.2101 -105.8603,-104.906 -105.8603,-104.906",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Bastille-StPaul",
+            "d": "m 2855.71,2550.2902 c 0,0 -23.6257,-29.6119 -40.1868,-37.3912 -5.7409,-2.6967 -12.5276,-2.4525 -18.8704,-2.4462 -37.1617,0.037 -70.7163,0.8406 -99.4633,0.3495 -4.5883,-0.078 -10.1645,-1.8937 -15.584,-7.0931 -6.7468,-6.4727 -11.5634,-11.8293 -11.5634,-11.8293",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "StPaul-HotelDeVille",
+            "d": "m 2670.0421,2491.8799 c 0,0 -106.2612,-103.2583 -143.9421,-142.8212",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "HotelDeVille-Chatelet",
+            "d": "m 2526.1,2349.0587 c -4.8244,-5.0653 -10.3203,-4.3714 -21.3254,-4.1362 -50.5908,1.0813 -151.5485,0.6416 -151.5485,0.6416",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Chatelet-LouvreRivoli",
+            "d": "m 2353.2261,2345.5641 -309.2898,-0.7509",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LouvreRivoli-PalaisRoyalMuseeLouvre",
+            "d": "m 2043.9363,2344.8132 -141.851,0.4852",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PalaisRoyalMuseeLouvre-Tuileries",
+            "d": "m 1902.0853,2345.2984 -172.8161,0.052",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Tuileries-Concorde",
+            "d": "m 1729.2692,2345.3504 c 0,0 -104.907,0.1827 -118.6424,-0.5892 -4.0166,-0.2257 -9.6285,0.061 -17.3198,-6.7538 -12.6502,-11.2087 -37.6051,-37.5483 -37.6051,-37.5483",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Concorde-ChampsElyseesClemenceau",
+            "d": "m 1555.7019,2300.4591 -84.515,-85.4277",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ChampsElyseesClemenceau-FranklinDRoosevelt",
+            "d": "m 1471.1869,2215.0314 -86.2883,-86.2306",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "FranklinDRoosevelt-GeorgeV",
+            "d": "m 1384.8986,2128.8008 -120.5865,-120.159",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "GeorgeV-CDGEtoile",
+            "d": "M 1264.3121,2008.6418 1141.3055,1885.6352",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "CDGEtoile-Argentine",
+            "d": "M 1141.3055,1885.6352 1040.6638,1784.9935",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Argentine-PorteMaillot",
+            "d": "M 1040.6638,1784.9935 912.76486,1656.7451",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PorteMaillot-LesSablons",
+            "d": "m 912.76486,1656.7451 -90.5077,-90.8571",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "LesSablons-PontDeNeuilly",
+            "d": "m 822.25716,1565.888 -81.20823,-80.3997",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PontDeNeuilly-EsplanadeLaDefense",
+            "d": "m 741.04893,1485.4883 -79.53902,-79.9982",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "EsplanadeLaDefense-LaDefense",
+            "d": "m 661.50991,1405.4901 -75.48132,-76.1802",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

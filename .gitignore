@@ -23,6 +23,8 @@
 hs_err_pid*
 replay_pid*
 
+jsscripts/node_modules
+
 target
 .DS_Store
 .vscode/settings.json

@@ -3,19 +3,21 @@ package fr.uwu;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-
 /**
  * Classe principale du Graphe. ELle gère les stations (noeud) et les relations
  * entre les stations (arête).
  */
+import java.util.Set;
 public class ReseauMetro {
 
     // #region Attributs
     ArrayList<Quai> quais;
     ArrayList<Relation> relations;
     Map<String, List<Quai>> stations;
+    Set<Integer> quaisTraites; // qui déja traité dans la fonction relierStationMemeNom (optimisation)
     // #endregion
 
     // #region Constructeurs
@@ -27,7 +29,7 @@ public class ReseauMetro {
     public ReseauMetro() {
         this.quais = new ArrayList<Quai>();
         this.relations = new ArrayList<Relation>();
-        this.stations = new HashMap<String, List<Quai>>();
+        init();
     }
 
     /**
@@ -40,6 +42,13 @@ public class ReseauMetro {
     public ReseauMetro(ArrayList<Quai> stations, ArrayList<Relation> relations) {
         this.quais = stations;
         this.relations = relations;
+        init();
+    }
+
+    public void init() {
+        this.stations = new HashMap<String, List<Quai>>();
+        this.quaisTraites = new HashSet<Integer>();
+        this.relierStationMemeNom();
     }
 
     // #endregion
@@ -53,6 +62,7 @@ public class ReseauMetro {
      */
     public void addStation(Quai station) {
         this.quais.add(station);
+        this.relierStationMemeNom();
     }
 
     /**
@@ -69,8 +79,9 @@ public class ReseauMetro {
      */
     public void relierStationMemeNom() {
         for (Quai station : this.quais) {
+            //System.out.println(station);
             // ne rien faire si la station est déja présente dans la hashmap
-            if (this.stations.values().stream().anyMatch(liste -> liste.contains(station))) {
+            if (this.quaisTraites.contains(station.id)) {
                 continue;
             }
 
@@ -80,12 +91,15 @@ public class ReseauMetro {
                 // relier cette station a toutes les autres déja presente
                 for (Quai stationsDejaPresente : this.stations.get(station.nom)) {
                     if (stationsDejaPresente != station) {
+                        //System.out.println("Relier " + station + " à " + stationsDejaPresente);
                         this.relations.add(new Relation(station, stationsDejaPresente, 180));
                     }
                 }
             } else {
                 this.stations.put(station.nom, new ArrayList<Quai>(Arrays.asList(station)));
             }
+
+            this.quaisTraites.add(station.id);
         }
     }
 
@@ -125,8 +139,17 @@ public class ReseauMetro {
      * @param ligne le nom de la ligne dont on veut afficher les stations
      * @return ne renvoie rien (affiche les stations)
      */
-    public void printStatioLigne(String ligne) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void printStationLigne(String ligne) {
+        boolean ligneExiste = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne));
+        if (!ligneExiste) {
+            throw new IllegalArgumentException("La ligne spécifiée n'existe pas.");
+        }
+
+        // Afficher les stations de la ligne
+        quais.stream()
+                .filter(quai -> quai.getLigne().equals(ligne))
+                .map(Quai::getNom)
+                .forEach(System.out::println);
     }
 
     /**
@@ -136,8 +159,38 @@ public class ReseauMetro {
      * @param ligne1
      * @param ligne2
      */
-    public void printCorrespondanceEntre2Ligne(String ligne1, String ligne2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void correspondanceEntre2Lignes(String ligne1, String ligne2) {
+        // Vérifier si les lignes existent dans la liste des quais
+        boolean ligne1Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne1));
+        boolean ligne2Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne2));
+    
+        if (!ligne1Existe || !ligne2Existe) {
+            throw new IllegalArgumentException("Au moins l'une des lignes spécifiées n'existe pas.");
+        }
+    
+        // Rechercher les correspondances possibles entre les deux lignes
+        List<Quai> correspondances = new ArrayList<>();
+    
+        for (Quai quai1 : quais) {
+            if (quai1.getLigne().equals(ligne1)) {
+                for (Quai quai2 : quais) {
+                    if (quai2.getLigne().equals(ligne2) && quai1.compareTo(quai2)) {
+                        correspondances.add(quai1);
+                        break;
+                    }
+                }
+            }
+        }
+    
+        // Afficher les correspondances trouvées
+        if (correspondances.isEmpty()) {
+            System.out.println("Il n'y a pas de correspondances entre les lignes spécifiées.");
+        } else {
+            System.out.println("Correspondances possibles entre les lignes " + ligne1 + " et " + ligne2 + ":");
+            for (Quai correspondance : correspondances) {
+                System.out.println(correspondance.getNom());
+            }
+        }
     }
 
     /**
@@ -147,7 +200,7 @@ public class ReseauMetro {
      * par correspondance).
      */
     public void trajetEntre2Station(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        
     }
 
     /**

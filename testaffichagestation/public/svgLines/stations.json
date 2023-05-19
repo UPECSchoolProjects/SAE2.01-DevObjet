@@ -1,0 +1,4319 @@
+{
+    "stations": [
+        {
+            "id": 263,
+            "idfmId": "",
+            "idName": "station-Porte-de-Bagnolet",
+            "displayName": "Porte de Bagnolet",
+            "line": "M3",
+            "position": {
+                "x": 3775.0006,
+                "y": 2125.8664
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 115,
+            "idfmId": "IDFM:21950",
+            "idName": "station-Gambetta",
+            "displayName": "Gambetta",
+            "line": "M3",
+            "position": {
+                "x": 3596.8206,
+                "y": 2125.6203
+            },
+            "displayType": "none"
+        },
+        {
+            "id": 285,
+            "idfmId": "",
+            "idName": "station-Pere-Lachaise",
+            "displayName": "Père Lachaise",
+            "line": "M3",
+            "position": {
+                "x": 3424.45,
+                "y": 2126.2282
+            },
+            "displayType": "correspondanceSimple"
+        },
+        {
+            "id": 305,
+            "idfmId": "",
+            "idName": "station-Rue-Saint-Maur",
+            "displayName": "Rue Saint Maur",
+            "line": "M3",
+            "position": {
+                "x": 3304.1344,
+                "y": 2125.8825
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 229,
+            "idfmId": "",
+            "idName": "station-Parmentier",
+            "displayName": "Parmentier",
+            "line": "M3",
+            "position": {
+                "x": 3216.7652,
+                "y": 2069.6296
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 312,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "M3",
+            "position": {
+                "x": 2915.7042,
+                "y": 1957.9194
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 350,
+            "idfmId": "",
+            "idName": "station-Temple",
+            "displayName": "Temple",
+            "line": "M3",
+            "position": {
+                "x": 2812.782,
+                "y": 2033.1573
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 8,
+            "idfmId": "",
+            "idName": "station-ArtsMetiers",
+            "displayName": "Arts et Métiers",
+            "line": "M3",
+            "position": {
+                "x": 2737.1358,
+                "y": 2109.2061
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 309,
+            "idfmId": "",
+            "idName": "station-ReaumurSebastopol",
+            "displayName": "Réaumur - Sébastopol",
+            "line": "M3",
+            "position": {
+                "x": 2503.5827,
+                "y": 2147.6951
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 336,
+            "idfmId": "",
+            "idName": "station-Sentier",
+            "displayName": "Sentier",
+            "line": "M3",
+            "position": {
+                "x": 2301.9771,
+                "y": 2148.1661
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 38,
+            "idfmId": "",
+            "idName": "station-Bourse",
+            "displayName": "Bourse",
+            "line": "M3",
+            "position": {
+                "x": 2147.6684,
+                "y": 2148.9359
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 289,
+            "idfmId": "",
+            "idName": "station-QuatreSeptembre",
+            "displayName": "Quatre-Septembre",
+            "line": "M3",
+            "position": {
+                "x": 2002.4926,
+                "y": 2095.4157
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 223,
+            "idfmId": "",
+            "idName": "station-Opera",
+            "displayName": "Opéra",
+            "line": "M3",
+            "position": {
+                "x": 1904.9503,
+                "y": 1998.5163
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 132,
+            "idfmId": "",
+            "idName": "station-HavreCaumartin",
+            "displayName": "Havre - Caumartin",
+            "line": "M3",
+            "position": {
+                "x": 1818.7699,
+                "y": 1912.7893
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 327,
+            "idfmId": "",
+            "idName": "station-SaintLazare",
+            "displayName": "Saint-Lazare",
+            "line": "M3",
+            "position": {
+                "x": 1744.7943,
+                "y": 1762.083
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 103,
+            "idfmId": "",
+            "idName": "station-Europe",
+            "displayName": "Europe",
+            "line": "M3",
+            "position": {
+                "x": 1639.004,
+                "y": 1603.4113
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 367,
+            "idfmId": "",
+            "idName": "station-Villiers",
+            "displayName": "Villiers",
+            "line": "M3",
+            "position": {
+                "x": 1531.3726,
+                "y": 1496.0618
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 189,
+            "idfmId": "",
+            "idName": "station-Malesherbes",
+            "displayName": "Malesherbes",
+            "line": "M3",
+            "position": {
+                "x": 1470.8132,
+                "y": 1435.7181
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 370,
+            "idfmId": "",
+            "idName": "station-Wagram",
+            "displayName": "Wagram",
+            "line": "M3",
+            "position": {
+                "x": 1412.2152,
+                "y": 1376.7917
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 286,
+            "idfmId": "",
+            "idName": "station-Pereire",
+            "displayName": "Pereire",
+            "line": "M3",
+            "position": {
+                "x": 1359.4648,
+                "y": 1325.0833
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 264,
+            "idfmId": "",
+            "idName": "station-PorteDeChamperret",
+            "displayName": "Porte de Champerret",
+            "line": "M3",
+            "position": {
+                "x": 1285.9429,
+                "y": 1251.1297
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 171,
+            "idfmId": "",
+            "idName": "station-LouiseMichel",
+            "displayName": "Louise Michel",
+            "line": "M3",
+            "position": {
+                "x": 1235.4923,
+                "y": 1200.3506
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 4,
+            "idfmId": "",
+            "idName": "station-AnatoleFrance",
+            "displayName": "Anatole France",
+            "line": "M3",
+            "position": {
+                "x": 1184.7131,
+                "y": 1148.5858
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 251,
+            "idfmId": "",
+            "idName": "station-PontDeLevalois",
+            "displayName": "Pont de Levallois - Bécon",
+            "line": "M3",
+            "position": {
+                "x": 1137.6109,
+                "y": 1100.9063
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 279,
+            "idfmId": "",
+            "idName": "station-PorteDesLilas",
+            "displayName": "Porte des Lilas",
+            "line": "M3bis",
+            "position": {
+                "x": 3793.8962,
+                "y": 1699.1713
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 320,
+            "idfmId": "",
+            "idName": "station-SaintFargeau",
+            "displayName": "Saint-Fargeau",
+            "line": "M3bis",
+            "position": {
+                "x": 3794.6481,
+                "y": 1829.269
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 233,
+            "idfmId": "",
+            "idName": "station-Pelleport",
+            "displayName": "Pelleport",
+            "line": "M3bis",
+            "position": {
+                "x": 3706.5064,
+                "y": 1971.1965
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 116,
+            "idfmId": "",
+            "idName": "station-Gambetta",
+            "displayName": "Gambetta",
+            "line": "M3bis",
+            "position": {
+                "x": 3598.7477000000003,
+                "y": 2103.2667
+            },
+            "displayType": "correspTerminus"
+        },
+        {
+            "id": 268,
+            "idfmId": "",
+            "idName": "station-PorteDeClignancourt",
+            "displayName": "Porte de Clignancourt",
+            "line": "M4",
+            "position": {
+                "x": 2303.2864,
+                "y": 1000.5187
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 337,
+            "idfmId": "",
+            "idName": "station-Simplon",
+            "displayName": "Simplon",
+            "line": "M4",
+            "position": {
+                "x": 2368.3359,
+                "y": 1066.8823
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 192,
+            "idfmId": "",
+            "idName": "station-MarcadetPoissonniers",
+            "displayName": "Marcadet - Poissonniers",
+            "line": "M4",
+            "position": {
+                "x": 2428.2931,
+                "y": 1165.1136
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 64,
+            "idfmId": "",
+            "idName": "station-ChateauRouge",
+            "displayName": "Château Rouge",
+            "line": "M4",
+            "position": {
+                "x": 2428.2931,
+                "y": 1250.5321
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 14,
+            "idfmId": "",
+            "idName": "station-BarbesRochechouart",
+            "displayName": "Barbès - Rochechouart",
+            "line": "M4",
+            "position": {
+                "x": 2544.4294,
+                "y": 1383.9164
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 124,
+            "idfmId": "",
+            "idName": "station-GareDuNord",
+            "displayName": "Gare du Nord",
+            "line": "M4",
+            "position": {
+                "x": 2727.7507,
+                "y": 1457.1792
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 121,
+            "idfmId": "",
+            "idName": "station-GareDeLEst",
+            "displayName": "Gare de l’Est",
+            "line": "M4",
+            "position": {
+                "x": 2747.7912,
+                "y": 1625.388
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 65,
+            "idfmId": "",
+            "idName": "station-ChateauDEau",
+            "displayName": "Château d'Eau",
+            "line": "M4",
+            "position": {
+                "x": 2644.4676,
+                "y": 1734.6251
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 342,
+            "idfmId": "",
+            "idName": "station-StrasbourtStDenis",
+            "displayName": "Strasbourg - Saint-Denis",
+            "line": "M4",
+            "position": {
+                "x": 2599.6229,
+                "y": 1922.71
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 310,
+            "idfmId": "",
+            "idName": "station-ReaumurSebastopol",
+            "displayName": "Réaumur - Sébastopol",
+            "line": "M4",
+            "position": {
+                "x": 2506.0633,
+                "y": 2169.3563
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 375,
+            "idfmId": "",
+            "idName": "station-EtienneMarcel",
+            "displayName": "Étienne Marcel",
+            "line": "M4",
+            "position": {
+                "x": 2353.6462,
+                "y": 2190.3267
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 165,
+            "idfmId": "",
+            "idName": "station-LesHalles",
+            "displayName": "Les Halles",
+            "line": "M4",
+            "position": {
+                "x": 2354.5375,
+                "y": 2268.6551
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 70,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet",
+            "line": "M4",
+            "position": {
+                "x": 2355.3065,
+                "y": 2386.9437
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 73,
+            "idfmId": "",
+            "idName": "station-Cite",
+            "displayName": "Cité",
+            "line": "M4",
+            "position": {
+                "x": 2287.9434,
+                "y": 2480.0338
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 330,
+            "idfmId": "",
+            "idName": "station-StMichel",
+            "displayName": "Saint-Michel",
+            "line": "M4",
+            "position": {
+                "x": 2231.0855,
+                "y": 2636.3829
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 222,
+            "idfmId": "",
+            "idName": "station-Odeon",
+            "displayName": "Odéon",
+            "line": "M4",
+            "position": {
+                "x": 2198.6504,
+                "y": 2709.1773
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 323,
+            "idfmId": "",
+            "idName": "station-StGermainDesPres",
+            "displayName": "Saint-Germain-des-Prés",
+            "line": "M4",
+            "position": {
+                "x": 2025.7793,
+                "y": 2708.3477
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 334,
+            "idfmId": "",
+            "idName": "station-SaintSulpice",
+            "displayName": "SaintSulpice",
+            "line": "M4",
+            "position": {
+                "x": 1973.5838,
+                "y": 2821.5754
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 333,
+            "idfmId": "",
+            "idName": "station-StPlacide",
+            "displayName": "StPlacide",
+            "line": "M4",
+            "position": {
+                "x": 1974.2609,
+                "y": 2959.0663
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 208,
+            "idfmId": "",
+            "idName": "station-MontparnasseBienvenue",
+            "displayName": "MontparnasseBienvenue",
+            "line": "M4",
+            "position": {
+                "x": 1974.3009,
+                "y": 3087.3726
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 361,
+            "idfmId": "",
+            "idName": "station-Vavin",
+            "displayName": "Vavin",
+            "line": "M4",
+            "position": {
+                "x": 2098.064,
+                "y": 3108.396
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 292,
+            "idfmId": "",
+            "idName": "station-Raspail",
+            "displayName": "Raspail",
+            "line": "M4",
+            "position": {
+                "x": 2208.4511,
+                "y": 3156.1975
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 95,
+            "idfmId": "",
+            "idName": "station-DenfertRochereau",
+            "displayName": "DenfertRochereau",
+            "line": "M4",
+            "position": {
+                "x": 2263.1518,
+                "y": 3247.3653
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 210,
+            "idfmId": "",
+            "idName": "station-MoutonDuvernet",
+            "displayName": "MoutonDuvernet",
+            "line": "M4",
+            "position": {
+                "x": 2262.3304,
+                "y": 3375.6574
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 3,
+            "idfmId": "",
+            "idName": "station-Alesia",
+            "displayName": "Alésia",
+            "line": "M4",
+            "position": {
+                "x": 2195.6063,
+                "y": 3521.7991
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 262,
+            "idfmId": "",
+            "idName": "station-PorteDOrleans",
+            "displayName": "PorteDOrleans",
+            "line": "M4",
+            "position": {
+                "x": 2139.3911,
+                "y": 3576.5952
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 376,
+            "idfmId": "",
+            "idName": "station-MairieDeMontrouge",
+            "displayName": "MairieDeMontrouge",
+            "line": "M4",
+            "position": {
+                "x": 2135.8735,
+                "y": 3684.7786
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 377,
+            "idfmId": "",
+            "idName": "station-Barbara",
+            "displayName": "Barbara",
+            "line": "M4",
+            "position": {
+                "x": 2136.1223,
+                "y": 3791.7159
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 378,
+            "idfmId": "",
+            "idName": "station-BagneuxLucieAubrac",
+            "displayName": "BagneuxLucieAubrac",
+            "line": "M4",
+            "position": {
+                "x": 2136.2817,
+                "y": 3879.1056
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 213,
+            "idfmId": "",
+            "idName": "station-Nation",
+            "displayName": "Nation",
+            "line": "M2",
+            "position": {
+                "x": 3525.8134,
+                "y": 2613.8065
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 12,
+            "idfmId": "",
+            "idName": "station-Avron",
+            "displayName": "",
+            "line": "M2",
+            "position": {
+                "x": 3437.1096,
+                "y": 2526.4168
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 1,
+            "idfmId": "",
+            "idName": "station-AlexandreDumas",
+            "displayName": "Alexandre Dumas",
+            "line": "M2",
+            "position": {
+                "x": 3425.9395,
+                "y": 2382.5195000000003
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 235,
+            "idfmId": "",
+            "idName": "station-PhilippeAuguste",
+            "displayName": "Philippe Auguste",
+            "line": "M2",
+            "position": {
+                "x": 3424.6254,
+                "y": 2239.2792
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 284,
+            "idfmId": "",
+            "idName": "station-PereLachaise",
+            "displayName": "Père Lachaise",
+            "line": "M2",
+            "position": {
+                "x": 3424.45,
+                "y": 2126.2282
+            },
+            "displayType": "correspondanceSimple"
+        },
+        {
+            "id": 211,
+            "idfmId": "",
+            "idName": "station-Menilmontant",
+            "displayName": "Ménilmontant",
+            "line": "M2",
+            "position": {
+                "x": 3320.809,
+                "y": 1988.9373000000003
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 86,
+            "idfmId": "",
+            "idName": "station-Couronnes",
+            "displayName": "Couronnes",
+            "line": "M2",
+            "position": {
+                "x": 3208.4508,
+                "y": 1877.8932
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 21,
+            "idfmId": "",
+            "idName": "station-Belleville",
+            "displayName": "Belleville",
+            "line": "M2",
+            "position": {
+                "x": 3116.2974,
+                "y": 1757.6501999999998
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "75",
+            "idfmId": "",
+            "idName": "station-ColonelFabien",
+            "displayName": "Colonel Fabien",
+            "line": "M2",
+            "position": {
+                "x": 3116.6259,
+                "y": 1614.4099
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "142",
+            "idfmId": "",
+            "idName": "station-Jaures",
+            "displayName": "Jaurès",
+            "line": "M2",
+            "position": {
+                "x": 3092.1502,
+                "y": 1471.1696000000004
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "339",
+            "idfmId": "",
+            "idName": "station-Stalingrad",
+            "displayName": "Stalingrad",
+            "line": "M2",
+            "position": {
+                "x": 3001.968,
+                "y": 1379.8374999999999
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "151",
+            "idfmId": "",
+            "idName": "station-LaChapelle",
+            "displayName": "La Chapelle",
+            "line": "M2",
+            "position": {
+                "x": 2754.2542999999996,
+                "y": 1361.2754
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "13",
+            "idfmId": "",
+            "idName": "station-BarbesRochechouart",
+            "displayName": "Barbès - Rochechouart",
+            "line": "M2",
+            "position": {
+                "x": 2544.4861,
+                "y": 1361.2754
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "5",
+            "idfmId": "",
+            "idName": "station-Anvers",
+            "displayName": "",
+            "line": "M2",
+            "position": {
+                "x": 2351.6374,
+                "y": 1361.2755
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "239",
+            "idfmId": "",
+            "idName": "station-Pigalle",
+            "displayName": "Pigalle",
+            "line": "M2",
+            "position": {
+                "x": 2190.1636,
+                "y": 1361.4397
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "27",
+            "idfmId": "",
+            "idName": "station-Blanche",
+            "displayName": "",
+            "line": "M2",
+            "position": {
+                "x": 1977.4387,
+                "y": 1361.4397
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "246",
+            "idfmId": "",
+            "idName": "station-PlaceDeClichy",
+            "displayName": "Place de Clichy",
+            "line": "M2",
+            "position": {
+                "x": 1766.1921,
+                "y": 1361.4397
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "302",
+            "idfmId": "",
+            "idName": "station-Rome",
+            "displayName": "",
+            "line": "M2",
+            "position": {
+                "x": 1635.469,
+                "y": 1390.9415999999999
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "366",
+            "idfmId": "",
+            "idName": "station-Villiers",
+            "displayName": "Villiers",
+            "line": "M2",
+            "position": {
+                "x": 1531.2347,
+                "y": 1495.6735
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": "204",
+            "idfmId": "",
+            "idName": "station-Monceau",
+            "displayName": "Monceau",
+            "line": "M2",
+            "position": {
+                "x": 1437.6991,
+                "y": 1589.4414000000002
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 85,
+            "idfmId": "",
+            "idName": "station-Courcelles",
+            "displayName": "Courcelles",
+            "line": "M2",
+            "position": {
+                "x": 1344.8206,
+                "y": 1683.3619999999999
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 351,
+            "idfmId": "",
+            "idName": "station-Ternes",
+            "displayName": "Ternes",
+            "line": "M2",
+            "position": {
+                "x": 1251.0527,
+                "y": 1776.4261000000001
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 56,
+            "idfmId": "",
+            "idName": "station-CDGEtoile",
+            "displayName": "Charles de Gaulle - Étoile",
+            "line": "M2",
+            "position": {
+                "x": 1146.5793,
+                "y": 1881.8356
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 362,
+            "idfmId": "",
+            "idName": "station-VictorHugo",
+            "displayName": "Porte VictorHugo",
+            "line": "M2",
+            "position": {
+                "x": 933.69007,
+                "y": 2053.9867
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 256,
+            "idfmId": "",
+            "idName": "station-PorteDauphine",
+            "displayName": "Porte Dauphine",
+            "line": "M2",
+            "position": {
+                "x": 785.19327,
+                "y": 1900.8905
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 66,
+            "idfmId": "",
+            "idName": "station-ChateauVincennes",
+            "displayName": "Château de Vincennes",
+            "line": "M1",
+            "position": {
+                "x": 3914,
+                "y": 2897
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 43,
+            "idfmId": "",
+            "idName": "station-Berault",
+            "displayName": "Bérault",
+            "line": "M1",
+            "position": {
+                "x": 3880,
+                "y": 2862
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 328,
+            "idfmId": "",
+            "idName": "station-StMande",
+            "displayName": "Saint-Mandé",
+            "line": "M1",
+            "position": {
+                "x": 3787,
+                "y": 2769
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 275,
+            "idfmId": "",
+            "idName": "station-PteVincennes",
+            "displayName": "Porte de Vincennes",
+            "line": "M1",
+            "position": {
+                "x": 3661,
+                "y": 2698
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 212,
+            "idfmId": "",
+            "idName": "station-Nation",
+            "displayName": "",
+            "line": "M1",
+            "position": {
+                "x": 3475,
+                "y": 2662
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 295,
+            "idfmId": "",
+            "idName": "station-ReuillyDiderot",
+            "displayName": "Reuilly - Diderot",
+            "line": "M1",
+            "position": {
+                "x": 3235,
+                "y": 2788
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 119,
+            "idfmId": "",
+            "idName": "station-GareDeLyon",
+            "displayName": "Gare de Lyon",
+            "line": "M1",
+            "position": {
+                "x": 3061,
+                "y": 2882
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 16,
+            "idfmId": "",
+            "idName": "station-Bastille",
+            "displayName": "",
+            "line": "M1",
+            "position": {
+                "x": 2855,
+                "y": 2550
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 331,
+            "idfmId": "",
+            "idName": "station-StPaul",
+            "displayName": "Saint-Paul Le Marais",
+            "line": "M1",
+            "position": {
+                "x": 2670,
+                "y": 2491
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 135,
+            "idfmId": "",
+            "idName": "station-HotelDeVille",
+            "displayName": "Hôtel de Ville",
+            "line": "M1",
+            "position": {
+                "x": 2526,
+                "y": 2349
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 67,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet",
+            "line": "M1",
+            "position": {
+                "x": 2353,
+                "y": 2345
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 173,
+            "idfmId": "",
+            "idName": "station-LouvreRivoli",
+            "displayName": "Louvre - Rivoli",
+            "line": "M1",
+            "position": {
+                "x": 2043,
+                "y": 2344
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 227,
+            "idfmId": "",
+            "idName": "station-PalaisRoyalMuseeLouvre",
+            "displayName": "Palais-Royal - Musée du Louvre",
+            "line": "M1",
+            "position": {
+                "x": 1902,
+                "y": 2345
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 356,
+            "idfmId": "",
+            "idName": "station-Tuileries",
+            "displayName": "Tuileries",
+            "line": "M1",
+            "position": {
+                "x": 1729,
+                "y": 2345
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 77,
+            "idfmId": "",
+            "idName": "station-Concorde",
+            "displayName": "Concorde",
+            "line": "M1",
+            "position": {
+                "x": 1555,
+                "y": 2300
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 50,
+            "idfmId": "",
+            "idName": "station-ChampsElyseesClemenceau",
+            "displayName": "Champs-Élysées - Clemenceau",
+            "line": "M1",
+            "position": {
+                "x": 1471,
+                "y": 2215
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 109,
+            "idfmId": "",
+            "idName": "station-FranklinDRoosevelt",
+            "displayName": "Franklin D. Roosevelt",
+            "line": "M1",
+            "position": {
+                "x": 1384,
+                "y": 2128
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 127,
+            "idfmId": "",
+            "idName": "station-GeorgeV",
+            "displayName": "George V",
+            "line": "M1",
+            "position": {
+                "x": 1264,
+                "y": 2008
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 55,
+            "idfmId": "",
+            "idName": "station-CDGEtoile",
+            "displayName": "Charles de Gaulle - Étoile",
+            "line": "M1",
+            "position": {
+                "x": 1141,
+                "y": 1885
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 6,
+            "idfmId": "",
+            "idName": "station-Argentine",
+            "displayName": "Argentine",
+            "line": "M1",
+            "position": {
+                "x": 1040,
+                "y": 1784
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 258,
+            "idfmId": "",
+            "idName": "station-PorteMaillot",
+            "displayName": "Porte Maillot",
+            "line": "M1",
+            "position": {
+                "x": 912,
+                "y": 1656
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 166,
+            "idfmId": "",
+            "idName": "station-LesSablons",
+            "displayName": "Les Sablons",
+            "line": "M1",
+            "position": {
+                "x": 822,
+                "y": 1565
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 252,
+            "idfmId": "",
+            "idName": "station-PontDeNeuilly",
+            "displayName": "Pont de Neuilly",
+            "line": "M1",
+            "position": {
+                "x": 741,
+                "y": 1485
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 102,
+            "idfmId": "",
+            "idName": "station-EsplanadeLaDefense",
+            "displayName": "Esplanade de la Défense",
+            "line": "M1",
+            "position": {
+                "x": 661,
+                "y": 1405
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 130,
+            "idfmId": "",
+            "idName": "station-LaDefense",
+            "displayName": "La Défense Grande Arche",
+            "line": "M1",
+            "position": {
+                "x": 586,
+                "y": 1329
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 242,
+            "idfmId": "",
+            "idName": "station-PlaceDItalie",
+            "displayName": "Place d'Italie",
+            "line": "M5",
+            "position": {
+                "x": 2700,
+                "y": 3386
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 46,
+            "idfmId": "",
+            "idName": "station-CampoFormio",
+            "displayName": "Campo-Formio",
+            "line": "M5",
+            "position": {
+                "x": 2790,
+                "y": 3233
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 329,
+            "idfmId": "",
+            "idName": "station-StMarcel",
+            "displayName": "Saint-Marcel",
+            "line": "M5",
+            "position": {
+                "x": 2854,
+                "y": 3146
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 118,
+            "idfmId": "",
+            "idName": "station-Austerlitz",
+            "displayName": "Gare d'Austerlitz",
+            "line": "M5",
+            "position": {
+                "x": 2854,
+                "y": 3028
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 288,
+            "idfmId": "",
+            "idName": "station-QuaiDeLaRapee",
+            "displayName": "Quai de la Rapée",
+            "line": "M5",
+            "position": {
+                "x": 2854,
+                "y": 2831
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 17,
+            "idfmId": "",
+            "idName": "station-Bastille",
+            "displayName": "Bastille",
+            "line": "M5",
+            "position": {
+                "x": 2854,
+                "y": 2538
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 40,
+            "idfmId": "",
+            "idName": "station-BreguetSabin",
+            "displayName": "Bréguet - Sabin",
+            "line": "M5",
+            "position": {
+                "x": 2944,
+                "y": 2401
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 297,
+            "idfmId": "",
+            "idName": "station-RichardLenoir",
+            "displayName": "Richard-Lenoir",
+            "line": "M5",
+            "position": {
+                "x": 3037,
+                "y": 2308
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 219,
+            "idfmId": "",
+            "idName": "station-Oberkampf",
+            "displayName": "Oberkampf",
+            "line": "M5",
+            "position": {
+                "x": 2974,
+                "y": 2063
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 313,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "M5",
+            "position": {
+                "x": 2894,
+                "y": 1982
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 140,
+            "idfmId": "",
+            "idName": "station-JacquesBonsergent",
+            "displayName": "Jacques Bonsergent",
+            "line": "M5",
+            "position": {
+                "x": 2812,
+                "y": 1818
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 122,
+            "idfmId": "",
+            "idName": "station-GareDeLEst",
+            "displayName": "Gare de l'Est",
+            "line": "M5",
+            "position": {
+                "x": 2769,
+                "y": 1621
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 125,
+            "idfmId": "",
+            "idName": "station-GareDuNord",
+            "displayName": "Gare du Nord",
+            "line": "M5",
+            "position": {
+                "x": 2770,
+                "y": 1456
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 340,
+            "idfmId": "",
+            "idName": "station-Stalingrad",
+            "displayName": "Stalingrad",
+            "line": "M5",
+            "position": {
+                "x": 2999,
+                "y": 1408
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 143,
+            "idfmId": "",
+            "idName": "station-Jaures",
+            "displayName": "Jaurès",
+            "line": "M5",
+            "position": {
+                "x": 3103,
+                "y": 1464
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 160,
+            "idfmId": "",
+            "idName": "station-Laumiere",
+            "displayName": "Laumière",
+            "line": "M5",
+            "position": {
+                "x": 3189,
+                "y": 1375
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 226,
+            "idfmId": "",
+            "idName": "station-Ourcq",
+            "displayName": "Ourcq",
+            "line": "M5",
+            "position": {
+                "x": 3306,
+                "y": 1303
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 270,
+            "idfmId": "",
+            "idName": "station-PortedePantin",
+            "displayName": "Porte de Pantin",
+            "line": "M5",
+            "position": {
+                "x": 3461,
+                "y": 1302
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 134,
+            "idfmId": "",
+            "idName": "station-Hoche",
+            "displayName": "Hoche",
+            "line": "M5",
+            "position": {
+                "x": 3611,
+                "y": 1303
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 374,
+            "idfmId": "",
+            "idName": "station-EgliseDePantin",
+            "displayName": "Église de Pantin",
+            "line": "M5",
+            "position": {
+                "x": 3718,
+                "y": 1242
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 29,
+            "idfmId": "",
+            "idName": "station-BobignyPantin",
+            "displayName": "Bobigny - Pantin - Raymond Queneau",
+            "line": "M5",
+            "position": {
+                "x": 3792,
+                "y": 1167
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 28,
+            "idfmId": "",
+            "idName": "station-BobignyPabloPicasso",
+            "displayName": "Bobigny - Pablo Picasso",
+            "line": "M5",
+            "position": {
+                "x": 3899.3552,
+                "y": 1060
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 379,
+            "idfmId": "",
+            "idName": "station-MairieDeSaintOuen",
+            "displayName": "Mairie de Saint-Ouen",
+            "line": "M14",
+            "position": {
+                "x": 1939,
+                "y": 787
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 380,
+            "idfmId": "",
+            "idName": "station-SaintOuen",
+            "displayName": "Saint-Ouen",
+            "line": "M14",
+            "position": {
+                "x": 1609,
+                "y": 789
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 381,
+            "idfmId": "",
+            "idName": "station-PorteDeClichy",
+            "displayName": "Porte de Clichy",
+            "line": "M14",
+            "position": {
+                "x": 1591,
+                "y": 1059
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 382,
+            "idfmId": "",
+            "idName": "station-PontCardinet",
+            "displayName": "Pont Cardinet",
+            "line": "M14",
+            "position": {
+                "x": 1483,
+                "y": 1326
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 383,
+            "idfmId": "",
+            "idName": "station-SaintLazare",
+            "displayName": "Saint-Lazare",
+            "line": "M14",
+            "position": {
+                "x": 1718,
+                "y": 1763
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 176,
+            "idfmId": "",
+            "idName": "station-Madeleine",
+            "displayName": "",
+            "line": "M14",
+            "position": {
+                "x": 1577,
+                "y": 2145
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 281,
+            "idfmId": "",
+            "idName": "station-Pyramides",
+            "displayName": "",
+            "line": "M14",
+            "position": {
+                "x": 1902,
+                "y": 2166
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 69,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet",
+            "line": "M14",
+            "position": {
+                "x": 2354,
+                "y": 2323
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 120,
+            "idfmId": "",
+            "idName": "station-GareDeLyon",
+            "displayName": "Gare de Lyon",
+            "line": "M14",
+            "position": {
+                "x": 3007,
+                "y": 2936
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 22,
+            "idfmId": "",
+            "idName": "station-Bercy",
+            "displayName": "Bercy",
+            "line": "M14",
+            "position": {
+                "x": 3252,
+                "y": 3181
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 84,
+            "idfmId": "",
+            "idName": "station-CourStEmilion",
+            "displayName": "Cour Saint-Émilion",
+            "line": "M14",
+            "position": {
+                "x": 3310,
+                "y": 3318
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 24,
+            "idfmId": "",
+            "idName": "station-BFM",
+            "displayName": "Bibliothèque François-Mitterrand",
+            "line": "M14",
+            "position": {
+                "x": 3226,
+                "y": 3404
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 384,
+            "idfmId": "",
+            "idName": "station-Olympiades",
+            "displayName": "",
+            "line": "M14",
+            "position": {
+                "x": 3022,
+                "y": 3478
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 179,
+            "idfmId": "",
+            "idName": "station-MairieDIvry",
+            "displayName": "Mairie d'Ivry",
+            "line": "M7",
+            "position": {
+                "x": 3235,
+                "y": 3743
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 237,
+            "idfmId": "",
+            "idName": "station-PierreMarieCurie",
+            "displayName": "Pierre et Marie Curie",
+            "line": "M7",
+            "position": {
+                "x": 3167,
+                "y": 3675
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 261,
+            "idfmId": "",
+            "idName": "station-PorteDIvry",
+            "displayName": "Porte d'Ivry",
+            "line": "M7",
+            "position": {
+                "x": 3075,
+                "y": 3633
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 266,
+            "idfmId": "",
+            "idName": "station-PorteDeChoisy",
+            "displayName": "Porte de Choisy",
+            "line": "M7",
+            "position": {
+                "x": 2937,
+                "y": 3634
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 260,
+            "idfmId": "",
+            "idName": "station-PorteDItalie",
+            "displayName": "Porte d'Italie",
+            "line": "M7",
+            "position": {
+                "x": 2795,
+                "y": 3633
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 184,
+            "idfmId": "",
+            "idName": "station-MaisonBlanche",
+            "displayName": "Maison Blanche",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3557
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 352,
+            "idfmId": "",
+            "idName": "station-Tolbiac",
+            "displayName": "Tolbiac",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3476
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 244,
+            "idfmId": "",
+            "idName": "station-PlaceDItalie",
+            "displayName": "Place d'Italie",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3385
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 164,
+            "idfmId": "",
+            "idName": "station-LesGobelins",
+            "displayName": "Les Gobelins",
+            "line": "M7",
+            "position": {
+                "x": 2607,
+                "y": 3252
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 49,
+            "idfmId": "",
+            "idName": "station-CensierDaubenton",
+            "displayName": "Censier - Daubenton",
+            "line": "M7",
+            "position": {
+                "x": 2524,
+                "y": 3141
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 241,
+            "idfmId": "",
+            "idName": "station-PlaceMonge",
+            "displayName": "Place Monge",
+            "line": "M7",
+            "position": {
+                "x": 2524,
+                "y": 3023
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 149,
+            "idfmId": "",
+            "idName": "station-Jussieu",
+            "displayName": "Jussieu",
+            "line": "M7",
+            "position": {
+                "x": 2609,
+                "y": 2933
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 345,
+            "idfmId": "",
+            "idName": "station-SullyMorland",
+            "displayName": "Sully - Morland",
+            "line": "M7",
+            "position": {
+                "x": 2664,
+                "y": 2623
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 254,
+            "idfmId": "",
+            "idName": "station-PontMarie",
+            "displayName": "Pont Marie",
+            "line": "M7",
+            "position": {
+                "x": 2544,
+                "y": 2503
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 71,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet",
+            "line": "M7",
+            "position": {
+                "x": 2353,
+                "y": 2365
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 255,
+            "idfmId": "",
+            "idName": "station-PontNeuf",
+            "displayName": "Pont-Neuf",
+            "line": "M7",
+            "position": {
+                "x": 2159,
+                "y": 2365
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 228,
+            "idfmId": "",
+            "idName": "station-PalaisRoyalMuseeDuLouvre",
+            "displayName": "Palais-Royal - Musée du Louvre",
+            "line": "M7",
+            "position": {
+                "x": 1902,
+                "y": 2345
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 282,
+            "idfmId": "",
+            "idName": "station-Pyramides",
+            "displayName": "Pyramides",
+            "line": "M7",
+            "position": {
+                "x": 1902,
+                "y": 2165
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 224,
+            "idfmId": "",
+            "idName": "station-Opera",
+            "displayName": "Opéra",
+            "line": "M7",
+            "position": {
+                "x": 1911,
+                "y": 2005
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 59,
+            "idfmId": "",
+            "idName": "station-ChausseeAntinLaFayette",
+            "displayName": "Chaussée d'Antin - La Fayette",
+            "line": "M7",
+            "position": {
+                "x": 2003,
+                "y": 1912
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 162,
+            "idfmId": "",
+            "idName": "station-LePeletier",
+            "displayName": "Le Peletier",
+            "line": "M7",
+            "position": {
+                "x": 2185,
+                "y": 1724
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 44,
+            "idfmId": "",
+            "idName": "station-Cadet",
+            "displayName": "Cadet",
+            "line": "M7",
+            "position": {
+                "x": 2255,
+                "y": 1653
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 250,
+            "idfmId": "",
+            "idName": "station-Poissionniere",
+            "displayName": "Poissonnière",
+            "line": "M7",
+            "position": {
+                "x": 2461,
+                "y": 1623
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 123,
+            "idfmId": "",
+            "idName": "station-GareDeLEst",
+            "displayName": "Gare de l'Est",
+            "line": "M7",
+            "position": {
+                "x": 2761,
+                "y": 1624
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 63,
+            "idfmId": "",
+            "idName": "station-ChateauLandon",
+            "displayName": "Château-Landon",
+            "line": "M7",
+            "position": {
+                "x": 2895,
+                "y": 1563
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 169,
+            "idfmId": "",
+            "idName": "station-LouisBlanc",
+            "displayName": "Louis Blanc",
+            "line": "M7",
+            "position": {
+                "x": 2968,
+                "y": 1489
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 341,
+            "idfmId": "",
+            "idName": "station-Stalingrad",
+            "displayName": "Stalingrad",
+            "line": "M7",
+            "position": {
+                "x": 2999,
+                "y": 1392
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 300,
+            "idfmId": "",
+            "idName": "station-Riquet",
+            "displayName": "Riquet",
+            "line": "M7",
+            "position": {
+                "x": 3034,
+                "y": 1299
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 87,
+            "idfmId": "",
+            "idName": "station-Crimee",
+            "displayName": "Crimée",
+            "line": "M7",
+            "position": {
+                "x": 3097,
+                "y": 1234
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 82,
+            "idfmId": "",
+            "idName": "station-CorentinCariou",
+            "displayName": "Corentin Cariou",
+            "line": "M7",
+            "position": {
+                "x": 3161,
+                "y": 1169
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 277,
+            "idfmId": "",
+            "idName": "station-PortedeLaVillette",
+            "displayName": "Porte de la Villette",
+            "line": "M7",
+            "position": {
+                "x": 3239,
+                "y": 1093
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 10,
+            "idfmId": "",
+            "idName": "station-AubervilliersPantinQuatreChemins",
+            "displayName": "Aubervilliers - Pantin - Quatre Chemins",
+            "line": "M7",
+            "position": {
+                "x": 3337,
+                "y": 993
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 108,
+            "idfmId": "",
+            "idName": "station-FortAubervilliers",
+            "displayName": "Fort d'Aubervilliers",
+            "line": "M7",
+            "position": {
+                "x": 3443,
+                "y": 859
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 152,
+            "idfmId": "",
+            "idName": "station-LaCourneuve8Mai1945",
+            "displayName": "La Courneuve - 8 Mai 1945",
+            "line": "M7",
+            "position": {
+                "x": 3444,
+                "y": 736
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 161,
+            "idfmId": "",
+            "idName": "station-LeKremlinBicetre",
+            "displayName": "Le Kremlin-Bicêtre",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3665
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 364,
+            "idfmId": "",
+            "idName": "station-VillejuifLeoLagrande",
+            "displayName": "Villejuif - Léo Lagrange",
+            "line": "M7",
+            "position": {
+                "x": 2678,
+                "y": 3756
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 365,
+            "idfmId": "",
+            "idName": "station-VillejuifPaulVaillantCouturier",
+            "displayName": "Villejuif - Paul Vaillant-Couturier",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3847
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 363,
+            "idfmId": "",
+            "idName": "station-VillejuifLouisAragon",
+            "displayName": "Villejuif - Louis Aragon",
+            "line": "M7",
+            "position": {
+                "x": 2679,
+                "y": 3938
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 170,
+            "idfmId": "",
+            "idName": "station-LouisBlanc",
+            "displayName": "Louis Blanc",
+            "line": "M7bis",
+            "position": {
+                "x": 2985,
+                "y": 1504
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 144,
+            "idfmId": "",
+            "idName": "station-Jaures",
+            "displayName": "Jaurès",
+            "line": "M7bis",
+            "position": {
+                "x": 3113,
+                "y": 1459
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 31,
+            "idfmId": "",
+            "idName": "station-Bolivar",
+            "displayName": "Bolivar",
+            "line": "M7bis",
+            "position": {
+                "x": 3191,
+                "y": 1538
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 41,
+            "idfmId": "",
+            "idName": "station-ButtesChaumont",
+            "displayName": "Buttes Chaumont",
+            "line": "M7bis",
+            "position": {
+                "x": 3351,
+                "y": 1571
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 34,
+            "idfmId": "",
+            "idName": "station-Botzaris",
+            "displayName": "Botzaris",
+            "line": "M7bis",
+            "position": {
+                "x": 3424,
+                "y": 1571
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 92,
+            "idfmId": "",
+            "idName": "station-Danube",
+            "displayName": "Danube",
+            "line": "M7bis",
+            "position": {
+                "x": 3561,
+                "y": 1467
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 248,
+            "idfmId": "",
+            "idName": "station-PlaceDesFetes",
+            "displayName": "Place des Fêtes",
+            "line": "M7bis",
+            "position": {
+                "x": 3560.1607000000004,
+                "y": 1675.896200000000
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 280,
+            "idfmId": "",
+            "idName": "station-PreSaintGervais",
+            "displayName": "Pré-Saint-Gervais",
+            "line": "M7bis",
+            "position": {
+                "x": 3670,
+                "y": 1550
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 72,
+            "idfmId": "",
+            "idName": "station-ChatillonMontrouge",
+            "displayName": "Châtillon - Montrouge",
+            "line": "M13",
+            "position": {
+                "x": 1363,
+                "y": 3894
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 188,
+            "idfmId": "",
+            "idName": "station-MalakoffRueEtienneDolet",
+            "displayName": "Malakoff - Rue Étienne-Dolet",
+            "line": "M13",
+            "position": {
+                "x": 1502,
+                "y": 3757
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 187,
+            "idfmId": "",
+            "idName": "station-MalakoffPlateauDeVanves",
+            "displayName": "Malakoff - Plateau de Vanves",
+            "line": "M13",
+            "position": {
+                "x": 1575,
+                "y": 3684
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 273,
+            "idfmId": "",
+            "idName": "station-PorteDeVanves",
+            "displayName": "Porte de Vanves",
+            "line": "M13",
+            "position": {
+                "x": 1682,
+                "y": 3578
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 249,
+            "idfmId": "",
+            "idName": "station-Plaisance",
+            "displayName": "Plaisance",
+            "line": "M13",
+            "position": {
+                "x": 1799,
+                "y": 3462
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 234,
+            "idfmId": "",
+            "idName": "station-Pernety",
+            "displayName": "Pernety",
+            "line": "M13",
+            "position": {
+                "x": 1894,
+                "y": 3364
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 113,
+            "idfmId": "",
+            "idName": "station-Gaite",
+            "displayName": "Gaîté",
+            "line": "M13",
+            "position": {
+                "x": 1952,
+                "y": 3268
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 207,
+            "idfmId": "",
+            "idName": "station-MontparnasseBienvenue",
+            "displayName": "Montparnasse - Bienvenüe",
+            "line": "M13",
+            "position": {
+                "x": 1950,
+                "y": 3115
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 100,
+            "idfmId": "",
+            "idName": "station-Duroc",
+            "displayName": "Duroc",
+            "line": "M13",
+            "position": {
+                "x": 1668,
+                "y": 2959
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 321,
+            "idfmId": "",
+            "idName": "station-StFrancoisXavier",
+            "displayName": "Saint-François-Xavier",
+            "line": "M13",
+            "position": {
+                "x": 1533,
+                "y": 2822
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 359,
+            "idfmId": "",
+            "idName": "station-Varenne",
+            "displayName": "Varenne",
+            "line": "M13",
+            "position": {
+                "x": 1469,
+                "y": 2619
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 137,
+            "idfmId": "",
+            "idName": "station-Invalides",
+            "displayName": "Invalides \t",
+            "line": "M13",
+            "position": {
+                "x": 1469,
+                "y": 2453
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 51,
+            "idfmId": "",
+            "idName": "station-ChampesElyseesClemenceau",
+            "displayName": "Champs-Élysées - Clemenceau",
+            "line": "M13",
+            "position": {
+                "x": 1469,
+                "y": 2213
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 202,
+            "idfmId": "",
+            "idName": "station-Miromesnil",
+            "displayName": "Miromesnil",
+            "line": "M13",
+            "position": {
+                "x": 1609,
+                "y": 1931
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 326,
+            "idfmId": "",
+            "idName": "station-SaintLazare",
+            "displayName": "Saint-Lazare",
+            "line": "M13",
+            "position": {
+                "x": 1766,
+                "y": 1761
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 168,
+            "idfmId": "",
+            "idName": "station-Liege",
+            "displayName": "Liège",
+            "line": "M13",
+            "position": {
+                "x": 1766,
+                "y": 1517
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 245,
+            "idfmId": "",
+            "idName": "station-PlaceDeClichy",
+            "displayName": "Place de Clichy",
+            "line": "M13",
+            "position": {
+                "x": 1767,
+                "y": 1360
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 153,
+            "idfmId": "",
+            "idName": "station-LaFourche",
+            "displayName": "La Fourche",
+            "line": "M13",
+            "position": {
+                "x": 1766,
+                "y": 1256
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 131,
+            "idfmId": "",
+            "idName": "station-GuyMoquet",
+            "displayName": "Guy Môquet",
+            "line": "M13",
+            "position": {
+                "x": 1766,
+                "y": 1123
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 272,
+            "idfmId": "",
+            "idName": "station-PorteDeSaintOuen",
+            "displayName": "Porte de Saint-Ouen",
+            "line": "M13",
+            "position": {
+                "x": 1766,
+                "y": 1003
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 126,
+            "idfmId": "",
+            "idName": "station-Garibaldi",
+            "displayName": "Garibaldi",
+            "line": "M13",
+            "position": {
+                "x": 1862,
+                "y": 886
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 182,
+            "idfmId": "",
+            "idName": "station-MairieDeSaintOuen",
+            "displayName": "Mairie de Saint-Ouen",
+            "line": "M13",
+            "position": {
+                "x": 1960,
+                "y": 787
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 48,
+            "idfmId": "",
+            "idName": "station-CarrefourPleyel",
+            "displayName": "Carrefour Pleyel",
+            "line": "M13",
+            "position": {
+                "x": 2067,
+                "y": 680
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 318,
+            "idfmId": "",
+            "idName": "station-SaintDenisPorteDeParis",
+            "displayName": "Saint-Denis - Porte de Paris",
+            "line": "M13",
+            "position": {
+                "x": 2271,
+                "y": 645
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 15,
+            "idfmId": "",
+            "idName": "station-BasiliqueSaintDenis",
+            "displayName": "Basilique de Saint-Denis",
+            "line": "M13",
+            "position": {
+                "x": 2602,
+                "y": 514
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 319,
+            "idfmId": "",
+            "idName": "station-SaintDenisUniversite",
+            "displayName": "Saint-Denis - Université",
+            "line": "M13",
+            "position": {
+                "x": 2654,
+                "y": 462
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 39,
+            "idfmId": "",
+            "idName": "station-Brochant",
+            "displayName": "Brochant",
+            "line": "M13",
+            "position": {
+                "x": 1673,
+                "y": 1141
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 267,
+            "idfmId": "",
+            "idName": "station-PorteDeClichy",
+            "displayName": "Porte de Clichy",
+            "line": "M13",
+            "position": {
+                "x": 1591,
+                "y": 1057
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 180,
+            "idfmId": "",
+            "idName": "station-MairieDeClichy",
+            "displayName": "Mairie de Clichy",
+            "line": "M13",
+            "position": {
+                "x": 1433,
+                "y": 900
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 112,
+            "idfmId": "",
+            "idName": "station-GabrielPeri",
+            "displayName": "Gabriel Péri",
+            "line": "M13",
+            "position": {
+                "x": 1314,
+                "y": 780
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 385,
+            "idfmId": "",
+            "idName": "station-LesAgnettes",
+            "displayName": "Les Agnettes",
+            "line": "M13",
+            "position": {
+                "x": 1246,
+                "y": 712
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 386,
+            "idfmId": "",
+            "idName": "station-LesCourtilles",
+            "displayName": "Les Courtilles",
+            "line": "M13",
+            "position": {
+                "x": 1223,
+                "y": 563
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 117,
+            "idfmId": "",
+            "idName": "station-Austerlitz",
+            "displayName": "Gare d'Austerlitz",
+            "line": "M10",
+            "position": {
+                "x": 2838,
+                "y": 3047
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 148,
+            "idfmId": "",
+            "idName": "station-Jussieu",
+            "displayName": "Jussieu",
+            "line": "M10",
+            "position": {
+                "x": 2609,
+                "y": 2911
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 47,
+            "idfmId": "",
+            "idName": "station-CardinalLemoine",
+            "displayName": "Cardinal Lemoine",
+            "line": "M10",
+            "position": {
+                "x": 2485,
+                "y": 2876
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 195,
+            "idfmId": "",
+            "idName": "station-MaubertMutualité",
+            "displayName": "Maubert - Mutualité",
+            "line": "M10",
+            "position": {
+                "x": 2409,
+                "y": 2800
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 74,
+            "idfmId": "",
+            "idName": "station-ClunyLaSorbonne",
+            "displayName": "Cluny - La Sorbonne",
+            "line": "M10",
+            "position": {
+                "x": 2310,
+                "y": 2728
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 221,
+            "idfmId": "",
+            "idName": "station-Odeon",
+            "displayName": "Odéon",
+            "line": "M10",
+            "position": {
+                "x": 2197,
+                "y": 2728
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 174,
+            "idfmId": "",
+            "idName": "station-Mabillon",
+            "displayName": "Mabillon",
+            "line": "M10",
+            "position": {
+                "x": 2066,
+                "y": 2729
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 346,
+            "idfmId": "",
+            "idName": "station-SevresBabylone",
+            "displayName": "Sèvres - Babylone",
+            "line": "M10",
+            "position": {
+                "x": 1846,
+                "y": 2783
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 358,
+            "idfmId": "",
+            "idName": "station-Vaneau",
+            "displayName": "Vaneau",
+            "line": "M10",
+            "position": {
+                "x": 1758,
+                "y": 2872
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 99,
+            "idfmId": "",
+            "idName": "station-Duroc",
+            "displayName": "Duroc",
+            "line": "M10",
+            "position": {
+                "x": 1670,
+                "y": 2960
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 349,
+            "idfmId": "",
+            "idName": "station-Segur",
+            "displayName": "Ségur",
+            "line": "M10",
+            "position": {
+                "x": 1527,
+                "y": 2994
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 154,
+            "idfmId": "",
+            "idName": "station-LaMottePicquetGrenelle",
+            "displayName": "La Motte-Picquet - Grenelle",
+            "line": "M10",
+            "position": {
+                "x": 1263,
+                "y": 2885
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 11,
+            "idfmId": "",
+            "idName": "station-AvenueEmileZola",
+            "displayName": "Avenue Émile-Zola",
+            "line": "M10",
+            "position": {
+                "x": 1166,
+                "y": 2929
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 54,
+            "idfmId": "",
+            "idName": "station-CharlesMichels",
+            "displayName": "Charles Michels",
+            "line": "M10",
+            "position": {
+                "x": 1098,
+                "y": 2997
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 145,
+            "idfmId": "",
+            "idName": "station-JavelAndreCitroen",
+            "displayName": "Javel - André Citroën",
+            "line": "M10",
+            "position": {
+                "x": 975,
+                "y": 3027
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 196,
+            "idfmId": "",
+            "idName": "station-MichelAngleAuteuil",
+            "displayName": "Michel-Ange - Auteuil",
+            "line": "M10",
+            "position": {
+                "x": 665,
+                "y": 3027
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 259,
+            "idfmId": "",
+            "idName": "station-PorteDAuteuil",
+            "displayName": "Porte d'Auteuil",
+            "line": "M10",
+            "position": {
+                "x": 544,
+                "y": 3091
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 36,
+            "idfmId": "",
+            "idName": "station-BoulogneJeanJaures",
+            "displayName": "Boulogne - Jean Jaurès",
+            "line": "M10",
+            "position": {
+                "x": 464,
+                "y": 3170
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 37,
+            "idfmId": "",
+            "idName": "station-BoulognePontDeStCloud",
+            "displayName": "Boulogne - Pont de Saint-Cloud",
+            "line": "M10",
+            "position": {
+                "x": 385,
+                "y": 3249
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 198,
+            "idfmId": "",
+            "idName": "station-MichelAngleMolitor",
+            "displayName": "Michel-Ange - Molitor",
+            "line": "M10",
+            "position": {
+                "x": 666,
+                "y": 3141
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 52,
+            "idfmId": "",
+            "idName": "station-ChardonLagache",
+            "displayName": "Chardon-Lagache",
+            "line": "M10",
+            "position": {
+                "x": 738,
+                "y": 3141
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 201,
+            "idfmId": "",
+            "idName": "station-Mirabeau",
+            "displayName": "Mirabeau",
+            "line": "M10",
+            "position": {
+                "x": 846,
+                "y": 3096
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 390,
+            "idfmId": "",
+            "idName": "station-CreteilPointeDuLac",
+            "displayName": "Pointe du Lac",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 4004
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 89,
+            "idfmId": "",
+            "idName": "station-CreteilPrefecture",
+            "displayName": "Préfecture",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 3929
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 90,
+            "idfmId": "",
+            "idName": "station-CreteilUniversite",
+            "displayName": "Créteil - Université",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 3855
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 91,
+            "idfmId": "",
+            "idName": "station-CreteilLEchat",
+            "displayName": "Créteil - L'Échat",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 3780
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 185,
+            "idfmId": "",
+            "idName": "station-MaisonsAlfortLesJuiliottes",
+            "displayName": "Maisons-Alfort - Les Juilliottes",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 3702
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 186,
+            "idfmId": "",
+            "idName": "station-MaisonsAlfortStade",
+            "displayName": "Maisons-Alfort - Stade",
+            "line": "M8",
+            "position": {
+                "x": 3815,
+                "y": 3627
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 372,
+            "idfmId": "",
+            "idName": "station-EcoleVeterinaireMaisonsAlfort",
+            "displayName": "École vétérinaire de Maisons-Alfort",
+            "line": "M8",
+            "position": {
+                "x": 3741,
+                "y": 3549
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 53,
+            "idfmId": "",
+            "idName": "station-CharentonEcoles",
+            "displayName": "Charenton - Écoles",
+            "line": "M8",
+            "position": {
+                "x": 3644,
+                "y": 3453
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 167,
+            "idfmId": "",
+            "idName": "station-Liberte",
+            "displayName": "Liberté",
+            "line": "M8",
+            "position": {
+                "x": 3548,
+                "y": 3356
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 265,
+            "idfmId": "",
+            "idName": "station-PorteDeCharenton",
+            "displayName": "Porte de Charenton",
+            "line": "M8",
+            "position": {
+                "x": 3483,
+                "y": 3247
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 257,
+            "idfmId": "",
+            "idName": "station-PorteDoree",
+            "displayName": "Porte Dorée",
+            "line": "M8",
+            "position": {
+                "x": 3571,
+                "y": 3157
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 200,
+            "idfmId": "",
+            "idName": "station-MichelBizot",
+            "displayName": "Michel Bizot",
+            "line": "M8",
+            "position": {
+                "x": 3506,
+                "y": 3060
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 94,
+            "idfmId": "",
+            "idName": "station-Daumesnil",
+            "displayName": "Daumesnil",
+            "line": "M8",
+            "position": {
+                "x": 3439,
+                "y": 2991
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 205,
+            "idfmId": "",
+            "idName": "station-Montgallet",
+            "displayName": "Montgallet",
+            "line": "M8",
+            "position": {
+                "x": 3335,
+                "y": 2889
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 296,
+            "idfmId": "",
+            "idName": "station-ReuillyDiderot",
+            "displayName": "Reuilly - Diderot",
+            "line": "M8",
+            "position": {
+                "x": 3235,
+                "y": 2787
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 105,
+            "idfmId": "",
+            "idName": "station-FaidherbeChaligny",
+            "displayName": "Faidherbe - Chaligny",
+            "line": "M8",
+            "position": {
+                "x": 3140,
+                "y": 2694
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 163,
+            "idfmId": "",
+            "idName": "station-LedruRollin",
+            "displayName": "Ledru-Rollin",
+            "line": "M8",
+            "position": {
+                "x": 2953,
+                "y": 2618
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 18,
+            "idfmId": "",
+            "idName": "station-Bastille",
+            "displayName": "Bastille",
+            "line": "M8",
+            "position": {
+                "x": 2855,
+                "y": 2520
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 61,
+            "idfmId": "",
+            "idName": "station-CheminVert",
+            "displayName": "Chemin Vert",
+            "line": "M8",
+            "position": {
+                "x": 2833,
+                "y": 2405
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 335,
+            "idfmId": "",
+            "idName": "station-StSebastienFroissart",
+            "displayName": "Saint-Sébastien - Froissart",
+            "line": "M8",
+            "position": {
+                "x": 2833,
+                "y": 2293
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 107,
+            "idfmId": "",
+            "idName": "station-FillesDuCalvaire",
+            "displayName": "Filles du Calvaire",
+            "line": "M8",
+            "position": {
+                "x": 2833,
+                "y": 2177
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 314,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "M8",
+            "position": {
+                "x": 2862,
+                "y": 2010
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 343,
+            "idfmId": "",
+            "idName": "station-StrasbourgSaintDenis",
+            "displayName": "StrasbouStrasbourg - Saint-DenisrgSaintDenis",
+            "line": "M8",
+            "position": {
+                "x": 2598,
+                "y": 1932
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 32,
+            "idfmId": "",
+            "idName": "station-BonneNouvelle",
+            "displayName": "Bonne-Nouvelle",
+            "line": "M8",
+            "position": {
+                "x": 2486,
+                "y": 1931
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 303,
+            "idfmId": "",
+            "idName": "station-GrandsBoulevards",
+            "displayName": "Grands Boulevards",
+            "line": "M8",
+            "position": {
+                "x": 2279,
+                "y": 1932
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 298,
+            "idfmId": "",
+            "idName": "station-RichelieuDrouot",
+            "displayName": "Richelieu - Drouot",
+            "line": "M8",
+            "position": {
+                "x": 2123,
+                "y": 1932
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 225,
+            "idfmId": "",
+            "idName": "station-Opera",
+            "displayName": "Opéra",
+            "line": "M8",
+            "position": {
+                "x": 1898,
+                "y": 1989
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 177,
+            "idfmId": "",
+            "idName": "station-Madeleine",
+            "displayName": "Madeleine",
+            "line": "M8",
+            "position": {
+                "x": 1563,
+                "y": 2143
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 79,
+            "idfmId": "",
+            "idName": "station-Concorde",
+            "displayName": "Concorde",
+            "line": "M8",
+            "position": {
+                "x": 1533,
+                "y": 2278
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 138,
+            "idfmId": "",
+            "idName": "station-Invalides",
+            "displayName": "Invalides",
+            "line": "M8",
+            "position": {
+                "x": 1470,
+                "y": 2453
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 158,
+            "idfmId": "",
+            "idName": "station-LaTourMaubourg",
+            "displayName": "La Tour-Maubourg",
+            "line": "M8",
+            "position": {
+                "x": 1367,
+                "y": 2557
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 371,
+            "idfmId": "",
+            "idName": "station-EcoleMilitaire",
+            "displayName": "École Militaire",
+            "line": "M8",
+            "position": {
+                "x": 1263,
+                "y": 2698
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 156,
+            "idfmId": "",
+            "idName": "station-LaMottePicquetGrenelle",
+            "displayName": "La Motte-Picquet - Grenelle",
+            "line": "M8",
+            "position": {
+                "x": 1262,
+                "y": 2893
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 76,
+            "idfmId": "",
+            "idName": "station-Commerce",
+            "displayName": "Commerce",
+            "line": "M8",
+            "position": {
+                "x": 1262,
+                "y": 3049
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 111,
+            "idfmId": "",
+            "idName": "station-FelixFaure",
+            "displayName": "Félix Faure",
+            "line": "M8",
+            "position": {
+                "x": 1263,
+                "y": 3166
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 35,
+            "idfmId": "",
+            "idName": "station-Boucicaut",
+            "displayName": "Boucicaut",
+            "line": "M8",
+            "position": {
+                "x": 1219,
+                "y": 3289
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 172,
+            "idfmId": "",
+            "idName": "station-Lourmel",
+            "displayName": "Lourmel",
+            "line": "M8",
+            "position": {
+                "x": 1132,
+                "y": 3378
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 240,
+            "idfmId": "",
+            "idName": "station-Balard",
+            "displayName": "Balard",
+            "line": "M8",
+            "position": {
+                "x": 1020,
+                "y": 3491
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 68,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet",
+            "line": "M11",
+            "position": {
+                "x": 2354,
+                "y": 2387
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 136,
+            "idfmId": "",
+            "idName": "station-HotelDeVille",
+            "displayName": "Hôtel de Ville",
+            "line": "M11",
+            "position": {
+                "x": 2527,
+                "y": 2349
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 290,
+            "idfmId": "",
+            "idName": "station-Rambuteau",
+            "displayName": "Rambuteau",
+            "line": "M11",
+            "position": {
+                "x": 2635,
+                "y": 2240
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 7,
+            "idfmId": "",
+            "idName": "station-ArtsEtMetiers",
+            "displayName": "Arts et Métiers",
+            "line": "M11",
+            "position": {
+                "x": 2752,
+                "y": 2123
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 311,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "M11",
+            "position": {
+                "x": 2891,
+                "y": 1986
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 129,
+            "idfmId": "",
+            "idName": "station-Goncourt",
+            "displayName": "Goncourt",
+            "line": "M11",
+            "position": {
+                "x": 3010,
+                "y": 1864
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 20,
+            "idfmId": "",
+            "idName": "station-Belleville",
+            "displayName": "Belleville",
+            "line": "M11",
+            "position": {
+                "x": 3117,
+                "y": 1757
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 283,
+            "idfmId": "",
+            "idName": "station-Pyrenees",
+            "displayName": "Pyrénées",
+            "line": "M11",
+            "position": {
+                "x": 3255,
+                "y": 1693
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 146,
+            "idfmId": "",
+            "idName": "station-Jourdain",
+            "displayName": "Jourdain",
+            "line": "M11",
+            "position": {
+                "x": 3421,
+                "y": 1693
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 247,
+            "idfmId": "",
+            "idName": "station-PlaceDesFetes",
+            "displayName": "Place des Fêtes",
+            "line": "M11",
+            "position": {
+                "x": 3561,
+                "y": 1693
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 357,
+            "idfmId": "",
+            "idName": "station-Telegraphe",
+            "displayName": "Télégraphe",
+            "line": "M11",
+            "position": {
+                "x": 3699,
+                "y": 1694
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 278,
+            "idfmId": "",
+            "idName": "station-PorteDesLilas",
+            "displayName": "Porte des Lilas",
+            "line": "M11",
+            "position": {
+                "x": 3793,
+                "y": 1678
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 183,
+            "idfmId": "",
+            "idName": "station-MairieDesLilas",
+            "displayName": "Mairie des Lilas",
+            "line": "M11",
+            "position": {
+                "x": 3908,
+                "y": 1563
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 57,
+            "idfmId": "",
+            "idName": "station-CDGEtoile",
+            "displayName": "Charles de Gaulle - Étoile",
+            "line": "M6",
+            "position": {
+                "x": 1126,
+                "y": 1899
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 150,
+            "idfmId": "",
+            "idName": "station-Kleber",
+            "displayName": "Kléber",
+            "line": "M6",
+            "position": {
+                "x": 1019,
+                "y": 2039
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 30,
+            "idfmId": "",
+            "idName": "station-Boissiere",
+            "displayName": "Boissière",
+            "line": "M6",
+            "position": {
+                "x": 891,
+                "y": 2165
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 354,
+            "idfmId": "",
+            "idName": "station-Trocadero",
+            "displayName": "Trocadéro",
+            "line": "M6",
+            "position": {
+                "x": 879,
+                "y": 2345
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 230,
+            "idfmId": "",
+            "idName": "station-Passy",
+            "displayName": "Passy",
+            "line": "M6",
+            "position": {
+                "x": 893,
+                "y": 2566
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 26,
+            "idfmId": "",
+            "idName": "station-BirHakeim",
+            "displayName": "Bir-Hakeim",
+            "line": "M6",
+            "position": {
+                "x": 1013,
+                "y": 2686
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 98,
+            "idfmId": "",
+            "idName": "station-Dupleix",
+            "displayName": "Dupleix",
+            "line": "M6",
+            "position": {
+                "x": 1116,
+                "y": 2790
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 155,
+            "idfmId": "",
+            "idName": "station-LaMottePicquet",
+            "displayName": "La Motte-Picquet - Grenelle",
+            "line": "M6",
+            "position": {
+                "x": 1265,
+                "y": 2906
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 45,
+            "idfmId": "",
+            "idName": "station-Cambronne",
+            "displayName": "Cambronne",
+            "line": "M6",
+            "position": {
+                "x": 1462,
+                "y": 2960
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 348,
+            "idfmId": "",
+            "idName": "station-SevresLecourbe",
+            "displayName": "Sèvres - Lecourbe",
+            "line": "M6",
+            "position": {
+                "x": 1568,
+                "y": 3066
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 232,
+            "idfmId": "",
+            "idName": "station-Pasteur",
+            "displayName": "Pasteur",
+            "line": "M6",
+            "position": {
+                "x": 1722,
+                "y": 3130
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 209,
+            "idfmId": "",
+            "idName": "station-Montparnasse",
+            "displayName": "Montparnasse - Bienvenüe",
+            "line": "M6",
+            "position": {
+                "x": 1930,
+                "y": 3130
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 101,
+            "idfmId": "",
+            "idName": "station-EdgarQuinet",
+            "displayName": "Edgar Quinet",
+            "line": "M6",
+            "position": {
+                "x": 2022,
+                "y": 3130
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 293,
+            "idfmId": "",
+            "idName": "station-Raspail",
+            "displayName": "Raspail",
+            "line": "M6",
+            "position": {
+                "x": 2194,
+                "y": 3173
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 96,
+            "idfmId": "",
+            "idName": "station-DenfertRochereau",
+            "displayName": "Denfert-Rochereau",
+            "line": "M6",
+            "position": {
+                "x": 2273,
+                "y": 3251
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 324,
+            "idfmId": "",
+            "idName": "station-StJacques",
+            "displayName": "Saint-Jacques",
+            "line": "M6",
+            "position": {
+                "x": 2349,
+                "y": 3330
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 128,
+            "idfmId": "",
+            "idName": "station-Glaciere",
+            "displayName": "Glacière",
+            "line": "M6",
+            "position": {
+                "x": 2459,
+                "y": 3387
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 83,
+            "idfmId": "",
+            "idName": "station-Corvisart",
+            "displayName": "Corvisart",
+            "line": "M6",
+            "position": {
+                "x": 2590,
+                "y": 3387
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 243,
+            "idfmId": "",
+            "idName": "station-PlaceItalie",
+            "displayName": "Place d'Italie",
+            "line": "M6",
+            "position": {
+                "x": 2702,
+                "y": 3386
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 216,
+            "idfmId": "",
+            "idName": "station-Nationale",
+            "displayName": "Nationale",
+            "line": "M6",
+            "position": {
+                "x": 2839,
+                "y": 3386
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 62,
+            "idfmId": "",
+            "idName": "station-Chevaleret",
+            "displayName": "Chevaleret",
+            "line": "M6",
+            "position": {
+                "x": 2971,
+                "y": 3386
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 287,
+            "idfmId": "",
+            "idName": "station-QuaiDeLaGare",
+            "displayName": "Quai de la Gare",
+            "line": "M6",
+            "position": {
+                "x": 3109,
+                "y": 3325
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 23,
+            "idfmId": "",
+            "idName": "station-Bercy",
+            "displayName": "Bercy",
+            "line": "M6",
+            "position": {
+                "x": 3252,
+                "y": 3181
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 97,
+            "idfmId": "",
+            "idName": "station-Dugommier",
+            "displayName": "Dugommier",
+            "line": "M6",
+            "position": {
+                "x": 3341,
+                "y": 3093
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 93,
+            "idfmId": "",
+            "idName": "station-Daumesnil",
+            "displayName": "Daumesnil",
+            "line": "M6",
+            "position": {
+                "x": 3440,
+                "y": 2994
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 19,
+            "idfmId": "",
+            "idName": "station-BelAir",
+            "displayName": "Bel-Air",
+            "line": "M6",
+            "position": {
+                "x": 3521,
+                "y": 2914
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 236,
+            "idfmId": "",
+            "idName": "station-Picpus",
+            "displayName": "Picpus",
+            "line": "M6",
+            "position": {
+                "x": 3597,
+                "y": 2835
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 214,
+            "idfmId": "",
+            "idName": "station-Nation",
+            "displayName": "",
+            "line": "M6",
+            "position": {
+                "x": 3461,
+                "y": 2679
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 181,
+            "idfmId": "",
+            "idName": "station-MairieDeMontreil",
+            "displayName": "Mairie de Montreuil",
+            "line": "M9",
+            "position": {
+                "x": 3913,
+                "y": 2269
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 88,
+            "idfmId": "",
+            "idName": "station-CroixDeChavaux",
+            "displayName": "Croix de Chavaux",
+            "line": "M9",
+            "position": {
+                "x": 3855,
+                "y": 2328
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 301,
+            "idfmId": "",
+            "idName": "station-Robespierre",
+            "displayName": "Robespierre",
+            "line": "M9",
+            "position": {
+                "x": 3796,
+                "y": 2387
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 269,
+            "idfmId": "",
+            "idName": "station-PorteDeMontreuil",
+            "displayName": "Porte de Montreuil",
+            "line": "M9",
+            "position": {
+                "x": 3739,
+                "y": 2445
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 190,
+            "idfmId": "",
+            "idName": "station-Maraichers",
+            "displayName": "Maraîchers",
+            "line": "M9",
+            "position": {
+                "x": 3678,
+                "y": 2505
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 42,
+            "idfmId": "",
+            "idName": "station-Buzenval",
+            "displayName": "Buzenval",
+            "line": "M9",
+            "position": {
+                "x": 3619,
+                "y": 2564
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 215,
+            "idfmId": "",
+            "idName": "station-Nation",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 3510,
+                "y": 2629
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 307,
+            "idfmId": "",
+            "idName": "station-RueDesBoulets",
+            "displayName": "Rue des Boulets",
+            "line": "M9",
+            "position": {
+                "x": 3392,
+                "y": 2510
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 58,
+            "idfmId": "",
+            "idName": "station-Charonne",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 3316,
+                "y": 2436
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 369,
+            "idfmId": "",
+            "idName": "station-Voltaire",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 3244,
+                "y": 2363
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 316,
+            "idfmId": "",
+            "idName": "station-StAmbroise",
+            "displayName": "Saint-Ambroise",
+            "line": "M9",
+            "position": {
+                "x": 3163,
+                "y": 2282
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 220,
+            "idfmId": "",
+            "idName": "station-Oberkampf",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 2960,
+                "y": 2078
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 315,
+            "idfmId": "",
+            "idName": "station-Republique",
+            "displayName": "République",
+            "line": "M9",
+            "position": {
+                "x": 2877,
+                "y": 1996
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 344,
+            "idfmId": "",
+            "idName": "station-StrasbourgSaintDenis",
+            "displayName": "Strasbourg - Saint-Denis",
+            "line": "M9",
+            "position": {
+                "x": 2598,
+                "y": 1913
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 33,
+            "idfmId": "",
+            "idName": "station-BonneNouvelle",
+            "displayName": "Bonne-Nouvelle",
+            "line": "M9",
+            "position": {
+                "x": 2487,
+                "y": 1913
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 304,
+            "idfmId": "",
+            "idName": "station-GrandsBoulevards",
+            "displayName": "Grands Boulevards",
+            "line": "M9",
+            "position": {
+                "x": 2278,
+                "y": 1913
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 299,
+            "idfmId": "",
+            "idName": "station-RichelieuDrouot",
+            "displayName": "Richelieu - Drouot",
+            "line": "M9",
+            "position": {
+                "x": 2124,
+                "y": 1912
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 60,
+            "idfmId": "",
+            "idName": "station-ChausseeAntinLaFayette",
+            "displayName": "Chaussée d'Antin - La Fayette",
+            "line": "M9",
+            "position": {
+                "x": 2003,
+                "y": 1912
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 133,
+            "idfmId": "",
+            "idName": "station-HavreCaumartin",
+            "displayName": "Havre - Caumartin",
+            "line": "M9",
+            "position": {
+                "x": 1819,
+                "y": 1912
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 317,
+            "idfmId": "",
+            "idName": "station-StAugustin",
+            "displayName": "Saint-Augustin",
+            "line": "M9",
+            "position": {
+                "x": 1661,
+                "y": 1850
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 203,
+            "idfmId": "",
+            "idName": "station-Miromesnil",
+            "displayName": "Miromesnil",
+            "line": "M9",
+            "position": {
+                "x": 1594,
+                "y": 1918
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 332,
+            "idfmId": "",
+            "idName": "station-StPhilippeDuRoule",
+            "displayName": "Saint-Philippe du Roule",
+            "line": "M9",
+            "position": {
+                "x": 1514,
+                "y": 1998
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 110,
+            "idfmId": "",
+            "idName": "station-FranklinDRoosevelt",
+            "displayName": "Franklin D. Roosevelt",
+            "line": "M9",
+            "position": {
+                "x": 1382,
+                "y": 2129
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 2,
+            "idfmId": "",
+            "idName": "station-AlmaMarceau",
+            "displayName": "Alma - Marceau",
+            "line": "M9",
+            "position": {
+                "x": 1242,
+                "y": 2271
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 139,
+            "idfmId": "",
+            "idName": "station-Iena",
+            "displayName": "Iéna",
+            "line": "M9",
+            "position": {
+                "x": 1056,
+                "y": 2344
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 355,
+            "idfmId": "",
+            "idName": "station-Trocadero",
+            "displayName": "Trocadéro",
+            "line": "M9",
+            "position": {
+                "x": 878,
+                "y": 2344
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 306,
+            "idfmId": "",
+            "idName": "station-RueDeLaPompe",
+            "displayName": "Rue de la Pompe",
+            "line": "M9",
+            "position": {
+                "x": 703,
+                "y": 2344
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 157,
+            "idfmId": "",
+            "idName": "station-LaMuette",
+            "displayName": "La Muette",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 2526
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 291,
+            "idfmId": "",
+            "idName": "station-Ranelagh",
+            "displayName": "Ranelagh",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 2697
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 141,
+            "idfmId": "",
+            "idName": "station-Jasmin",
+            "displayName": "Jasmin",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 2863
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 197,
+            "idfmId": "",
+            "idName": "station-MichelAngleAuteuil",
+            "displayName": "Michel-Ange - Auteuil",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 3028
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 199,
+            "idfmId": "",
+            "idName": "station-MichelAngeMolitor",
+            "displayName": "Michel-Ange - Molitor",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 3140
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 104,
+            "idfmId": "",
+            "idName": "station-Exelmans",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 3253
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 271,
+            "idfmId": "",
+            "idName": "station-PorteDeStCloud",
+            "displayName": "Porte de Saint-Cloud",
+            "line": "M9",
+            "position": {
+                "x": 665,
+                "y": 3355
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 193,
+            "idfmId": "",
+            "idName": "station-MarcelSembat",
+            "displayName": "Marcel Sembat",
+            "line": "M9",
+            "position": {
+                "x": 598,
+                "y": 3444
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 25,
+            "idfmId": "",
+            "idName": "station-Billancourt",
+            "displayName": "",
+            "line": "M9",
+            "position": {
+                "x": 529,
+                "y": 3512
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 253,
+            "idfmId": "",
+            "idName": "station-PontDeSevres",
+            "displayName": "Pont de Sèvres",
+            "line": "M9",
+            "position": {
+                "x": 461,
+                "y": 3581
+            },
+            "displayType": "normal"
+        }
+    ],
+    "correspondances": [
+        {
+            "id": "corresp1",
+            "displayName": "Gambetta",
+            "stations": [
+                {
+                    "id": 116,
+                    "line": "M3bis"
+                },
+                {
+                    "id": 115,
+                    "line": "M3"
+                }
+            ],
+            "d": "m 3586.7153,2129.3327 c -0.1195,-3.8481 -0.4865,-23.5988 -0.2324,-26.7154 0.1745,-2.1403 1.3543,-4.2088 2.7877,-5.8077 1.3698,-1.528 3.266,-2.6476 5.227,-3.2523 1.7775,-0.5481 3.7491,-0.5854 5.5753,-0.2323 2.1267,0.4112 4.3144,1.2218 5.9239,2.6715 1.9984,1.7999 4.0945,4.28 4.0654,6.9693 -0.025,2.2778 0.014,23.6042 -0.1743,26.7734 -0.1531,2.5783 -3.0975,4.6714 -5.1688,6.2143 -1.1681,0.8701 -2.5444,1.3505 -4.0073,1.7423 -1.7221,0.4611 -3.6958,0.3449 -5.4012,-0.1742 -1.7787,-0.5415 -3.2569,-1.1563 -4.53,-2.2651 -1.806,-1.5728 -3.991,-3.5301 -4.0653,-5.9238 z",
+            "strokeColor": "#000000",
+            "strokeWidth": 1
+        }
+    ]
+}
