@@ -223,11 +223,60 @@ public class ReseauMetro {
      * @param station1 Reference de la station 1
      * @param station2 Reference de la station 2
      */
-    public void comparerStation_A_B(Quai station1, Quai station2) {
-        // throw new UnsupportedOperationException("Not supported yet.");
+    public void comparerStation_A_B(Quai station1, Quai station2, int pDistance) {
+        throw new UnsupportedOperationException("Not supported yet.");
+
+        // int accessibilite_S1 = 0;
+        // int accessibilite_S2 = 0;
         // ACCESSIBLE 
+// Problème avec l'utilisation de la classe BellmanFord
+        // for (String key : stations.keySet()) {
+        //     List<Quai> quais_accassible = stations.get(key);  
+        //     for (int i = 0; i < quais_accassible.size(); i++) {
+        //         Quai station_accessible = quais_accassible.get(i);
+        //         if (accessibilite_S1 < BellmanFord(station1, station_accessible)){
+        //             accessibilite_S1 = BellmanFord(station1, station_accessible);
+        //         }
+        //         if (accessibilite_S2 < BellmanFord(station2, station_accessible)){
+        //             accessibilite_S2 = BellmanFord(station2, station_accessible);
+        //         }
+        //     }
+        // }
+        // if (accessibilite_S1 < accessibilite_S2){
+        //     return station1.getNom() + " plus accessible que "+ station2.getNom();
+        // }
+        // if (accessibilite_S2 < accessibilite_S1){
+        //     return station2.getNom() + " plus accessible que "+ station1.getNom();
+        // }
+        // if (accessibilite_S2 == accessibilite_S1){
+        //     return station2.getNom() + " aussi accessible que "+ station1.getNom();
+        // }
 
         // CENTRALE
+// Problème avec l'utilisation de la classe BellmanFord
+        // int centrale_S1 = 0;
+        // int centrale_S2 = 0;
+        // for (String key : stations.keySet()) {
+        //     List<Quai> quais_accassible = stations.get(key);  
+        //     for (int i = 0; i < quais_accassible.size(); i++) {
+        //         Quai station_accessible = quais_accassible.get(i);
+        //         if (centrale_S1 < BellmanFord(station1, station_accessible) && BellmanFord(station1, station_accessible) <= pDistance ){
+        //             centrale_S1 += 1;
+        //         }
+        //         if (centrale_S2 < BellmanFord(station2, station_accessible) && BellmanFord(station2, station_accessible) <= pDistance){
+        //             centrale_S2 += 1;
+        //         }
+        //     }
+        // }
+        // if (accessibilite_S1 < accessibilite_S2){
+        //     return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + accessibilite_S1 + " stations à moins de " + pDistance + " contre " + accessibilite_S2 + " pour la station " + station2.getNom();
+        // }
+        // if (accessibilite_S2 < accessibilite_S1){
+        //     return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " + station2.getNom() +" a " + accessibilite_S2 + " stations à moins de " + pDistance + " contre " + accessibilite_S1 + " pour la station " + station1.getNom();
+        // }
+        // if (accessibilite_S2 == accessibilite_S1){
+        //     return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + accessibilite_S1 + " stations à moins de " + pDistance + " et " + station2.getNom() + " a " + accessibilite_S2 + " stations à cette distance" + ;
+        // }
         
         // TERMINALE
         // ArrayList<Quai> terminus = new ArrayList<>();
@@ -238,13 +287,13 @@ public class ReseauMetro {
         // }
         // for (Quai terminus_quai : terminus){
         //     if (dijkstra_algo(station1, terminus_quai) > dijkstra_algo(station2, terminus_quai) ){
-        //         return station1 + " plus accessible que "+ station2;
+        //         return station1 + " plus proche d'un terminus que "+ station2;
         //     }
         //     if (dijkstra_algo(station2, terminus_quai) > dijkstra_algo(station1, terminus_quai) ){
-        //         return station2 + " plus accessible que "+ station1;
+        //         return station2 + " plus proche d'un terminus que "+ station1;
         //     }
         //     if (dijkstra_algo(station2, terminus_quai) == dijkstra_algo(station1, terminus_quai) ){
-        //         return station1 + " aussi accessible que "+ station2;
+        //         return station1 + " aussi plus proche d'un terminus que "+ station2;
         //     }
         // }
     }
