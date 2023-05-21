@@ -10,6 +10,7 @@ public class Relation {
     // TODO : Getters and Setters si besoin
     Quai st1;
     Quai st2;
+
     Integer temps; // Temps en secondes
     // #endregion
 
@@ -28,6 +29,28 @@ public class Relation {
 
     public String toString() {
         return "\t- St1: " + st1 + "\n\t- St2: " + st2 + "\n\t- Tps: " + temps;
+    }
+
+    public Quai getSt1() {
+        return st1;
+    }
+
+    public Quai getSt2() {
+        return st2;
+    }
+
+    public boolean hasStation(Quai station) {
+        return (this.st1 == station || this.st2 == station);
+    }
+
+    public Quai getOtherStation(Quai station) {
+        if (this.st1 == station) {
+            return this.st2;
+        } else if (this.st2 == station) {
+            return this.st1;
+        } else {
+            return null;
+        }
     }
 
     public boolean compareTo(Relation relation) {

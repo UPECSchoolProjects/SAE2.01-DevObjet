@@ -2,6 +2,7 @@ package fr.uwu;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -12,6 +13,29 @@ import java.util.Map;
  */
 import java.util.Set;
 public class ReseauMetro {
+
+
+    public static List<Quai> convertRelationPathToStationPath(List<Relation> relations, Quai start, Quai end) {
+        List<Quai> stations = new ArrayList<Quai>();
+        Quai current = start;
+
+        stations.add(start);
+
+        for (Relation r : relations) {
+            // graphe non orienté, donc on peut avoir st1 ou st2 en premier
+            if (r.getSt1().compareTo(current)) {
+                stations.add(r.getSt2());
+                current = r.getSt2();
+            } else if (r.getSt2().compareTo(current)) {
+                stations.add(r.getSt1());
+                current = r.getSt1();
+            }  else {
+                System.out.println("Erreur : Relation " + r + " ne contient pas la station " + current);
+            }
+        }
+
+        return stations;
+    }
 
     // #region Attributs
     ArrayList<Quai> quais;
@@ -92,7 +116,7 @@ public class ReseauMetro {
                 for (Quai stationsDejaPresente : this.stations.get(station.nom)) {
                     if (stationsDejaPresente != station) {
                         //System.out.println("Relier " + station + " à " + stationsDejaPresente);
-                        this.relations.add(new Relation(station, stationsDejaPresente, 180));
+                        //this.relations.add(new Relation(station, stationsDejaPresente, 6000));
                     }
                 }
             } else {
@@ -343,6 +367,25 @@ public class ReseauMetro {
      */
     public void trajetEntrePlusieursStation(ArrayList<Quai> stations) {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+
+    public Quai getStationByName(String pNom) {
+        for (Quai quai : quais) {
+            if (quai.getNom().equals(pNom)) {
+                return quai;
+            }
+        }
+        return null;
+    }
+
+    public Quai getQuaiById(int pId) {
+        for (Quai quai : quais) {
+            if (quai.id == pId) {
+                return quai;
+            }
+        }
+        return null;
     }
 
     // #endregion
