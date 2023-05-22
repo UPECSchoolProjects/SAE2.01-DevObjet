@@ -139,8 +139,12 @@ function SvgComponent() {
         const panZoom = svgPanZoom(svgRef.current!, {
             zoomEnabled: true,
             controlIconsEnabled: true,
-            fit: true
+            fit: true,
+            center: true,
+            minZoom: 1.2
         });
+
+        panZoom.zoom(1.5);
 
         setMapLoaded(true);
         setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]);
@@ -200,16 +204,18 @@ function SvgComponent() {
 
     return (
         <svg
-            id="test"
+            id="metro-map-svg"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            width="1000"
-            height="800"
+            width="100%"
+            height="100%"
             viewBox="0 0 4536 4536"
             shapeRendering="geometricPrecision"
             textRendering="geometricPrecision"
             ref={svgRef}
-            style= {{cursor: 'grab'}}
+            // add cursor grab
+            onMouseDown={(e) => { e.currentTarget.style.cursor = 'grab'; }}
+            onMouseUp={(e) => { e.currentTarget.style.cursor = 'default'; }}
         >
             <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">

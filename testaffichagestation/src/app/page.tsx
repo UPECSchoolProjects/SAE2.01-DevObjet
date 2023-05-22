@@ -6,14 +6,23 @@ export default function Map() {
   const SvgComponent = React.useMemo(() => dynamic(
     () => import('../../components/MetroMap'),
     {
-        loading: () => <p>Chargement...</p>,
-        ssr: false // cette ligne est importante. Elle empêche le rendu côté serveur
+      loading: () => <p>Chargement...</p>,
+      ssr: false // cette ligne est importante. Elle empêche le rendu côté serveur
     }
-), [])
+  ), [])
 
   return (
-    <div>
-      <SvgComponent />
-    </div>
+    <>
+      <header>
+        <h1>SAE201</h1>
+      </header>
+      <main>
+        <aside>
+          <h2>Aside</h2>
+        </aside>
+        <SvgComponent />
+
+      </main>
+    </>
   );
 }
