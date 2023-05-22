@@ -209,7 +209,18 @@ public class ReseauMetro {
      * utilisateurs ?
      */
     public void ACM() {
+        // Kruskal(G) :
+    //    A := ø
+    //    pour chaque sommet v de G :
+    //       créerEnsemble(v)
+    //    trier les arêtes de G par poids croissant
+    //    pour chaque arête (u, v) de G prise par poids croissant :
+    //       si find(u) ≠ find(v) :
+    //          ajouter l'arête (u, v) à l'ensemble A
+    //          union(u, v)
+    //    renvoyer A
         throw new UnsupportedOperationException("Not supported yet.");
+        
     }
 
     /**
@@ -268,14 +279,14 @@ public class ReseauMetro {
         //         }
         //     }
         // }
-        // if (accessibilite_S1 < accessibilite_S2){
-        //     return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + accessibilite_S1 + " stations à moins de " + pDistance + " contre " + accessibilite_S2 + " pour la station " + station2.getNom();
+        // if (centrale_S1 < centrale_S2){
+        //     return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de " + pDistance + " contre " + centraleS2 + " pour la station " + station2.getNom();
         // }
-        // if (accessibilite_S2 < accessibilite_S1){
-        //     return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " + station2.getNom() +" a " + accessibilite_S2 + " stations à moins de " + pDistance + " contre " + accessibilite_S1 + " pour la station " + station1.getNom();
+        // if (centrale_S1 < accessibilite_S1){
+        //     return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " + station2.getNom() +" a " + centrale_S2 + " stations à moins de " + pDistance + " contre " + centrale_S1 + " pour la station " + station1.getNom();
         // }
-        // if (accessibilite_S2 == accessibilite_S1){
-        //     return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + accessibilite_S1 + " stations à moins de " + pDistance + " et " + station2.getNom() + " a " + accessibilite_S2 + " stations à cette distance" + ;
+        // if (centrale_S2 == centrale_S1){
+        //     return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de " + pDistance + " et " + station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
         // }
         
         // TERMINALE
@@ -328,8 +339,32 @@ public class ReseauMetro {
      * @param station1
      * @param station2
      */
-    public void analyse1Distance(Quai station1, Quai station2) {
+    public String analyse1Distance(Quai station1, Quai station2) {
         throw new UnsupportedOperationException("Not supported yet.");
+// Besoin de Bellman ou de Djikstra
+    //     int centrale_S1 = 0;
+    //     int centrale_S2 = 0;
+    //     for (String key : stations.keySet()) {
+    //         List<Quai> quais_accassible = stations.get(key);  
+    //         for (int i = 0; i < quais_accassible.size(); i++) {
+    //             Quai station_accessible = quais_accassible.get(i);
+    //             if (centrale_S1 < BellmanFord(station1, station_accessible) && BellmanFord(station1, station_accessible) <= 1 ){
+    //                 centrale_S1 += 1;
+    //             }
+    //             if (centrale_S2 < BellmanFord(station2, station_accessible) && BellmanFord(station2, station_accessible) <= 1){
+    //                 centrale_S2 += 1;
+    //             }
+    //         }
+    //     }
+    //     if (centrale_S1 < centrale_S2){
+    //         return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 contre " + centrale_S2 + " pour la station " + station2.getNom();
+    //     }
+    //     if (centrale_S2 < centrale_S1){
+    //         return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " + station2.getNom() +" a " + centrale_S2 + " stations à moins de 1 contre " + centrale_S1 + " pour la station " + station1.getNom();
+    //     }
+    //     if (centrale_S2 == centrale_S1){
+    //         return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 et " + station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
+    //     }
     }
 
     /**
