@@ -1,6 +1,7 @@
 package fr.uwu;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -477,7 +478,7 @@ public class ReseauMetro {
                 stations.add(station);
             }
         }
-        
+
         return stations;
     }
     // #endregion
