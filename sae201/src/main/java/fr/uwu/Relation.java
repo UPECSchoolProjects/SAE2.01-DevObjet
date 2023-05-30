@@ -74,5 +74,8 @@ public class Relation {
         return true;
     }
 
+    public Integer getTemps() {
+        return temps;
+    }
     // #endregion
 }
