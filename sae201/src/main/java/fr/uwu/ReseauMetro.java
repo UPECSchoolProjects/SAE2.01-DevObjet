@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Comparator;
 /**
  * Classe principale du Graphe. ELle gère les stations (noeud) et les relations
  * entre les stations (arête).
@@ -227,24 +228,38 @@ public class ReseauMetro {
         
     }
 
+
+    /**
+     * Création de la méthode RelationComparator permettant de comparer les temps des 
+     * éléments de la liste relations (utilisé pour la méthode ACM)
+     */
+    public class RelationComparator implements Comparator<Relation> {
+        public int compare(Relation r1, Relation r2) {
+            return r1.getTemps().compareTo(r2.getTemps());
+        }
+    }
     /**
      * proposer un algorithme qui permet de trouver l’arbre couvrant minimum (ACM) reliant toutes
      * les stations. En quoi ce réseau serait-il avantageux ou pas pour la RATP ? et pour les
      * utilisateurs ?
      */
     public void ACM() {
-        // Kruskal(G) :
-    //    A := ø
-    //    pour chaque sommet v de G :
-    //       créerEnsemble(v)
-    //    trier les arêtes de G par poids croissant
-    //    pour chaque arête (u, v) de G prise par poids croissant :
-    //       si find(u) ≠ find(v) :
-    //          ajouter l'arête (u, v) à l'ensemble A
-    //          union(u, v)
-    //    renvoyer A
+        ArrayList<Relation> relation_ordonne = new ArrayList<>(relations);
+        Collections.sort(relation_ordonne, new RelationComparator());
+
+        HashSet<Quai> stationsSet = new HashSet<>();
+
+        for (Relation relation : relations) {
+            stationsSet.add(relation.getSt1());
+            stationsSet.add(relation.getSt2());
+        }
+
+        int nbStations = stationsSet.size();
+
+        for (int i=0; i<nbStations; i++){
+            
+        }
         throw new UnsupportedOperationException("Not supported yet.");
-        
     }
 
     /**
@@ -381,13 +396,13 @@ public class ReseauMetro {
     //         }
     //     }
     //     if (centrale_S1 < centrale_S2){
-    //         return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 contre " + centrale_S2 + " pour la station " + station2.getNom();
+    //         return station1.getNom() + " plus proche d'une correspondance que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 contre " + centrale_S2 + " pour la station " + station2.getNom();
     //     }
     //     if (centrale_S2 < centrale_S1){
-    //         return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " + station2.getNom() +" a " + centrale_S2 + " stations à moins de 1 contre " + centrale_S1 + " pour la station " + station1.getNom();
+    //         return station2.getNom() + " plus proche d'une correspondance que "+ station1.getNom() + " : " + station2.getNom() +" a " + centrale_S2 + " stations à moins de 1 contre " + centrale_S1 + " pour la station " + station1.getNom();
     //     }
     //     if (centrale_S2 == centrale_S1){
-    //         return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 et " + station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
+    //         return station1.getNom() + " aussi proche d'une correspondance que "+ station2.getNom() + " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 et " + station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
     //     }
     }
 
