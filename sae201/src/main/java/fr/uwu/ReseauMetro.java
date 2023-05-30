@@ -1,8 +1,6 @@
 package fr.uwu;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -40,8 +38,9 @@ public class ReseauMetro {
     // #region Attributs
     ArrayList<Quai> quais;
     ArrayList<Relation> relations;
-    Map<String, List<Quai>> stations;
-    Set<Integer> quaisTraites; // qui déja traité dans la fonction relierStationMemeNom (optimisation)
+    Map<Quai, Set<Quai>> stations; // Quai est une station virtuelle qui regroupe toutes les stations
+                                   // ayant le même nom (en correspondance)
+    Set<Relation> relTraites; // qui déja traité dans la fonction relierStationMemeNom (optimisation)
     // #endregion
 
     // #region Constructeurs
@@ -70,9 +69,9 @@ public class ReseauMetro {
     }
 
     public void init() {
-        this.stations = new HashMap<String, List<Quai>>();
-        this.quaisTraites = new HashSet<Integer>();
-        this.relierStationMemeNom();
+        this.stations = new HashMap<Quai, Set<Quai>>();
+        this.relTraites = new HashSet<Relation>();
+        this.relierStationCorresp();
     }
 
     // #endregion
@@ -86,7 +85,7 @@ public class ReseauMetro {
      */
     public void addStation(Quai station) {
         this.quais.add(station);
-        this.relierStationMemeNom();
+        this.relierStationCorresp();
     }
 
     /**
@@ -99,31 +98,36 @@ public class ReseauMetro {
     }
 
     /**
-     * 
+     * Relie les relations avec correspondance = true à un sommet virtuel qui regroupe tout les quais d'une même station
      */
-    public void relierStationMemeNom() {
-        for (Quai station : this.quais) {
-            //System.out.println(station);
-            // ne rien faire si la station est déja présente dans la hashmap
-            if (this.quaisTraites.contains(station.id)) {
+    public void relierStationCorresp() {
+        for (Relation rel : this.relations) {
+            if(this.relTraites.contains(rel) || !rel.correspondance) {
                 continue;
             }
 
-            if (this.stations.containsKey(station.nom)) {
-                this.stations.get(station.nom).add(station);
+            Quai st1 = rel.getSt1();
+            Quai st2 = rel.getSt2();
 
-                // relier cette station a toutes les autres déja presente
-                for (Quai stationsDejaPresente : this.stations.get(station.nom)) {
-                    if (stationsDejaPresente != station) {
-                        //System.out.println("Relier " + station + " à " + stationsDejaPresente);
-                        //this.relations.add(new Relation(station, stationsDejaPresente, 6000));
-                    }
+            Quai stVirt = new Quai(st1.terminus, st1.nom);
+
+            boolean alreadyExists = false;
+            for (Quai st : this.stations.keySet()) {
+                if (st.nom.equals(stVirt.nom)) {
+                    alreadyExists = true;
+                    stVirt = st;
+                    break;
                 }
-            } else {
-                this.stations.put(station.nom, new ArrayList<Quai>(Arrays.asList(station)));
             }
 
-            this.quaisTraites.add(station.id);
+            if (!alreadyExists) {
+                this.stations.put(stVirt, new HashSet<Quai>());
+            }
+
+            this.stations.get(stVirt).add(st1);
+            this.stations.get(stVirt).add(st2);
+
+            this.relTraites.add(rel);
         }
     }
 
@@ -137,7 +141,48 @@ public class ReseauMetro {
      *         l'ordre)
      */
     public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Map<Quai, Integer> distances = new HashMap<Quai, Integer>();
+        Set<Quai> quaiTraitees = new HashSet<Quai>();
+
+        // initialisation
+        for (Quai station : this.quais) {
+            distances.put(station, Integer.MAX_VALUE);
+        }
+
+        distances.put(station1, 0);
+
+        // on va parcourir toutes les stations
+        while(quaiTraitees.size() != this.quais.size()) {
+            // on prend la station la plus proche
+            Quai stationPlusProche = null;
+            int distanceMin = Integer.MAX_VALUE;
+            for (Quai station : this.quais) {
+                if (distances.get(station) < distanceMin && !quaiTraitees.contains(station)) {
+                    stationPlusProche = station;
+                    distanceMin = distances.get(station);
+                }
+            }
+
+            // on a trouvé la station la plus proche
+            quaiTraitees.add(stationPlusProche);
+            
+            // on va mettre à jour les distances des stations voisines
+            for (Relation rel : this.relations) {
+                if (rel.getSt1().equals(stationPlusProche) || rel.getSt2().equals(stationPlusProche)) {
+                    Quai stationVoisine = rel.getSt1().equals(stationPlusProche) ? rel.getSt2() : rel.getSt1();
+                    int distance = distances.get(stationPlusProche) + rel.temps;
+                    if (distance < distances.get(stationVoisine)) {
+                        distances.put(stationVoisine, distance);
+                    }
+                }
+            }
+        }
+        return relations;
+        
+        
+
+
+        
     }
 
     /**
@@ -370,23 +415,20 @@ public class ReseauMetro {
     }
 
 
-    public Quai getStationByName(String pNom) {
-        for (Quai quai : quais) {
-            if (quai.getNom().equals(pNom)) {
-                return quai;
+    public Set<Quai> getStationByName(String pNom) {
+        Set<Quai> stations = new HashSet<>();
+        Quai virtStation = this.stations.keySet().stream().filter(station -> station.getNom().equals(pNom)).findFirst().orElse(null);
+
+        if (virtStation != null) {
+            stations.addAll(this.stations.get(virtStation));
+        } else {
+            Quai station = this.quais.stream().filter(quai -> quai.getNom().equals(pNom)).findFirst().orElse(null);
+            if (station != null) {
+                stations.add(station);
             }
         }
-        return null;
+        
+        return stations;
     }
-
-    public Quai getQuaiById(int pId) {
-        for (Quai quai : quais) {
-            if (quai.id == pId) {
-                return quai;
-            }
-        }
-        return null;
-    }
-
     // #endregion
 }

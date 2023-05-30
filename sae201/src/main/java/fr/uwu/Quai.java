@@ -8,26 +8,37 @@ import java.util.List;
  */
 public class Quai {
 
-    public static Quai getQuaiById(List<Quai> quais, int id) {
-        return quais.stream().filter(quai -> quai.id == id).findFirst().orElse(null);
+    private static int idCounter = 0;
+
+    public static Quai getQuaiById(List<Quai> quais, String id) {
+        return quais.stream().filter(quai -> quai.getId().equals(id)).findFirst().orElse(null);
     }
 
     //#region Variables
     // TODO : Getters and Setters si besoin
-    Integer id;
+    private Integer id;
     String ligne;
     boolean terminus;
     String nom;
+    boolean virtuel;
     //#endregion
 
     //#region Constructeurs
-    public Quai() {
-    }
 
-    public Quai(Integer id, String ligne, Boolean terminus, String nom) {
+    public Quai(Integer id, String ligne, Boolean terminus, String nom, boolean virtuel) {
         this.id = id;
         this.ligne = ligne;
         this.terminus = terminus;
+        this.nom = nom;
+        this.virtuel = virtuel;
+    }
+
+
+    public Quai(Boolean terminus, String nom) {
+        this.id = idCounter++;
+        this.ligne = "VIRT";
+        this.terminus = terminus;
+        this.virtuel = true;
         this.nom = nom;
     }
     //#endregion
@@ -40,7 +51,7 @@ public class Quai {
     }
 
     public String toString() {
-        return "Id: " + id + ", Ligne: " + ligne + ", Terminus: " + terminus + ", Nom: " + nom;
+        return "Id: " + this.getId() + ", Ligne: " + ligne + ", Terminus: " + terminus + ", Nom: " + nom;
     }
 
     public Boolean isTerminus(){
@@ -74,6 +85,10 @@ public class Quai {
 
     public String getLigne() {
         return ligne;
+    }
+
+    public String getId() {
+        return (this.virtuel ? "V" : "Q") + id.toString();
     }
 
     //#endregion

@@ -40,5 +40,20 @@ public class App {
         System.out.println("Nombre de stations: " + station.size());
         System.out.println(station.get(24));
  
+        StringBuffer sb = new StringBuffer();
+
+        for (Quai s : reseau.stations.keySet()) {
+            sb.append(s + "\n");
+        }
+
+         Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V43");
+
+         sb.append("-- " + abes + " --\n");
+
+        for (Quai s : reseau.stations.get(abes)) {
+            sb.append(s + "\n");
+        } 
+
+        System.out.println(sb.toString());
     }
 }

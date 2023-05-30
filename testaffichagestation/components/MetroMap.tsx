@@ -2,7 +2,7 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
-import { GraphicCorrespondance, Station, Troncons, linedata } from '../types/LinesAttributes';
+import { GraphicCorrespondance, Station, Troncons, linedata, point } from '../types/LinesAttributes';
 import { StopPoint } from './StopPoints';
 import { LinePath } from './Lines';
 import { cp } from 'fs';
@@ -39,7 +39,7 @@ function GraphicCorrespondance({ correspondance }: { correspondance: GraphicCorr
     </>
 }
 
-function renderTroncons(tronconsController: TroconController[], linesData: Map<String, linedata>): JSX.Element[] {
+function renderTroncons(tronconsController: TroconController[], linesData: Map<String, linedata>, StopAnimation: boolean): JSX.Element[] {
     const itemsPerLine = new Map<String, number>();
     const countedPerLine = new Map<String, number>();
 
@@ -72,14 +72,15 @@ function renderTroncons(tronconsController: TroconController[], linesData: Map<S
             countedPerLine.set(troncon.line || "3", count + 1);
         }
 
-        return <LinePath key={troncon.line + '-' + troncon.id} id={troncon.line + '-' + troncon.id} activated={tronconsControl.activated} d={troncon.d} strokeColor={lineData?.strokeColor || "#FFF"} strokeWidth={lineData?.strokeWidth || "1"} delay={3000 * count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={3000} />
+        return <LinePath key={troncon.line + '-' + troncon.id} id={troncon.line + '-' + troncon.id} activated={tronconsControl.activated} stopAnimation={StopAnimation} d={troncon.d} strokeColor={lineData?.strokeColor || "#FFF"} strokeWidth={lineData?.strokeWidth || "1"} delay={3000 * count} nbItem={itemsPerLine.get(troncon.line || "3") || 5} animationDuration={3000} />
 
     })
 }
 
 type StationController = {
     station: Station,
-    activated: boolean
+    activated: boolean,
+    toDisplay: boolean
 }
 
 type TroconController = {
@@ -90,6 +91,99 @@ type TroconController = {
 type CorrespondanceController = {
     correspondance: GraphicCorrespondance,
     activated: boolean
+}
+
+function beforePan(oldPan: { x: number; y: number }, newPan: { x: number; y: number }): { x: number; y: number } {
+    const stopHorizontal = false;
+    const stopVertical = false;
+    const gutterWidth = svgPanZoom.getSizes().viewBox.width * svgPanZoom.getSizes().realZoom;
+    const gutterHeight = svgPanZoom.getSizes().viewBox.height * svgPanZoom.getSizes().realZoom;
+  
+    const sizes: any = svgPanZoom.getSizes();
+    const leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth;
+    const rightLimit = sizes.width - gutterWidth - sizes.viewBox.x * sizes.realZoom;
+    const topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight;
+    const bottomLimit = sizes.height - gutterHeight - sizes.viewBox.y * sizes.realZoom;
+  
+    const customPan: { x: number; y: number } = {
+      x: Math.max(leftLimit, Math.min(rightLimit, newPan.x)),
+      y: Math.max(topLimit, Math.min(bottomLimit, newPan.y)),
+    };
+  
+    return customPan;
+  }
+
+
+function stationToDisplay(stations: StationController[]): StationController[] {
+    // check that stations doesn't overlap and if so set Todisplay to False for the one that overlap (priority to the one that are activated)
+    // if both are activated or both are not activated,  set Todisplay to False for the one that is the most on the left
+
+    const strictOverlapProcessed = [] as StationController[];
+
+    const stationsToDisplay = stations.map((station) => {
+        // search stations that are distant from the current station of less than 4px
+        const stationsToCheck: {station: StationController, distance: number}[] = stations.map((stationToCheck) => {
+            const distance = Math.abs(stationToCheck.station.position.x - station.station.position.x);
+            return {station: stationToCheck, distance: distance};
+        }).filter((stationToCheck) => {
+            return stationToCheck.distance < 4;
+        });
+
+        // if there is no station to check, return the station
+        if (stationsToCheck.length === 0) {
+            return {...station, toDisplay: true};
+        }
+
+        // if there is a distance of 0, check if the station is activated
+        const strictEqualStations = stationsToCheck.filter((stationToCheck) => {
+            return stationToCheck.distance === 0;
+        });
+
+        if (strictEqualStations.length > 0) {
+            const isStationActivated = station.activated;
+            const isOtherStationActivated = strictEqualStations[0].station.activated;
+
+            if (isStationActivated && !isOtherStationActivated) {
+                return {...station, toDisplay: true};
+            } else if (!isStationActivated && isOtherStationActivated) {
+                return {...station, toDisplay: false};
+            } else {
+                // if both are activated or both are not activated, check strictOverlapProcessed to see if the station other station has already been processed
+                // if not add the current station to strictOverlapProcessed and return the current station
+                const isOtherStationAlreadyProcessed = strictOverlapProcessed.filter((stationProcessed) => { 
+                    return stationProcessed.station.id === strictEqualStations[0].station.station.id;
+                }).length > 0;
+
+                if (!isOtherStationAlreadyProcessed) {
+                    strictOverlapProcessed.push(station);
+                    return {...station, toDisplay: true};
+                } else {
+                    return {...station, toDisplay: false};
+                }
+            }
+        } else {
+            // if there is a station to check but the distance is not 0, check if the station is activated
+            const isStationActivated = station.activated;
+            const isOtherStationActivated = stationsToCheck[0].station.activated;
+
+            if (isStationActivated && !isOtherStationActivated) {
+                return {...station, toDisplay: true};
+            } else if (!isStationActivated && isOtherStationActivated) {
+                return {...station, toDisplay: false};
+            } else {
+                // if both are activated or both are not activated, the station that is the most on the left is the one that is displayed
+                const isStationOnTheLeft = station.station.position.x < stationsToCheck[0].station.station.position.x;
+
+                if (isStationOnTheLeft) {
+                    return {...station, toDisplay: true};
+                } else {
+                    return {...station, toDisplay: false};
+                }
+            }
+        }
+}) as StationController[];
+
+    return stationsToDisplay;
 }
 
 function SvgComponent() {
@@ -104,18 +198,19 @@ function SvgComponent() {
 
     const svgRef = React.useRef<SVGSVGElement | null>(null);
 
-    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M13", "M14"]
+    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M12", "M13", "M14"]
 
     const fetchData = async () => {
         let data: { stations: Station[], correspondances: GraphicCorrespondance[] } = await getStations()
 
         const stations = data.stations.map((station) => {
-            return { station, activated: false };
+            return { station, activated: true, toDisplay: true };
         });
-        setStations(stations);
+
+        setStations(stationToDisplay(stations));
 
         const correspondances = data.correspondances.map((correspondance) => {
-            return { correspondance, activated: false };
+            return { correspondance, activated: true };
         });
 
         setCorrespondances(correspondances);
@@ -127,7 +222,7 @@ function SvgComponent() {
 
                 const tronconsWithLine = troncons.map((troncon) => ({
                     troncon: { ...troncon, line },
-                    activated: false,
+                    activated: true,
                 }));
 
                 setTroncons((prevTroncons) => [...prevTroncons, ...tronconsWithLine]);
@@ -141,13 +236,13 @@ function SvgComponent() {
             controlIconsEnabled: true,
             fit: true,
             center: true,
-            minZoom: 1.2
+            minZoom: 1.2,
         });
 
         panZoom.zoom(1.5);
 
         setMapLoaded(true);
-        setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]);
+         setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]); 
     };
 
     React.useEffect(() => {
@@ -229,7 +324,7 @@ function SvgComponent() {
             <SvgLineComponent key={line} line={line} />
            )} */}
             <g id="troncons">
-                {stations && troncons && renderTroncons(troncons, linesData)}
+                {stations && troncons && renderTroncons(troncons, linesData, true)}
 
             </g>
             <g id="correspondances">
@@ -239,9 +334,14 @@ function SvgComponent() {
             </g>
             <g id="stations">
                 {stations && stations.map((stationControl) => {
+                    if (!stationControl?.toDisplay) {
+                        return <></>;
+                    }
+
                     const station = stationControl.station;
 
                     const lineData = linesData.get(station.line || "3")
+
                     return <StopPoint key={station.line + "-" + station.id} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
                 })}
             </g>
