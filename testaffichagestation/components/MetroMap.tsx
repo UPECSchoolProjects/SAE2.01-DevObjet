@@ -242,7 +242,7 @@ function SvgComponent() {
         panZoom.zoom(1.5);
 
         setMapLoaded(true);
-         setCurrentPath([275, 212, 295, 119, 16, 331, 135, 67, 173, 227, 228, 282, 224]); 
+         setCurrentPath([224,282,228,227,356,77,50,109,127,55]); 
     };
 
     React.useEffect(() => {

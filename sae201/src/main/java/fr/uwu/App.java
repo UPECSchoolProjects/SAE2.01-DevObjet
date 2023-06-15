@@ -55,5 +55,30 @@ public class App {
         } 
 
         System.out.println(sb.toString());
-    }
+
+        Quai CDGEtoile = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V9");
+
+        Quai Nation = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V61");
+        Quai Opera = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V69");
+
+        List<Relation> chemin = reseau.dijkstra_algo(CDGEtoile, Nation);
+
+        List<Quai> cheminQuai = ReseauMetro.convertRelationPathToStationPath(chemin, CDGEtoile, Nation);
+
+        System.out.println("Chemin de " + CDGEtoile + " à " + Nation + " : \n");
+
+        for (Quai s : cheminQuai) {
+            System.out.println(s);
+        }
+
+        System.out.println("Nombre de stations: " + cheminQuai.size());
+
+        // print sous forme de lsite d'id sans le Q
+        for (Quai s : cheminQuai) {
+            if (s.getId().charAt(0) == 'Q'){    
+                System.out.print(s.getId().substring(1));
+                System.out.print(",");
+            }
+        }
+    } 
 }
