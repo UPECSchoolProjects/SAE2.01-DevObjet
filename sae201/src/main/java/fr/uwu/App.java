@@ -3,12 +3,6 @@ package fr.uwu;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.Spring;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-
 import fr.uwu.utils.CSVUtils;
 
 public class App {
@@ -22,16 +16,16 @@ public class App {
 
         // ? Parcours du CSV Relations
 
-         List<Quai> station = CSVUtils.readStationCSV(null);
-         List<Relation> relations = CSVUtils.readRelationCSV(null, station);
+        List<Quai> station = CSVUtils.readStationCSV(null);
+        List<Relation> relations = CSVUtils.readRelationCSV(null, station);
 
-         System.out.println("Nombre de relations: " + relations.size());
+        System.out.println("Nombre de relations: " + relations.size());
 
         ReseauMetro reseau = new ReseauMetro(new ArrayList<Quai>(station), new ArrayList<Relation>(relations));
 
         for (Quai s : reseau.quais.subList(0, 10)) {
             List<Relation> rel = s.getRelations(relations);
-            StringBuilder sb = new StringBuilder("----- ("+s + ") -> -----  \n");
+            StringBuilder sb = new StringBuilder("----- (" + s + ") -> -----  \n");
 
             int i = 1;
 
@@ -42,23 +36,23 @@ public class App {
 
             System.out.println(sb.toString() + "\n");
         }
-        
+
         System.out.println("Nombre de stations: " + station.size());
         System.out.println(station.get(24));
- 
+
         StringBuffer sb = new StringBuffer();
 
         for (Quai s : reseau.stations.keySet()) {
             sb.append(s + "\n");
         }
 
-         Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V43");
+        Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V43");
 
-         sb.append("-- " + abes + " --\n");
+        sb.append("-- " + abes + " --\n");
 
         for (Quai s : reseau.stations.get(abes)) {
             sb.append(s + "\n");
-        } 
+        }
 
         System.out.println(sb.toString());
 
@@ -81,12 +75,11 @@ public class App {
 
         // print sous forme de lsite d'id sans le Q
         for (Quai s : cheminQuai) {
-            if (s.getId().charAt(0) == 'Q'){    
+            if (s.getId().charAt(0) == 'Q') {
                 System.out.print(s.getId().substring(1));
                 System.out.print(",");
             }
         }
-        
-        SpringApplication.run(Controller.class, args);
-    } 
+
+    }
 }
