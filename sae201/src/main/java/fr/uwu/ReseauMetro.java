@@ -139,7 +139,7 @@ public class ReseauMetro {
     public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
+    
     /**
      * Retourne le trajet le plus court entre deux stations.
      * Se base sur l'algorithme de Bellman-Ford (voir
