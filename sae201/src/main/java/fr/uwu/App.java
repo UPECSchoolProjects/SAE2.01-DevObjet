@@ -3,6 +3,12 @@ package fr.uwu;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.Spring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
 import fr.uwu.utils.CSVUtils;
 
 public class App {
@@ -80,5 +86,7 @@ public class App {
                 System.out.print(",");
             }
         }
+        
+        SpringApplication.run(Controller.class, args);
     } 
 }
