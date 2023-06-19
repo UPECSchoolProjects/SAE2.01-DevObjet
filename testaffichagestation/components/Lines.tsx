@@ -10,7 +10,7 @@ async function getPathData(line: string) {
     return data;
 }
 
-export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, animationDuration, activated }: pathAttr & { strokeColor: string, strokeWidth: string, delay: number, nbItem: number, animationDuration: number, activated: boolean }) {
+export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, animationDuration, activated, stopAnimation }: pathAttr & { strokeColor: string, strokeWidth: string, delay: number, nbItem: number, animationDuration: number, activated: boolean, stopAnimation: boolean }) {
     const pathRef = React.useRef<SVGPathElement>(null);
 
     React.useEffect(() => {
@@ -32,6 +32,7 @@ export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, anima
     }
 
     return <React.Fragment>
+        {!stopAnimation && 
         <Transition
             in={true}
             timeout={{ enter: 0, exit: delay + nbItem * animationDuration }}
@@ -55,6 +56,7 @@ export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, anima
                 />
             )}
         </Transition>
+        }
         <path
             id={id + "-plain"}
             d={d}

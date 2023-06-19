@@ -18,7 +18,7 @@ export default function Map() {
       </header>
       <main>
         <aside>
-          <h2>Aside</h2>
+          <h2></h2>
         </aside>
         <SvgComponent />
 

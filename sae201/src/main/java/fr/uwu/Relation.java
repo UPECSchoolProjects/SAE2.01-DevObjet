@@ -11,6 +11,8 @@ public class Relation {
     Quai st1;
     Quai st2;
 
+    boolean correspondance;
+
     Integer temps; // Temps en secondes
     // #endregion
 
@@ -22,6 +24,12 @@ public class Relation {
         this.st1 = st1;
         this.st2 = st2;
         this.temps = temps;
+
+        if (st1.nom.equals(st2.nom)) {
+            this.correspondance = true;
+        } else {
+            this.correspondance = false;
+        }
     }
     // #endregion
 
@@ -66,5 +74,8 @@ public class Relation {
         return true;
     }
 
+    public Integer getTemps() {
+        return temps;
+    }
     // #endregion
 }

@@ -1,0 +1,188 @@
+{
+    "linedata": {
+        "strokeColor": "#00824B",
+        "strokeWidth": "4"
+    },
+    "troncons": [
+        {
+            "id": "MairieAubervilliers-AimeCesaire",
+            "d": "m 3073.7524,891.63788 c 0,0 -41.1515,36.72629 -45.1733,39.5882 -4.9139,3.49673 -9.3378,7.37601 -14.9482,7.88478 -10.1406,0.91957 -40.5738,-0.16427 -40.5738,-0.16427",
+            "beginStation": 389,
+            "endStation": 388
+        },
+        {
+            "id": "AimeCesaire-FrontPopulaire",
+            "d": "m 2973.0571,938.94659 -135.8483,0.16427",
+            "beginStation": 388,
+            "endStation": 387
+        },
+        {
+            "id": "FrontPopulaire-PorteDeLaChapelle",
+            "d": "m 2837.2088,939.11086 c 0,0 -48.1335,0.418 -54.2079,0.82133 -6.0684,0.40297 -8.7443,1.73729 -10.513,7.55625 -1.0066,3.31163 -2.1355,52.40094 -2.1355,52.40094",
+            "beginStation": 387,
+            "endStation": 276
+        },
+        {
+            "id": "PorteDeLaChapelle-MarxDormoy",
+            "d": "m 2770.3524,999.88938 0.3285,121.55712",
+            "beginStation": 276,
+            "endStation": 194
+        },
+        {
+            "id": "MarxDormoy-MarcadetPoissonniers",
+            "d": "m 2770.6809,1121.4465 c 0,0 -0.3033,26.6692 -1.1498,31.7034 -0.7424,4.4149 -4.6904,9.4096 -9.199,10.1846 -8.7026,1.4959 -332.2517,0.3863 -332.2517,0.3863",
+            "beginStation": 194,
+            "endStation": 191
+        },
+        {
+            "id": "MarcadetPoissonniers-JulesJoffrin",
+            "d": "m 2428.0804,1163.7208 -126.2157,0.5992",
+            "beginStation": 191,
+            "endStation": 147
+        },
+        {
+            "id": "JulesJoffrin-LamarckCaulaincourt",
+            "d": "m 2301.8647,1164.32 c 0,0 -95.2634,0.1087 -100.6953,0.4929 -5.0707,0.3586 -8.3181,2.0851 -10.8416,5.0922 -2.348,2.798 -2.2328,7.032 -2.4639,10.6773",
+            "beginStation": 147,
+            "endStation": 159
+        },
+        {
+            "id": "LamarckCaulaincourt-Abbesses",
+            "d": "m 2187.8639,1180.5824 c -0.2656,4.1898 0.1642,90.5108 0.1642,90.5108",
+            "beginStation": 159,
+            "endStation": 0
+        },
+        {
+            "id": "Abbesses-Pigalle",
+            "d": "m 2188.0281,1271.0932 0.8213,91.3321",
+            "beginStation": 0,
+            "endStation": 238
+        },
+        {
+            "id": "Pigalle-SaintGeorges",
+            "d": "m 2188.8494,1362.4253 0.1643,155.2317",
+            "beginStation": 238,
+            "endStation": 322
+        },
+        {
+            "id": "SaintGeorges-NotreDameDeLorette",
+            "d": "m 2189.0137,1517.657 c 0,0 1.2878,139.8118 -0.3285,144.7187 -1.3345,4.0512 -4.5028,8.157 -8.5419,9.5275 -3.2505,1.1029 -37.1242,0 -37.1242,0",
+            "beginStation": 322,
+            "endStation": 217
+        },
+        {
+            "id": "NotreDameDeLorette-TriniteDEstienneOrves",
+            "d": "m 2143.0191,1671.9032 -211.7393,-0.1643",
+            "beginStation": 217,
+            "endStation": 353
+        },
+        {
+            "id": "TriniteDEstienneOrves-SaintLazare",
+            "d": "m 1931.2798,1671.7389 c 0,0 -128.8755,-0.032 -133.5486,0.8213 -6.5447,1.1948 -8.6935,4.6797 -10.0203,8.7061 -1.5629,4.7426 0.3285,80.162 0.3285,80.162",
+            "beginStation": 353,
+            "endStation": 325
+        },
+        {
+            "id": "SaintLazare-Madeleine",
+            "d": "m 1788.0394,1761.4283 c 0,0 0.5652,16.8149 -0.1642,20.2048 -0.9523,4.4259 -3.9885,8.3359 -7.2277,11.4987 -4.2263,4.1265 -208.4729,208.4691 -218.4743,217.8171 -4.301,4.02 -5.0107,7.4465 -5.585,16.7552 -0.6447,10.4496 -0.9856,117.6147 -0.9856,117.6147",
+            "beginStation": 325,
+            "endStation": 175
+        },
+        {
+            "id": "Madeleine-Concorde",
+            "d": "m 1555.6026,2145.3188 -0.9856,156.3816",
+            "beginStation": 175,
+            "endStation": 78
+        },
+        {
+            "id": "Concorde-AssembleeNationale",
+            "d": "m 1554.617,2301.7004 c 0,0 0.2948,167.8061 0.3285,172.8083 0.8246,14.4934 2.4988,17.7959 8.3776,25.4612",
+            "beginStation": 78,
+            "endStation": 9
+        },
+        {
+            "id": "AssembleeNationale-Solferino",
+            "d": "m 1563.3231,2499.9699 c 2.051,2.4089 89.1966,90.1823 89.1966,90.1823",
+            "beginStation": 9,
+            "endStation": 338
+        },
+        {
+            "id": "Solferino-RueDuBac",
+            "d": "m 1652.5197,2590.1522 103.1593,102.8307",
+            "beginStation": 338,
+            "endStation": 308
+        },
+        {
+            "id": "RueDuBac-SevresBabylone",
+            "d": "m 1755.679,2692.9829 90.675,89.6895",
+            "beginStation": 308,
+            "endStation": 347
+        },
+        {
+            "id": "SevresBabylone-Rennes",
+            "d": "m 1846.354,2782.6724 90.3465,92.6462",
+            "beginStation": 347,
+            "endStation": 294
+        },
+        {
+            "id": "Rennes-NotreDameDesChamps",
+            "d": "m 1936.7005,2875.3186 c 0,0 82.9018,81.2839 89.0324,88.3753 4.8686,5.6315 5.9021,5.5634 7.2278,11.8272 1.0913,5.1562 0.657,31.5392 0.657,31.5392",
+            "beginStation": 294,
+            "endStation": 218
+        },
+        {
+            "id": "NotreDameDesChamps-MontparnasseBienvenue",
+            "d": "m 2033.6177,3007.0603 c 0,0 0.4927,66.247 -0.9856,72.1129 -0.9939,3.9437 -3.7224,8.3269 -8.8703,8.3775 -2.7866,0.027 -49.28,-0.3285 -49.28,-0.3285",
+            "beginStation": 218,
+            "endStation": 206
+        },
+        {
+            "id": "MontparnasseBienvenue-Falguiere",
+            "d": "m 1974.4818,3087.2222 -193.3415,0.6571 c 0,0 -9.1741,-0.6112 -13.1413,0.9857",
+            "beginStation": 206,
+            "endStation": 106
+        },
+        {
+            "id": "Falguiere-Pasteur",
+            "d": "m 1767.999,3088.865 c -4.033,1.6233 -11.0059,8.8703 -11.0059,8.8703 l -34.1674,33.5103",
+            "beginStation": 106,
+            "endStation": 231
+        },
+        {
+            "id": "Pasteur-Volontaires",
+            "d": "m 1722.8257,3131.2456 -118.6003,118.2718",
+            "beginStation": 231,
+            "endStation": 368
+        },
+        {
+            "id": "Volontaires-Vaugirard",
+            "d": "m 1604.2254,3249.5174 -99.2169,100.2025",
+            "beginStation": 368,
+            "endStation": 360
+        },
+        {
+            "id": "Vaugirard-Convention",
+            "d": "m 1505.0085,3349.7199 -101.5166,102.5022",
+            "beginStation": 360,
+            "endStation": 80
+        },
+        {
+            "id": "Convention-PorteDeVersailles",
+            "d": "m 1403.4919,3452.2221 -84.1044,83.4473",
+            "beginStation": 80,
+            "endStation": 274
+        },
+        {
+            "id": "PorteDeVersailles-CorentinCelton",
+            "d": "m 1319.3875,3535.6694 -168.8658,169.1944",
+            "beginStation": 274,
+            "endStation": 81
+        },
+        {
+            "id": "CorentinCelton-MairieDIssy",
+            "d": "m 1150.5217,3704.8638 -88.0468,87.0612",
+            "beginStation": 81,
+            "endStation": 178
+        }
+    ]
+}

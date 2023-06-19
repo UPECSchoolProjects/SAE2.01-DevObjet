@@ -54,7 +54,7 @@ public class CSVUtilsTest {
         System.out.println(station1);
 
         assert(stations.size() == 376);
-        assert(station1.id == 0);
+        assert(station1.getId().equals("Q0"));
         assert(station1.nom.equals("Abbesses"));
         assert(station1.ligne.equals("12"));
         assert(station1.terminus == false);
@@ -71,8 +71,10 @@ public class CSVUtilsTest {
         // id1;id2;temps
         // 0;238;41
 
-        assert(relation1.st1.id == 0);
-        assert(relation1.st2.id == 238);
+        System.out.println(relation1);
+
+        assert(relation1.st1.getId().equals("Q0"));
+        assert(relation1.st2.getId().equals("Q238"));
         assert(relation1.temps == 41);
     }
 }
