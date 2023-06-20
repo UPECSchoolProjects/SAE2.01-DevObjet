@@ -59,7 +59,7 @@ public class App {
         Quai CDGEtoile = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V9");
 
         Quai Nation = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V61");
-        Quai Opera = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V69");
+        //Quai Opera = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V69");
 
         List<Relation> chemin = reseau.dijkstra_algo(CDGEtoile, Nation);
 

@@ -1,5 +1,7 @@
-import './globals.scss'
+import './globals.scss';
+
 import { Inter } from 'next/font/google'
+import Image from 'next/image'  
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +17,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charSet="utf-8" />
+      <meta name="keywords" content="GARE ***, ITINERAIRE, La UwU Corporation™&nbsp;est heureuse de vous présenter son nouveau chef d&amp;apos;oeuvre." />
+      <meta name="description" content="" />
+      <title>Accueil</title>
+      {/* <link rel="stylesheet" href="nicepage.css" media="screen" /> */}
+      </head>
+      <body className={inter.className}>
+        <header>
+          <Image src="/images/icon.png" alt="" className="logo" />
+        </header>
+        {children}
+        </body>
     </html>
   )
 }
