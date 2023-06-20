@@ -569,7 +569,12 @@ public class ReseauMetro {
      * @param stations
      */
     public void trajetEntrePlusieursStation(ArrayList<Quai> stations) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        ArrayList<Relation> relations = new ArrayList<>();
+        for (int i = 0; i < stations.size() - 1; i++) {
+            Quai station1 = stations.get(i);
+            Quai station2 = stations.get(i + 1);
+            relations.addAll(dijkstra_algo(station1, station2));
+        }
     }
 
 
@@ -591,4 +596,18 @@ public class ReseauMetro {
         return stations;
     }
     // #endregion
+
+    public Quai getStationVirtByStation(Quai pStation) {
+        // pStation est un quai
+
+        Quai virtStation = this.stations.keySet().stream()
+                .filter(station -> station.getNom().equals(pStation.getNom())).findFirst()
+                .orElse(null);
+
+        if (virtStation != null) {  
+            return virtStation;
+        } else {
+            return pStation;
+        }
+    }
 }

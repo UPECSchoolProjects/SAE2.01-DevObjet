@@ -7,6 +7,7 @@ import { StopPoint } from './StopPoints';
 import { LinePath } from './Lines';
 import { cp } from 'fs';
 import svgPanZoom from 'svg-pan-zoom';
+import { Hash } from 'crypto';
 
 
 function addIntensity(num: number) {
@@ -31,12 +32,17 @@ async function getTroncons(line: string) {
     return data;
 }
 
-function GraphicCorrespondance({ correspondance }: { correspondance: GraphicCorrespondance }) {
-    return <>
-        <path d={correspondance.d} fill='#FFF' stroke={correspondance.strokeColor} strokeWidth={correspondance.strokeWidth}>
-            <title>{correspondance.displayName}</title>
-        </path>
-    </>
+function GraphicCorrespondance({ correspondance, activated }: { correspondance: GraphicCorrespondance, activated: boolean }) {
+    return activated ? <>
+            <path d={correspondance.d} fill='#FFF' stroke={correspondance.strokeColor} strokeWidth={correspondance.strokeWidth}>
+                <title>{correspondance.displayName}</title>
+            </path>
+        </> :
+        <>
+            <path d={correspondance.d} fill='#444' stroke="#444" strokeWidth={correspondance.strokeWidth} strokeDasharray="5,5">
+                <title>{correspondance.displayName}</title>
+            </path>
+        </>
 }
 
 function renderTroncons(tronconsController: TroconController[], linesData: Map<String, linedata>, StopAnimation: boolean): JSX.Element[] {
@@ -186,13 +192,18 @@ function stationToDisplay(stations: StationController[]): StationController[] {
     return stationsToDisplay;
 }
 
-function SvgComponent() {
+const hashCode = function(s: string) {
+    return s.split("").reduce(function(a, b) {
+      a = ((a << 5) - a) + b.charCodeAt(0);
+      return a & a;
+    }, 0);
+  }
+
+function SvgComponent({path}: {path: number[]}) {
     const [stations, setStations] = React.useState<StationController[]>([]);
     const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
     const [troncons, setTroncons] = React.useState<TroconController[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
-
-    const [currentPath, setCurrentPath] = React.useState<number[]>([]);
 
     const [mapLoaded, setMapLoaded] = React.useState(false);
 
@@ -242,7 +253,6 @@ function SvgComponent() {
         panZoom.zoom(1.5);
 
         setMapLoaded(true);
-         setCurrentPath([224,282,228,227,356,77,50,109,127,55]); 
     };
 
     React.useEffect(() => {
@@ -273,7 +283,7 @@ function SvgComponent() {
             setStations((prevStations) =>
                 prevStations.map((prevStation) => ({
                     ...prevStation,
-                    activated: currentPath.includes(parseInt(prevStation.station.id)),
+                    activated: path.includes(parseInt(prevStation.station.id)),
                 }))
             );
 
@@ -281,21 +291,25 @@ function SvgComponent() {
                 prevTroncons.map((prevTroncon) => ({
                     ...prevTroncon,
                     activated:
-                        currentPath.includes(parseInt(prevTroncon.troncon.beginStation)) &&
-                        currentPath.includes(parseInt(prevTroncon.troncon.endStation)),
+                        path.includes(parseInt(prevTroncon.troncon.beginStation)) &&
+                        path.includes(parseInt(prevTroncon.troncon.endStation)),
                 }))
             );
 
             setCorrespondances((prevCorrespondances) =>
                 prevCorrespondances.map((prevCorrespondance) => ({
                     ...prevCorrespondance,
-                    activated: true,
+                    // corresp à une liste de stations associé
+                    // si au moins une station de la correspondance est dans le path, on active la correspondance
+                    activated: prevCorrespondance.correspondance.stations.some((station) =>
+                        path.includes(station.id)
+                    ),
                 }))
             );
         };
 
         activate();
-    }, [mapLoaded, currentPath]);
+    }, [mapLoaded, path]);
 
     return (
         <svg
@@ -329,7 +343,7 @@ function SvgComponent() {
             </g>
             <g id="correspondances">
                 {correspondances && correspondances.map((correspondance) => (
-                    <GraphicCorrespondance key={correspondance.correspondance.id} correspondance={correspondance.correspondance} />
+                    <GraphicCorrespondance key={correspondance.correspondance.id} correspondance={correspondance.correspondance} activated={correspondance.activated} />
                 ))}
             </g>
             <g id="stations">
@@ -342,7 +356,10 @@ function SvgComponent() {
 
                     const lineData = linesData.get(station.line || "3")
 
-                    return <StopPoint key={station.line + "-" + station.id} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                    // hash de la position
+                    const hashProp = hashCode(station.position.x + "" + station.position.y);
+
+                    return <StopPoint key={station.line + "-" + station.id + hashProp} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
                 })}
             </g>
         </svg>
