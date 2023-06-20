@@ -228,39 +228,96 @@ public class ReseauMetro {
         
     }
 
-
-    /**
-     * Création de la méthode RelationComparator permettant de comparer les temps des 
-     * éléments de la liste relations (utilisé pour la méthode ACM)
-     */
-    public class RelationComparator implements Comparator<Relation> {
-        public int compare(Relation r1, Relation r2) {
-            return r1.getTemps().compareTo(r2.getTemps());
-        }
-    }
     /**
      * proposer un algorithme qui permet de trouver l’arbre couvrant minimum (ACM) reliant toutes
      * les stations. En quoi ce réseau serait-il avantageux ou pas pour la RATP ? et pour les
      * utilisateurs ?
      */
-    public void ACM() {
-        ArrayList<Relation> relation_ordonne = new ArrayList<>(relations);
-        Collections.sort(relation_ordonne, new RelationComparator());
+    public List<Relation> ACM() {
+        // Copier les relations existantes
+        List<Relation> allRelations = new ArrayList<>(relations);
 
-        HashSet<Quai> stationsSet = new HashSet<>();
+        // Trier les relations par ordre croissant de temps
+        allRelations.sort(new RelationComparator());
 
-        for (Relation relation : relations) {
-            stationsSet.add(relation.getSt1());
-            stationsSet.add(relation.getSt2());
+        // Créer une liste pour stocker les relations de l'ACM
+        List<Relation> acm = new ArrayList<>();
+
+        // Créer un tableau pour stocker les parents de chaque quai
+        int[] parent = new int[quais.size()];
+        for (int i = 0; i < quais.size(); i++) {
+            parent[i] = i;
         }
 
-        int nbStations = stationsSet.size();
+        // Parcourir toutes les relations triées
+        for (Relation relation : allRelations) {
+            Quai st1 = relation.getSt1();
+            Quai st2 = relation.getSt2();
 
-        for (int i=0; i<nbStations; i++){
-            
+            // Vérifier si l'ajout de cette relation crée un cycle
+            if (!connected(parent, st1, st2)) {
+                // Ajouter la relation à l'ACM
+                acm.add(relation);
+                // Fusionner les ensembles de st1 et st2
+                union(parent, st1, st2);
+            }
         }
-        throw new UnsupportedOperationException("Not supported yet.");
+        return acm;
     }
+
+    /**
+     * Vérifie si deux quais sont connectés dans l'ensemble disjoint représenté par le tableau parent.
+     *
+     * @param parent Tableau représentant les ensembles disjoint
+     * @param quai1  Premier quai
+     * @param quai2  Deuxième quai
+     * @return true si les quais sont connectés, false sinon
+     */
+    private boolean connected(int[] parent, Quai quai1, Quai quai2) {
+        int quai1Index = quais.indexOf(quai1);
+        int quai2Index = quais.indexOf(quai2);
+        return find(parent, quai1Index) == find(parent, quai2Index);
+    }
+
+    /**
+     * Effectue l'opération d'union entre deux ensembles représentés par le tableau parent.
+     *
+     * @param parent Tableau représentant les ensembles disjoint
+     * @param quai1  Premier quai
+     * @param quai2  Deuxième quai
+     */
+    private void union(int[] parent, Quai quai1, Quai quai2) {
+        int quai1Index = quais.indexOf(quai1);
+        int quai2Index = quais.indexOf(quai2);
+        int root1 = find(parent, quai1Index);
+        int root2 = find(parent, quai2Index);
+        parent[root1] = root2;
+    }
+
+    /**
+     * Retourne la racine de l'ensemble auquel appartient l'élément représenté par l'index.
+     *
+     * @param parent Tableau représentant les ensembles disjoint
+     * @param index  Index de l'élément
+     * @return Racine de l'ensemble
+     */
+    private int find(int[] parent, int index) {
+        while (parent[index] != index) {
+            index = parent[index];
+        }
+        return index;
+    }
+
+    /**
+     * Création de la méthode RelationComparator permettant de comparer les temps des éléments de la liste relations.
+     * Utilisée pour l'algorithme de l'ACM.
+     */
+    private static class RelationComparator implements Comparator<Relation> {
+        public int compare(Relation r1, Relation r2) {
+            return r1.getTemps().compareTo(r2.getTemps());
+        }
+    }
+
 
     /**
      * Analyse plus poussée du graphe des lignes de métro :
