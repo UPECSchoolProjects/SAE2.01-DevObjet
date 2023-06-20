@@ -91,6 +91,16 @@ public class Quai {
         return (this.virtuel ? "V" : "Q") + id.toString();
     }
 
+    // override comparaison par id
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Quai) {
+            Quai station = (Quai) obj;
+            return this.id == station.id;
+        }
+        return false;
+    }
+
     //#endregion
 
 }

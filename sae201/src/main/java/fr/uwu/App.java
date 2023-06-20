@@ -2,7 +2,8 @@ package fr.uwu;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.stream.Collectors;
+import fr.uwu.ReseauMetro.TypeAnalyse;
 import fr.uwu.utils.CSVUtils;
 
 public class App {
@@ -81,5 +82,16 @@ public class App {
             }
         }
 
+        System.out.println("\n");
+        System.out.println(reseau.relations.size());
+
+        System.out.println("\n");
+        System.out.println(reseau.ACM().size());
+
+        List<Quai> stations_virt = reseau.stations.keySet().stream().filter(s -> s.virtuel).collect(Collectors.toList());
+
+        System.out.println(stations_virt.size());
+
+        reseau.comparerStation_A_B(Nation, CDGEtoile, 200, TypeAnalyse.TERMINALE);
     }
 }

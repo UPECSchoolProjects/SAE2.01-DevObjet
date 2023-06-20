@@ -1,7 +1,6 @@
 package fr.uwu;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -266,7 +265,7 @@ public class ReseauMetro {
                 System.out.println("Erreur : le réseau n'est pas connexe");
                 return null;
             }
-            
+
             chemin.add(relPrec);
             station = relPrec.getOtherStation(station);
         }
@@ -275,10 +274,10 @@ public class ReseauMetro {
         System.out.println("Chemin : " + chemin.get(0));
         System.out.println("Nation rela : " + relations.stream()
                 .filter(rel -> rel.hasStation(station2)).collect(Collectors.toList()));
-        
+
         return chemin;
     }
-    
+
     /**
      * Retourne le trajet le plus court entre deux stations. Se base sur l'algorithme de
      * Bellman-Ford (voir https://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford).
@@ -414,11 +413,12 @@ public class ReseauMetro {
     }
 
     /**
-     * Vérifie si deux quais sont connectés dans l'ensemble disjoint représenté par le tableau parent.
+     * Vérifie si deux quais sont connectés dans l'ensemble disjoint représenté par le tableau
+     * parent.
      *
      * @param parent Tableau représentant les ensembles disjoint
-     * @param quai1  Premier quai
-     * @param quai2  Deuxième quai
+     * @param quai1 Premier quai
+     * @param quai2 Deuxième quai
      * @return true si les quais sont connectés, false sinon
      */
     private boolean connected(int[] parent, Quai quai1, Quai quai2) {
@@ -431,8 +431,8 @@ public class ReseauMetro {
      * Effectue l'opération d'union entre deux ensembles représentés par le tableau parent.
      *
      * @param parent Tableau représentant les ensembles disjoint
-     * @param quai1  Premier quai
-     * @param quai2  Deuxième quai
+     * @param quai1 Premier quai
+     * @param quai2 Deuxième quai
      */
     private void union(int[] parent, Quai quai1, Quai quai2) {
         int quai1Index = quais.indexOf(quai1);
@@ -446,7 +446,7 @@ public class ReseauMetro {
      * Retourne la racine de l'ensemble auquel appartient l'élément représenté par l'index.
      *
      * @param parent Tableau représentant les ensembles disjoint
-     * @param index  Index de l'élément
+     * @param index Index de l'élément
      * @return Racine de l'ensemble
      */
     private int find(int[] parent, int index) {
@@ -456,16 +456,9 @@ public class ReseauMetro {
         return index;
     }
 
-    /**
-     * Création de la méthode RelationComparator permettant de comparer les temps des éléments de la liste relations.
-     * Utilisée pour l'algorithme de l'ACM.
-     */
-    private static class RelationComparator implements Comparator<Relation> {
-        public int compare(Relation r1, Relation r2) {
-            return r1.getTemps().compareTo(r2.getTemps());
-        }
+    enum TypeAnalyse {
+        ACCESSIBLE, CENTRALE, TERMINALE
     }
-
 
     /**
      * Analyse plus poussée du graphe des lignes de métro :
@@ -477,88 +470,157 @@ public class ReseauMetro {
      * 
      * @param station1 Reference de la station 1
      * @param station2 Reference de la station 2
+     * @param pDistance Distance p
      */
-    public void comparerStation_A_B(Quai station1, Quai station2, int pDistance) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void comparerStation_A_B(Quai station1, Quai station2, int pDistance,
+            TypeAnalyse typeAnalyse) {
+        List<Quai> corresp =
+                this.stations.keySet().stream().filter(s -> s.virtuel).collect(Collectors.toList());
 
-        // int accessibilite_S1 = 0;
-        // int accessibilite_S2 = 0;
-        // ACCESSIBLE
-        // Problème avec l'utilisation de la classe BellmanFord
-        // for (String key : stations.keySet()) {
-        // List<Quai> quais_accassible = stations.get(key);
-        // for (int i = 0; i < quais_accassible.size(); i++) {
-        // Quai station_accessible = quais_accassible.get(i);
-        // if (accessibilite_S1 < BellmanFord(station1, station_accessible)){
-        // accessibilite_S1 = BellmanFord(station1, station_accessible);
-        // }
-        // if (accessibilite_S2 < BellmanFord(station2, station_accessible)){
-        // accessibilite_S2 = BellmanFord(station2, station_accessible);
-        // }
-        // }
-        // }
-        // if (accessibilite_S1 < accessibilite_S2){
-        // return station1.getNom() + " plus accessible que "+ station2.getNom();
-        // }
-        // if (accessibilite_S2 < accessibilite_S1){
-        // return station2.getNom() + " plus accessible que "+ station1.getNom();
-        // }
-        // if (accessibilite_S2 == accessibilite_S1){
-        // return station2.getNom() + " aussi accessible que "+ station1.getNom();
-        // }
+        switch (typeAnalyse) {
+            case ACCESSIBLE:
+                int distanceMinStation1 = Integer.MAX_VALUE;
+                Quai stationMinStation1 = null;
 
-        // CENTRALE
-        // Problème avec l'utilisation de la classe BellmanFord
-        // int centrale_S1 = 0;
-        // int centrale_S2 = 0;
-        // for (String key : stations.keySet()) {
-        // List<Quai> quais_accassible = stations.get(key);
-        // for (int i = 0; i < quais_accassible.size(); i++) {
-        // Quai station_accessible = quais_accassible.get(i);
-        // if (centrale_S1 < BellmanFord(station1, station_accessible) && BellmanFord(station1,
-        // station_accessible) <= pDistance ){
-        // centrale_S1 += 1;
-        // }
-        // if (centrale_S2 < BellmanFord(station2, station_accessible) && BellmanFord(station2,
-        // station_accessible) <= pDistance){
-        // centrale_S2 += 1;
-        // }
-        // }
-        // }
-        // if (centrale_S1 < centrale_S2){
-        // return station1.getNom() + " plus centrale que "+ station2.getNom() + " : " +
-        // station1.getNom() +" a " + centrale_S1 + " stations à moins de " + pDistance + " contre "
-        // + centraleS2 + " pour la station " + station2.getNom();
-        // }
-        // if (centrale_S1 < accessibilite_S1){
-        // return station2.getNom() + " plus centrale que "+ station1.getNom() + " : " +
-        // station2.getNom() +" a " + centrale_S2 + " stations à moins de " + pDistance + " contre "
-        // + centrale_S1 + " pour la station " + station1.getNom();
-        // }
-        // if (centrale_S2 == centrale_S1){
-        // return station1.getNom() + " aussi centrale que "+ station2.getNom() + " : " +
-        // station1.getNom() +" a " + centrale_S1 + " stations à moins de " + pDistance + " et " +
-        // station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
-        // }
+                int distanceMinStation2 = Integer.MAX_VALUE;
+                Quai stationMinStation2 = null;
+                for (Quai qVirt : corresp) {
+                    if (!qVirt.equals(station1)) {
+                        System.out.println(
+                                "Trajet entre " + station1.getNom() + " et " + qVirt.getNom());
+                        List<Relation> relations = dijkstra_algo(station1, qVirt);
+                        int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
+                                Integer::sum);
 
-        // TERMINALE
-        // ArrayList<Quai> terminus = new ArrayList<>();
-        // for (Quai quai : quais) {
-        // if (quai.isTerminus()) { // Vérifier si le terminus est vrai
-        // terminus.add(quai);
-        // }
-        // }
-        // for (Quai terminus_quai : terminus){
-        // if (dijkstra_algo(station1, terminus_quai) > dijkstra_algo(station2, terminus_quai) ){
-        // return station1 + " plus proche d'un terminus que "+ station2;
-        // }
-        // if (dijkstra_algo(station2, terminus_quai) > dijkstra_algo(station1, terminus_quai) ){
-        // return station2 + " plus proche d'un terminus que "+ station1;
-        // }
-        // if (dijkstra_algo(station2, terminus_quai) == dijkstra_algo(station1, terminus_quai) ){
-        // return station1 + " aussi plus proche d'un terminus que "+ station2;
-        // }
-        // }
+                        if (distance < distanceMinStation1) {
+                            distanceMinStation1 = distance;
+                            stationMinStation1 = qVirt;
+                        }
+                    }
+                    if (!qVirt.equals(station2)) {
+                        List<Relation> relations2 = dijkstra_algo(station2, qVirt);
+                        int distance2 = relations2.stream().reduce(0,
+                                (acc, r) -> acc + r.getTemps(), Integer::sum);
+
+                        if (distance2 < distanceMinStation2) {
+                            distanceMinStation2 = distance2;
+                            stationMinStation2 = qVirt;
+                        }
+                    }
+                }
+
+                if (distanceMinStation1 < distanceMinStation2) {
+                    System.out.println("La station " + station1.getNom()
+                            + " est plus accessible que la station " + station2.getNom());
+                    System.out.println(
+                            "La station " + station1.getNom() + " est à " + distanceMinStation1
+                                    + " secondes de la station " + stationMinStation1.getNom());
+                } else if (distanceMinStation1 > distanceMinStation2) {
+                    System.out.println("La station " + station2.getNom()
+                            + " est plus accessible que la station " + station1.getNom());
+                    System.out.println(
+                            "La station " + station2.getNom() + " est à " + distanceMinStation2
+                                    + " secondes de la station " + stationMinStation2.getNom());
+                } else {
+                    System.out.println("Les deux stations sont aussi accessibles");
+                }
+                break;
+            case CENTRALE:
+                int nbCorrespStation1 = 0;
+                int nbCorrespStation2 = 0;
+                for (Quai qVirt : corresp) {
+                    if (!qVirt.equals(station1)) {
+                        List<Relation> relations = dijkstra_algo(station1, qVirt);
+                        int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
+                                Integer::sum);
+
+                        if (distance <= pDistance) {
+                            nbCorrespStation1++;
+                        }
+                    }
+
+                    if (!qVirt.equals(station2)) {
+                        List<Relation> relations2 = dijkstra_algo(station2, qVirt);
+                        int distance2 = relations2.stream().reduce(0,
+                                (acc, r) -> acc + r.getTemps(), Integer::sum);
+
+                        if (distance2 <= pDistance) {
+                            nbCorrespStation2++;
+                        }
+                    }
+                }
+
+                if (nbCorrespStation1 > nbCorrespStation2) {
+                    System.out.println("La station " + station1.getNom()
+                            + " est plus centrale que la station " + station2.getNom());
+                    System.out.println(
+                            "La station " + station1.getNom() + " possède " + nbCorrespStation1
+                                    + " correspondances à " + pDistance + " s de trajet");
+                } else if (nbCorrespStation1 < nbCorrespStation2) {
+                    System.out.println("La station " + station2.getNom()
+                            + " est plus centrale que la station " + station1.getNom());
+                    System.out.println(
+                            "La station " + station2.getNom() + " possède " + nbCorrespStation2
+                                    + " correspondances à " + pDistance + " s de trajet");
+                } else {
+                    System.out.println("Les deux stations sont aussi centrales");
+                    System.out.println("Les deux stations possèdent " + nbCorrespStation1
+                            + " correspondances à " + pDistance + " s de trajer");
+                }
+                break;
+            case TERMINALE:
+                // plus proche en temps d’un terminus
+                List<Quai> terminus = this.stations.keySet().stream().filter(s -> s.terminus)
+                        .collect(Collectors.toList());
+
+                int distanceMinStation1Terminus = Integer.MAX_VALUE;
+                Quai stationMinStation1Terminus = null;
+
+                int distanceMinStation2Terminus = Integer.MAX_VALUE;
+                Quai stationMinStation2Terminus = null;
+
+                for (Quai qTerminus : terminus) {
+                    if (!qTerminus.equals(station1)) {
+                        List<Relation> relations = dijkstra_algo(station1, qTerminus);
+                        int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
+                                Integer::sum);
+
+                        if (distance < distanceMinStation1Terminus) {
+                            distanceMinStation1Terminus = distance;
+                            stationMinStation1Terminus = qTerminus;
+                        }
+                    }
+
+                    if (!qTerminus.equals(station2)) {
+                        List<Relation> relations2 = dijkstra_algo(station2, qTerminus);
+                        int distance2 = relations2.stream().reduce(0,
+                                (acc, r) -> acc + r.getTemps(), Integer::sum);
+
+                        if (distance2 < distanceMinStation2Terminus) {
+                            distanceMinStation2Terminus = distance2;
+                            stationMinStation2Terminus = qTerminus;
+                        }
+                    }
+                }
+
+                if (distanceMinStation1Terminus < distanceMinStation2Terminus) {
+                    System.out.println("La station " + station1.getNom()
+                            + " est plus proche d'un terminus que la station " + station2.getNom());
+                    System.out.println("La station " + station1.getNom() + " est à "
+                            + distanceMinStation1Terminus + " secondes du terminus "
+                            + stationMinStation1Terminus.getNom());
+                } else if (distanceMinStation1Terminus > distanceMinStation2Terminus) {
+                    System.out.println("La station " + station2.getNom()
+                            + " est plus proche d'un terminus que la station " + station1.getNom());
+                    System.out.println("La station " + station2.getNom() + " est à "
+                            + distanceMinStation2Terminus + " secondes du terminus "
+                            + stationMinStation2Terminus.getNom());
+                } else {
+                    System.out.println("Les deux stations sont aussi proches d'un terminus");
+                }
+                break;
+        }
+
     }
 
 
@@ -572,7 +634,7 @@ public class ReseauMetro {
      */
     public int reliePDistance(Quai station1, Quai station2, int pDistance) {
         List<Relation> relations = dijkstra_algo(station1, station2);
-        int distance = relations.size();
+        int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(), Integer::sum);
 
         if (distance == pDistance) {
             return pDistance;
@@ -592,39 +654,17 @@ public class ReseauMetro {
      * @param station2
      */
     public String analyse1Distance(Quai station1, Quai station2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-        // Besoin de Bellman ou de Djikstra
-        // int centrale_S1 = 0;
-        // int centrale_S2 = 0;
-        // for (String key : stations.keySet()) {
-        // List<Quai> quais_accassible = stations.get(key);
-        // for (int i = 0; i < quais_accassible.size(); i++) {
-        // Quai station_accessible = quais_accassible.get(i);
-        // if (centrale_S1 < BellmanFord(station1, station_accessible) && BellmanFord(station1,
-        // station_accessible) <= 1 ){
-        // centrale_S1 += 1;
-        // }
-        // if (centrale_S2 < BellmanFord(station2, station_accessible) && BellmanFord(station2,
-        // station_accessible) <= 1){
-        // centrale_S2 += 1;
-        // }
-        // }
-        // }
-        // if (centrale_S1 < centrale_S2){
-        // return station1.getNom() + " plus proche d'une correspondance que "+ station2.getNom() +
-        // " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 contre " +
-        // centrale_S2 + " pour la station " + station2.getNom();
-        // }
-        // if (centrale_S2 < centrale_S1){
-        // return station2.getNom() + " plus proche d'une correspondance que "+ station1.getNom() +
-        // " : " + station2.getNom() +" a " + centrale_S2 + " stations à moins de 1 contre " +
-        // centrale_S1 + " pour la station " + station1.getNom();
-        // }
-        // if (centrale_S2 == centrale_S1){
-        // return station1.getNom() + " aussi proche d'une correspondance que "+ station2.getNom() +
-        // " : " + station1.getNom() +" a " + centrale_S1 + " stations à moins de 1 et " +
-        // station2.getNom() + " a " + centrale_S2 + " stations à cette distance" + ;
-        // }
+        List<Relation> rel = this.relations.stream()
+                .filter(r -> r.hasStation(station1) && r.hasStation(station2))
+                .collect(Collectors.toList());
+
+        if (rel.size() > 0) {
+            return "Les stations " + station1.getNom() + " et " + station2.getNom()
+                    + " sont reliées par une arête";
+        } else {
+            return "Les stations " + station1.getNom() + " et " + station2.getNom()
+                    + " ne sont pas reliées par une arête";
+        }
     }
 
     /**
@@ -671,7 +711,7 @@ public class ReseauMetro {
                 .filter(station -> station.getNom().equals(pStation.getNom())).findFirst()
                 .orElse(null);
 
-        if (virtStation != null) {  
+        if (virtStation != null) {
             return virtStation;
         } else {
             return pStation;
