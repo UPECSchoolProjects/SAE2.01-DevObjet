@@ -1,61 +1,373 @@
 [
     {
-        "id": 36,
+        "id": 389,
         "idfmId": "",
-        "idName": "station-BoulogneJeanJaures",
-        "displayName": "Boulogne - Jean Jaurès",
-        "line": "M10",
+        "idName": "station-MairieAubervilliers",
+        "displayName": "Mairie d'Aubervilliers",
+        "line": "M12",
         "position": {
-            "x": 465,
-            "y": 3170
+            "x": 3073,
+            "y": 891
         },
         "displayType": "normal"
     },
     {
-        "id": 198,
+        "id": 388,
         "idfmId": "",
-        "idName": "station-MichelAngleMolitor",
-        "displayName": "Michel-Ange - Molitor",
-        "line": "M10",
+        "idName": "station-AimeCesaire",
+        "displayName": "Aimé Césaire",
+        "line": "M12",
         "position": {
-            "x": 666,
-            "y": 3141
+            "x": 2973,
+            "y": 938
         },
         "displayType": "normal"
     },
     {
-        "id": 52,
+        "id": 387,
         "idfmId": "",
-        "idName": "station-ChardonLagache",
-        "displayName": "Chardon-Lagache",
-        "line": "M10",
+        "idName": "station-FrontPopulaire",
+        "displayName": "Front populaire",
+        "line": "M12",
         "position": {
-            "x": 738,
-            "y": 3141
+            "x": 2837,
+            "y": 939
         },
         "displayType": "normal"
     },
     {
-        "id": 201,
+        "id": 276,
         "idfmId": "",
-        "idName": "station-Mirabeau",
-        "displayName": "Mirabeau",
-        "line": "M10",
+        "idName": "station-PorteDeLaChapelle",
+        "displayName": "Porte de la Chapelle",
+        "line": "M12",
         "position": {
-            "x": 846,
-            "y": 3096
+            "x": 2770,
+            "y": 999
         },
         "displayType": "normal"
     },
     {
-        "id": 145,
+        "id": 194,
         "idfmId": "",
-        "idName": "station-JavelAndreCitroen",
-        "displayName": "Javel - André Citroën",
-        "line": "M10",
+        "idName": "station-MarxDormoy",
+        "displayName": "Marx Dormoy",
+        "line": "M12",
         "position": {
-            "x": 976,
-            "y": 3028
+            "x": 2770,
+            "y": 1121
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 191,
+        "idfmId": "",
+        "idName": "station-MarcadetPoissonniers",
+        "displayName": "Marcadet - Poissonniers",
+        "line": "M12",
+        "position": {
+            "x": 2428,
+            "y": 1163
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 147,
+        "idfmId": "",
+        "idName": "station-JulesJoffrin",
+        "displayName": "Jules Joffrin",
+        "line": "M12",
+        "position": {
+            "x": 2301,
+            "y": 1164
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 159,
+        "idfmId": "",
+        "idName": "station-LamarckCaulaincourt",
+        "displayName": "Lamarck - Caulaincourt",
+        "line": "M12",
+        "position": {
+            "x": 2187,
+            "y": 1180
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 0,
+        "idfmId": "",
+        "idName": "station-Abbesses",
+        "displayName": "Abbesses",
+        "line": "M12",
+        "position": {
+            "x": 2188,
+            "y": 1271
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 238,
+        "idfmId": "",
+        "idName": "station-Pigalle",
+        "displayName": "Pigalle",
+        "line": "M12",
+        "position": {
+            "x": 2188,
+            "y": 1362
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 322,
+        "idfmId": "",
+        "idName": "station-SaintGeorges",
+        "displayName": "Saint-Georges",
+        "line": "M12",
+        "position": {
+            "x": 2189,
+            "y": 1517
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 217,
+        "idfmId": "",
+        "idName": "station-NotreDameDeLorette",
+        "displayName": "Notre-Dame-de-Lorette",
+        "line": "M12",
+        "position": {
+            "x": 2143,
+            "y": 1671
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 353,
+        "idfmId": "",
+        "idName": "station-TriniteDEstienneOrves",
+        "displayName": "Trinité - d'Estienne d'Orves",
+        "line": "M12",
+        "position": {
+            "x": 1931,
+            "y": 1671
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 325,
+        "idfmId": "",
+        "idName": "station-SaintLazare",
+        "displayName": "Saint-Lazare",
+        "line": "M12",
+        "position": {
+            "x": 1788,
+            "y": 1761
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 175,
+        "idfmId": "",
+        "idName": "station-Madeleine",
+        "displayName": "Madeleine",
+        "line": "M12",
+        "position": {
+            "x": 1555,
+            "y": 2145
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 78,
+        "idfmId": "",
+        "idName": "station-Concorde",
+        "displayName": "Concorde",
+        "line": "M12",
+        "position": {
+            "x": 1554,
+            "y": 2301
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 9,
+        "idfmId": "",
+        "idName": "station-AssembleeNationale",
+        "displayName": "Assemblée nationale",
+        "line": "M12",
+        "position": {
+            "x": 1563,
+            "y": 2499
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 338,
+        "idfmId": "",
+        "idName": "station-Solferino",
+        "displayName": "Solférino",
+        "line": "M12",
+        "position": {
+            "x": 1652,
+            "y": 2590
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 308,
+        "idfmId": "",
+        "idName": "station-RueDuBac",
+        "displayName": "Rue du Bac",
+        "line": "M12",
+        "position": {
+            "x": 1755,
+            "y": 2692
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 347,
+        "idfmId": "",
+        "idName": "station-SevresBabylone",
+        "displayName": "Sèvres - Babylone",
+        "line": "M12",
+        "position": {
+            "x": 1846,
+            "y": 2782
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 294,
+        "idfmId": "",
+        "idName": "station-Rennes",
+        "displayName": "",
+        "line": "M12",
+        "position": {
+            "x": 1936,
+            "y": 2875
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 218,
+        "idfmId": "",
+        "idName": "station-NotreDameDesChamps",
+        "displayName": "Notre-Dame-des-Champs",
+        "line": "M12",
+        "position": {
+            "x": 2033,
+            "y": 3007
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 206,
+        "idfmId": "",
+        "idName": "station-MontparnasseBienvenue",
+        "displayName": "Montparnasse - Bienvenüe",
+        "line": "M12",
+        "position": {
+            "x": 1974,
+            "y": 3087
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 106,
+        "idfmId": "",
+        "idName": "station-Falguiere",
+        "displayName": "Falguière",
+        "line": "M12",
+        "position": {
+            "x": 1767,
+            "y": 3088
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 231,
+        "idfmId": "",
+        "idName": "station-Pasteur",
+        "displayName": "",
+        "line": "M12",
+        "position": {
+            "x": 1722,
+            "y": 3131
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 368,
+        "idfmId": "",
+        "idName": "station-Volontaires",
+        "displayName": "Volontaires",
+        "line": "M12",
+        "position": {
+            "x": 1604,
+            "y": 3249
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 360,
+        "idfmId": "",
+        "idName": "station-Vaugirard",
+        "displayName": "Vaugirard",
+        "line": "M12",
+        "position": {
+            "x": 1505,
+            "y": 3349
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 80,
+        "idfmId": "",
+        "idName": "station-Convention",
+        "displayName": "Convention",
+        "line": "M12",
+        "position": {
+            "x": 1403,
+            "y": 3452
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 274,
+        "idfmId": "",
+        "idName": "station-PorteDeVersailles",
+        "displayName": "Porte de Versailles",
+        "line": "M12",
+        "position": {
+            "x": 1319,
+            "y": 3535
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 81,
+        "idfmId": "",
+        "idName": "station-CorentinCelton",
+        "displayName": "Corentin Celton",
+        "line": "M12",
+        "position": {
+            "x": 1150,
+            "y": 3704
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 178,
+        "idfmId": "",
+        "idName": "station-MairieDIssy",
+        "displayName": "Mairie d'Issy",
+        "line": "M12",
+        "position": {
+            "x": 1062,
+            "y": 3791
         },
         "displayType": "normal"
     }

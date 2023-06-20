@@ -13,7 +13,7 @@ export type Station = {
     displayName: string,
     line: string,
     position: point,
-    displayType: "normal" | "correspTerminus" | "correspondanceSimple" | "none"
+    displayType: "normal" | "correspTerminus" | "correspondanceSimple" | "none" | "correspHover",
 }
 
 export type Troncons = {

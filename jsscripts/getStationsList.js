@@ -21,7 +21,7 @@ export type Troncons = {
 const readline = require('readline');
 const SPD = require('svg-path-d');
 
-const ligne = require('./10BoulogneVersJavel.json'); // { troncons: Troncons[] }
+const ligne = require('./12.json'); // { troncons: Troncons[] }
 
 const stations = []; // Station[]
 
@@ -29,7 +29,7 @@ const troncons = ligne.troncons;
 
 const newTroncons = [];
 
-const line = 'M10';
+const line = 'M12';
 
 // Start from the beginning create first station
 // first line :

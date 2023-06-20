@@ -12,6 +12,8 @@ export function StopPoint({ station, lineColor, lineWidth, activated }: { statio
                 return deactiveStopPoint({ station, lineColor, lineWidth: nR });
             case "correspTerminus":
                 return correspTerminusStopPoint({ station, lineColor: '#666', lineWidth: nR });
+            case "correspHover": // permet de mettre sa souris pour voir le nom de la station mais ne l'affiche pas
+                return correspHoverStopPoint({ station, lineWidth: nR });
             default:
                 return <></>;
         }
@@ -24,9 +26,19 @@ export function StopPoint({ station, lineColor, lineWidth, activated }: { statio
             return correspSimpleStopPoint({ station, lineColor, lineWidth: nR });
         case "correspTerminus":
             return correspTerminusStopPoint({ station, lineColor, lineWidth: nR });
+        case "correspHover":
+            return correspHoverStopPoint({ station, lineWidth: nR });
         default:
             return <></>;
     }
+}
+
+function correspHoverStopPoint({ station, lineWidth }: { station: Station, lineWidth: number }) {
+    return (<>
+        <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={2.5 * lineWidth} fill="#fff">
+            <title>{station.displayName}</title>
+        </circle>
+    </>)
 }
 
 function deactiveStopPoint({ station, lineColor, lineWidth }: { station: Station, lineColor: string, lineWidth: number }) {

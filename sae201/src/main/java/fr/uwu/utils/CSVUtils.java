@@ -83,7 +83,8 @@ public class CSVUtils {
                 Integer.parseInt(lignesplit[0]),
                 lignesplit[1],
                 lignesplit[2].equals("1"),
-                lignesplit[3]);
+                lignesplit[3],
+                false);
         });
     }
 
@@ -104,8 +105,8 @@ public class CSVUtils {
 
         return readCSV(filename, (lignesplit) -> {
             return new Relation(
-                Quai.getQuaiById(stations, Integer.parseInt(lignesplit[0])),
-                Quai.getQuaiById(stations, Integer.parseInt(lignesplit[1])),
+                Quai.getQuaiById(stations, "Q" + Integer.parseInt(lignesplit[0])),
+                Quai.getQuaiById(stations, "Q" + Integer.parseInt(lignesplit[1])),
                 Integer.parseInt(lignesplit[2]));
         });
     }
