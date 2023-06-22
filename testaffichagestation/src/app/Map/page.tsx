@@ -18,8 +18,8 @@ export default function Map() {
     //setPath(mockpath.path.map((station) => parseInt(station.slice(1))))
 
     const fetchData = async () => {
-      const path = await getPath("Q285", "Q217");
-      setPath(path.path.map((station: string) => parseInt(station.slice(1))));
+      const path = await getPath("Q373", "Q145");
+      setPath(path.path.map((station: string) => parseInt(station.replace("Q", ""))));
     }
 
     fetchData();
@@ -43,7 +43,7 @@ export default function Map() {
         <aside>
           <h2></h2>
         </aside>
-          <SvgComponent path={path} /> 
+        <SvgComponent path={path} />
       </main>
     </>
   );

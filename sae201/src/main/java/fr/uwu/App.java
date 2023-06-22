@@ -17,8 +17,12 @@ public class App {
 
         // ? Parcours du CSV Relations
 
-        List<Quai> station = CSVUtils.readStationCSV(null);
-        List<Relation> relations = CSVUtils.readRelationCSV(null, station);
+        //List<Quai> station = CSVUtils.readStationCSV(null);
+        //List<Relation> relations = CSVUtils.readRelationCSV(null, station);
+
+        DbConnector db = DbConnector.getDbFromResourceFile();
+        List<Quai> station = db.get_stations();
+        List<Relation> relations = db.get_relations(station);
 
         System.out.println("Nombre de relations: " + relations.size());
 

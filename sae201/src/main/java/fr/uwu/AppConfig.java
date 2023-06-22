@@ -11,8 +11,9 @@ public class AppConfig {
 
     @Bean
     public ReseauMetro reseauMetro() {
-        List<Quai> stations = CSVUtils.readStationCSV(null);
-        List<Relation> relations = CSVUtils.readRelationCSV(null, stations);
+        DbConnector db = DbConnector.getDbFromResourceFile();
+        List<Quai> stations = db.get_stations();
+        List<Relation> relations = db.get_relations(stations);
 
         System.out.println("Nombre de relations: " + relations.size());
 
