@@ -390,20 +390,6 @@ public class ReseauMetro {
     }
 
     /**
-     * Afficher les éléments du réseau métropolitain à la demande de l’utilisateur :
-     * - Les trajets
-     * possibles entre deux stations, en indiquant le nombre de stations, le nombre
-     * de
-     * correspondances, le temps estimé du trajet (on comptera 3 min entre deux
-     * stations et 6 min
-     * par correspondance).
-     */
-    public void trajetEntre2Station(Quai station1, Quai station2) {
-
-    }
-
-
-    /**
      * Création de la méthode RelationComparator permettant de comparer les temps
      * des éléments de la
      * liste relations (utilisé pour la méthode ACM)

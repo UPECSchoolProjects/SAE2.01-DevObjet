@@ -220,7 +220,7 @@ function SvgComponent({ stations, path, pathRel }: { stations: Station[], path: 
             controlIconsEnabled: true,
             fit: true,
             center: true,
-            minZoom: 1.2,
+            minZoom: 0.8,
         });
 
         panZoom.zoom(1.5);
@@ -399,7 +399,7 @@ function SvgComponent({ stations, path, pathRel }: { stations: Station[], path: 
             <g id="stations">
                 {stationsController && stationsController.map((stationControl) => {
                     if (!stationControl?.toDisplay) {
-                        return <></>;
+                        return null;
                     }
 
                     const station = stationControl.station;
