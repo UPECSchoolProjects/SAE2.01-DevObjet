@@ -21,6 +21,12 @@ public class Quai {
     boolean terminus;
     String nom;
     boolean virtuel;
+    String idName; // pour le front
+    String idfmId; // pour le front
+    String displayName; // pour le front
+    String displayType; // pour le front
+    int posX; // pour le front
+    int posY; // pour le front
     //#endregion
 
     //#region Constructeurs
@@ -44,13 +50,24 @@ public class Quai {
      * Constructeur
      * @param terminus Si la station est un terminus
      * @param nom Nom de la station
+     * @param displayName Nom d'affichage de la station
     */
-    public Quai(Boolean terminus, String nom) {
+    public Quai(Boolean terminus, String nom, String displayName) {
         this.id = idCounter++;
         this.ligne = "VIRT";
         this.terminus = terminus;
         this.virtuel = true;
         this.nom = nom;
+        this.displayName = displayName;
+    }
+
+    public void setFrontProps(String idName, String idfmId, String displayName, String displayType, int posX, int posY) {
+        this.idName = idName;
+        this.idfmId = idfmId;
+        this.displayName = displayName;
+        this.displayType = displayType;
+        this.posX = posX;
+        this.posY = posY;
     }
 
 
@@ -142,11 +159,11 @@ public class Quai {
         return (this.virtuel ? "V" : "Q") + id.toString();
     }
 
-    /**
-     * Obtient l'identifiant du quai.
-     * Cette méthode retourne l'identifiant du quai, représenté sous forme d'un entier.
-     * @return L'identifiant du quai
-    */
+    public String IdLineToJSON() {
+        return "{\"id\":\"" + this.getId() + "\",\"ligne\":\"" + this.ligne + "\"}";
+    }
+
+    // override comparaison par id
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Quai) {

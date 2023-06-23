@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import fr.uwu.ReseauMetro.TypeAnalyse;
-import fr.uwu.utils.CSVUtils;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -17,8 +16,12 @@ public class App {
 
         // ? Parcours du CSV Relations
 
-        List<Quai> station = CSVUtils.readStationCSV(null);
-        List<Relation> relations = CSVUtils.readRelationCSV(null, station);
+        //List<Quai> station = CSVUtils.readStationCSV(null);
+        //List<Relation> relations = CSVUtils.readRelationCSV(null, station);
+
+        DbConnector db = DbConnector.getDbFromResourceFile();
+        List<Quai> station = db.get_stations();
+        List<Relation> relations = db.get_relations(station);
 
         System.out.println("Nombre de relations: " + relations.size());
 
@@ -97,5 +100,7 @@ public class App {
         System.out.println(stations_virt.size());
 
         reseau.comparerStation_A_B(Nation, CDGEtoile, 200, TypeAnalyse.TERMINALE);
+
+        System.out.println(reseau.stations.size());
     }
 }
