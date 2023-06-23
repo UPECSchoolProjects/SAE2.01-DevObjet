@@ -2341,6 +2341,18 @@
             "displayType": "normal"
         },
         {
+            "id": 114,
+            "idfmId": "",
+            "idName": "station-Gallieni",
+            "displayName": "Gallieni",
+            "line": "M3",
+            "position": {
+                "x": 3901.376,
+                "y": 2126.5449
+            },
+            "displayType": "normal"
+        },
+        {
             "id": 207,
             "idfmId": "",
             "idName": "station-MontparnasseBienvenue",
@@ -2392,7 +2404,7 @@
             "id": 137,
             "idfmId": "",
             "idName": "station-Invalides",
-            "displayName": "Invalides \t",
+            "displayName": "Invalides",
             "line": "M13",
             "position": {
                 "x": 1469,
@@ -2985,6 +2997,18 @@
             "position": {
                 "x": 3741,
                 "y": 3549
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 373,
+            "idfmId": "",
+            "idName": "station-EgliseAuteuil",
+            "displayName": "Église d'Auteuil",
+            "line": "M10",
+            "position": {
+                "x": 725,
+                "y": 3028
             },
             "displayType": "normal"
         },

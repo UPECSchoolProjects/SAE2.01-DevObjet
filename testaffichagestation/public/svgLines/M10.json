@@ -89,9 +89,15 @@
             "endStation": 145
         },
         {
-            "id": "JavelAndreCitroen-MichelAngleAuteuil",
-            "d": "m 975.00547,3027.9901 -179.95622,-0.2323 h -129.4419",
+            "id": "JavelAndreCitroen-EgliseAuteuil",
+            "d": "m 975.00547,3027.9901 -179.95622,-0.2323 h -64",
             "beginStation": 145,
+            "endStation": 373
+        },
+        {
+            "id": "EgliseAuteuil-MichelAngleAuteuil",
+            "d": "M 725,3028 h -64.4419",
+            "beginStation": 373,
             "endStation": 196
         },
         {
