@@ -88,7 +88,7 @@ id;ligne;terminus;nom
 86;2;0;Couronnes
 87;7;0;Crimée
 88;9;0;Croix_de_Chavaux
-89;8;1;Créteil-Préfecture
+89;8;0;Créteil-Préfecture
 90;8;0;Créteil-Université
 91;8;0;Créteil-l'Echat,_Hôpital_Henri_Mondor
 92;7b;0;Danube
@@ -111,7 +111,7 @@ id;ligne;terminus;nom
 109;1;0;Franklin_D._Roosevelt
 110;9;0;Franklin_D._Roosevelt
 111;8;0;Félix_Faure
-112;13;1;Gabriel_Péri,_Asnières-Gennevilliers
+112;13;0;Gabriel_Péri,_Asnières-Gennevilliers
 113;13;0;Gaité
 114;3;1;Galliéni
 115;3;0;Gambetta
@@ -375,3 +375,18 @@ id;ligne;terminus;nom
 373;10;0;Église_d'Auteuil
 374;5;0;Église_de_Pantin
 375;4;0;Étienne_Marcel
+376;4;0;Mairie_de_Montrouge
+377;4;0;Barbara
+378;4;1;Bagneux_Lucie_Aubrac
+379;14;1;Mairie_de_Saint_Ouen
+380;14;0;Saint_Ouen
+381;14;0;Porte_de_Clichy
+382;14;0;Pont_Cardinet
+383;14;0;Saint-Lazare
+384;14;1;Olympiades
+385;13;0;Les_Agnettes
+386;13;1;Les_Courtilles
+387;12;0;Front_populaire
+388;12;0;Aime_Cesaire
+389;12;1;Mairie_d'Aubervilliers
+390;8;1;Créteil-Pointe_du_Lac
