@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import fr.uwu.ReseauMetro.TypeAnalyse;
-import fr.uwu.utils.CSVUtils;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -97,5 +96,7 @@ public class App {
         System.out.println(stations_virt.size());
 
         reseau.comparerStation_A_B(Nation, CDGEtoile, 200, TypeAnalyse.TERMINALE);
+
+        System.out.println(reseau.stations.size());
     }
 }

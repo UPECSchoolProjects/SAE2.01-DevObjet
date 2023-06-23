@@ -21,6 +21,12 @@ public class Quai {
     boolean terminus;
     String nom;
     boolean virtuel;
+    String idName; // pour le front
+    String idfmId; // pour le front
+    String displayName; // pour le front
+    String displayType; // pour le front
+    int posX; // pour le front
+    int posY; // pour le front
     //#endregion
 
     //#region Constructeurs
@@ -34,16 +40,26 @@ public class Quai {
     }
 
 
-    public Quai(Boolean terminus, String nom) {
+    public Quai(Boolean terminus, String nom, String displayName) {
         this.id = idCounter++;
         this.ligne = "VIRT";
         this.terminus = terminus;
         this.virtuel = true;
         this.nom = nom;
+        this.displayName = displayName;
     }
     //#endregion
 
     //#region Méthodes
+
+    public void setFrontProps(String idName, String idfmId, String displayName, String displayType, int posX, int posY) {
+        this.idName = idName;
+        this.idfmId = idfmId;
+        this.displayName = displayName;
+        this.displayType = displayType;
+        this.posX = posX;
+        this.posY = posY;
+    }
 
 
     public List<Relation> getRelations(List<Relation> relations) {

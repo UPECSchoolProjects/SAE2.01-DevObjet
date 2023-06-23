@@ -5,9 +5,7 @@ import React from 'react';
 import { GraphicCorrespondance, Station, Troncons, linedata, point } from '../types/LinesAttributes';
 import { StopPoint } from './StopPoints';
 import { LinePath } from './Lines';
-import { cp } from 'fs';
 import svgPanZoom from 'svg-pan-zoom';
-import { Hash } from 'crypto';
 
 
 function addIntensity(num: number) {
@@ -34,10 +32,10 @@ async function getTroncons(line: string) {
 
 function GraphicCorrespondance({ correspondance, activated }: { correspondance: GraphicCorrespondance, activated: boolean }) {
     return activated ? <>
-            <path d={correspondance.d} fill='#FFF' stroke={correspondance.strokeColor} strokeWidth={correspondance.strokeWidth}>
-                <title>{correspondance.displayName}</title>
-            </path>
-        </> :
+        <path d={correspondance.d} fill='#FFF' stroke={correspondance.strokeColor} strokeWidth={correspondance.strokeWidth}>
+            <title>{correspondance.displayName}</title>
+        </path>
+    </> :
         <>
             <path d={correspondance.d} fill='#444' stroke="#444" strokeWidth={correspondance.strokeWidth} strokeDasharray="5,5">
                 <title>{correspondance.displayName}</title>
@@ -99,26 +97,6 @@ type CorrespondanceController = {
     activated: boolean
 }
 
-function beforePan(oldPan: { x: number; y: number }, newPan: { x: number; y: number }): { x: number; y: number } {
-    const stopHorizontal = false;
-    const stopVertical = false;
-    const gutterWidth = svgPanZoom.getSizes().viewBox.width * svgPanZoom.getSizes().realZoom;
-    const gutterHeight = svgPanZoom.getSizes().viewBox.height * svgPanZoom.getSizes().realZoom;
-  
-    const sizes: any = svgPanZoom.getSizes();
-    const leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth;
-    const rightLimit = sizes.width - gutterWidth - sizes.viewBox.x * sizes.realZoom;
-    const topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight;
-    const bottomLimit = sizes.height - gutterHeight - sizes.viewBox.y * sizes.realZoom;
-  
-    const customPan: { x: number; y: number } = {
-      x: Math.max(leftLimit, Math.min(rightLimit, newPan.x)),
-      y: Math.max(topLimit, Math.min(bottomLimit, newPan.y)),
-    };
-  
-    return customPan;
-  }
-
 
 function stationToDisplay(stations: StationController[]): StationController[] {
     // check that stations doesn't overlap and if so set Todisplay to False for the one that overlap (priority to the one that are activated)
@@ -128,16 +106,16 @@ function stationToDisplay(stations: StationController[]): StationController[] {
 
     const stationsToDisplay = stations.map((station) => {
         // search stations that are distant from the current station of less than 4px
-        const stationsToCheck: {station: StationController, distance: number}[] = stations.map((stationToCheck) => {
+        const stationsToCheck: { station: StationController, distance: number }[] = stations.map((stationToCheck) => {
             const distance = Math.abs(stationToCheck.station.position.x - station.station.position.x);
-            return {station: stationToCheck, distance: distance};
+            return { station: stationToCheck, distance: distance };
         }).filter((stationToCheck) => {
             return stationToCheck.distance < 4;
         });
 
         // if there is no station to check, return the station
         if (stationsToCheck.length === 0) {
-            return {...station, toDisplay: true};
+            return { ...station, toDisplay: true };
         }
 
         // if there is a distance of 0, check if the station is activated
@@ -150,21 +128,21 @@ function stationToDisplay(stations: StationController[]): StationController[] {
             const isOtherStationActivated = strictEqualStations[0].station.activated;
 
             if (isStationActivated && !isOtherStationActivated) {
-                return {...station, toDisplay: true};
+                return { ...station, toDisplay: true };
             } else if (!isStationActivated && isOtherStationActivated) {
-                return {...station, toDisplay: false};
+                return { ...station, toDisplay: false };
             } else {
                 // if both are activated or both are not activated, check strictOverlapProcessed to see if the station other station has already been processed
                 // if not add the current station to strictOverlapProcessed and return the current station
-                const isOtherStationAlreadyProcessed = strictOverlapProcessed.filter((stationProcessed) => { 
+                const isOtherStationAlreadyProcessed = strictOverlapProcessed.filter((stationProcessed) => {
                     return stationProcessed.station.id === strictEqualStations[0].station.station.id;
                 }).length > 0;
 
                 if (!isOtherStationAlreadyProcessed) {
                     strictOverlapProcessed.push(station);
-                    return {...station, toDisplay: true};
+                    return { ...station, toDisplay: true };
                 } else {
-                    return {...station, toDisplay: false};
+                    return { ...station, toDisplay: false };
                 }
             }
         } else {
@@ -173,34 +151,34 @@ function stationToDisplay(stations: StationController[]): StationController[] {
             const isOtherStationActivated = stationsToCheck[0].station.activated;
 
             if (isStationActivated && !isOtherStationActivated) {
-                return {...station, toDisplay: true};
+                return { ...station, toDisplay: true };
             } else if (!isStationActivated && isOtherStationActivated) {
-                return {...station, toDisplay: false};
+                return { ...station, toDisplay: false };
             } else {
                 // if both are activated or both are not activated, the station that is the most on the left is the one that is displayed
                 const isStationOnTheLeft = station.station.position.x < stationsToCheck[0].station.station.position.x;
 
                 if (isStationOnTheLeft) {
-                    return {...station, toDisplay: true};
+                    return { ...station, toDisplay: true };
                 } else {
-                    return {...station, toDisplay: false};
+                    return { ...station, toDisplay: false };
                 }
             }
         }
-}) as StationController[];
+    }) as StationController[];
 
     return stationsToDisplay;
 }
 
-const hashCode = function(s: string) {
-    return s.split("").reduce(function(a, b) {
-      a = ((a << 5) - a) + b.charCodeAt(0);
-      return a & a;
+const hashCode = function (s: string) {
+    return s.split("").reduce(function (a, b) {
+        a = ((a << 5) - a) + b.charCodeAt(0);
+        return a & a;
     }, 0);
-  }
+}
 
-function SvgComponent({path}: {path: number[]}) {
-    const [stations, setStations] = React.useState<StationController[]>([]);
+function SvgComponent({ stations, path }: { stations: Station[], path: number[] }) {
+    const [stationsController, setStationsController] = React.useState<StationController[]>([]);
     const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
     const [troncons, setTroncons] = React.useState<TroconController[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
@@ -213,12 +191,6 @@ function SvgComponent({path}: {path: number[]}) {
 
     const fetchData = async () => {
         let data: { stations: Station[], correspondances: GraphicCorrespondance[] } = await getStations()
-
-        const stations = data.stations.map((station) => {
-            return { station, activated: true, toDisplay: true };
-        });
-
-        setStations(stationToDisplay(stations));
 
         const correspondances = data.correspondances.map((correspondance) => {
             return { correspondance, activated: true };
@@ -269,7 +241,22 @@ function SvgComponent({path}: {path: number[]}) {
     }, [linesData]);
 
     React.useEffect(() => {
-        console.log(stations);
+        console.log(stationsController);
+    }, [stationsController]);
+
+    React.useEffect(() => {
+
+        if (path.length > 0) {
+            return;
+        }
+
+        let stationsControl: StationController[] = stations.map((station) => {
+            return { station, activated: true, toDisplay: true };
+        });
+
+        setStationsController(stationToDisplay(stationsControl));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [stations]);
 
     React.useEffect(() => {
@@ -280,10 +267,11 @@ function SvgComponent({path}: {path: number[]}) {
         }
 
         const activate = async () => {
-            setStations((prevStations) =>
-                prevStations.map((prevStation) => ({
-                    ...prevStation,
-                    activated: path.includes(parseInt(prevStation.station.id)),
+            setStationsController(() =>
+                stations.map((prevStation: Station) => ({
+                    station: prevStation,
+                    activated: path.includes(parseInt(prevStation.id)),
+                    toDisplay: path.includes(parseInt(prevStation.id)),
                 }))
             );
 
@@ -309,7 +297,7 @@ function SvgComponent({path}: {path: number[]}) {
         };
 
         activate();
-    }, [mapLoaded, path]);
+    }, [mapLoaded, path, stations]);
 
     return (
         <svg
@@ -338,7 +326,7 @@ function SvgComponent({path}: {path: number[]}) {
             <SvgLineComponent key={line} line={line} />
            )} */}
             <g id="troncons">
-                {stations && troncons && renderTroncons(troncons, linesData, true)}
+                {stationsController && troncons && renderTroncons(troncons, linesData, true)}
 
             </g>
             <g id="correspondances">
@@ -347,7 +335,7 @@ function SvgComponent({path}: {path: number[]}) {
                 ))}
             </g>
             <g id="stations">
-                {stations && stations.map((stationControl) => {
+                {stationsController && stationsController.map((stationControl) => {
                     if (!stationControl?.toDisplay) {
                         return <></>;
                     }

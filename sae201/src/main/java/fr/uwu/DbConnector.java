@@ -78,8 +78,14 @@ public class DbConnector {
                 if (resultSet.getBoolean("virtual")) {
                     continue;
                 } else {
-                    stations.add(new Quai(resultSet.getInt("id"), resultSet.getString("line"),
-                            resultSet.getBoolean("terminus"), resultSet.getString("nom"), false));
+                    Quai newStation = new Quai(resultSet.getInt("id"), resultSet.getString("line"),
+                            resultSet.getBoolean("terminus"), resultSet.getString("nom"), false);
+
+                    newStation.setFrontProps(resultSet.getString("idName"), resultSet.getString("idfmId"),
+                            resultSet.getString("displayName"), resultSet.getString("displayType"),
+                            resultSet.getInt("position_x"), resultSet.getInt("position_y"));
+
+                    stations.add(newStation);
                 }
             }
             resultSet.close();
@@ -99,10 +105,9 @@ public class DbConnector {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 relations.add(new Relation(
-                Quai.getQuaiById(stations, "Q" + resultSet.getInt("id1")),
-                Quai.getQuaiById(stations, "Q" + resultSet.getInt("id2")),
-                resultSet.getInt("temps")
-                ));
+                        Quai.getQuaiById(stations, "Q" + resultSet.getInt("id1")),
+                        Quai.getQuaiById(stations, "Q" + resultSet.getInt("id2")),
+                        resultSet.getInt("temps")));
             }
             resultSet.close();
             statement.close();
