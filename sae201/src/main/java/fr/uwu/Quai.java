@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Represente une station de métro.
  * C'est le noeud du graphe.
-*/
+ */
 public class Quai {
 
     private static int idCounter = 0;
@@ -14,7 +14,7 @@ public class Quai {
         return quais.stream().filter(quai -> quai.getId().equals(id)).findFirst().orElse(null);
     }
 
-    //#region Variables
+    // #region Variables
     // TODO : Getters and Setters si besoin
     private Integer id;
     String ligne;
@@ -27,17 +27,18 @@ public class Quai {
     String displayType; // pour le front
     int posX; // pour le front
     int posY; // pour le front
-    //#endregion
+    // #endregion
 
-    //#region Constructeurs
+    // #region Constructeurs
 
     /**
      * Constructeur
-     * @param id Identifiant de la station
-     * @param ligne Ligne de la station
+     * 
+     * @param id       Identifiant de la station
+     * @param ligne    Ligne de la station
      * @param terminus Si la station est un terminus
-     * @param nom Nom de la station
-    */
+     * @param nom      Nom de la station
+     */
     public Quai(Integer id, String ligne, Boolean terminus, String nom, boolean virtuel) {
         this.id = id;
         this.ligne = ligne;
@@ -48,10 +49,11 @@ public class Quai {
 
     /**
      * Constructeur
-     * @param terminus Si la station est un terminus
-     * @param nom Nom de la station
+     * 
+     * @param terminus    Si la station est un terminus
+     * @param nom         Nom de la station
      * @param displayName Nom d'affichage de la station
-    */
+     */
     public Quai(Boolean terminus, String nom, String displayName) {
         this.id = idCounter++;
         this.ligne = "VIRT";
@@ -61,7 +63,8 @@ public class Quai {
         this.displayName = displayName;
     }
 
-    public void setFrontProps(String idName, String idfmId, String displayName, String displayType, int posX, int posY) {
+    public void setFrontProps(String idName, String idfmId, String displayName, String displayType, int posX,
+            int posY) {
         this.idName = idName;
         this.idfmId = idfmId;
         this.displayName = displayName;
@@ -70,57 +73,66 @@ public class Quai {
         this.posY = posY;
     }
 
-
     /**
      * Obtient les relations associées à ce quai.
-     * Cette méthode filtre la liste des relations en ne conservant que celles qui sont connectées à ce quai.
+     * Cette méthode filtre la liste des relations en ne conservant que celles qui
+     * sont connectées à ce quai.
+     * 
      * @param relations Liste des relations à filtrer
      * @return Liste des relations associées à ce quai
-    */
+     */
     public List<Relation> getRelations(List<Relation> relations) {
         return relations.stream().filter(relation -> relation.st1.id == this.id || relation.st2.id == this.id).toList();
     }
 
     /**
-     * Retourne une représentation sous forme de chaîne de caractères de l'objet Quai.
-     * Cette méthode retourne les informations de l'objet Quai, telles que son identifiant, sa ligne, son terminus et son nom, 
+     * Retourne une représentation sous forme de chaîne de caractères de l'objet
+     * Quai.
+     * Cette méthode retourne les informations de l'objet Quai, telles que son
+     * identifiant, sa ligne, son terminus et son nom,
      * sous forme de chaîne de caractères.
+     * 
      * @return Représentation sous forme de chaîne de caractères de l'objet Quai
-    */
+     */
     public String toString() {
-        return "Id: " + this.getId() + ", Ligne: " + ligne + ", Terminus: " + terminus + ", Nom: " + nom;
+        return Couleurs.MAGENTA + "Id:" + Couleurs.RESET + " " + this.getId() + ", " +
+                Couleurs.ORANGE + "Ligne:" + Couleurs.RESET + " " + ligne + ", " +
+                Couleurs.GREEN + "Terminus:" + Couleurs.RESET + " " + terminus + ", " +
+                Couleurs.BLUE + "Nom:" + Couleurs.RESET + " " + nom;
     }
 
     /**
      * Vérifie si ce quai est un terminus.
      * Cette méthode vérifie si le quai est marqué comme terminus.
+     * 
      * @return True si le quai est un terminus, False sinon
-    */
-    public Boolean isTerminus(){
-        if (this.terminus == true){
+     */
+    public Boolean isTerminus() {
+        if (this.terminus == true) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 
     /**
      * Obtient le nom du quai.
+     * 
      * @return Le nom du quai
-    */
+     */
     public String getNom() {
         return nom;
     }
 
-    
     /**
      * Compare ce quai à un autre quai spécifié.
-     * Cette méthode compare les attributs de ce quai avec ceux du quai spécifié. Si tous les attributs sont identiques,
+     * Cette méthode compare les attributs de ce quai avec ceux du quai spécifié. Si
+     * tous les attributs sont identiques,
      * la méthode retourne true, sinon elle retourne false.
+     * 
      * @param station Quai à comparer avec ce quai
      * @return True si les quais sont identiques, False sinon
-    */
+     */
     public boolean compareTo(Quai station) {
         // Comparaison de l'identifiant de la station
         if (this.id != station.id) {
@@ -143,16 +155,20 @@ public class Quai {
 
     /**
      * Obtient l'identifiant du quai.
+     * 
      * @return L'identifiant du quai
-    */
+     */
     public String getLigne() {
         return ligne;
     }
 
     /**
      * Obtient l'identifiant du quai.
-     * Cette méthode retourne l'identifiant du quai, représenté sous forme d'une chaîne de caractères.
-     * L'identifiant est précédé par "V" si le quai est virtuel, ou par "Q" s'il est physique.
+     * Cette méthode retourne l'identifiant du quai, représenté sous forme d'une
+     * chaîne de caractères.
+     * L'identifiant est précédé par "V" si le quai est virtuel, ou par "Q" s'il est
+     * physique.
+     * 
      * @return L'identifiant du quai
      */
     public String getId() {
@@ -173,6 +189,6 @@ public class Quai {
         return false;
     }
 
-    //#endregion
+    // #endregion
 
 }
