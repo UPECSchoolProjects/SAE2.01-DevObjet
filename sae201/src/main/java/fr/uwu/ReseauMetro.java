@@ -16,6 +16,14 @@ import java.util.stream.Collectors;
 public class ReseauMetro {
 
 
+    /**
+     * Convertit une liste de relations en une liste de stations.
+     * 
+     * @param relations Liste de relations
+     * @param start Station de départ
+     * @param end Station d'arrivée
+     * @return Liste de stations
+     */
     public static List<Quai> convertRelationPathToStationPath(List<Relation> relations, Quai start,
             Quai end) {
         List<Quai> stations = new ArrayList<Quai>();
@@ -23,6 +31,7 @@ public class ReseauMetro {
 
         stations.add(end);
 
+        // on parcourt les relations dans l'ordre inverse
         for (Relation r : relations) {
             // graphe non orienté, donc on peut avoir st1 ou st2 en premier
             if (r.getSt1().compareTo(current)) {
@@ -54,7 +63,7 @@ public class ReseauMetro {
 
     /**
      * Constructeur par défaut. Initialise les listes de stations et de relations (vides).
-     */
+    */
     public ReseauMetro() {
         this.quais = new ArrayList<Quai>();
         this.relations = new ArrayList<Relation>();
@@ -74,6 +83,10 @@ public class ReseauMetro {
         init();
     }
 
+    /**
+     * Initialise les attributs de la classe.
+     * Cette méthode initialise les attributs de la classe comme la map des stations.
+     */
     public void init() {
         this.stations = new HashMap<Quai, Set<Quai>>();
         this.relTraites = new HashSet<Relation>();
@@ -108,7 +121,9 @@ public class ReseauMetro {
      * quais d'une même station
      */
     public void relierStationCorresp() {
+        // on va parcourir toutes les relations
         for (Relation rel : this.relations) {
+            // si la relation est déjà traitée ou si elle n'a pas de correspondance, on continue
             if (this.relTraites.contains(rel) || !rel.correspondance) {
                 continue;
             }
@@ -119,7 +134,9 @@ public class ReseauMetro {
             Quai stVirt = new Quai(st1.terminus, st1.nom);
 
             boolean alreadyExists = false;
+            // on va vérifier si le quai virtuel existe déjà
             for (Quai st : this.stations.keySet()) {
+                // si le quai virtuel existe déjà, on le récupère
                 if (st.nom.equals(stVirt.nom)) {
                     alreadyExists = true;
                     stVirt = st;
@@ -127,6 +144,7 @@ public class ReseauMetro {
                 }
             }
 
+            // si le quai virtuel n'existe pas, on l'ajoute
             if (!alreadyExists) {
                 this.stations.put(stVirt, new HashSet<Quai>());
             }
@@ -165,12 +183,14 @@ public class ReseauMetro {
 
             quais.add(station1);
 
+            // on ajoute les relations entre la station et les quais de la station
             for (Quai st : this.stations.get(station1)) {
                 relations.add(new Relation(station1, st, 0));
                 System.out.println("Ajout de la relation " + station1 + " -> " + st);
             }
         }
 
+        // il faut ajouter aux relations déjà présente la relation entre les quai de la station
         if (station2.virtuel) {
             if (!this.stations.keySet().contains(station2)) {
                 System.out.println(
@@ -180,6 +200,7 @@ public class ReseauMetro {
 
             quais.add(station2);
 
+            // on ajoute les relations entre la station et les quais de la station
             for (Quai st : this.stations.get(station2)) {
                 relations.add(new Relation(station2, st, 0));
                 System.out.println("Ajout de la relation " + station2 + " -> " + st);
@@ -207,6 +228,7 @@ public class ReseauMetro {
                 }
             }
 
+            // si on a pas trouvé de station, c'est que le réseau n'est pas connexe
             if (stationPlusProche == null) {
                 System.out.println("Erreur : le réseau n'est pas connexe");
                 System.out.println("Dernière station traitée : " + lastQuai + "(quai traitees : "
@@ -214,7 +236,7 @@ public class ReseauMetro {
                 return null;
             }
 
-            // on a trouvé la station la plus proche
+            // on ajoute la station à la liste des stations traitées
             quaiTraitees.add(stationPlusProche);
 
             lastQuai = stationPlusProche;
@@ -261,6 +283,7 @@ public class ReseauMetro {
         while (!station.equals(station1)) {
             Relation relPrec = anteriorite.get(station);
 
+            // si la relation n'existe pas, c'est que le réseau n'est pas connexe
             if (relPrec == null) {
                 System.out.println("Erreur : le réseau n'est pas connexe");
                 return null;
@@ -331,6 +354,7 @@ public class ReseauMetro {
         // Rechercher les correspondances possibles entre les deux lignes
         List<Quai> correspondances = new ArrayList<>();
 
+        // Parcourir tous les quais
         for (Quai quai1 : quais) {
             if (quai1.getLigne().equals(ligne1)) {
                 for (Quai quai2 : quais) {
@@ -484,24 +508,35 @@ public class ReseauMetro {
 
                 int distanceMinStation2 = Integer.MAX_VALUE;
                 Quai stationMinStation2 = null;
+
+                // on va parcourir toutes les correspondances
                 for (Quai qVirt : corresp) {
+                    // on ne prend pas en compte la station elle-même
                     if (!qVirt.equals(station1)) {
                         System.out.println(
                                 "Trajet entre " + station1.getNom() + " et " + qVirt.getNom());
+                                // on calcule le trajet entre la station et la correspondance
+                        // on récupère toutes les relations
                         List<Relation> relations = dijkstra_algo(station1, qVirt);
+                        // on calcule la distance totale
                         int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
                                 Integer::sum);
 
+                        // on compare la distance avec la distance minimale
                         if (distance < distanceMinStation1) {
                             distanceMinStation1 = distance;
                             stationMinStation1 = qVirt;
                         }
                     }
+
+                    // on ne prend pas en compte la station elle-même
                     if (!qVirt.equals(station2)) {
+                        // on calcule le trajet entre la station et la correspondance
                         List<Relation> relations2 = dijkstra_algo(station2, qVirt);
                         int distance2 = relations2.stream().reduce(0,
                                 (acc, r) -> acc + r.getTemps(), Integer::sum);
 
+                        // on compare la distance avec la distance minimale
                         if (distance2 < distanceMinStation2) {
                             distanceMinStation2 = distance2;
                             stationMinStation2 = qVirt;
@@ -509,12 +544,14 @@ public class ReseauMetro {
                     }
                 }
 
+                // on compare les distances minimales
                 if (distanceMinStation1 < distanceMinStation2) {
                     System.out.println("La station " + station1.getNom()
                             + " est plus accessible que la station " + station2.getNom());
                     System.out.println(
                             "La station " + station1.getNom() + " est à " + distanceMinStation1
                                     + " secondes de la station " + stationMinStation1.getNom());
+                // on compare les distances minimales
                 } else if (distanceMinStation1 > distanceMinStation2) {
                     System.out.println("La station " + station2.getNom()
                             + " est plus accessible que la station " + station1.getNom());
@@ -528,28 +565,34 @@ public class ReseauMetro {
             case CENTRALE:
                 int nbCorrespStation1 = 0;
                 int nbCorrespStation2 = 0;
+
+                // on va parcourir toutes les correspondances
                 for (Quai qVirt : corresp) {
+                    // on ne prend pas en compte la station elle-même
                     if (!qVirt.equals(station1)) {
                         List<Relation> relations = dijkstra_algo(station1, qVirt);
                         int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
                                 Integer::sum);
 
+                        // on compare la distance avec la distance minimale
                         if (distance <= pDistance) {
                             nbCorrespStation1++;
                         }
                     }
 
+                    // on ne prend pas en compte la station elle-même
                     if (!qVirt.equals(station2)) {
                         List<Relation> relations2 = dijkstra_algo(station2, qVirt);
                         int distance2 = relations2.stream().reduce(0,
                                 (acc, r) -> acc + r.getTemps(), Integer::sum);
-
+                        // on compare la distance avec la distance minimale
                         if (distance2 <= pDistance) {
                             nbCorrespStation2++;
                         }
                     }
                 }
 
+                    
                 if (nbCorrespStation1 > nbCorrespStation2) {
                     System.out.println("La station " + station1.getNom()
                             + " est plus centrale que la station " + station2.getNom());
@@ -579,23 +622,29 @@ public class ReseauMetro {
                 int distanceMinStation2Terminus = Integer.MAX_VALUE;
                 Quai stationMinStation2Terminus = null;
 
+                // on va parcourir toutes les correspondances
                 for (Quai qTerminus : terminus) {
+                    // on ne prend pas en compte la station elle-même
                     if (!qTerminus.equals(station1)) {
+                        // on calcule le trajet entre la station et la correspondance
                         List<Relation> relations = dijkstra_algo(station1, qTerminus);
                         int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(),
                                 Integer::sum);
 
+                        // on compare la distance avec la distance minimale
                         if (distance < distanceMinStation1Terminus) {
                             distanceMinStation1Terminus = distance;
                             stationMinStation1Terminus = qTerminus;
                         }
                     }
 
+                    // on ne prend pas en compte la station elle-même
                     if (!qTerminus.equals(station2)) {
                         List<Relation> relations2 = dijkstra_algo(station2, qTerminus);
                         int distance2 = relations2.stream().reduce(0,
                                 (acc, r) -> acc + r.getTemps(), Integer::sum);
 
+                        // on compare la distance avec la distance minimale
                         if (distance2 < distanceMinStation2Terminus) {
                             distanceMinStation2Terminus = distance2;
                             stationMinStation2Terminus = qTerminus;
@@ -636,6 +685,7 @@ public class ReseauMetro {
         List<Relation> relations = dijkstra_algo(station1, station2);
         int distance = relations.stream().reduce(0, (acc, r) -> acc + r.getTemps(), Integer::sum);
 
+        // on compare la distance avec la distance minimale
         if (distance == pDistance) {
             return pDistance;
         } else {
@@ -658,6 +708,7 @@ public class ReseauMetro {
                 .filter(r -> r.hasStation(station1) && r.hasStation(station2))
                 .collect(Collectors.toList());
 
+        // on compare la distance avec la distance minimale
         if (rel.size() > 0) {
             return "Les stations " + station1.getNom() + " et " + station2.getNom()
                     + " sont reliées par une arête";
@@ -685,11 +736,21 @@ public class ReseauMetro {
     }
 
 
+    /**
+     * Obtient les quais correspondant à un nom spécifié.
+     * Cette méthode retourne un ensemble de quais correspondant au nom spécifié. 
+     * Elle va rechercher les quais virtuels dans la map des stations en utilisant le nom spécifié. 
+     * Si des quais virtuels sont trouvés, tous les quais correspondants sont ajoutés à l'ensemble de quais retourné. 
+     * Si aucun quai virtuel n'est trouvé 
+     * la méthode recherche les quais physiques dans la liste des quais, et ajoute le premier quai correspondant trouvé à l'ensemble de quais retourné.
+     * @param pNom Nom pour la recherche des quais
+     * @return Ensemble de quais correspondant au nom spécifié
+    */
     public Set<Quai> getStationByName(String pNom) {
         Set<Quai> stations = new HashSet<>();
         Quai virtStation = this.stations.keySet().stream()
                 .filter(station -> station.getNom().equals(pNom)).findFirst().orElse(null);
-
+        // si la station est virtuelle, on ajoute toutes les stations correspondantes
         if (virtStation != null) {
             stations.addAll(this.stations.get(virtStation));
         } else {
@@ -704,13 +765,24 @@ public class ReseauMetro {
     }
     // #endregion
 
+    /**
+     * Obtient le quai virtuel correspondant à un quai spécifié.
+     * Cette méthode recherche le quai virtuel correspondant au quai spécifié en utilisant le nom du quai.
+     * Elle parcourt la map des stations et filtre les quais virtuels dont le nom correspond au nom du quai spécifié.
+     * Si un quai virtuel est trouvé, il est retourné. 
+     * Sinon, le quai spécifié est retourné.
+     * @param pStation Quai spécifié
+     * @return Quai virtuel correspondant au quai spécifié, ou le quai spécifié lui-même s'il n'y a pas de correspondance virtuelle
+    */
     public Quai getStationVirtByStation(Quai pStation) {
         // pStation est un quai
 
+        // on va chercher le quai virtuel correspondant
         Quai virtStation = this.stations.keySet().stream()
                 .filter(station -> station.getNom().equals(pStation.getNom())).findFirst()
                 .orElse(null);
 
+        // si la station est virtuelle, on ajoute toutes les stations correspondantes
         if (virtStation != null) {
             return virtStation;
         } else {

@@ -8,20 +8,36 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @SpringBootApplication
 @RestController
 public class Controller {
 
     private final ReseauMetro reseauMetro;
 
+    /**
+     * Constructeur
+    */
     public Controller(ReseauMetro reseauMetro) {
         this.reseauMetro = reseauMetro;
     }
 
+    /**
+     * Point d'entrée de l'application
+     * @param args Arguments de la ligne de commande
+    */
     public static void main(String[] args) {
         SpringApplication.run(Controller.class, args);
     }
 
+    /**
+     * Permet d'obtenir un chemin entre deux quais.
+     * Ce point d'extrémité permet d'obtenir un chemin optimal entre deux quais spécifiés en utilisant leurs identifiants.
+     * Le résultat est renvoyé au format JSON, représentant le chemin entre les deux quais.
+     * @param startID Identifiant du quai de départ
+     * @param endID Identifiant du quai d'arrivée
+     * @return JSON représentant le chemin entre les deux quais
+    */
     @GetMapping("/path")
     @CrossOrigin(origins = "*")
     public String hello(@RequestParam("start") String startID, @RequestParam("end") String endID) {

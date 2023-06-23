@@ -24,6 +24,7 @@ public class App {
 
         ReseauMetro reseau = new ReseauMetro(new ArrayList<Quai>(station), new ArrayList<Relation>(relations));
 
+        // Boucle pour afficher les relations de chaque station 
         for (Quai s : reseau.quais.subList(0, 10)) {
             List<Relation> rel = s.getRelations(relations);
             StringBuilder sb = new StringBuilder("----- (" + s + ") -> -----  \n");
@@ -43,6 +44,7 @@ public class App {
 
         StringBuffer sb = new StringBuffer();
 
+        // Boucle pour afficher les stations de chaque station
         for (Quai s : reseau.stations.keySet()) {
             sb.append(s + "\n");
         }
@@ -51,12 +53,14 @@ public class App {
 
         sb.append("-- " + abes + " --\n");
 
+        // Boucle pour afficher les stations de chaque station de la station abes
         for (Quai s : reseau.stations.get(abes)) {
             sb.append(s + "\n");
         }
 
         System.out.println(sb.toString());
 
+        // ? Test de l'algo de Dijkstra
         Quai CDGEtoile = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V9");
 
         Quai Nation = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V61");

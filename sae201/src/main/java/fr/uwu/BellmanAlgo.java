@@ -6,16 +6,25 @@ package fr.uwu;
      * @param sommet Nombre de sommets dans le graphe
      * @param arete Nombre d'arêtes dans le graphe
      * @return renvoie la distance du sommet depuis la source
-     */
+*/
 public class BellmanAlgo
 {
  
-// La fonction principale qui trouve les distances les plus courtes
-// de la source à tous les autres sommets
-// en utilisant l'algorithme de Bellman-Ford. La fonction
-// détecte également les cycles de poids négatifs
-// La ligne graph[i] représente le i-ème arc avec
-// trois valeurs u, sommet et w.
+/**
+ * Fonction d'implémentation de l'algorithme de Bellman-Ford
+ * Correspond a la fonction principale qui trouve les distances les plus courtes
+ * de la source à tous les autres sommets
+ * en utilisant l'algorithme de Bellman-Ford. La fonction
+ * détecte également les cycles de poids négatifs
+ * La ligne graph[i] représente le i-ème arc avec
+ * trois valeurs u, sommet et w.
+ * @param graph Le graphe
+ * @param sommet Nombre de sommets dans le graphe
+ * @param arete Nombre d'arêtes dans le graphe
+ * @param src La source
+ * @return renvoie la distance du sommet depuis la source
+ * @throws Exception
+ */
 static void BellmanFord(int graph[][], int sommet, int arete,
                 int src)
 {
