@@ -107,6 +107,10 @@ public class Quai {
         return (this.virtuel ? "V" : "Q") + id.toString();
     }
 
+    public String IdLineToJSON() {
+        return "{\"id\":\"" + this.getId() + "\",\"ligne\":\"" + this.ligne + "\"}";
+    }
+
     // override comparaison par id
     @Override
     public boolean equals(Object obj) {

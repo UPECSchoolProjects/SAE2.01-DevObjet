@@ -7,6 +7,7 @@ interface Ligne {
 interface VirtualContent {
     id: string;
     name: string;
+    nameFront: string;
     displayName: string;
     lignes: string[];
 }
@@ -14,6 +15,7 @@ interface VirtualContent {
 interface RealContent {
     id: string;
     name: string;
+    nameFront: string;
     idfmId: string;
     displayName: string;
     displayType: string;

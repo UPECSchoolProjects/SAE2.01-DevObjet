@@ -40,7 +40,7 @@ public class ReseauMetro {
     }
 
     // #region Attributs
-    ArrayList<Quai> quais;
+    List<Quai> quais;
     ArrayList<Relation> relations;
     Map<Quai, Set<Quai>> stations; // Quai est une station virtuelle qui regroupe toutes les
                                    // stations

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { v4 as uuidv4 } from 'uuid';
@@ -177,7 +178,7 @@ const hashCode = function (s: string) {
     }, 0);
 }
 
-function SvgComponent({ stations, path }: { stations: Station[], path: number[] }) {
+function SvgComponent({ stations, path, pathRel }: { stations: Station[], path: number[], pathRel: RelationFromBackend[] }) {
     const [stationsController, setStationsController] = React.useState<StationController[]>([]);
     const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
     const [troncons, setTroncons] = React.useState<TroconController[]>([]);
@@ -246,7 +247,7 @@ function SvgComponent({ stations, path }: { stations: Station[], path: number[] 
 
     React.useEffect(() => {
 
-        if (path.length > 0) {
+        if (path.length > 0 || pathRel.length > 0) {
             return;
         }
 
@@ -262,7 +263,7 @@ function SvgComponent({ stations, path }: { stations: Station[], path: number[] 
     React.useEffect(() => {
         console.log('Activating');
 
-        if (!mapLoaded) {
+        if (!mapLoaded || pathRel.length > 0) {
             return;
         }
 
@@ -298,6 +299,67 @@ function SvgComponent({ stations, path }: { stations: Station[], path: number[] 
 
         activate();
     }, [mapLoaded, path, stations]);
+
+    React.useEffect(() => {
+        console.log('Activating pathrel');
+        console.log("PathRel: ", pathRel);
+
+        if (!mapLoaded) {
+            return;
+        }
+
+        const activate = async () => {
+            // on fait une liste de toutes les stations presentes (set)
+            let stationsControl: Set<String> = new Set();
+
+            pathRel.forEach((rel) => {
+                stationsControl.add(rel.st1.id);
+                stationsControl.add(rel.st2.id);
+            });
+
+            console.log("nombre de stations dans le path rel : ", stationsControl);
+
+            console.log(stations[0].id);
+
+            // on active les stations qui sont dans le path
+            setStationsController((prevStationsController) =>
+                stations.map((prevStation: Station) => ({
+                    station: prevStation,
+                    activated: stationsControl.has("Q" + prevStation.id),
+                    toDisplay: stationsControl.has("Q" + prevStation.id),
+                }))
+            );
+
+            // on active les troncons qui sont dans le path
+            setTroncons((prevTroncons) =>
+                prevTroncons.map((prevTroncon) => ({
+                    ...prevTroncon,
+                    activated:
+                        pathRel.some(
+                            (rel) =>
+                                (rel.st1.id.replace("Q", "") == prevTroncon.troncon.beginStation &&
+                                    rel.st2.id.replace("Q", "") == prevTroncon.troncon.endStation) ||
+                                (rel.st1.id.replace("Q", "") == prevTroncon.troncon.endStation &&
+                                    rel.st2.id.replace("Q", "") == prevTroncon.troncon.beginStation)
+                        ),
+
+                })));
+
+            // on active les correspondances qui sont dans le path
+            setCorrespondances((prevCorrespondances) =>
+                prevCorrespondances.map((prevCorrespondance) => ({
+                    ...prevCorrespondance,
+                    activated: prevCorrespondance.correspondance.stations.some((station) =>
+                        stationsControl.has("Q" + station.id.toString())
+                    ),
+                }))
+            );
+        };
+
+        activate();
+
+    }, [mapLoaded, pathRel]);
+
 
     return (
         <svg

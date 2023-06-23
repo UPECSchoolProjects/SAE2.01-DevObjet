@@ -74,6 +74,14 @@ public class Relation {
         return true;
     }
 
+    public String toJSON() {
+        return "{\"st1\": " + st1.IdLineToJSON() + ", \"st2\": " + st2.IdLineToJSON() + ", \"temps\": " + temps + "}";
+    }
+
+    public Relation reverse() {
+        return new Relation(this.st2, this.st1, this.temps);
+    }
+
     public Integer getTemps() {
         return temps;
     }
