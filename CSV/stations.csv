@@ -399,6 +399,9 @@ id;ligne;terminus;nom
 397;RERD;0;Stade-de-France-Saint-Denis
 448;RERD;1;Creil
 449;RERD;0;Saint-Denis
+450;RERD;0;Créteil_Pompadour
+451;RERD;1;Malesherbes
+452;RERD;0;Melun
 399;RERA;0;La_Défense
 400;RERA;0;Charles_de_Gaulle,_Étoile
 401;RERA;0;Auber
@@ -427,6 +430,9 @@ id;ligne;terminus;nom
 442;RERB;1;Saint-Rémy_lès_Chevreuse
 413;RERE;1;Haussman
 414;RERE;0;Magenta,_Gare_du_Nord
+453;RERE;0;Noisy_le_Sec
+454;RERE;1;Chelles_Gournay
+455;RERE;1;Tournan
 415;RERC;0;Saint-Ouen
 416;RERC;0;Porte_de_Clichy
 417;RERC;0;Péreire_Levallois
