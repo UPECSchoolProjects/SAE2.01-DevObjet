@@ -71,29 +71,6 @@ public class App {
             sb.append(s + "\n");
         }
 
-        // ? Afficher les éléments du réseau métropolitain à la demande de l’utilisateur
-        System.out.println("");
-        System.out.println(Couleurs.BG_RED
-                + "- - - Afficher les éléments du réseau métropolitain à la demande de l'utilisateur : - - -"
-                + Couleurs.RESET);
-        System.out.println("");
-
-        // ^ 1. La liste des stations d’une ligne donnée.
-
-        System.out.println(Couleurs.UNDERLINE + "Liste des stations de la ligne M3:" + Couleurs.RESET + "\n");
-        reseau.printStationLigne("M3");
-
-        // ^ 2. La ou les correspondances possibles entre deux lignes.
-
-        System.out.println("\n" + Couleurs.UNDERLINE + "Correspondances entre M7 et M4:" + Couleurs.RESET + "\n");
-        reseau.correspondanceEntre2Lignes("M7", "M4");
-
-        System.out.println("\n" + Couleurs.UNDERLINE + "Correspondances entre M6 et M7:" + Couleurs.RESET + "\n");
-        reseau.correspondanceEntre2Lignes("M6", "M7");
-
-        // ^ 3. Les trajets possibles entre deux stations, en indiquant le nombre de
-        // ^ stations, le nombre de correspondances, le temps estimé du trajet
-
         // ? Afficher les stations virtuelles (correspondances)
         System.out.println("");
         System.out.println(Couleurs.BG_RED + "- - - Station virtuelles (correspondances) - - -" + Couleurs.RESET);
@@ -140,6 +117,32 @@ public class App {
                 System.out.print(",");
             }
         }
+
+        // ? Afficher les éléments du réseau métropolitain à la demande de l’utilisateur
+        System.out.println("");
+        System.out.println(Couleurs.BG_RED
+                + "- - - Afficher les éléments du réseau métropolitain à la demande de l'utilisateur : - - -"
+                + Couleurs.RESET);
+        System.out.println("");
+
+        // ^ 1. La liste des stations d’une ligne donnée.
+
+        System.out.println(Couleurs.UNDERLINE + "Liste des stations de la ligne M3:" + Couleurs.RESET + "\n");
+        reseau.printStationLigne("M3");
+
+        // ^ 2. La ou les correspondances possibles entre deux lignes.
+
+        System.out.println("\n" + Couleurs.UNDERLINE + "Correspondances entre M7 et M4:" + Couleurs.RESET + "\n");
+        reseau.correspondanceEntre2Lignes("M7", "M4");
+
+        System.out.println("\n" + Couleurs.UNDERLINE + "Correspondances entre M6 et M7:" + Couleurs.RESET + "\n");
+        reseau.correspondanceEntre2Lignes("M6", "M7");
+
+        // ^ 3. Temps estimé trajet entre deux stations.
+
+        System.out.println(
+                "\n" + Couleurs.UNDERLINE + "Temps estimé du trajet entre CDGEtoile et Nation (trajet précédent):"
+                        + Couleurs.RESET + " " + ReseauMetro.calculertemps(chemin) + " secondes");
 
         // ? ACM
         System.out.println("\n\n" + Couleurs.BG_RED + "- - - ACM - - -" + Couleurs.RESET);
