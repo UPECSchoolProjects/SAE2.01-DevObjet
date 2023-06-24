@@ -227,7 +227,7 @@ export default function Map() {
         </aside>
 
 
-        <SvgComponent path={path} stations={removeVirtualStations(stations)} pathRel={acmRelations} animate={animation} />
+        <SvgComponent path={path} stations={removeVirtualStations(stations)} pathRel={acmRelations} animate={animation} lastRequestedPath={lastRequestedPath} />
       </main>
     </>
   );

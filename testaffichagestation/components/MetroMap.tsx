@@ -7,6 +7,7 @@ import { GraphicCorrespondance, Station, Troncons, linedata, point } from '../ty
 import { StopPoint } from './StopPoints';
 import { LinePath } from './Lines';
 import svgPanZoom from 'svg-pan-zoom';
+import StationPopup from './StationPopup';
 
 
 function addIntensity(num: number) {
@@ -178,11 +179,13 @@ const hashCode = function (s: string) {
     }, 0);
 }
 
-function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[], path: number[], pathRel: RelationFromBackend[], animate: boolean }) {
+function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: { stations: Station[], path: number[], pathRel: RelationFromBackend[], animate: boolean, lastRequestedPath: string[] }) {
     const [stationsController, setStationsController] = React.useState<StationController[]>([]);
     const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
     const [troncons, setTroncons] = React.useState<TroconController[]>([]);
     const [linesData, setLinesData] = React.useState<Map<String, linedata>>(new Map());
+
+    const [lastRequestedName, setLastRequestedName] = React.useState<string[]>([]);
 
     const [mapLoaded, setMapLoaded] = React.useState(false);
 
@@ -244,6 +247,22 @@ function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[
     React.useEffect(() => {
         console.log(stationsController);
     }, [stationsController]);
+
+    React.useEffect(() => {
+        let names = lastRequestedPath.map((path) => {
+            let station = getStationById(path.replace('Q', ''), stations);
+
+            console.log(station);
+
+            if (station === null) {
+                return '';
+            }
+            return station.idName;
+        }
+        );
+
+        setLastRequestedName(names);
+    }, [lastRequestedPath]);
 
     React.useEffect(() => {
 
@@ -410,7 +429,14 @@ function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[
                     // hash de la position
                     const hashProp = hashCode(station.position.x + "" + station.position.y);
 
-                    return <StopPoint key={station.line + "-" + station.id + hashProp} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                    if (lastRequestedPath.length > 0 && (lastRequestedPath.includes("Q" + station.id) || lastRequestedName.includes(station.idName))) {
+                        return <>
+                            <StationPopup station={station} />
+                            <StopPoint key={station.line + "-" + station.id + hashProp} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                        </>
+                    } else {
+                        return <StopPoint key={station.line + "-" + station.id + hashProp} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />
+                    }
                 })}
             </g>
         </svg>
@@ -418,3 +444,22 @@ function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[
 }
 
 export default SvgComponent;
+
+function getStationById(id: string, stations: Station[]): Station | null {
+    id = id.replace("Q", "");
+    for (const station of stations) {
+        if (station.id == id) {
+            return station;
+        }
+    }
+    return null;
+}
+
+function getStationByName(name: string, stations: Station[]): Station | null {
+    for (const station of stations) {
+        if (station.idName == name) {
+            return station;
+        }
+    }
+    return null;
+}
