@@ -13,6 +13,8 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.swing.RowFilter.Entry;
+
 public class ReseauMetro {
 
 
@@ -366,14 +368,24 @@ public class ReseauMetro {
         List<Quai> correspondances = new ArrayList<>();
 
         // Parcourir tous les quais
-        for (Quai quai1 : quais) {
-            if (quai1.getLigne().equals(ligne1)) {
-                for (Quai quai2 : quais) {
-                    if (quai2.getLigne().equals(ligne2) && quai1.compareTo(quai2)) {
-                        correspondances.add(quai1);
-                        break;
-                    }
+        for (java.util.Map.Entry<Quai, Set<Quai>> entry : this.stations.entrySet()) {
+            Quai quai = entry.getKey();
+            Set<Quai> correspondancesQuai = entry.getValue();
+
+            boolean contientLigne1 = false;
+            boolean contientLigne2 = false;
+
+            for (Quai correspondance : correspondancesQuai) {
+                if (correspondance.getLigne().equals(ligne1)) {
+                    contientLigne1 = true;
                 }
+                if (correspondance.getLigne().equals(ligne2)) {
+                    contientLigne2 = true;
+                }
+            }
+
+            if (contientLigne1 && contientLigne2) {
+                correspondances.add(quai);
             }
         }
 
