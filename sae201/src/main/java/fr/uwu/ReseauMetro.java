@@ -51,6 +51,10 @@ public class ReseauMetro {
         return stations;
     }
 
+    public static int calculertemps(List<Relation> relations) {
+        return relations.stream().mapToInt(r -> r.temps).sum();
+    }
+
     // #region Attributs
     List<Quai> quais;
     ArrayList<Relation> relations;
