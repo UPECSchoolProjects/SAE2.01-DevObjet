@@ -1,0 +1,65 @@
+#trajet {
+    overflow-y: scroll;
+
+    margin-bottom: 10px;
+}
+
+.correspStep {
+
+    .stationIcon {
+        margin-right: 10px;
+        aspect-ratio: 1;
+    }
+
+    .correspTime {
+        color: gray;
+        font-size: 0.8em;
+    }
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stationStep {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stationIcon {
+    margin-right: 10px;
+    aspect-ratio: 1;
+}
+
+.stationName {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stationTime {
+    color: gray;
+    font-size: 1em;
+}
+
+.bigStationName {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .correspStep,
+.stationStep {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.correspStep {
+  background-color: #e2f3ff;
+}
+
+.stationStep:first-child,
+.stationStep:last-child {
+  background-color: #fff6e2;
+}

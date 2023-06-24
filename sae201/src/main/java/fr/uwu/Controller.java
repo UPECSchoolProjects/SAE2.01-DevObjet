@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 @SpringBootApplication
 @RestController
 public class Controller {
@@ -23,27 +22,31 @@ public class Controller {
 
     /**
      * Constructeur
-    */
+     */
     public Controller(ReseauMetro reseauMetro) {
         this.reseauMetro = reseauMetro;
     }
 
     /**
      * Point d'entrée de l'application
+     * 
      * @param args Arguments de la ligne de commande
-    */
+     */
     public static void main(String[] args) {
         SpringApplication.run(Controller.class, args);
     }
 
     /**
      * Permet d'obtenir un chemin entre deux quais.
-     * Ce point d'extrémité permet d'obtenir un chemin optimal entre deux quais spécifiés en utilisant leurs identifiants.
-     * Le résultat est renvoyé au format JSON, représentant le chemin entre les deux quais.
+     * Ce point d'extrémité permet d'obtenir un chemin optimal entre deux quais
+     * spécifiés en utilisant leurs identifiants.
+     * Le résultat est renvoyé au format JSON, représentant le chemin entre les deux
+     * quais.
+     * 
      * @param startID Identifiant du quai de départ
-     * @param endID Identifiant du quai d'arrivée
+     * @param endID   Identifiant du quai d'arrivée
      * @return JSON représentant le chemin entre les deux quais
-    */
+     */
     @GetMapping("/path")
     @CrossOrigin(origins = "*")
     public String hello(@RequestParam("start") String startID, @RequestParam("end") String endID) {
@@ -67,14 +70,13 @@ public class Controller {
             return "Aucun chemin trouvé";
         }
 
-        List<Quai> stations = ReseauMetro.convertRelationPathToStationPath(path, start, end);
-
-        // reverse
-        for (int i = 0; i < stations.size() / 2; i++) {
-            Quai temp = stations.get(i);
-            stations.set(i, stations.get(stations.size() - i - 1));
-            stations.set(stations.size() - i - 1, temp);
+        // reverse path
+        List<Relation> reversedPath = new ArrayList<Relation>();
+        for (int i = path.size() - 1; i >= 0; i--) {
+            reversedPath.add(path.get(i));
         }
+
+        List<Quai> stations = ReseauMetro.convertRelationPathToStationPath(reversedPath, end, start);
 
         // to json
         StringBuilder sb = new StringBuilder();
@@ -89,7 +91,7 @@ public class Controller {
 
         String id_last = null;
 
-        for (Relation r : path) {
+        for (Relation r : reversedPath) {
             // si la relation est "dans le mauvais sens" on la retourne
             if (id_last != null && !r.getSt1().getId().equals(id_last)) {
                 r = r.reverse();

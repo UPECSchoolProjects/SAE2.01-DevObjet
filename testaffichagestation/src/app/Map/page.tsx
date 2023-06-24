@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 import { GraphicCorrespondance, Station } from '../../../types/LinesAttributes';
 import StationSelector from '../../../components/StationSelector';
+import Trajet from '../../../components/Trajet';
+import style from './Map.module.scss'
 
 async function getPath(start: string, end: string) {
   let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?start=${start}&end=${end}`);
@@ -51,6 +53,7 @@ function removeVirtualStations(stations: StationFromBackend[]): Station[] {
 export default function Map() {
 
   const [path, setPath] = React.useState<number[]>([]);
+  const [pathRel, setPathRel] = React.useState<RelationFromBackend[]>([]);
   const [stations, setStations] = React.useState<StationFromBackend[]>([]);
 
   const [acmRelations, setAcmRelations] = React.useState<RelationFromBackend[]>([]);
@@ -58,6 +61,7 @@ export default function Map() {
   const [uniqueStations, setUniqueStations] = React.useState<StationFromBackend[]>([]);
   const [depart, setDepart] = React.useState<StationFromBackend | null>(null);
   const [arrivee, setArrivee] = React.useState<StationFromBackend | null>(null);
+  const [animation, setAnimation] = React.useState<boolean>(false);
 
 
   React.useEffect(() => {
@@ -119,12 +123,14 @@ export default function Map() {
 
   React.useEffect(() => {
 
-    setAcmRelations([]);
-
     console.log("départ : " + depart?.content.id + " / arrivée : " + arrivee?.content.id);
     if (depart !== null && arrivee !== null && depart.content.id !== arrivee.content.id) {
+      setAnimation((prev) => true);
+      setAcmRelations([]);
+
       getPath(depart.content.id, arrivee.content.id).then((path) => {
         setPath(path.stationsInPath.map((station: string) => parseInt(station.replace("Q", ""))));
+        setPathRel(path.path);
       });
     }
   }, [depart, arrivee])
@@ -146,15 +152,18 @@ export default function Map() {
       </header>
       <main>
         <aside>
-          <h2>
-            <span>Départ</span>
+          <div id={style.asideContainer}>
+            <h2>Départ</h2>
             <StationSelector stations={uniqueStations} selectedStation={depart} setSelectedStation={setDepart} />
 
-            <span>Arrivée</span>
+            <h2>Arrivée</h2>
             <StationSelector stations={uniqueStations} selectedStation={arrivee} setSelectedStation={setArrivee} />
-          </h2>
+
+            <h2>Trajet</h2>
+            <Trajet RelPath={pathRel} stations={stations} />            
+          </div>
         </aside>
-        <SvgComponent path={path} stations={removeVirtualStations(stations)} pathRel={acmRelations}/>
+        <SvgComponent path={path} stations={removeVirtualStations(stations)} pathRel={acmRelations} animate={animation} />
       </main>
     </>
   );

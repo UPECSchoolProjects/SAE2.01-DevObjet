@@ -50,7 +50,7 @@ function renderTroncons(tronconsController: TroconController[], linesData: Map<S
 
 
     // count how many troncons per line
-    tronconsController.forEach((tronconsControl) => {
+    tronconsController.filter(s => s.activated).forEach((tronconsControl) => {
         const troncon = tronconsControl.troncon;
 
 
@@ -178,7 +178,7 @@ const hashCode = function (s: string) {
     }, 0);
 }
 
-function SvgComponent({ stations, path, pathRel }: { stations: Station[], path: number[], pathRel: RelationFromBackend[] }) {
+function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[], path: number[], pathRel: RelationFromBackend[], animate: boolean }) {
     const [stationsController, setStationsController] = React.useState<StationController[]>([]);
     const [correspondances, setCorrespondances] = React.useState<CorrespondanceController[]>([]);
     const [troncons, setTroncons] = React.useState<TroconController[]>([]);
@@ -388,7 +388,7 @@ function SvgComponent({ stations, path, pathRel }: { stations: Station[], path: 
             <SvgLineComponent key={line} line={line} />
            )} */}
             <g id="troncons">
-                {stationsController && troncons && renderTroncons(troncons, linesData, true)}
+                {stationsController && troncons && renderTroncons(troncons, linesData, !animate)}
 
             </g>
             <g id="correspondances">

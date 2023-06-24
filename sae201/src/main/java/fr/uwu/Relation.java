@@ -33,7 +33,7 @@ public class Relation {
         this.temps = temps;
 
         // Si les deux stations ont le même nom, alors c'est une correspondance
-        if (st1.nom.equals(st2.nom)) {
+        if (!st1.ligne.equals(st2.ligne)) {
             this.correspondance = true;
         } else {
             this.correspondance = false;

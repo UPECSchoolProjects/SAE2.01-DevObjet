@@ -70,12 +70,16 @@ export function LinePath({ id, d, strokeColor, strokeWidth, delay, nbItem, anima
           0% {
             opacity: 0.6
           }
-          85% {
+          65% {
+            stroke-dashoffset: 1;
             opacity: 0.6
           }
-            to {
+          85% {
+            opacity: 0
+          }
+          to {
             stroke-dashoffset: 0;
-            opacity: 0;
+            opacity: 0.6;
           }
         }
       `}
