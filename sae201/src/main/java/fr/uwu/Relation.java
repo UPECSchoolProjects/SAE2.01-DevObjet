@@ -53,7 +53,9 @@ public class Relation {
      * @return chaîne de caractères
      */
     public String toString() {
-        return "\t- St1: " + st1 + "\n\t- St2: " + st2 + "\n\t- Tps: " + temps;
+        return "\t- " + Couleurs.RED + "St1:" + Couleurs.RESET + " " + st1 +
+                "\n\t- " + Couleurs.RED + "St2: " + Couleurs.RESET + st2 +
+                "\n\t- " + Couleurs.YELLOW + "Tps: " + Couleurs.RESET + temps;
     }
 
     /**
