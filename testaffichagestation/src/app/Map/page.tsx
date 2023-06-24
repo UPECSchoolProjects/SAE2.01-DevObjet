@@ -7,8 +7,8 @@ import StationSelector from '../../../components/StationSelector';
 import Trajet from '../../../components/Trajet';
 import style from './Map.module.scss'
 
-async function getPath(start: string, end: string) {
-  let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?start=${start}&end=${end}`);
+async function getPath(stations: string[]) {
+  let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?stations=${stations.join(",")}`);
   let data = await res.json();
   return data;
 }
@@ -52,6 +52,7 @@ function removeVirtualStations(stations: StationFromBackend[]): Station[] {
 
 export default function Map() {
 
+  const [lastRequestedPath, setLastRequestedPath] = React.useState<string[]>([]);
   const [path, setPath] = React.useState<number[]>([]);
   const [pathRel, setPathRel] = React.useState<RelationFromBackend[]>([]);
   const [stations, setStations] = React.useState<StationFromBackend[]>([]);
@@ -61,6 +62,7 @@ export default function Map() {
   const [uniqueStations, setUniqueStations] = React.useState<StationFromBackend[]>([]);
   const [depart, setDepart] = React.useState<StationFromBackend | null>(null);
   const [arrivee, setArrivee] = React.useState<StationFromBackend | null>(null);
+  const [etape, setEtape] = React.useState<(StationFromBackend | null)[]>([]);
   const [animation, setAnimation] = React.useState<boolean>(false);
 
 
@@ -128,12 +130,24 @@ export default function Map() {
       setAnimation((prev) => true);
       setAcmRelations([]);
 
-      getPath(depart.content.id, arrivee.content.id).then((path) => {
+      let stations: string[] = [];
+      stations.push(depart.content.id);
+
+      etape.forEach((station) => {
+        if (station !== null) {
+          stations.push(station.content.id);
+        }
+      });
+
+      stations.push(arrivee.content.id);
+
+      getPath(stations).then((path) => {
         setPath(path.stationsInPath.map((station: string) => parseInt(station.replace("Q", ""))));
         setPathRel(path.path);
+        setLastRequestedPath(stations);
       });
     }
-  }, [depart, arrivee])
+  }, [depart, arrivee, etape])
 
   // barrel file who call SvgComponent
   const SvgComponent = React.useMemo(() => dynamic(
@@ -156,13 +170,52 @@ export default function Map() {
             <h2>Départ</h2>
             <StationSelector stations={uniqueStations} selectedStation={depart} setSelectedStation={setDepart} />
 
+            <h2>Étape</h2>
+            <div id={style.etapeContainer}>
+
+              {etape.map((station, index) => {
+                return (
+                  <div key={index} className={style.etapeItem}>
+                    <StationSelector stations={uniqueStations} selectedStation={station} setSelectedStation={(station) => {
+                      let newEtape = [...etape];
+                      newEtape[index] = station;
+                      setEtape(newEtape);
+                    }} />
+                    <button
+                      className={style.deleteButton}
+                      onClick={() => {
+                        let newEtape = [...etape];
+                        newEtape.splice(index, 1);
+                        setEtape(newEtape);
+                      }}
+                    >
+                      x
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            <button
+              className={style.addButton}
+              onClick={() => {
+                let newEtape = [...etape];
+                newEtape.push(null);
+                setEtape(newEtape);
+              }}
+            >
+              +
+            </button>
+
             <h2>Arrivée</h2>
             <StationSelector stations={uniqueStations} selectedStation={arrivee} setSelectedStation={setArrivee} />
 
             <h2>Trajet</h2>
-            <Trajet RelPath={pathRel} stations={stations} />            
+            <Trajet RelPath={pathRel} stations={stations} lastRequestedPath={lastRequestedPath} />
           </div>
         </aside>
+
+
         <SvgComponent path={path} stations={removeVirtualStations(stations)} pathRel={acmRelations} animate={animation} />
       </main>
     </>

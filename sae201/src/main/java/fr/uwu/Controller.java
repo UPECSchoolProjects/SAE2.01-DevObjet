@@ -49,7 +49,7 @@ public class Controller {
      */
     @GetMapping("/path")
     @CrossOrigin(origins = "*")
-    public String hello(@RequestParam("start") String startID, @RequestParam("end") String endID) {
+    public String path(@RequestParam("stations") String stationsStr) {
         List<Quai> stationsList = new ArrayList<Quai>(reseauMetro.quais);
 
         // on ajoute les stations virtuelles
@@ -57,26 +57,46 @@ public class Controller {
 
         System.out.println("Nombre de stations: " + stationsList.size());
 
-        Quai start = Quai.getQuaiById(stationsList, startID);
-        Quai end = Quai.getQuaiById(stationsList, endID);
+        String[] points = stationsStr.split(",");
 
-        if (start == null || end == null) {
-            return "Station non trouvée";
+        if (points.length < 2) {
+            return "Nombre de points incorrect";
         }
 
-        List<Relation> path = reseauMetro.dijkstra_algo(start, end);
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append("Stations: ");
+        for (String point : points) {
+            sb2.append(point + ", ");
+        }
+        System.out.println(sb2.toString());
+    
+
+        ArrayList<Quai> quais = new ArrayList<Quai>();
+
+        for (String point : points) {
+            Quai quai = Quai.getQuaiById(stationsList, point);
+            if (quai == null) {
+                return "Station non trouvée " + point;
+            }
+            quais.add(quai);
+        }
+
+        List<Relation> path = reseauMetro.trajetEntrePlusieursStation(quais);
 
         if (path == null) {
             return "Aucun chemin trouvé";
         }
 
-        // reverse path
-        List<Relation> reversedPath = new ArrayList<Relation>();
-        for (int i = path.size() - 1; i >= 0; i--) {
-            reversedPath.add(path.get(i));
+        StringBuilder pathSb = new StringBuilder();
+        pathSb.append("Path: ");
+        for (Relation r : path) {
+            pathSb.append(r.getSt1().getId() + "\n -> " + r.getSt2().getId() + ", ");
         }
 
-        List<Quai> stations = ReseauMetro.convertRelationPathToStationPath(reversedPath, end, start);
+        System.out.println(pathSb.toString());
+
+
+        List<Quai> stations = ReseauMetro.convertRelationPathToStationPath(path, quais.get(quais.size() - 1), quais.get(0));
 
         // to json
         StringBuilder sb = new StringBuilder();
@@ -91,7 +111,7 @@ public class Controller {
 
         String id_last = null;
 
-        for (Relation r : reversedPath) {
+        for (Relation r : path) {
             // si la relation est "dans le mauvais sens" on la retourne
             if (id_last != null && !r.getSt1().getId().equals(id_last)) {
                 r = r.reverse();
