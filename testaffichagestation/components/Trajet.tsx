@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Trajet.module.scss';
 
-function renderStation(step: pathStep, index: number, size: number) {
+function renderStation(step: pathStep, index: number, size: number, lastRequestedName: string[]) {
     if (step.type === "corresp") {
         const { st1, st2, time } = step.content;
         if (st1.virtual || st2.virtual) {
@@ -25,9 +25,14 @@ function renderStation(step: pathStep, index: number, size: number) {
         }
         const isFirstStation = index === 0;
         const isLastStation = index === size - 1;
-        const stationIconSize = isFirstStation || isLastStation ? 40 : 20;
-        const stationNameClass = isFirstStation || isLastStation ? styles.bigStationName : styles.stationName;
-        const stationStepClass = isFirstStation || isLastStation ? styles.stationStep : "";
+
+        //console.log("lastRequestedPath : " + lastRequestedPath + " / st1.content.id : " + st1.content.id + " / includes : " + lastRequestedPath.includes(st1.content.id));
+
+        const isBigStation = isFirstStation || isLastStation || lastRequestedName.includes(st1.content.name);
+
+        const stationIconSize = isBigStation ? 40 : 20;
+        const stationNameClass = isBigStation ? styles.bigStationName : styles.stationName;
+        const stationStepClass = isBigStation ? styles.stationBigStep : "";
 
         return (
             <div className={`${styles.stationStep} ${stationStepClass}`}>
@@ -64,13 +69,19 @@ type pathStep = {
     content: pathStepStation;
 }
 
-export default function Trajet({ RelPath, stations }: { RelPath: RelationFromBackend[], stations: StationFromBackend[] }) {
+export default function Trajet({ RelPath, stations, lastRequestedPath }: { RelPath: RelationFromBackend[], stations: StationFromBackend[], lastRequestedPath: string[] }) {
     const [stationsPath, setStationsPath] = React.useState<pathStep[]>([]);
+
+    const [lastRequestedPathName, setLastRequestedPathName] = React.useState<string[]>([]);
 
     const [tempsTotal, setTempsTotal] = React.useState<number>(0);
 
     React.useEffect(() => {
         const fetchData = async () => {
+            if (!(RelPath.length > 0 || stations.length > 0 || lastRequestedPath.length > 0)) {
+                return;
+            }
+
             let stationsPath: pathStep[] = [];
             setTempsTotal(0);
             for (const relation of RelPath) {
@@ -128,15 +139,26 @@ export default function Trajet({ RelPath, stations }: { RelPath: RelationFromBac
             }
 
             console.log("Stations path: ", stationsPath);
+            console.log("Last requested path: ", lastRequestedPath);
+
+            let lastRequestedPathName: string[] = [];
+            for (const stationId of lastRequestedPath) {
+                const station = getStationById(stationId, stations);
+                if (station) {
+                    lastRequestedPathName.push(station.content.name);
+                }
+            }
+
+            setLastRequestedPathName(lastRequestedPathName);
 
             setStationsPath(stationsPath);
         }
         fetchData();
-    }, [RelPath, stations])
+    }, [RelPath, stations, lastRequestedPath])
 
     return <>
         <div id={styles.trajet}>
-            {stationsPath.map((station, index) => renderStation(station, index, stationsPath.length))}
+            {stationsPath.map((station, index) => renderStation(station, index, stationsPath.length, lastRequestedPathName))}
         </div>
         <div className="tempsTotal">
             Temps total : {Math.floor(tempsTotal / 60)} minutes et {tempsTotal % 60} secondes

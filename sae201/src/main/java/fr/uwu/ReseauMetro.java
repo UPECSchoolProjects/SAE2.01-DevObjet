@@ -1,6 +1,7 @@
 package fr.uwu;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -752,13 +753,24 @@ public class ReseauMetro {
      * 
      * @param stations
      */
-    public void trajetEntrePlusieursStation(ArrayList<Quai> stations) {
+    public List<Relation> trajetEntrePlusieursStation(ArrayList<Quai> stations) {
         ArrayList<Relation> relations = new ArrayList<>();
         for (int i = 0; i < stations.size() - 1; i++) {
             Quai station1 = stations.get(i);
             Quai station2 = stations.get(i + 1);
-            relations.addAll(dijkstra_algo(station1, station2));
+
+            System.out.println("Calcul du trajet entre " + station1.getNom() + " et "
+                    + station2.getNom());
+
+            List<Relation> relations2 = dijkstra_algo(station1, station2);
+
+            // reverse
+            Collections.reverse(relations2);
+
+            relations.addAll(relations2);
         }
+
+        return relations;
     }
 
     /**

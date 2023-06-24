@@ -36,7 +36,7 @@ export function StopPoint({ station, lineColor, lineWidth, activated }: { statio
 function correspHoverStopPoint({ station, lineWidth }: { station: Station, lineWidth: number }) {
     return (<>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={2.5 * lineWidth} fill="#fff">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
     </>)
 }
@@ -44,10 +44,10 @@ function correspHoverStopPoint({ station, lineWidth }: { station: Station, lineW
 function deactiveStopPoint({ station, lineColor, lineWidth }: { station: Station, lineColor: string, lineWidth: number }) {
     return (<>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.5 * lineWidth} fill="#666" filter="url(#glow)">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.3 * lineWidth} fill="#fff">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
     </>)
 }
@@ -55,10 +55,10 @@ function deactiveStopPoint({ station, lineColor, lineWidth }: { station: Station
 function normalStopPoint({ station, lineColor, lineWidth }: { station: Station, lineColor: string, lineWidth: number }) {
     return (<>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.5 * lineWidth} fill={lineColor} filter="url(#glow)">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.3 * lineWidth} fill="#fff">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
     </>)
 }
@@ -66,10 +66,10 @@ function normalStopPoint({ station, lineColor, lineWidth }: { station: Station, 
 function correspSimpleStopPoint({ station, lineColor, lineWidth }: { station: Station, lineColor: string, lineWidth: number }) {
     return (<>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.6 * lineWidth} fill="#000" filter="url(#glow)">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.5 * lineWidth} fill="#fff">
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>
     </>)
 }
@@ -77,7 +77,7 @@ function correspSimpleStopPoint({ station, lineColor, lineWidth }: { station: St
 function correspTerminusStopPoint({ station, lineColor, lineWidth }: { station: Station, lineColor: string, lineWidth: number }) {
     return (<>
         <circle id={station.idName} cx={station.position.x} cy={station.position.y} r={1.3 * lineWidth} fill={lineColor}>
-            <title>{station.displayName}</title>
+            <title>{station.displayName} ({station.id})</title>
         </circle>)
     </>)
 }
