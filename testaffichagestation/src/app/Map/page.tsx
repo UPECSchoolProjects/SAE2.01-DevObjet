@@ -6,10 +6,10 @@ import { Station } from '../../../types/LinesAttributes';
 import StationSelector from '../../../components/StationSelector';
 import Trajet from '../../../components/Trajet';
 import style from './Map.module.scss'
-import Link from "next/link"; 
+import Link from "next/link";
 
-async function getPath(stations: string[]) {
-  let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?stations=${stations.join(",")}`);
+async function getPath(stations: string[], pref: string) {
+  let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?stations=${stations.join(",")}&preference=${pref}`);
   let data = await res.json();
   return data;
 }
@@ -65,6 +65,7 @@ export default function Map() {
   const [arrivee, setArrivee] = React.useState<StationFromBackend | null>(null);
   const [etape, setEtape] = React.useState<(StationFromBackend | null)[]>([]);
   const [animation, setAnimation] = React.useState<boolean>(false);
+  const [preferences, setPreferences] = React.useState<string>("temps");
 
 
   React.useEffect(() => {
@@ -142,13 +143,13 @@ export default function Map() {
 
       stations.push(arrivee.content.id);
 
-      getPath(stations).then((path) => {
+      getPath(stations, preferences).then((path) => {
         setPath(path.stationsInPath.map((station: string) => parseInt(station.replace("Q", ""))));
         setPathRel(path.path);
         setLastRequestedPath(stations);
       });
     }
-  }, [depart, arrivee, etape])
+  }, [depart, arrivee, etape, preferences])
 
   // barrel file who call SvgComponent
   const SvgComponent = React.useMemo(() => dynamic(
@@ -207,6 +208,18 @@ export default function Map() {
 
             <h2>Arrivée</h2>
             <StationSelector stations={uniqueStations} selectedStation={arrivee} setSelectedStation={setArrivee} />
+
+            <h2>Préférences</h2>
+            <select
+              value={preferences}
+              onChange={(event) => {
+                setPreferences(event.target.value);
+              }
+              }
+            >
+              <option value="temps" defaultValue="true">Le plus rapide</option>
+              <option value="correspondance">Le moins de correspondances</option>
+            </select>
 
             <h2>Trajet</h2>
             <Trajet RelPath={pathRel} stations={stations} lastRequestedPath={lastRequestedPath} />

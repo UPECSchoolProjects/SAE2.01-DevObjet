@@ -167,6 +167,17 @@ public class ReseauMetro {
         }
     }
 
+    enum TrajectPreference {
+        TEMPS, CORRESPONDANCE
+    }
+
+    /*
+     * Surcharge de la fonction dijkstra_algo, avec une préférence de trajet par défaut sur le temps
+     */
+    public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
+        return dijkstra_algo(station1, station2, TrajectPreference.TEMPS);
+    }
+
     /**
      * Retourne le trajet le plus court entre deux stations. Se base sur
      * l'algorithme de Dijkstra
@@ -178,7 +189,7 @@ public class ReseauMetro {
      *         court (dans
      *         l'ordre)
      */
-    public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
+    public List<Relation> dijkstra_algo(Quai station1, Quai station2, TrajectPreference pref) {
         Map<Quai, Integer> distances = new HashMap<Quai, Integer>();
         Map<Quai, Relation> anteriorite = new HashMap<Quai, Relation>();
         Set<Quai> quaiTraitees = new HashSet<Quai>();
@@ -241,7 +252,9 @@ public class ReseauMetro {
             Quai stationPlusProche = null;
             int distanceMin = Integer.MAX_VALUE;
             for (Quai station : quais) {
-                if (distances.get(station) < distanceMin && !quaiTraitees.contains(station)) {
+                int distance = distances.get(station);
+
+                if (distance < distanceMin && !quaiTraitees.contains(station)) {
                     stationPlusProche = station;
                     distanceMin = distances.get(station);
                 }
@@ -283,6 +296,15 @@ public class ReseauMetro {
                 // on cherche la station à l'autre bout de la relation
                 Quai stationVoisine = rel.getOtherStation(stationPlusProche);
                 int distance = distances.get(stationPlusProche) + rel.temps;
+
+                if(pref == TrajectPreference.CORRESPONDANCE && rel.correspondance) {
+                    // on ajoute 8000s de correspondance si on veut privilégier le moins de correspondance possible
+                    // cela permet de privilégier les trajets avec le moins de correspondance
+                    
+                    distance += 8000;
+                    System.out.println("oui" + distance);
+                }
+
                 if (distance < distances.get(stationVoisine)) {
                     distances.put(stationVoisine, distance);
                     anteriorite.put(stationVoisine, rel);
@@ -757,7 +779,7 @@ public class ReseauMetro {
      * 
      * @param stations
      */
-    public List<Relation> trajetEntrePlusieursStation(ArrayList<Quai> stations) {
+    public List<Relation> trajetEntrePlusieursStation(ArrayList<Quai> stations, TrajectPreference pref) {
         ArrayList<Relation> relations = new ArrayList<>();
         for (int i = 0; i < stations.size() - 1; i++) {
             Quai station1 = stations.get(i);
@@ -766,7 +788,7 @@ public class ReseauMetro {
             System.out.println("Calcul du trajet entre " + station1.getNom() + " et "
                     + station2.getNom());
 
-            List<Relation> relations2 = dijkstra_algo(station1, station2);
+            List<Relation> relations2 = dijkstra_algo(station1, station2, pref);
 
             // reverse
             Collections.reverse(relations2);

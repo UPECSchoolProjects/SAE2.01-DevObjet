@@ -2,6 +2,8 @@ package fr.uwu;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.uwu.ReseauMetro.TrajectPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +51,7 @@ public class Controller {
      */
     @GetMapping("/path")
     @CrossOrigin(origins = "*")
-    public String path(@RequestParam("stations") String stationsStr) {
+    public String path(@RequestParam("stations") String stationsStr, @RequestParam("preference") String preference) {
         List<Quai> stationsList = new ArrayList<Quai>(reseauMetro.quais);
 
         // on ajoute les stations virtuelles
@@ -62,6 +64,16 @@ public class Controller {
         if (points.length < 2) {
             return "Nombre de points incorrect";
         }
+
+        if(preference == null || preference.isEmpty()) {
+            preference = "temps";
+        }
+
+        if(!preference.equals("temps") && !preference.equals("correspondance")) {
+            return "Préférence incorrecte";
+        }
+
+        TrajectPreference pref = preference.equals("temps") ? TrajectPreference.TEMPS : TrajectPreference.CORRESPONDANCE;
 
         StringBuilder sb2 = new StringBuilder();
         sb2.append("Stations: ");
@@ -81,7 +93,7 @@ public class Controller {
             quais.add(quai);
         }
 
-        List<Relation> path = reseauMetro.trajetEntrePlusieursStation(quais);
+        List<Relation> path = reseauMetro.trajetEntrePlusieursStation(quais, pref);
 
         if (path == null) {
             return "Aucun chemin trouvé";
