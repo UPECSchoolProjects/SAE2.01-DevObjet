@@ -2,10 +2,11 @@
 
 import dynamic from 'next/dynamic';
 import React from 'react';
-import { GraphicCorrespondance, Station } from '../../../types/LinesAttributes';
+import { Station } from '../../../types/LinesAttributes';
 import StationSelector from '../../../components/StationSelector';
 import Trajet from '../../../components/Trajet';
 import style from './Map.module.scss'
+import Link from "next/link"; 
 
 async function getPath(stations: string[]) {
   let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/path?stations=${stations.join(",")}`);
@@ -161,9 +162,6 @@ export default function Map() {
 
   return (
     <>
-      <header>
-        <h1>SAE201</h1>
-      </header>
       <main>
         <aside>
           <div id={style.asideContainer}>

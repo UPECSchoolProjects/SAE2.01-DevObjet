@@ -1,7 +1,7 @@
 import './globals.scss';
 
 import { Inter } from 'next/font/google'
-import Image from 'next/image'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +27,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <header>
+          <h1>SAE201</h1>
+          <nav>
+            <Link href="/">Accueil</Link>
+            <Link href="/Map">Carte</Link>
+          </nav>
         </header>
         {children}
       </body>

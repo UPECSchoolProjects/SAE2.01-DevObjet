@@ -375,6 +375,7 @@ function SvgComponent({ stations, path, pathRel, animate }: { stations: Station[
             // add cursor grab
             onMouseDown={(e) => { e.currentTarget.style.cursor = 'grab'; }}
             onMouseUp={(e) => { e.currentTarget.style.cursor = 'default'; }}
+            style={{ backgroundColor: '#222' }}
         >
             <defs>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
