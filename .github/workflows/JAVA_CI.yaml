@@ -24,7 +24,15 @@ jobs:
           echo "db_name: ${{ secrets.DB_NAME }}" >> sae201\src\test\resources\db.yaml
           echo "db_host: ${{ secrets.DB_HOST }}" >> sae201\src\test\resources\db.yaml
           echo "db_port: ${{ secrets.DB_PORT }}" >> sae201\src\test\resources\db.yaml
-
+      - name: Build db.yaml step2
+        run: |
+          echo ${{ secrets.DB_PORT }}
+          echo "db_username: ${{ secrets.DB_USERNAME }}" > sae201\src\main\resources\db.yaml
+          echo "db_password: ${{ secrets.DB_PASSWORD }}" >> sae201\src\main\resources\db.yaml
+          echo "db_dialect: ${{ secrets.DB_DIALECT }}" >> sae201\src\main\resources\db.yaml
+          echo "db_name: ${{ secrets.DB_NAME }}" >> sae201\src\main\resources\db.yaml
+          echo "db_host: ${{ secrets.DB_HOST }}" >> sae201\src\main\resources\db.yaml
+          echo "db_port: ${{ secrets.DB_PORT }}" >> sae201\src\main\resources\db.yaml
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
         working-directory: ./sae201

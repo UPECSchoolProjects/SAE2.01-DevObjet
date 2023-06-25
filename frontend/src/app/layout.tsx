@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <header>
-          <Image src="/images/long_logo.png" alt="Logo"
+          <Image src="/images/long_logoUwU.png" alt="Logo"
             width={0}
             height={0}
             sizes="2%"
