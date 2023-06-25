@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class VerificationConnexe {
+public class VerificationConnexeTest {
     ReseauMetro reseau;
 
     @BeforeEach
