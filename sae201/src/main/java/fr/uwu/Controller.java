@@ -99,6 +99,10 @@ public class Controller {
             return "Aucun chemin trouvé";
         }
 
+        if(path.size() == 0) {
+            return "Erreur";
+        }
+
         StringBuilder pathSb = new StringBuilder();
         pathSb.append("Path: ");
         for (Relation r : path) {
