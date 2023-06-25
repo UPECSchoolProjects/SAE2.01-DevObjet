@@ -8,8 +8,6 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import fr.uwu.ReseauMetro.TrajectPreference;
-
 /**
  * Test des classes Relation, Quai et ReseauMetro
  */
