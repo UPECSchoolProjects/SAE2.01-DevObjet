@@ -4,11 +4,37 @@ import fr.uwu.Couleurs;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.boot.SpringApplication;
+
 import fr.uwu.ReseauMetro.TypeAnalyse;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
+        if (args.length < 1) {
+            System.out.println("Veuillez spécifier un argument");
+            return;
+        }
+
+        if(args[0] == "" || args[0] == null) {
+            System.out.println("Veuillez spécifier un argument");
+            return;
+        }
+
+        if (args[0].equals("info")) {
+            afficherInfo();
+            return;
+        } else if (args[0].equals("serveur")) {
+            SpringApplication.run(Controller.class, args);
+        } else {
+            System.out.println("Argument invalide");
+            return;
+        }
+
+    }
+
+    public static void afficherInfo() {
         // ? Test pour voir si les classes marchent
         // Station stationtest = new Station(1, "2", 3, "Test");
         // System.out.println(stationtest);
@@ -76,7 +102,7 @@ public class App {
         System.out.println(Couleurs.BG_RED + "- - - Station virtuelles (correspondances) - - -" + Couleurs.RESET);
         System.out.println("");
 
-        Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V41");
+        Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V0");
 
         sb.append("-- " + abes + " --\n");
 
@@ -159,14 +185,12 @@ public class App {
 
         System.out.println(Couleurs.UNDERLINE + "Nombre de stations virtuelles trouvées:" + Couleurs.RESET
                 + " " + stations_virt.size());
-        
+
         // relié ?
         reseau.analyse1Distance(Nation, CDGEtoile);
 
-
         // relié à moins de p temps
         reseau.reliePDistance(Nation, CDGEtoile, 100);
-
 
         // ? Comparaison de deux stations (Méthode ACCESSIBLE)
         // System.out.println("");

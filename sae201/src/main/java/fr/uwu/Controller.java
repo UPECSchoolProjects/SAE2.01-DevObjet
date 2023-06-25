@@ -30,15 +30,6 @@ public class Controller {
     }
 
     /**
-     * Point d'entrée de l'application
-     * 
-     * @param args Arguments de la ligne de commande
-     */
-    public static void main(String[] args) {
-        SpringApplication.run(Controller.class, args);
-    }
-
-    /**
      * Permet d'obtenir un chemin entre deux quais.
      * Ce point d'extrémité permet d'obtenir un chemin optimal entre deux quais
      * spécifiés en utilisant leurs identifiants.
