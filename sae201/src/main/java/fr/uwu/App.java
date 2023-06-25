@@ -76,7 +76,7 @@ public class App {
         System.out.println(Couleurs.BG_RED + "- - - Station virtuelles (correspondances) - - -" + Couleurs.RESET);
         System.out.println("");
 
-        Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V43");
+        Quai abes = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V41");
 
         sb.append("-- " + abes + " --\n");
 
@@ -90,7 +90,7 @@ public class App {
         // ? Test de l'algo de Dijkstra
         Quai CDGEtoile = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V9");
 
-        Quai Nation = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V61");
+        Quai Nation = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()), "V62");
         // Quai Opera = Quai.getQuaiById(new ArrayList<Quai>(reseau.stations.keySet()),
         // "V69");
 
@@ -159,6 +159,14 @@ public class App {
 
         System.out.println(Couleurs.UNDERLINE + "Nombre de stations virtuelles trouvées:" + Couleurs.RESET
                 + " " + stations_virt.size());
+        
+        // relié ?
+        reseau.analyse1Distance(Nation, CDGEtoile);
+
+
+        // relié à moins de p temps
+        reseau.reliePDistance(Nation, CDGEtoile, 100);
+
 
         // ? Comparaison de deux stations (Méthode ACCESSIBLE)
         // System.out.println("");
