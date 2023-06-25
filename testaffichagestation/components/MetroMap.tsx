@@ -109,7 +109,9 @@ function stationToDisplay(stations: StationController[]): StationController[] {
     const stationsToDisplay = stations.map((station) => {
         // search stations that are distant from the current station of less than 4px
         const stationsToCheck: { station: StationController, distance: number }[] = stations.map((stationToCheck) => {
-            const distance = Math.abs(stationToCheck.station.position.x - station.station.position.x);
+            
+            // compare distance x et y
+            const distance = Math.sqrt(Math.pow(stationToCheck.station.position.x - station.station.position.x, 2) + Math.pow(stationToCheck.station.position.y - station.station.position.y, 2));
             return { station: stationToCheck, distance: distance };
         }).filter((stationToCheck) => {
             return stationToCheck.distance < 4;
@@ -287,12 +289,17 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
         }
 
         const activate = async () => {
+
+            let stationsNew = stations.map((prevStation: Station) => ({
+                station: prevStation,
+                activated: path.includes(parseInt(prevStation.id)),
+                toDisplay: path.includes(parseInt(prevStation.id)),
+            }))
+
+
             setStationsController(() =>
-                stations.map((prevStation: Station) => ({
-                    station: prevStation,
-                    activated: path.includes(parseInt(prevStation.id)),
-                    toDisplay: path.includes(parseInt(prevStation.id)),
-                }))
+                stationToDisplay(stationsNew)
+                //stationsNew
             );
 
             setTroncons((prevTroncons) =>
@@ -340,15 +347,18 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
 
             console.log(stations[0].id);
 
+            let stationsnew = stations.map((prevStation: Station) => ({
+                station: prevStation,
+                //activated: stationsControl.has("Q" + prevStation.id),
+                //toDisplay: stationsControl.has("Q" + prevStation.id),
+                activated: true,
+                toDisplay: true,
+            }))
+
             // on active les stations qui sont dans le path
             setStationsController((prevStationsController) =>
-                stations.map((prevStation: Station) => ({
-                    station: prevStation,
-                    //activated: stationsControl.has("Q" + prevStation.id),
-                    //toDisplay: stationsControl.has("Q" + prevStation.id),
-                    activated: true,
-                    toDisplay: true,
-                }))
+                stationToDisplay(stationsnew)
+                //stationsnew
             );
 
             // on active les troncons qui sont dans le path
