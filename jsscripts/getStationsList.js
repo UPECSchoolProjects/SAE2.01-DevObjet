@@ -21,7 +21,7 @@ export type Troncons = {
 const readline = require('readline');
 const SPD = require('svg-path-d');
 
-const ligne = require('./12.json'); // { troncons: Troncons[] }
+const ligne = require('./RERABoissy-StGermain.json'); // { troncons: Troncons[] }
 
 const stations = []; // Station[]
 

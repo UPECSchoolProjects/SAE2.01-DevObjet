@@ -17,7 +17,11 @@ public class AppConfig {
 
         System.out.println("Nombre de relations: " + relations.size());
 
-        return new ReseauMetro(new ArrayList<Quai>(stations), new ArrayList<Relation>(relations));
+        ReseauMetro reseau = new ReseauMetro(new ArrayList<Quai>(stations), new ArrayList<Relation>(relations));
+
+        reseau.verificationConnexe();
+
+        return reseau;
     }
 
     // Autres configurations si nécessaires

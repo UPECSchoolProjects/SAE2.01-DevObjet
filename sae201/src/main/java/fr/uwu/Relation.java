@@ -32,6 +32,8 @@ public class Relation {
         this.st2 = st2;
         this.temps = temps;
 
+        //System.out.println("Relation créée: " + this.toString());
+
         // Si les deux stations ont le même nom, alors c'est une correspondance
         if (!st1.ligne.equals(st2.ligne)) {
             this.correspondance = true;

@@ -4691,6 +4691,114 @@
                 "y": 3791
             },
             "displayType": "normal"
+        },
+        {
+            "id": 433,
+            "idfmId": "",
+            "idName": "station-BoissyStLeger",
+            "displayName": "Boissy-Saint-Léger",
+            "line": "RERA",
+            "position": {
+                "x": 4207,
+                "y": 2792
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 405,
+            "idfmId": "",
+            "idName": "station-Vincennes",
+            "displayName": "Vincennes",
+            "line": "RERA",
+            "position": {
+                "x": 4014,
+                "y": 2674
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 404,
+            "idfmId": "",
+            "idName": "station-Nation",
+            "displayName": "Nation",
+            "line": "RERA",
+            "position": {
+                "x": 3491,
+                "y": 2646
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 403,
+            "idfmId": "",
+            "idName": "station-GareDeLyon",
+            "displayName": "Gare-de-Lyon",
+            "line": "RERA",
+            "position": {
+                "x": 3042,
+                "y": 2900
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 402,
+            "idfmId": "",
+            "idName": "station-Chatelet",
+            "displayName": "Châtelet - Les Halles",
+            "line": "RERA",
+            "position": {
+                "x": 2389,
+                "y": 2300
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 401,
+            "idfmId": "",
+            "idName": "station-Auber",
+            "displayName": "Auber",
+            "line": "RERA",
+            "position": {
+                "x": 1818,
+                "y": 2021
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 400,
+            "idfmId": "",
+            "idName": "station-CDGEtoile",
+            "displayName": "Charles-de-Gaulle - Étoile",
+            "line": "RERA",
+            "position": {
+                "x": 1158,
+                "y": 1869
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 399,
+            "idfmId": "",
+            "idName": "station-LaDefense",
+            "displayName": "La Défense - Grande Arche",
+            "line": "RERA",
+            "position": {
+                "x": 603,
+                "y": 1313
+            },
+            "displayType": "normal"
+        },
+        {
+            "id": 434,
+            "idfmId": "",
+            "idName": "station-StGermainEnLaye",
+            "displayName": "Saint-Germain-en-Laye",
+            "line": "RERA",
+            "position": {
+                "x": 206,
+                "y": 1226
+            },
+            "displayType": "normal"
         }
     ],
     "correspondances": [

@@ -191,7 +191,7 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
 
     const svgRef = React.useRef<SVGSVGElement | null>(null);
 
-    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M12", "M13", "M14"]
+    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "RERA"]
 
     const fetchData = async () => {
         let data: { stations: Station[], correspondances: GraphicCorrespondance[] } = await getStations()
@@ -344,8 +344,10 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
             setStationsController((prevStationsController) =>
                 stations.map((prevStation: Station) => ({
                     station: prevStation,
-                    activated: stationsControl.has("Q" + prevStation.id),
-                    toDisplay: stationsControl.has("Q" + prevStation.id),
+                    //activated: stationsControl.has("Q" + prevStation.id),
+                    //toDisplay: stationsControl.has("Q" + prevStation.id),
+                    activated: true,
+                    toDisplay: true,
                 }))
             );
 

@@ -172,7 +172,8 @@ public class ReseauMetro {
     }
 
     /*
-     * Surcharge de la fonction dijkstra_algo, avec une préférence de trajet par défaut sur le temps
+     * Surcharge de la fonction dijkstra_algo, avec une préférence de trajet par
+     * défaut sur le temps
      */
     public List<Relation> dijkstra_algo(Quai station1, Quai station2) {
         return dijkstra_algo(station1, station2, TrajectPreference.TEMPS);
@@ -297,10 +298,11 @@ public class ReseauMetro {
                 Quai stationVoisine = rel.getOtherStation(stationPlusProche);
                 int distance = distances.get(stationPlusProche) + rel.temps;
 
-                if(pref == TrajectPreference.CORRESPONDANCE && rel.correspondance) {
-                    // on ajoute 8000s de correspondance si on veut privilégier le moins de correspondance possible
+                if (pref == TrajectPreference.CORRESPONDANCE && rel.correspondance) {
+                    // on ajoute 8000s de correspondance si on veut privilégier le moins de
+                    // correspondance possible
                     // cela permet de privilégier les trajets avec le moins de correspondance
-                    
+
                     distance += 8000;
                     System.out.println("oui" + distance);
                 }
@@ -342,6 +344,50 @@ public class ReseauMetro {
 
         return chemin;
     }
+
+public void verificationConnexe() {
+    Quai stationCentrale = quais.stream()
+            .filter(station -> station.getId().equals("Q67"))
+            .findFirst()
+            .orElse(null);
+
+    if (stationCentrale == null) {
+        System.out.println("La station centrale Q67 n'a pas été trouvée dans le réseau.");
+        return;
+    }
+
+    Set<Quai> visitees = new HashSet<>();
+    Set<Quai> stationsNonVisitees = new HashSet<>(quais);
+
+    System.out.println("Vérification de connectivité à partir de la station centrale : " + stationCentrale.getNom());
+    dfs(stationCentrale, visitees, stationsNonVisitees);
+
+    if (visitees.size() < quais.size()) {
+        System.out.println("Le réseau est divisé en deux parties distinctes.");
+
+        System.out.println("Stations non visitées :");
+        for (Quai station : stationsNonVisitees) {
+            System.out.println(station.getNom());
+        }
+    }
+}
+
+private void dfs(Quai station, Set<Quai> visitees, Set<Quai> stationsNonVisitees) {
+    visitees.add(station);
+    stationsNonVisitees.remove(station);
+
+    List<Quai> voisins = relations.stream()
+            .filter(rel -> rel.hasStation(station))
+            .map(rel -> rel.getOtherStation(station))
+            .collect(Collectors.toList());
+
+    for (Quai voisin : voisins) {
+        if (!visitees.contains(voisin)) {
+            dfs(voisin, visitees, stationsNonVisitees);
+        }
+    }
+}
+
 
     /**
      * Retourne le trajet le plus court entre deux stations. Se base sur
