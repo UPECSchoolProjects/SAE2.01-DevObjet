@@ -14,12 +14,19 @@ export default function StationSelector({ stations, selectedStation, setSelected
 
     return <div className="station-selector">
         <Select
-            options={stations.map((station) => ({ value: station, label: station.content.displayName }))}
+            options={stations.map((station) => ({ value: station, label: getLabel(station) }))}
             onChange={(e: any) => setSelectedStation(e.value)}
-            value={selectedStation ? { value: selectedStation, label: selectedStation.content.displayName } : null}
+            value={selectedStation ? { value: selectedStation, label: getLabel(selectedStation) } : null}
             placeholder="Sélectionnez une station"
             isClearable={true}
             isSearchable={true}
         />
     </div>
+}
+
+function getLabel(station: StationFromBackend) {
+    if(station.virtual) {
+        return station.content.displayName;
+    }
+    return station.content.displayName + " (" + station.content.line + ")";
 }

@@ -1,109 +1,25 @@
 [
     {
-        "id": 434,
+        "id": 526,
         "idfmId": "",
-        "idName": "station-StGermainEnLaye",
-        "displayName": "StGermainEnLaye",
-        "line": "M12",
+        "idName": "station-ViroflayRG",
+        "displayName": "ViroflayRG",
+        "line": "RERC",
         "position": {
-            "x": 206,
-            "y": 1226
+            "x": 525,
+            "y": 4048
         },
         "displayType": "normal"
     },
     {
-        "id": 399,
+        "id": 528,
         "idfmId": "",
-        "idName": "station-LaDefense",
-        "displayName": "",
-        "line": "M12",
+        "idName": "station-StQuentinEnYvelines",
+        "displayName": "Saint-Quentin-en-Yvelines-Montigny-le-Bretonneux",
+        "line": "RERC",
         "position": {
-            "x": 603,
-            "y": 1313
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 400,
-        "idfmId": "",
-        "idName": "station-CDGEtoile",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 1158,
-            "y": 1869
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 401,
-        "idfmId": "",
-        "idName": "station-Auber",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 1818,
-            "y": 2021
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 402,
-        "idfmId": "",
-        "idName": "station-Chatelet",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 2389,
-            "y": 2300
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 403,
-        "idfmId": "",
-        "idName": "station-GareDeLyon",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 3042,
-            "y": 2900
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 404,
-        "idfmId": "",
-        "idName": "station-Nation",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 3491,
-            "y": 2646
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 405,
-        "idfmId": "",
-        "idName": "station-Vincennes",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 4014,
-            "y": 2674
-        },
-        "displayType": "normal"
-    },
-    {
-        "id": 433,
-        "idfmId": "",
-        "idName": "station-BoissyStLeger",
-        "displayName": "",
-        "line": "M12",
-        "position": {
-            "x": 4012,
-            "y": 2674
+            "x": 249,
+            "y": 4226
         },
         "displayType": "normal"
     }
