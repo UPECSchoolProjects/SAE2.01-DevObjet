@@ -408,7 +408,6 @@ id;ligne;terminus;nom
 403;RERA;0;Paris_Gare_de_Lyon
 404;RERA;0;Nation
 405;RERA;0;Vincennes 
-406;RERA;0;Val_de_Fontenay
 432;RERA;1;Marne_la_Vallée_Chessy
 433;RERA;1;Boissy_Saint-Léger
 434;RERA;1;Saint-Germain_en_Laye
@@ -421,17 +420,6 @@ id;ligne;terminus;nom
 456;RERE;0;Rosa_parks
 454;RERE;1;Chelles_Gournay
 455;RERE;1;Tournan
-488;RERE;0;Rosny_Bois_Perrier
-489;RERE;0;Rosny_sous_Bois
-490;RERE;0;Val_de_Fontenay
-491;RERE;0;Nogent_Le_Perreux
-492;RERE;0;Les_Boullereaux_Champigny
-493;RERE;0;Villiers_sur_Marne_Le_Plessis_Trévise
-494;RERE;0;Les_Yvris_Noisy_le_Grand
-495;RERE;0;Emerainvile_Pontault_Combault
-496;RERE;0;Roissy_en_Brie
-497;RERE;0;Ozoir_la_Ferrière
-498;RERE;0;Gretz_Armainvilliers
 443;RERC;0;Viroflay_Rive_Gauche
 444;RERC;1;Versailles_Château
 445;RERC;1;Saint-Quentin_en_Yvelines
@@ -469,7 +457,6 @@ id;ligne;terminus;nom
 523;RERC;0;Issy
 524;RERC;0;Meudon_Val_Fleury
 525;RERC;0;Chaville-Vélizy
-526;RERC;0;Viroflay_Rive_Gauche
 527;RERC;1;Versailles_Château
 528;RERC;1;Saint-Quentin_en_Yvelines
 529;RERC;1;Dourdans_la_Fôret
