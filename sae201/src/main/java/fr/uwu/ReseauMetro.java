@@ -440,7 +440,7 @@ public class ReseauMetro {
      * @param ligne1
      * @param ligne2
      */
-    public void correspondanceEntre2Lignes(String ligne1, String ligne2) {
+    public String correspondanceEntre2Lignes(String ligne1, String ligne2) {
         // Vérifier si les lignes existent dans la liste des quais
         boolean ligne1Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne1));
         boolean ligne2Existe = quais.stream().anyMatch(quai -> quai.getLigne().equals(ligne2));
@@ -449,6 +449,9 @@ public class ReseauMetro {
             throw new IllegalArgumentException(
                     "Au moins l'une des lignes spécifiées n'existe pas.");
         }
+
+        // Liste des correspondances (cas où il y a des correspondances)
+        String listeCorrespondance = "";
 
         // Rechercher les correspondances possibles entre les deux lignes
         List<Quai> correspondances = new ArrayList<>();
@@ -477,13 +480,16 @@ public class ReseauMetro {
 
         // Afficher les correspondances trouvées
         if (correspondances.isEmpty()) {
-            System.out.println("Il n'y a pas de correspondances entre les lignes spécifiées.");
+            return "Il n'y a pas de correspondances entre les lignes spécifiées.";
         } else {
-            System.out.println(
-                    "Correspondances possibles entre les lignes " + ligne1 + " et " + ligne2 + ":");
             for (Quai correspondance : correspondances) {
-                System.out.println(correspondance.getNom());
+                if (listeCorrespondance.length() == 0)
+                    listeCorrespondance += correspondance.getLigne();
+                else {
+                    listeCorrespondance += "\n" + correspondance.getLigne();
+                }
             }
+            return listeCorrespondance;
         }
     }
 
