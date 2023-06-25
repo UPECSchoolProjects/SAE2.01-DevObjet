@@ -106,8 +106,16 @@ export default function Map() {
 
     sortedStations.forEach((station) => {
       // check by name
-      if (uniqueStations.find((uniqueStation) => uniqueStation.content.name === station.content.name) === undefined) {
-        uniqueStations.push(station);
+      let find = uniqueStations.find((uniqueStation) => ((uniqueStation.content.name === station.content.name)));
+      if (find === undefined || station.virtual === false) {
+        // si les deux ne sont pas virtuelles on garde
+        if (station.virtual === false && find !== undefined && find.virtual === false) {
+          uniqueStations.push(station);
+        }
+
+        if(find === undefined) {
+          uniqueStations.push(station);
+        }
       }
     });
 

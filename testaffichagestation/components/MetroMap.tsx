@@ -109,7 +109,7 @@ function stationToDisplay(stations: StationController[]): StationController[] {
     const stationsToDisplay = stations.map((station) => {
         // search stations that are distant from the current station of less than 4px
         const stationsToCheck: { station: StationController, distance: number }[] = stations.map((stationToCheck) => {
-            
+
             // compare distance x et y
             const distance = Math.sqrt(Math.pow(stationToCheck.station.position.x - station.station.position.x, 2) + Math.pow(stationToCheck.station.position.y - station.station.position.y, 2));
             return { station: stationToCheck, distance: distance };
@@ -193,7 +193,7 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
 
     const svgRef = React.useRef<SVGSVGElement | null>(null);
 
-    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "RERA"]
+    const lines = ["M1", "M2", "M3", "M3bis", "M4", "M5", "M6", "M7", "M7bis", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "RERA", "RERB", "RERC", "RERD", "RERE"]
 
     const fetchData = async () => {
         let data: { stations: Station[], correspondances: GraphicCorrespondance[] } = await getStations()
@@ -434,6 +434,8 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
                         return null;
                     }
 
+                    let alreadyDisplayedPopup = new Set();
+
                     const station = stationControl.station;
 
                     const lineData = linesData.get(station.line || "3")
@@ -441,7 +443,9 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
                     // hash de la position
                     const hashProp = hashCode(station.position.x + "" + station.position.y);
 
-                    if (lastRequestedPath.length > 0 && (lastRequestedPath.includes("Q" + station.id) || lastRequestedName.includes(station.idName))) {
+                    if ((lastRequestedPath.length > 0 && (lastRequestedPath.includes("Q" + station.id) || lastRequestedName.includes(station.idName))) && !alreadyDisplayedPopup.has(station.idName)) {
+                        alreadyDisplayedPopup.add(station.idName);
+
                         return <>
                             <StationPopup station={station} />
                             <StopPoint key={station.line + "-" + station.id + hashProp} activated={stationControl.activated} station={station} lineColor={linesData.get(station.line || "3")?.strokeColor || "#FFF"} lineWidth={lineData?.strokeWidth || "1"} />

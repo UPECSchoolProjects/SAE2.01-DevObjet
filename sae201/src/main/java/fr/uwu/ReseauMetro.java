@@ -345,50 +345,74 @@ public class ReseauMetro {
         return chemin;
     }
 
-    /*
+    /**
      * Vérifie si le réseau est connexe à partir de la station centrale Q67
      * (chatelet ligne 1).
      * On avait des problèmes de connexité avec le réseau lors de l'ajout des RER
      * j'ai donc ajouté cette méthode pour vérifier que le réseau est bien connexe.
      * et trouver les stations qui ne sont pas connectées au réseau.
+     * 
+     * @return true si le réseau est connexe, false sinon.
      */
-    public void verificationConnexe() {
+    public boolean verificationConnexe() {
+        // Recherche de la station centrale Q67
         Quai stationCentrale = quais.stream()
                 .filter(station -> station.getId().equals("Q67"))
                 .findFirst()
                 .orElse(null);
 
         if (stationCentrale == null) {
+            // La station centrale Q67 n'a pas été trouvée dans le réseau.
             System.out.println("La station centrale Q67 n'a pas été trouvée dans le réseau.");
-            return;
+            return false;
         }
 
+        // Initialisation des ensembles de stations visitées et non visitées
         Set<Quai> visitees = new HashSet<>();
         Set<Quai> stationsNonVisitees = new HashSet<>(quais);
 
+        // Vérification de la connectivité à partir de la station centrale
         System.out
                 .println("Vérification de connectivité à partir de la station centrale : " + stationCentrale.getNom());
         dfs(stationCentrale, visitees, stationsNonVisitees);
 
         if (visitees.size() < quais.size()) {
+            // Le réseau est divisé en deux parties distinctes.
             System.out.println("Le réseau est divisé en deux parties distinctes.");
 
+            // Affichage des stations non visitées
             System.out.println("Stations non visitées :");
             for (Quai station : stationsNonVisitees) {
                 System.out.println(station.getNom());
             }
+            return false;
+        } else {
+            // Le réseau est connexe.
+            System.out.println("Le réseau est connexe.");
+            return true;
         }
     }
 
+    /**
+     * Parcours en profondeur (Depth-First Search) pour vérifier la connectivité du
+     * réseau.
+     * 
+     * @param station             la station actuelle.
+     * @param visitees            l'ensemble des stations déjà visitées.
+     * @param stationsNonVisitees l'ensemble des stations non visitées.
+     */
     private void dfs(Quai station, Set<Quai> visitees, Set<Quai> stationsNonVisitees) {
+        // Marquer la station actuelle comme visitée
         visitees.add(station);
         stationsNonVisitees.remove(station);
 
+        // Trouver les voisins de la station actuelle
         List<Quai> voisins = relations.stream()
                 .filter(rel -> rel.hasStation(station))
                 .map(rel -> rel.getOtherStation(station))
                 .collect(Collectors.toList());
 
+        // Parcourir récursivement les voisins non visités
         for (Quai voisin : voisins) {
             if (!visitees.contains(voisin)) {
                 dfs(voisin, visitees, stationsNonVisitees);

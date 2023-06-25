@@ -1,0 +1,52 @@
+{
+    "troncons": [
+        {
+            "id": "AvenueDuPdtKennedy-Javel",
+            "d": "m 815.74681,2679.5131 c 0,0 69.83574,-0.3779 102.14792,-0.3847 4.89357,0 7.6591,-1.8199 8.16863,10.7874 0.5608,13.876 -0.25808,284.9647 -0.25808,284.9647",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Javel-PontDuGarigliano",
+            "d": "m 925.80528,2974.8805 -0.11274,371.1293",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "PontDuGarigliano-IssyValDeSeine",
+            "d": "m 925.69254,3346.0098 0.11274,297.4184",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "IssyValDeSeine-Issy",
+            "d": "m 925.80528,3643.4282 0.27217,121.1323",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "Issy-MeudenValFleury",
+            "d": "m 926.07745,3764.5605 -0.23231,126.5814",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "MeudenValFleury-ChavilleVelizy",
+            "d": "m 925.84514,3891.1419 c 0,0 0.0638,8.5834 -1.43371,13.8547 -1.34001,4.717 -4.01726,9.5573 -7.3638,14.4555 -4.78114,6.998 -60.23423,62.3648 -60.23423,62.3648",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ChavilleVelizy-ViroflayRG",
+            "d": "m 856.8134,3981.8169 c -0.3566,0.2675 -48.62027,50.573 -56.50763,57.8218 -2.43185,2.235 -5.19571,6.8909 -16.45966,7.5795 -12.47208,0.7624 -257.64939,1.075 -257.64939,1.075",
+            "beginStation": -1,
+            "endStation": -1
+        },
+        {
+            "id": "ViroflayRG-VersaillesChateau",
+            "d": "m 526.19672,4048.2932 -300.89526,-0.1127",
+            "beginStation": -1,
+            "endStation": -1
+        }
+    ]
+}

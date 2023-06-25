@@ -1,0 +1,266 @@
+[
+    {
+        "id": 438,
+        "idfmId": "",
+        "idName": "station-AeroportCDG",
+        "displayName": "Aéroport Charles-de-Gaulle 2 TGV",
+        "line": "RERB",
+        "position": {
+            "x": 3785,
+            "y": 598
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 439,
+        "idfmId": "",
+        "idName": "station-AulnaySousBois",
+        "displayName": "Aulnay-sous-Bois",
+        "line": "RERB",
+        "position": {
+            "x": 4215,
+            "y": 399
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 532,
+        "idfmId": "",
+        "idName": "station-LeBourget",
+        "displayName": "Le Bourget",
+        "line": "RERB",
+        "position": {
+            "x": 3784,
+            "y": 598
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 533,
+        "idfmId": "",
+        "idName": "station-LaCourneuveAubervilliers",
+        "displayName": "La Courneuve - Aubervilliers",
+        "line": "RERB",
+        "position": {
+            "x": 3628,
+            "y": 598
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 534,
+        "idfmId": "",
+        "idName": "station-LaPlaineStadeDeFrance",
+        "displayName": "La Plaine - Stade de France",
+        "line": "RERB",
+        "position": {
+            "x": 3102,
+            "y": 599
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 407,
+        "idfmId": "",
+        "idName": "station-GareDuNord",
+        "displayName": "Gare du Nord",
+        "line": "RERB",
+        "position": {
+            "x": 2619,
+            "y": 812
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 408,
+        "idfmId": "",
+        "idName": "station-Chatelet",
+        "displayName": "Châtelet - Les Halles",
+        "line": "RERB",
+        "position": {
+            "x": 2724,
+            "y": 1457
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 409,
+        "idfmId": "",
+        "idName": "station-StMichelNotreDame",
+        "displayName": "Saint-Michel - Notre-Dame",
+        "line": "RERB",
+        "position": {
+            "x": 2404,
+            "y": 2299
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 410,
+        "idfmId": "",
+        "idName": "station-Luxembourg",
+        "displayName": "Luxembourg",
+        "line": "RERB",
+        "position": {
+            "x": 2286,
+            "y": 2606
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 411,
+        "idfmId": "",
+        "idName": "station-PortRoyal",
+        "displayName": "Port-Royal",
+        "line": "RERB",
+        "position": {
+            "x": 2287,
+            "y": 2879
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 412,
+        "idfmId": "",
+        "idName": "station-DenfertRochereau",
+        "displayName": "Denfert-Rochereau",
+        "line": "RERB",
+        "position": {
+            "x": 2286,
+            "y": 3085
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 535,
+        "idfmId": "",
+        "idName": "station-CiteUniversitaire",
+        "displayName": "Cité Universitaire",
+        "line": "RERB",
+        "position": {
+            "x": 2287,
+            "y": 3261
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 536,
+        "idfmId": "",
+        "idName": "station-Gentilly",
+        "displayName": "Gentilly",
+        "line": "RERB",
+        "position": {
+            "x": 2286,
+            "y": 3574
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 537,
+        "idfmId": "",
+        "idName": "station-Laplace",
+        "displayName": "Laplace",
+        "line": "RERB",
+        "position": {
+            "x": 2287,
+            "y": 3696
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 538,
+        "idfmId": "",
+        "idName": "station-ArcueilCachan",
+        "displayName": "Arcueil - Cachan",
+        "line": "RERB",
+        "position": {
+            "x": 2287,
+            "y": 3801
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 539,
+        "idfmId": "",
+        "idName": "station-Bagneux",
+        "displayName": "Bagneux",
+        "line": "RERB",
+        "position": {
+            "x": 2250,
+            "y": 3871
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 440,
+        "idfmId": "",
+        "idName": "station-BourglaReine",
+        "displayName": "Bourg-la-Reine",
+        "line": "RERB",
+        "position": {
+            "x": 2196,
+            "y": 3923
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 540,
+        "idfmId": "",
+        "idName": "station-ParcDeSceaux",
+        "displayName": "Parc de Sceaux",
+        "line": "RERB",
+        "position": {
+            "x": 2140,
+            "y": 3978
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 541,
+        "idfmId": "",
+        "idName": "station-LaCroixDeBerny",
+        "displayName": "La Croix de Berny",
+        "line": "RERB",
+        "position": {
+            "x": 2087,
+            "y": 4031
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 542,
+        "idfmId": "",
+        "idName": "station-Antony",
+        "displayName": "Antony",
+        "line": "RERB",
+        "position": {
+            "x": 2039,
+            "y": 4078
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 543,
+        "idfmId": "",
+        "idName": "station-MassyPalaiseau",
+        "displayName": "Massy - Palaiseau",
+        "line": "RERB",
+        "position": {
+            "x": 1992,
+            "y": 4126
+        },
+        "displayType": "normal"
+    },
+    {
+        "id": 442,
+        "idfmId": "",
+        "idName": "station-SaintRemyLesChevreuse",
+        "displayName": "Saint-Rémy-lès-Chevreuse",
+        "line": "RERB",
+        "position": {
+            "x": 1934,
+            "y": 4184
+        },
+        "displayType": "normal"
+    }
+]

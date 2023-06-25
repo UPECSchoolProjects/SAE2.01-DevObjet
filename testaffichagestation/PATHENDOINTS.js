@@ -1,5 +1,18 @@
 
 const SPD = require('svg-path-d');
+const readline = require('readline');
+
+function askQuestion(query) {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    return new Promise(resolve => rl.question(query, ans => {
+        rl.close();
+        resolve(ans);
+    }))
+}
 
 function getPathEndpoints(d) {
     // get the start and end points of a path
@@ -46,4 +59,14 @@ function getPathEndpoints(d) {
 }
 
 // Path: PATHENDOINTS.js
-console.log(getPathEndpoints("m 4207.0964,2792.1498 c 0,0 -102.0516,-102.7485 -106.8567,-107.4972 -3.0122,-2.9769 -13.0807,-9.5532 -17.3151,-9.6291 -2.7987,-0.05 -70.0408,-0.058 -70.0408,-0.058"))
+
+//prompt end point
+async function main() {
+let d = await askQuestion('d: ');
+
+
+
+console.log(getPathEndpoints(d))
+}
+
+main();

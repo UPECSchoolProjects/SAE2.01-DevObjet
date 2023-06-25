@@ -2,48 +2,45 @@
 
 const input = `
 <path
-style="display:inline;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 4207.0964,2792.1498 c 0,0 -102.0516,-102.7485 -106.8567,-107.4972 -3.0122,-2.9769 -13.0807,-9.5532 -17.3151,-9.6291 -2.7987,-0.05 -70.0408,-0.058 -70.0408,-0.058"
-id="path8585"
-sodipodi:nodetypes="cssc"
-inkscape:label="BoissyStLeger-Vincennes" />
+style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
+d="m 526.19672,4048.2932 -300.89526,-0.1127"
+id="path477"
+inkscape:label="ViroflayRG-VersaillesChateau" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3491.9745,2646.6598 c 0,0 15.5763,15.5254 23.3259,20.369 6.5217,4.0762 14.0011,7.52 21.6832,7.8848 20.5856,0.9775 477.0295,0 477.0295,0"
-id="path407"
-inkscape:label="Vincennes-Nation" />
+d="m 856.8134,3981.8169 c -0.3566,0.2675 -48.62027,50.573 -56.50763,57.8218 -2.43185,2.235 -5.19571,6.8909 -16.45966,7.5795 -12.47208,0.7624 -257.64939,1.075 -257.64939,1.075"
+id="path475"
+inkscape:label="ChavilleVelizy-ViroflayRG" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 3042.2133,2900.6156 c 0,0 7.3845,8.1852 19.7119,16.0981 3.7275,2.3927 12.2635,2.0262 18.3978,-5.5851 8.4086,-10.4331 311.3099,-314.776 318.6768,-320.3194 9.8006,-7.3746 27.4678,-7.964 36.7957,0 2.3974,2.0468 25.1191,24.7338 40.9203,40.5544 8.6715,8.6821 15.2587,15.2962 15.2587,15.2962"
-id="path405"
-sodipodi:nodetypes="csssssc"
-inkscape:label="Nation-GareDeLyon" />
+d="m 925.84514,3891.1419 c 0,0 0.0638,8.5834 -1.43371,13.8547 -1.34001,4.717 -4.01726,9.5573 -7.3638,14.4555 -4.78114,6.998 -60.23423,62.3648 -60.23423,62.3648"
+id="path473"
+inkscape:label="MeudenValFleury-ChavilleVelizy" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 2389.0901,2300.3863 c 0,0 31.6565,0.5463 43.3664,0 7.7599,-0.362 16.3247,2.9174 21.6831,8.5418 6.9401,7.2847 588.0737,591.6875 588.0737,591.6875"
-id="path403"
-inkscape:label="GareDeLyon-Chatelet" />
+d="m 926.07745,3764.5605 -0.23231,126.5814"
+id="path471"
+inkscape:label="Issy-MeudenValFleury" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1818.7573,2021.1335 c 0,0 37.317,0.9854 61.1071,1.3141 9.8963,0.1367 15.7309,1.4346 23.9829,6.8991 9.4292,6.2441 251.8494,256.5943 259.2123,262.4977 6.0003,4.8109 13.9961,8.1216 21.6832,7.8848 18.1126,-0.5581 204.3473,0.6571 204.3473,0.6571"
-id="path401"
-inkscape:label="Chatelet-Auber" />
+d="m 925.80528,3643.4282 0.27217,121.1323"
+id="path469"
+inkscape:label="IssyValDeSeine-Issy" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 1158.4065,1869.3513 c 0,0 137.3342,139.5233 145.8685,145.8686 6.0069,4.4662 13.5538,7.4433 21.0261,7.8848 7.4952,0.4429 493.4562,-1.9712 493.4562,-1.9712"
-id="path399"
-inkscape:label="Auber-CDGEtoile" />
+d="m 925.69254,3346.0098 0.11274,297.4184"
+id="path467"
+inkscape:label="PontDuGarigliano-IssyValDeSeine" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 602.52906,1312.8169 555.87744,556.5344"
-id="path397"
-inkscape:label="CDGEtoile-LaDefense" />
+d="m 925.80528,2974.8805 -0.11274,371.1293"
+id="path465"
+inkscape:label="Javel-PontDuGarigliano" />
 <path
 style="display:none;fill:none;stroke:#000000;stroke-opacity:1"
-d="m 206.71176,1226.1202 c 0,0 132.80506,-5.2757 250.09023,0.1285 59.78114,2.7546 103.97262,62.5707 146.7335,87.6838"
-id="path8583"
-sodipodi:nodetypes="csc"
-inkscape:label="LaDefense-StGermainEnLaye" />
+d="m 815.74681,2679.5131 c 0,0 69.83574,-0.3779 102.14792,-0.3847 4.89357,0 7.6591,-1.8199 8.16863,10.7874 0.5608,13.876 -0.25808,284.9647 -0.25808,284.9647"
+id="path8643"
+inkscape:label="AvenueDuPdtKennedy-Javel" />
 `;
 
 const lines = input.split('<path');
@@ -55,7 +52,7 @@ lines.forEach(line => {
         const d = line.match(/d="([^"]+)"/)[1];
 
         // reverse id order 
-        id = id.split('-').reverse().join('-');
+        //id = id.split('-').reverse().join('-');
 
 
 
@@ -102,4 +99,4 @@ const fs = require('fs');
 console.log(JSON.stringify(output, null, 4));
 
 // write the output to a file
-fs.writeFileSync('RERABoissy-StGermain.json', JSON.stringify(output, null, 4));
+fs.writeFileSync('RERCAvenuePdtKennedy-VersailleChateau.json', JSON.stringify(output, null, 4));
