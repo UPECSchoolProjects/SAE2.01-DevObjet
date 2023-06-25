@@ -32,3 +32,5 @@ target
 .vscode/settings.json
 settings.json
 **/.vscode/
+
+db.yaml

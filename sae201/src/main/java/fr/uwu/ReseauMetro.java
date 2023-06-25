@@ -352,7 +352,7 @@ public class ReseauMetro {
      * j'ai donc ajouté cette méthode pour vérifier que le réseau est bien connexe.
      * et trouver les stations qui ne sont pas connectées au réseau.
      */
-    public void verificationConnexe() {
+    public boolean verificationConnexe() {
         Quai stationCentrale = quais.stream()
                 .filter(station -> station.getId().equals("Q67"))
                 .findFirst()
@@ -360,7 +360,7 @@ public class ReseauMetro {
 
         if (stationCentrale == null) {
             System.out.println("La station centrale Q67 n'a pas été trouvée dans le réseau.");
-            return;
+            return false;
         }
 
         Set<Quai> visitees = new HashSet<>();
@@ -377,6 +377,10 @@ public class ReseauMetro {
             for (Quai station : stationsNonVisitees) {
                 System.out.println(station.getNom());
             }
+            return false;
+        } else {
+            System.out.println("Le réseau est connexe.");
+            return true;
         }
     }
 

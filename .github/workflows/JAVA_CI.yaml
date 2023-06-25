@@ -7,21 +7,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Set up JDK 19
         uses: actions/setup-java@v3
         with:
           java-version: '19'
           distribution: 'temurin'
+
+      - name: Build db.yaml
+        run: |
+          echo "db_username: ${{ secrets.DB_USERNAME }}" > sae201\src\test\resources\db.yaml
+          echo "db_password: ${{ secrets.DB_PASSWORD }}" >> sae201\src\test\resources\db.yaml
+          echo "db_dialect: ${{ secrets.DB_DIALECT }}" >> sae201\src\test\resources\db.yaml
+          echo "db_name: ${{ secrets.DB_NAME }}" >> sae201\src\test\resources\db.yaml
+          echo "db_host: ${{ secrets.DB_HOST }}" >> sae201\src\test\resources\db.yaml
+          echo "db_port: ${{ secrets.DB_PORT }}" >> sae201\src\test\resources\db.yaml
+
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
         working-directory: ./sae201
+
       - name: Generate JaCoCo Badge
         uses: cicirello/jacoco-badge-generator@v2
         with:
           generate-coverage-badge: true
           coverage-badge-filename: jacoco.svg
           jacoco-csv-file: ./sae201/target/site/jacoco/jacoco.csv
+
       - name: Upload JaCoCo coverage report
         uses: actions/upload-artifact@v2
         with:
