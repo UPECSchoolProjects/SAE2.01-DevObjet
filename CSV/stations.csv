@@ -450,7 +450,6 @@ id;ligne;terminus;nom
 516;RERC;0;Orly_Ville
 517;RERC;0;La_Fraternelle
 518;RERC;0;Massy_Palaiseau
-519;RERC;1;Saint-Martin_d'Etampes
 520;RERC;0;Javel
 521;RERC;0;Pont_du_Garigliano
 522;RERC;0;Issy_Val_de_Seine
@@ -459,7 +458,6 @@ id;ligne;terminus;nom
 525;RERC;0;Chaville-Vélizy
 527;RERC;1;Versailles_Château
 528;RERC;1;Saint-Quentin_en_Yvelines
-529;RERC;1;Dourdans_la_Fôret
 407;RERB;0;Paris_Gare_du_Nord
 408;RERB;0;Châtelet,_Les_Halles
 409;RERB;0;Saint-Michel_Notre_Dame
@@ -472,8 +470,6 @@ id;ligne;terminus;nom
 440;RERB;0;Bourg_la_Reine
 441;RERB;1;Robinson
 442;RERB;1;Saint-Rémy_lès_Chevreuse
-530;RERB;0;Le_Blanc_Mesnil
-531;RERB;0;Drancy
 532;RERB;0;Le_Bourget
 533;RERB;0;La_Courneuve_Aubervilliers
 534;RERB;0;La_Plaine_Stade_de_France
