@@ -1,6 +1,8 @@
 # SAÉ2.01: Développement orienté objets</h1>
 BRIAULT Maxence, JARNOUX Antoine, DE MOURA Thomas, Lotto Maxime, GELIS Adrien et PARISSE Chloé (Info Groupe C)
 
+[![Maven Tests Github](https://github.com/UUUUUwUUUUU/SAE2.01-DevObjet/actions/workflows/JAVA_CI.yaml/badge.svg)](https://github.com/UUUUUwUUUUU/SAE2.01-DevObjet/actions/workflows/JAVA_CI.yaml)
+
 &nbsp;
 
 ## 1. Préface
