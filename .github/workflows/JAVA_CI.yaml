@@ -35,7 +35,9 @@ jobs:
           echo "db_name: ${{ secrets.DB_NAME }}" >> ./src/main/resources/db.yaml
           echo "db_host: ${{ secrets.DB_HOST }}" >> ./src/main/resources/db.yaml
           echo "db_port: ${{ secrets.DB_PORT }}" >> ./src/main/resources/db.yaml
-          cat ./src/main/resources/db.yaml
+      - name: Test Tree
+        working-directory: ./sae201
+        run: tree ./
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
         working-directory: ./sae201
