@@ -6,7 +6,10 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class VerificationConnexeTest {
+public class VerificationConnexe {
+    // test à executer manuellement en raison du besoin de connexion à la base de
+    // données
+
     ReseauMetro reseau;
 
     @BeforeEach
