@@ -47,6 +47,8 @@ public class DbConnector {
                 map.put(keyValue[0].trim(), keyValue[1].trim().replace("\"", ""));
             }
 
+            System.out.println(map.get("db_username"));
+
             DbConnector dbMigration = new DbConnector(map.get("db_username"), map.get("db_password"),
                     map.get("db_dialect"), map.get("db_host"), map.get("db_port"), map.get("db_name"));
             return dbMigration;
