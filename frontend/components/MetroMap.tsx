@@ -376,6 +376,17 @@ function SvgComponent({ stations, path, pathRel, animate, lastRequestedPath }: {
 
                 })));
 
+            // compter et afficher nombre de troncons activés
+            let nbTroncons = 0;
+            troncons.forEach((troncon) => {
+                if (troncon.activated) {
+                    nbTroncons++;
+                }
+            });
+            console.log("nombre de troncons activés : ", nbTroncons);
+            console.log("nombre de troncons total : ", troncons.length)
+            console.log("nombre de troncons dans l'ACM : ", pathRel.length)
+
             // on active les correspondances qui sont dans le path
             setCorrespondances((prevCorrespondances) =>
                 prevCorrespondances.map((prevCorrespondance) => ({

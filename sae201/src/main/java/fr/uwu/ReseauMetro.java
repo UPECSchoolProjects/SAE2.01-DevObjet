@@ -12,6 +12,7 @@ import java.util.Comparator;
  * (arête).
  */
 import java.util.Set;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 import javax.swing.RowFilter.Entry;
@@ -355,7 +356,7 @@ public class ReseauMetro {
      * @return true si le réseau est connexe, false sinon.
      */
     public boolean verificationConnexe() {
-        // Recherche de la station centrale Q67
+        // Recherche de la station centrale Q67 (Chatelet)
         Quai stationCentrale = quais.stream()
                 .filter(station -> station.getId().equals("Q67"))
                 .findFirst()
@@ -545,73 +546,73 @@ public class ReseauMetro {
         // Créer une liste pour stocker les relations de l'ACM
         List<Relation> acm = new ArrayList<>();
 
-        // Créer un tableau pour stocker les parents de chaque quai
-        int[] parent = new int[quais.size()];
-        for (int i = 0; i < quais.size(); i++) {
-            parent[i] = i;
-        }
+        List<Quai> quaisRestant = new ArrayList<>(this.quais);
 
-        // Parcourir toutes les relations triées
+        // Parcourir les relations triées
         for (Relation relation : allRelations) {
             Quai st1 = relation.getSt1();
             Quai st2 = relation.getSt2();
 
-            // Vérifier si l'ajout de cette relation crée un cycle
-            if (!connected(parent, st1, st2)) {
+            // Vérifier si l'ajout de la relation crée un cycle dans l'ACM
+            if (!createCycle(acm, relation)) {
                 // Ajouter la relation à l'ACM
+
+                if(!(quaisRestant.contains(st1) || quaisRestant.contains(st2))) {
+                    continue;
+                }
+
                 acm.add(relation);
-                // Fusionner les ensembles de st1 et st2
-                union(parent, st1, st2);
+
+                // Retirer les quais de la relation de la liste des quais restants
+
+                // si le quai fait partie d'une station virtuelle enlevé tout les quai relié à
+                // la station virtuelle
+
+                // trouver si le quai fait partie d'une station virtuelle
+                this.stations.forEach((quai, correspondances) -> {
+                    if (correspondances.contains(st1) || correspondances.contains(st2)) {
+                        correspondances.forEach(correspondance -> quaisRestant.remove(correspondance));
+                    }
+                });
+
+                quaisRestant.remove(st1);
+                quaisRestant.remove(st2);
+
+                if (quaisRestant.isEmpty()) {
+                    break;
+                }
+
             }
         }
+
         return acm;
     }
 
     /**
-     * Vérifie si deux quais sont connectés dans l'ensemble disjoint représenté par
-     * le tableau
-     * parent.
+     * Vérifie si l'ajout de la relation à l'ACM crée un cycle.
      *
-     * @param parent Tableau représentant les ensembles disjoint
-     * @param quai1  Premier quai
-     * @param quai2  Deuxième quai
-     * @return true si les quais sont connectés, false sinon
+     * @param acm      Liste des relations de l'ACM
+     * @param relation Relation à ajouter
+     * @return True si l'ajout crée un cycle, False sinon
      */
-    private boolean connected(int[] parent, Quai quai1, Quai quai2) {
-        int quai1Index = quais.indexOf(quai1);
-        int quai2Index = quais.indexOf(quai2);
-        return find(parent, quai1Index) == find(parent, quai2Index);
-    }
+    private boolean createCycle(List<Relation> acm, Relation relation) {
+        Quai st1 = relation.getSt1();
+        Quai st2 = relation.getSt2();
 
-    /**
-     * Effectue l'opération d'union entre deux ensembles représentés par le tableau
-     * parent.
-     *
-     * @param parent Tableau représentant les ensembles disjoint
-     * @param quai1  Premier quai
-     * @param quai2  Deuxième quai
-     */
-    private void union(int[] parent, Quai quai1, Quai quai2) {
-        int quai1Index = quais.indexOf(quai1);
-        int quai2Index = quais.indexOf(quai2);
-        int root1 = find(parent, quai1Index);
-        int root2 = find(parent, quai2Index);
-        parent[root1] = root2;
-    }
+        // Vérifier si l'ajout de la relation crée un cycle
+        for (Relation acmRelation : acm) {
+            Quai acmSt1 = acmRelation.getSt1();
+            Quai acmSt2 = acmRelation.getSt2();
 
-    /**
-     * Retourne la racine de l'ensemble auquel appartient l'élément représenté par
-     * l'index.
-     *
-     * @param parent Tableau représentant les ensembles disjoint
-     * @param index  Index de l'élément
-     * @return Racine de l'ensemble
-     */
-    private int find(int[] parent, int index) {
-        while (parent[index] != index) {
-            index = parent[index];
+            // Vérifier si la relation crée un lien entre les mêmes quais que la relation de
+            // l'ACM
+            if ((st1 == acmSt1 && st2 == acmSt2) || (st1 == acmSt2 && st2 == acmSt1)) {
+                // Le cycle est créé, la relation ne doit pas être ajoutée à l'ACM
+                return true;
+            }
         }
-        return index;
+
+        return false;
     }
 
     enum TypeAnalyse {

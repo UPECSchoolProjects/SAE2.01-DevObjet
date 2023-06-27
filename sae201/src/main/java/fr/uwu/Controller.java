@@ -209,6 +209,10 @@ public class Controller {
     public String acm() {
         List<Relation> rel_acm = reseauMetro.ACM();
 
+        System.out.println("ACM: " + rel_acm.size());
+
+        System.out.println("Nombre de relations: " + reseauMetro.relations.size());
+
         List<Quai> stations = rel_acm.stream().map(r -> r.getSt1()).distinct().collect(Collectors.toList());
         stations.addAll(rel_acm.stream().map(r -> r.getSt2()).distinct().collect(Collectors.toList()));
 

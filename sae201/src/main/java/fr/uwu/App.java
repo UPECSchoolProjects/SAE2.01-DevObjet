@@ -17,7 +17,7 @@ public class App {
             return;
         }
 
-        if(args[0] == "" || args[0] == null) {
+        if (args[0] == "" || args[0] == null) {
             System.out.println("Veuillez spécifier un argument");
             return;
         }
@@ -214,5 +214,11 @@ public class App {
                 + Couleurs.RESET);
 
         reseau.comparerStation_A_B(Nation, CDGEtoile, 200, TypeAnalyse.TERMINALE);
+
+        List<Relation> rel_acm = reseau.ACM();
+
+        System.out.println("ACM: " + rel_acm.size());
+
+        System.out.println("Nombre de relations: " + reseau.relations.size());
     }
 }
