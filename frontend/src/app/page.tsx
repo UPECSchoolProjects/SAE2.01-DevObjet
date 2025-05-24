@@ -20,7 +20,7 @@ const MyComponent: React.FC = () => {
       <section className="section1">
         <h1>Équipe</h1>
         <ul>
-          <li>Maxime LOTTO</li>
+          <li>Mélodie LOTTO</li>
           <li>Maxence BRIAULT</li>
           <li>Chloé PARISSE</li>
           <li>Thomas DE-MOURA</li>
